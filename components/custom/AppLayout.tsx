@@ -7,7 +7,7 @@ const Header = dynamic(() => import("@/components/modules/header/Header"), {
 })
 
 function AppLayout({ children }: Readonly<{ children: ReactNode }>) {
-  return <main>
+  return <main className="relative">
     <Header/>
     
     {children}
