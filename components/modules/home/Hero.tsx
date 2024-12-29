@@ -25,23 +25,27 @@ const Hero = () => {
       const elapsed = now - startTime;
 
       const linearProgress = elapsed / duration;
+      
 
-      if (linearProgress >= 1) {
-        setProgress(100);
-        setIsAutoplaying(false);
-        startTime = now;
-      } else {
-        const easedProgress = easeInOut(Math.min(linearProgress, 1));
-        setProgress(easedProgress * 100);
-        requestAnimationFrame(animateProgress);
+      if (linearProgress >= 1.038) {
+          startTime = now;
+         
+      }
+
+      const easedProgress = easeInOut(Math.min(linearProgress, 1));
+      setProgress(easedProgress * 100);
+      
+
+      requestAnimationFrame(animateProgress); 
+      if (linearProgress < 1) {
       }
     };
 
     if (isAutoplaying) {
-      requestAnimationFrame(animateProgress);
+      requestAnimationFrame(animateProgress); 
     }
 
-    return () => cancelAnimationFrame(lastTime);
+    return () => cancelAnimationFrame(lastTime); 
   }, [isAutoplaying]);
 
   return (
@@ -167,10 +171,7 @@ const Hero = () => {
                   <div className="h-[0.01rem] w-[65vw] bg-muted">
                     <div
                       className="h-full bg-foreground"
-                      style={{
-                        width: `${progress}%`,
-                        transitionTimingFunction: "ease-in-out",
-                      }}
+                      style={{ width: `${progress}%`, transitionTimingFunction: "ease-in-out" }}
                     ></div>
                   </div>
                 )}
