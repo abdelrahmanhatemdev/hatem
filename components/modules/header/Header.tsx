@@ -27,7 +27,7 @@ function Header() {
         </li>
         <li className="hover:bg-neutral-800 px-[0.4rem] py-[0.4rem] rounded-lg cursor-pointer transition-colors">
           <DropdownMenu>
-            <DropdownMenuTrigger>
+            <DropdownMenuTrigger className="flex items-center">
               <TbMenu size={25} />
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end" sideOffset={20} className="w-56 p-2 rounded-2xl cursor-pointer">
