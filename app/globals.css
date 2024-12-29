@@ -67,6 +67,28 @@ body {
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
   }
+
+  .hero-swiper .swiper-pagination {
+    position: absolute;
+    transition: opacity 0.3s;
+    z-index: 10;
+    bottom: 7vh;
+    top: var(--swiper-pagination-top, auto);
+    left: 0;
+    display: flex;
+    gap: 6vw;
+  }
+
+  .hero-swiper .swiper-pagination-bullet {
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 100;
+    color: #fff;
+    cursor: pointer;
+  }
+  .hero-swiper .swiper-pagination-bullet-active{
+    font-weight: 500;
+  }
 }
 
 @layer base {

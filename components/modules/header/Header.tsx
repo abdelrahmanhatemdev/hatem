@@ -30,7 +30,7 @@ function Header() {
             <DropdownMenuTrigger className="flex items-center">
               <TbMenu size={25} />
             </DropdownMenuTrigger>
-            <DropdownMenuContent align="end" sideOffset={20} className="w-56 p-2 rounded-2xl cursor-pointer">
+            <DropdownMenuContent align="end" sideOffset={14} className="w-56 p-2 rounded-2xl cursor-pointer">
               <DropdownMenuGroup className="p-2 flex flex-col gap-2">
                 <DropdownMenuItem className="rounded-lg">
                   <Link href="/projects" className="w-full py-1">Projects</Link>

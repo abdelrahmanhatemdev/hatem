@@ -3,9 +3,9 @@ import { Inter_Tight } from "next/font/google";
 import "@/app/globals.css";
 
 const interTight = Inter_Tight({
-  variable: "--font-inter-tight", 
-  subsets: ["latin"]
-})
+  variable: "--font-inter-tight",
+  subsets: ["latin"],
+});
 
 export const metadata: Metadata = {
   title: "Hatem",
@@ -19,11 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${interTight.variable} antialiased`}
-      >
-        {children}
-      </body>
+      <body className={`${interTight.className} ${interTight.variable} antialiased`}>{children}</body>
     </html>
   );
 }
