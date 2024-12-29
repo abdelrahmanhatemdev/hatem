@@ -5,38 +5,44 @@ import { Autoplay } from "swiper/modules";
 import "swiper/css";
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import { cn } from "@/lib/utils";
+import { cn, cubicBezier } from "@/lib/utils";
 
 const Hero = () => {
   const [sliderIndex, setSliderIndex] = useState<number | null>(null);
   const [progress, setProgress] = useState<number>(0);
-  const [isAutoplaying, setisAutoplaying] = useState<boolean>(false);
+  const [isAutoplaying, setIsAutoplaying] = useState<boolean>(false);
 
-  const autoplayDelay = 100000; // 3 seconds delay for each slide
+  const autoplayDelay = 5000;
 
-  // Start a timer to update the progress
   useEffect(() => {
-    let interval: NodeJS.Timeout | number;
+    const easeInOut = cubicBezier(0.9, 0, 0.2, 1);
+    const duration = autoplayDelay;
+    let startTime: number | null = null;
+    let lastTime: number = 0;
+
+    const animateProgress = (now: number) => {
+      if (startTime === null) startTime = now;
+      const elapsed = now - startTime;
+
+      const linearProgress = elapsed / duration;
+
+      if (linearProgress >= 1) {
+        setProgress(100);
+        setIsAutoplaying(false);
+        startTime = now;
+      } else {
+        const easedProgress = easeInOut(Math.min(linearProgress, 1));
+        setProgress(easedProgress * 100);
+        requestAnimationFrame(animateProgress);
+      }
+    };
+
     if (isAutoplaying) {
-      interval = setInterval(() => {
-        setProgress((prevProgress) => {
-          if (prevProgress < 100) {
-            return prevProgress + 1
-            // return prevProgress + (100 / (autoplayDelay / 100));
-          } else {
-            return 100;
-          }
-        });
-      }, 1000);
-    } else {
-      setProgress(0);
+      requestAnimationFrame(animateProgress);
     }
 
-    return () => clearInterval(interval); // Clear interval on cleanup
+    return () => cancelAnimationFrame(lastTime);
   }, [isAutoplaying]);
-
-  console.log("progress", progress);
-  
 
   return (
     <section className="h-screen w-full">
@@ -50,15 +56,25 @@ const Hero = () => {
         }}
         autoplay={{
           delay: autoplayDelay,
+          disableOnInteraction: false,
         }}
         loop={true}
         className="h-full w-[85%] mx-auto hero-swiper relative"
         onSlideChange={(swiper) => {
-          setSliderIndex(swiper.realIndex + 1);
+          const newIndex = swiper.realIndex + 1;
+
+          if (newIndex === sliderIndex) {
+            return;
+          }
+
+          setSliderIndex(newIndex);
+          setIsAutoplaying(true);
+        }}
+        onAutoplayStart={() => setIsAutoplaying(true)}
+        onAutoplayStop={() => {
+          setIsAutoplaying(false);
           setProgress(0);
         }}
-        onAutoplayStart={() => setisAutoplaying(true)}
-        onAutoplayStop={() => setisAutoplaying(false)}
       >
         <SwiperSlide>
           <div className="h-full flex flex-col justify-center ">
@@ -149,7 +165,13 @@ const Hero = () => {
                 </span>
                 {isActive && (
                   <div className="h-[0.01rem] w-[65vw] bg-muted">
-                    <div className={cn(`h-full bg-foreground`,  `w-[${1}%]`)}></div>
+                    <div
+                      className="h-full bg-foreground"
+                      style={{
+                        width: `${progress}%`,
+                        transitionTimingFunction: "ease-in-out",
+                      }}
+                    ></div>
                   </div>
                 )}
               </div>
