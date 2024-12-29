@@ -33,13 +33,13 @@ function Header() {
             <DropdownMenuContent align="end" sideOffset={20} className="w-56 p-2 rounded-2xl cursor-pointer">
               <DropdownMenuGroup className="p-2 flex flex-col gap-2">
                 <DropdownMenuItem className="rounded-lg">
-                  <Link href="/projects" className="w-full">Projects</Link>
+                  <Link href="/projects" className="w-full py-1">Projects</Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem className="rounded-lg">
-                  <Link href="/features" className="w-full">Features</Link>
+                  <Link href="/features" className="w-full py-1">Features</Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem className="rounded-lg">
-                  <Link href="/contact" className="w-full">Contact</Link>
+                  <Link href="/contact" className="w-full py-1">Contact</Link>
                 </DropdownMenuItem>
               </DropdownMenuGroup>
               <DropdownMenuSeparator className="w-[95%] m-auto"/>
