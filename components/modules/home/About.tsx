@@ -8,6 +8,10 @@ const ResponsiveWeb = dynamic(() => import("@/components/modules/home/about/Resp
   loading: Loading
 })
 
+const Performance = dynamic(() => import("@/components/modules/home/about/Performance"), {
+  loading: Loading
+})
+
 const About = () => {
 
   return (
@@ -74,11 +78,7 @@ const About = () => {
         </div>
         <div className="grid grid-cols-[calc(50%-1.25rem)_calc(50%-1.25rem)] gap-10">
           <ResponsiveWeb/>
-          
-          <div className="bg-neutral-900 rounded-3xl border border-neutral-800 pt-16 flex flex-col gap-4 justify-between">
-            <h2 className="text-3xl font-semibold px-16">Performance</h2>
-            {/* <Image src="/assets/images/about/performance.webp" alt="Resbonsive Web" height={597} width={1024}/> */}
-          </div>
+          <Performance/>
         </div>
       </div>
     </section>
