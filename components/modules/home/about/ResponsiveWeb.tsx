@@ -3,6 +3,8 @@ import { memo, useRef } from "react";
 import { AnimatePresence, motion, useInView } from "framer-motion";
 import Image from "next/image";
 const ResponsiveWeb = () => {
+  const MainRef = useRef(null);
+
   const responsiveWebRef = useRef(null);
   const responsiveWebIsInView = useInView(responsiveWebRef, {
     once: false,
@@ -16,7 +18,7 @@ const ResponsiveWeb = () => {
   });
 
   const animationVariants = {
-    visible: { opacity: 1, y: 0, transition: { duration: 1 } },
+    visible: { opacity: 1, y: 0, transition: { duration: 1, delay: .3 } },
     hidden: { opacity: 0, y: 200 },
   };
   return (
@@ -37,7 +39,7 @@ const ResponsiveWeb = () => {
                     initial={{ y: "0%" }}
                     animate={{ y: "-59%" }}
                     transition={{
-                      duration: 8, 
+                      duration: 8,
                       repeat: 1,
                       repeatType: "reverse",
                       ease: "easeInOut",
@@ -59,7 +61,7 @@ const ResponsiveWeb = () => {
           </div>
         </div>
         <div className="w-[8rem] h-[20rem] h relative overflow-hidden">
-        <div ref={responsivePhoneRef}>
+          <div ref={responsivePhoneRef}>
             <AnimatePresence>
               {responsivePhoneIsInView && (
                 <motion.div
@@ -72,7 +74,7 @@ const ResponsiveWeb = () => {
                     initial={{ y: "0%" }}
                     animate={{ y: "-77%" }}
                     transition={{
-                      duration: 8, 
+                      duration: 8,
                       repeat: 1,
                       repeatType: "reverse",
                       ease: "easeInOut",

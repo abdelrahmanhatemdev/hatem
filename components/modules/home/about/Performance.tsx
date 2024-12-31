@@ -9,11 +9,11 @@ const Performance = () => {
     margin: "0px",
   });
 
-  
   const animationVariants = {
-    visible: { opacity: 1, y: 0, transition: { duration: 1 } },
+    visible: { opacity: 1, y: 0, transition: { duration: 1, delay: .3 } },
     hidden: { opacity: 0, y: 200 },
   };
+
   return (
     <div className="bg-neutral-900 rounded-3xl border border-neutral-800 pt-16 flex flex-col gap-10 justify-between">
       <h2 className="text-3xl font-semibold px-8">Performance</h2>
