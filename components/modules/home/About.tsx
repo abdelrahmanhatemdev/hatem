@@ -40,6 +40,23 @@ const MobileFirst = dynamic(
   }
 );
 
+const PixelPerfect = dynamic(
+  () => import("@/components/modules/home/about/PixelPerfect"),
+  {
+    loading: Loading,
+  }
+);
+
+const TrustedBrands = dynamic(
+  () => import("@/components/modules/home/about/TrustedBrands"),
+  {
+    loading: Loading,
+  }
+);
+
+
+
+
 const About = () => {
   const responsiveRef = useRef(null);
   const responsiveIsInView = useInView(responsiveRef, {
@@ -101,11 +118,12 @@ const About = () => {
             </AnimatePresence>
           </div>
         </div>
-        <div className="grid grid-cols-[repeat(3,calc(33.33333%-0.8333333rem))] gap-10 ">
+        <div className="grid grid-cols-[repeat(3,calc(33.33333%-1.666666666rem))] gap-10 ">
           <SPA/>
           <MobileFirst/>
-          <div>Implementing REST APIs</div>
+          <PixelPerfect/>
         </div>
+        <TrustedBrands/>
       </div>
     </section>
   );

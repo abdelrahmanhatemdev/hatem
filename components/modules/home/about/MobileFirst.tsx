@@ -12,7 +12,7 @@ const MobileFirst = () => {
   });
 
   const animationVariants = {
-    visible: { opacity: 1, scale: 1, transition: { duration: 0.8 } },
+    visible: { opacity: 1, scale: 1, transition: { duration: 0.8, delay: .3 } },
     hidden: { opacity: 0, scale: 0.8 },
   };
   return (
@@ -28,7 +28,7 @@ const MobileFirst = () => {
             <div className="bg-gradient-to-r from-neutral-900 to-[#1f1f1f] rounded-3xl border pt-10 border-neutral-800 h-full flex flex-col gap-10 justify-center overflow-hidden relative">
               <div className="flex flex-col gap-4 items-start px-8">
                 <h3 className="text-xl font-semibold ">Mobile-First Design</h3>
-                <p className="text-sm font-semibold text-neutral-500">
+                <p className="text-sm font-semibold text-neutral-500 line-clamp-3">
                   I prioritize mobile-first development, ensuring your web
                   applications look and perform great on any device, from
                   smartphones to desktops.
@@ -53,17 +53,17 @@ const MobileFirst = () => {
                   loop
                   muted
                   playsInline
-                  className="max-w-[45%] border border-neutral-800 rounded-tr-2xl"
+                  className="max-w-[50%] border border-neutral-800 rounded-tr-2xl -ml-2"
                 >
                   <source src="/assets/media/about/mobile-first.mp4" />
                   Your browser does not support the video tag.
                 </video>
-                <div className="absolute start-[calc(45%+.5rem)] max-w-[45%] h-auto border border-neutral-800 rounded-t-2xl overflow-hidden">
+                <div className="absolute start-[calc(43%+.5rem)] max-w-[45%] h-auto border border-neutral-800 rounded-t-2xl overflow-hidden">
                 <motion.div
                   initial={{ y: "0%" }}
                   animate={{ y: "-77%" }}
                   transition={{
-                    duration: 8,
+                    duration: 15,
                     repeat: Infinity,
                     repeatType: "reverse",
                     ease: "easeInOut",

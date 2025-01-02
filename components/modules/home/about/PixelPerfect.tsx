@@ -3,7 +3,7 @@ import Link from "next/link";
 import { memo, useRef } from "react";
 import { HiArrowLongRight } from "react-icons/hi2";
 
-const SPA = () => {
+const PixelPerfect = () => {
   const boxRef = useRef(null);
   const boxIsInView = useInView(boxRef, {
     once: false,
@@ -11,7 +11,7 @@ const SPA = () => {
   });
 
   const animationVariants = {
-    visible: { opacity: 1, scale: 1, transition: { duration: 0.8 } },
+    visible: { opacity: 1, scale: 1, transition: { duration: 0.8, delay: .6 } },
     hidden: { opacity: 0, scale: 0.8 },
   };
   return (
@@ -27,11 +27,10 @@ const SPA = () => {
             <div className="bg-gradient-to-r from-neutral-900 to-[#1f1f1f] rounded-3xl border pt-10 border-neutral-800 h-full flex flex-col gap-10 justify-center overflow-hidden">
               <div className="flex flex-col gap-4 items-start px-8">
                 <h3 className="text-xl font-semibold ">
-                  Single Page Application (SPA)
+                  Pixel-Perfect Development
                 </h3>
                 <p className="text-sm font-semibold text-neutral-500 line-clamp-3">
-                  
-I build dynamic, fast-loading SPAs from the ground up, tailored to provide seamless user experience .
+                I transform your Figma, Sketch, or Adobe XD designs into production-ready code, aligning elements to ensure a flawless implementation.
                 </p>
                 <Link
                   href="/projects"
@@ -52,9 +51,9 @@ I build dynamic, fast-loading SPAs from the ground up, tailored to provide seaml
                   loop
                   muted
                   playsInline
-                  className="rounded-2xl -mb-24 -ml-10 max-w-96 border border-neutral-800"
+                  className="rounded-2xl  -ml-3 max-w-[22rem] border border-neutral-800"
                 >
-                  <source src="/assets/media/about/spa.mp4" />
+                  <source src="/assets/media/about/pixel-perfect.mp4" />
                   Your browser does not support the video tag.
                 </video>
               </div>
@@ -65,4 +64,4 @@ I build dynamic, fast-loading SPAs from the ground up, tailored to provide seaml
     </div>
   );
 };
-export default memo(SPA);
+export default memo(PixelPerfect);
