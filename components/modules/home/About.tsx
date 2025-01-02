@@ -26,6 +26,20 @@ const Performance = dynamic(
   }
 );
 
+const SPA = dynamic(
+  () => import("@/components/modules/home/about/SPA"),
+  {
+    loading: Loading,
+  }
+);
+
+const MobileFirst = dynamic(
+  () => import("@/components/modules/home/about/MobileFirst"),
+  {
+    loading: Loading,
+  }
+);
+
 const About = () => {
   const responsiveRef = useRef(null);
   const responsiveIsInView = useInView(responsiveRef, {
@@ -86,6 +100,11 @@ const About = () => {
               )}
             </AnimatePresence>
           </div>
+        </div>
+        <div className="grid grid-cols-[repeat(3,calc(33.33333%-0.8333333rem))] gap-10 ">
+          <SPA/>
+          <MobileFirst/>
+          <div>Implementing REST APIs</div>
         </div>
       </div>
     </section>

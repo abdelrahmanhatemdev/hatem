@@ -15,7 +15,7 @@ const Performance = () => {
   };
 
   return (
-    <div className="bg-neutral-900 rounded-3xl border border-neutral-800 pt-16 flex flex-col gap-10 justify-between">
+    <div className="bg-gradient-to-r from-neutral-900 to-[#1f1f1f] rounded-3xl border border-neutral-800 pt-10 flex flex-col gap-10 justify-between">
       <h2 className="text-3xl font-semibold px-8">Performance</h2>
       <div className="px-8 flex gap-8">
         <div className="w-[32rem] h-[20rem] h  relative overflow-hidden">
@@ -40,7 +40,7 @@ const Performance = () => {
                     className="absolute w-full h-auto"
                   >
                     <Image
-                      src="/assets/images/about/performance.webp"
+                      src="/assets/media/about/performance.webp"
                       alt="Responsive Web"
                       width={1366}
                       height={3024}

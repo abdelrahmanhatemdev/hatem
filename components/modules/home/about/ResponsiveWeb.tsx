@@ -22,10 +22,10 @@ const ResponsiveWeb = () => {
     hidden: { opacity: 0, y: 200 },
   };
   return (
-    <div className="bg-neutral-900 rounded-3xl border border-neutral-800 pt-16 flex flex-col gap-10 justify-between">
+    <div className="bg-gradient-to-r from-neutral-900 to-[#1f1f1f] rounded-3xl border border-neutral-800 pt-10 flex flex-col gap-10 justify-between">
       <h2 className="text-3xl font-semibold px-8">Responsive Web</h2>
       <div className="px-8 flex gap-8">
-        <div className="w-[22rem] h-[20rem] h  relative overflow-hidden">
+        <div className="w-[22rem] h-[20rem] h relative overflow-hidden">
           <div ref={responsiveWebRef}>
             <AnimatePresence>
               {responsiveWebIsInView && (
@@ -47,7 +47,7 @@ const ResponsiveWeb = () => {
                     className="absolute w-full h-auto"
                   >
                     <Image
-                      src="/assets/images/about/responsive-web.webp"
+                      src="/assets/media/about/responsive-web.webp"
                       alt="Responsive Web"
                       width={1366}
                       height={3024}
@@ -82,7 +82,7 @@ const ResponsiveWeb = () => {
                     className="absolute w-full h-auto"
                   >
                     <Image
-                      src="/assets/images/about/responsive-phone.webp"
+                      src="/assets/media/about/responsive-phone.webp"
                       alt="Responsive Phone"
                       width={1366}
                       height={3024}

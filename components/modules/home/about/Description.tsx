@@ -37,6 +37,15 @@ const Performance = () => {
     hidden: { opacity: 0, scale: 0.8 },
   };
 
+  const descriptionVariants = {
+    ...animationVariants,
+    visible: {
+      ...animationVariants.visible,
+      transition: { ...animationVariants.visible.transition, duration: 1.2  },
+    },
+  };
+
+
   const boxOneVariants = {
     ...animationVariants,
     visible: {
@@ -73,7 +82,7 @@ const Performance = () => {
     <div className="grid grid-cols-[calc(60%-1.25rem)_calc(40%-1.25rem)] gap-10 ">
       <div
         ref={descriptionRef}
-        className="bg-neutral-900 rounded-3xl border border-neutral-800 p-16"
+        className="h-full"
       >
         <AnimatePresence>
           {descriptionIsInView && (
@@ -81,8 +90,8 @@ const Performance = () => {
               initial="hidden"
               animate="visible"
               exit="hidden"
-              variants={animationVariants}
-              className="flex flex-col gap-4 justify-center"
+              variants={descriptionVariants}
+              className="bg-gradient-to-r from-neutral-900 to-[#1f1f1f] rounded-3xl border p-16 border-neutral-800 h-full flex flex-col gap-4 justify-center"
             >
               <h2 className="text-3xl font-semibold">
                 Crafting Code with Precision and Purpose
@@ -114,9 +123,8 @@ const Performance = () => {
                 animate="visible"
                 exit="hidden"
                 variants={boxOneVariants}
-                className="bg-neutral-900 rounded-3xl border border-neutral-800 p-10 flex flex-col gap-2 items-center justify-center"
+                className="bg-gradient-to-r from-neutral-900 to-[#1f1f1f] rounded-3xl border border-neutral-800 p-10 flex flex-col gap-2 items-center justify-center"
               >
-                <div>
                   <h3 className="text-5xl font-medium bg-gradient-to-b from-sky-600 to-sky-400 bg-clip-text text-transparent flex gap-1 items-center">
                     <span className="text-3xl">+</span>
                     <span>5</span>
@@ -124,7 +132,6 @@ const Performance = () => {
                   <p className="font-semibold tracking-wider text-center px-6">
                     Years of Experience
                   </p>
-                </div>
               </motion.div>
             )}
           </AnimatePresence>
@@ -137,7 +144,7 @@ const Performance = () => {
                 animate="visible"
                 exit="hidden"
                 variants={boxTwoVariants}
-                className="bg-neutral-900 rounded-3xl border border-neutral-800 p-10 flex flex-col gap-2 items-center justify-center"
+                className="bg-gradient-to-r from-neutral-900 to-[#1f1f1f] rounded-3xl border border-neutral-800 p-10 flex flex-col gap-2 items-center justify-center"
               >
                 <h3 className="text-5xl font-medium bg-gradient-to-b from-sky-600 to-sky-400 bg-clip-text text-transparent flex gap-1 items-center">
                   <span className="text-3xl">+</span>
@@ -158,7 +165,7 @@ const Performance = () => {
                 animate="visible"
                 exit="hidden"
                 variants={boxThreeVariants}
-                className="bg-neutral-900 rounded-3xl border border-neutral-800 p-10 flex flex-col gap-2 items-center justify-center"
+                className="bg-gradient-to-r from-neutral-900 to-[#1f1f1f] rounded-3xl border border-neutral-800 p-10 flex flex-col gap-2 items-center justify-center"
               >
                 {" "}
                 <h3 className="text-5xl font-medium bg-gradient-to-b from-sky-600 to-sky-400 bg-clip-text text-transparent flex gap-1 items-center">
@@ -180,7 +187,7 @@ const Performance = () => {
                 animate="visible"
                 exit="hidden"
                 variants={boxFourVariants}
-                className="bg-neutral-900 rounded-3xl border border-neutral-800 p-10 flex flex-col gap-2 items-center justify-center"
+                className="bg-gradient-to-r from-neutral-900 to-[#1f1f1f] rounded-3xl border border-neutral-800 p-10 flex flex-col gap-2 items-center justify-center"
               >
                 {" "}
                 <h3 className="text-5xl font-medium bg-gradient-to-b from-sky-600 to-sky-400 bg-clip-text text-transparent flex gap-1 items-center">

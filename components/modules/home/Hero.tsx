@@ -117,7 +117,7 @@ const Hero = () => {
                   >
                     <span >
                       <Image
-                        src="/assets/images/nextjs.png"
+                        src="/assets/media/nextjs.png"
                         fill
                         alt="Next.js"
                       />
