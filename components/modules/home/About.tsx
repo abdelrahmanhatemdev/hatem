@@ -90,33 +90,25 @@ const About = () => {
         <Description />
         <div className="grid grid-cols-[calc(50%-1.25rem)_calc(50%-1.25rem)] gap-10">
           <div ref={responsiveRef}>
-            <AnimatePresence>
-              {responsiveIsInView && (
                 <motion.div
                   initial="hidden"
-                  animate="visible"
-                  exit="hidden"
-                  variants={animationVariants}
+                  whileInView="visible"
+              viewport={{ once: true, amount: 0.5 }}     variants={animationVariants}
+                  layout
                 >
                   <ResponsiveWeb />
                 </motion.div>
-              )}
-            </AnimatePresence>
-          </div>
+                  </div>
           <div ref={performanceRef}>
-            <AnimatePresence>
-              {performanceIsInView && (
                 <motion.div
                   initial="hidden"
-                  animate="visible"
-                  exit="hidden"
-                  variants={animationDelayedVariants}
+                  whileInView="visible"
+              viewport={{ once: true, amount: 0.5 }}     variants={animationDelayedVariants}
+                  layout
                 >
                   <Performance />
                 </motion.div>
-              )}
-            </AnimatePresence>
-          </div>
+                  </div>
         </div>
         <div className="grid grid-cols-[repeat(3,calc(33.33333%-1.666666666rem))] gap-10 ">
           <SPA/>

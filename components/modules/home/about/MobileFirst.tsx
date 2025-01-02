@@ -17,13 +17,11 @@ const MobileFirst = () => {
   };
   return (
     <div ref={boxRef} className="h-full">
-      <AnimatePresence>
-        {boxIsInView && (
+      
           <motion.div
             initial="hidden"
-            animate="visible"
-            exit="hidden"
-            variants={animationVariants}
+            whileInView="visible"
+              viewport={{ once: true, amount: 0.5 }} variants={animationVariants}
           >
             <div className="bg-gradient-to-r from-neutral-900 to-[#1f1f1f] rounded-3xl border pt-10 border-neutral-800 h-full flex flex-col gap-10 justify-center overflow-hidden relative">
               <div className="flex flex-col gap-4 items-start px-8">
@@ -68,6 +66,7 @@ const MobileFirst = () => {
                     repeatType: "reverse",
                     ease: "easeInOut",
                   }}
+                  layout
                   className="w-full h-auto"
                 >
                   <Image
@@ -84,9 +83,7 @@ const MobileFirst = () => {
               </div>
             </div>
           </motion.div>
-        )}
-      </AnimatePresence>
-    </div>
+      </div>
   );
 };
 export default memo(MobileFirst);

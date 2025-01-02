@@ -25,10 +25,7 @@ const brands = [
 
 const TrustedBrands = () => {
   const boxRef = useRef(null);
-  const boxIsInView = useInView(boxRef, {
-    once: false,
-    margin: "0px",
-  });
+  
 
   const animationVariants = {
     visible: { opacity: 1, scale: 1, transition: { duration: 0.8 } },
@@ -36,13 +33,12 @@ const TrustedBrands = () => {
   };
   return (
     <div ref={boxRef} className="h-full">
-      <AnimatePresence>
-        {boxIsInView && (
+      
           <motion.div
             initial="hidden"
-            animate="visible"
-            exit="hidden"
-            variants={animationVariants}
+            whileInView="visible"
+              viewport={{ once: true, amount: 0.5 }} variants={animationVariants}
+            layout
           >
             <div className="bg-gradient-to-r from-neutral-900 to-[#1f1f1f] rounded-3xl border pt-10 border-neutral-800 h-full flex flex-col gap-10 justify-center items-center">
               <h3 className="text-xl font-semibold ">
@@ -67,9 +63,8 @@ const TrustedBrands = () => {
               </div>
             </div>
           </motion.div>
-        )}
-      </AnimatePresence>
-    </div>
+       
+      </div>
   );
 };
 export default memo(TrustedBrands);

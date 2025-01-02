@@ -27,12 +27,11 @@ const ResponsiveWeb = () => {
       <div className="px-8 flex gap-8">
         <div className="w-[22rem] h-[20rem] h relative overflow-hidden">
           <div ref={responsiveWebRef}>
-            <AnimatePresence>
-              {responsiveWebIsInView && (
+                  {responsiveWebIsInView && (
                 <motion.div
                   initial="hidden"
-                  animate="visible"
-                  exit="hidden"
+                  whileInView="visible"
+              viewport={{ once: true, amount: 0.5 }}     exit="hidden"
                   variants={animationVariants}
                 >
                   <motion.div
@@ -57,17 +56,15 @@ const ResponsiveWeb = () => {
                   </motion.div>
                 </motion.div>
               )}
-            </AnimatePresence>
-          </div>
+                  </div>
         </div>
         <div className="w-[8rem] h-[20rem] h relative overflow-hidden">
           <div ref={responsivePhoneRef}>
-            <AnimatePresence>
-              {responsivePhoneIsInView && (
+                  {responsivePhoneIsInView && (
                 <motion.div
                   initial="hidden"
-                  animate="visible"
-                  exit="hidden"
+                  whileInView="visible"
+              viewport={{ once: true, amount: 0.5 }}     exit="hidden"
                   variants={animationVariants}
                 >
                   <motion.div
@@ -92,8 +89,7 @@ const ResponsiveWeb = () => {
                   </motion.div>
                 </motion.div>
               )}
-            </AnimatePresence>
-          </div>
+                  </div>
         </div>
       </div>
     </div>

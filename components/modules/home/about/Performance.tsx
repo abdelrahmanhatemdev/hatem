@@ -20,12 +20,11 @@ const Performance = () => {
       <div className="px-8 flex gap-8">
         <div className="w-[32rem] h-[20rem] h  relative overflow-hidden">
           <div ref={performanceRef}>
-            <AnimatePresence>
-              {performanceIsInView && (
+                  {performanceIsInView && (
                 <motion.div
                   initial="hidden"
-                  animate="visible"
-                  exit="hidden"
+                  whileInView="visible"
+              viewport={{ once: true, amount: 0.5 }}     exit="hidden"
                   variants={animationVariants}
                 >
                   <motion.div
@@ -50,8 +49,7 @@ const Performance = () => {
                   </motion.div>
                 </motion.div>
               )}
-            </AnimatePresence>
-          </div>
+                  </div>
         </div>
       </div>
     </div>
