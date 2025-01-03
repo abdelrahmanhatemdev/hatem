@@ -1,21 +1,15 @@
-import { AnimatePresence, useInView, motion } from "framer-motion";
+import {  motion } from "framer-motion";
 import Link from "next/link";
-import { memo, useRef } from "react";
+import { memo } from "react";
 import { HiArrowLongRight } from "react-icons/hi2";
 
 const PixelPerfect = () => {
-  const boxRef = useRef(null);
-  const boxIsInView = useInView(boxRef, {
-    once: false,
-    margin: "0px",
-  });
 
   const animationVariants = {
     visible: { opacity: 1, scale: 1, transition: { duration: 0.8, delay: .6 } },
     hidden: { opacity: 0, scale: 0.8 },
   };
   return (
-    <div ref={boxRef} className="h-full">
    
           <motion.div
             initial="hidden"
@@ -44,13 +38,13 @@ const PixelPerfect = () => {
                   </div>
                 </Link>
               </div>
-              <div className="h-[19rem] overflow-hidden">
+              <div className="h-[16rem] md:h-[19rem] overflow-hidden">
                 <video
                   autoPlay
                   loop
                   muted
                   playsInline
-                  className="rounded-2xl  -ml-3 max-w-[22rem] border border-neutral-800"
+                  className="rounded-2xl  -ml-6  -mb-24 md:-ml-10 max-w-[19rem] border border-neutral-800"
                 >
                   <source src="/assets/media/about/pixel-perfect.mp4" />
                   Your browser does not support the video tag.
@@ -58,7 +52,6 @@ const PixelPerfect = () => {
               </div>
             </div>
           </motion.div>
-      </div>
   );
 };
 export default memo(PixelPerfect);

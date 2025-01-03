@@ -1,9 +1,9 @@
 "use client";
-import { memo, useRef } from "react";
+import { memo } from "react";
 
 import dynamic from "next/dynamic";
 import Loading from "@/components/custom/Loading";
-import { AnimatePresence, useInView, motion } from "framer-motion";
+import { useInView, motion } from "framer-motion";
 
 const Description = dynamic(
   () => import("@/components/modules/home/about/Description"),
@@ -26,12 +26,9 @@ const Performance = dynamic(
   }
 );
 
-const SPA = dynamic(
-  () => import("@/components/modules/home/about/SPA"),
-  {
-    loading: Loading,
-  }
-);
+const SPA = dynamic(() => import("@/components/modules/home/about/SPA"), {
+  loading: Loading,
+});
 
 const MobileFirst = dynamic(
   () => import("@/components/modules/home/about/MobileFirst"),
@@ -54,22 +51,7 @@ const TrustedBrands = dynamic(
   }
 );
 
-
-
-
 const About = () => {
-  const responsiveRef = useRef(null);
-  const responsiveIsInView = useInView(responsiveRef, {
-    once: false,
-    margin: "0px",
-  });
-  
-
-  const performanceRef = useRef(null);
-  const performanceIsInView = useInView(performanceRef, {
-    once: false,
-    margin: "0px",
-  });
 
   const animationVariants = {
     visible: { opacity: 1, scale: 1, transition: { duration: 0.8 } },
@@ -80,42 +62,42 @@ const About = () => {
     ...animationVariants,
     visible: {
       ...animationVariants.visible,
-      transition: { ...animationVariants.visible.transition, delay: .4 },
+      transition: { ...animationVariants.visible.transition, delay: 0.4 },
     },
   };
 
   return (
-    <section className="w-full mt-24">
-      <div className="w-[1225px] mx-auto flex flex-col gap-10">
+    <section className="w-full mt-24 px-10">
+      <div className="2xl:w-[1225px] mx-auto flex flex-col gap-10">
         <Description />
-        <div className="grid grid-cols-[calc(50%-1.25rem)_calc(50%-1.25rem)] gap-10">
-          <div ref={responsiveRef}>
-                <motion.div
-                  initial="hidden"
-                  whileInView="visible"
-              viewport={{ once: true, amount: 0.5 }}     variants={animationVariants}
-                  layout
-                >
-                  <ResponsiveWeb />
-                </motion.div>
-                  </div>
-          <div ref={performanceRef}>
-                <motion.div
-                  initial="hidden"
-                  whileInView="visible"
-              viewport={{ once: true, amount: 0.5 }}     variants={animationDelayedVariants}
-                  layout
-                >
-                  <Performance />
-                </motion.div>
-                  </div>
+        <div className="grid md:grid-cols-[calc(50%-1.25rem)_calc(50%-1.25rem)] gap-10">
+         
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.5 }}
+              variants={animationVariants}
+              layout
+              className="max-w-full"
+            >
+              <ResponsiveWeb />
+            </motion.div>
+            {/* <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.5 }}
+              variants={animationDelayedVariants}
+              layout
+            > */}
+              <Performance />
+            {/* </motion.div> */}
         </div>
-        <div className="grid grid-cols-[repeat(3,calc(33.33333%-1.666666666rem))] gap-10 ">
-          <SPA/>
-          <MobileFirst/>
-          <PixelPerfect/>
+        <div className="grid md:grid-cols-[repeat(3,calc(33.33333%-1.666666666rem))] gap-10 ">
+          <SPA />
+          <MobileFirst />
+          <PixelPerfect />
         </div>
-        <TrustedBrands/>
+        <TrustedBrands />
       </div>
     </section>
   );

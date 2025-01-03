@@ -1,10 +1,6 @@
-import { AnimatePresence, useInView, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import Image from "next/image";
-import Link from "next/link";
-import { memo, useRef } from "react";
-import { HiArrowLongRight } from "react-icons/hi2";
-import { Autoplay } from "swiper/modules";
-import { Swiper, SwiperSlide } from "swiper/react";
+import { memo } from "react";
 
 const brands = [
   "roasting-house",
@@ -24,7 +20,7 @@ const brands = [
 ];
 
 const TrustedBrands = () => {
-  const boxRef = useRef(null);
+
   
 
   const animationVariants = {
@@ -32,7 +28,6 @@ const TrustedBrands = () => {
     hidden: { opacity: 0, scale: 0.8 },
   };
   return (
-    <div ref={boxRef} className="h-full">
       
           <motion.div
             initial="hidden"
@@ -41,11 +36,11 @@ const TrustedBrands = () => {
             layout
           >
             <div className="bg-gradient-to-r from-neutral-900 to-[#1f1f1f] rounded-3xl border pt-10 border-neutral-800 h-full flex flex-col gap-10 justify-center items-center">
-              <h3 className="text-xl font-semibold ">
+              <h3 className="md:text-xl font-semibold text-center p-4">
                 Relied on by leaders across enterprises, growing scale-ups, and
                 innovative startups
               </h3>
-              <div className="grid grid-cols-7 px-20 gap-x-10">
+              <div className="grid grid-cols-2 lg:grid-cols-7 px-4 lg:px-20 gap-4 lg:gap-x-10">
                 {brands.map((brand) => (
                   <Image
                     key={`${brand}`}
@@ -64,7 +59,6 @@ const TrustedBrands = () => {
             </div>
           </motion.div>
        
-      </div>
   );
 };
 export default memo(TrustedBrands);
