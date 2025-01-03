@@ -13,8 +13,13 @@ const Home = () => {
   return (
     <>
       <Hero />
+      {/* <div>Images</div> */}
       <About/>
-      <div>Next Div</div>
+      {/* <div>Projects</div>
+      <div>Images</div>
+      <div>Area of Expertise</div> */}
+
+
     </>
   );
 };

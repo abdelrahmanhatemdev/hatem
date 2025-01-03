@@ -8,7 +8,7 @@ import { cn, cubicBezier } from "@/lib/utils";
 import { motion } from "framer-motion";
 
 const Hero = () => {
-  const [activeSlide, setActiveSlide] = useState<number | null>(null);
+  const [activeSlide, setActiveSlide] = useState<number | null>(1);
   const [progress, setProgress] = useState<number>(0);
   const [isAutoplaying, setIsAutoplaying] = useState<boolean>(false);
 
@@ -90,7 +90,7 @@ const Hero = () => {
           <SwiperSlide key={index}>
             {slide === 1 && (
               <div className="h-full flex flex-col justify-center">
-                <p className="text-[4vw] leading-[6vw] flex items-center gap-[1vw]">
+                <p className="text-2xl md:text-[4vw] md:leading-[6vw] flex items-center gap-[1vw]">
                   <motion.span
                     variants={slideVariants}
                     initial={`initial`}
@@ -133,7 +133,7 @@ const Hero = () => {
                       delay: 2* slideSpanDelay,
                     }}
                   >
-                    <strong className="font-extrabold tracking-wider text-[4.5vw] scale-y-105">
+                    <strong className="font-extrabold md:tracking-wider text-2xl md:text-[4.5vw] scale-y-105">
                       Developer
                     </strong>
                   </motion.span>
@@ -149,7 +149,7 @@ const Hero = () => {
                     delay: 1 * slideParagraphDelay,
                   }}
                 >
-                  <p className="text-[4vw] leading-[6vw]">
+                  <p className="text-2xl md:text-[4vw] md:leading-[6vw]">
                     <motion.span
                       variants={slideVariants}
                       initial={`initial`}
@@ -184,8 +184,8 @@ const Hero = () => {
                         delay: (1 * slideParagraphDelay) + (3 * slideSpanDelay),
                       }}
                     >
-                      <strong className="font-extrabold tracking-wider text-[4.5vw] scale-y-105">
-                        Frontend 
+                      <strong className="font-extrabold md:tracking-wider text-2xl md:text-[4.5vw] scale-y-105">
+                      Frontend First, Full-Stack-Ready 
                       </strong>
                     </motion.span>
                     <motion.span
@@ -198,7 +198,7 @@ const Hero = () => {
                         delay: (1 * slideParagraphDelay) + (4 * slideSpanDelay),
                       }}
                     >
-                      <strong className="font-extrabold tracking-wider text-[4.5vw] scale-y-105">
+                      <strong className="font-light">
                       {" "}Development
                       </strong>
                     </motion.span>
@@ -211,7 +211,7 @@ const Hero = () => {
                   exit={`exit`}
                   transition={{ ...slideTransition, delay: (2 * slideParagraphDelay) }}
                 >
-                  <p className="text-[4vw] leading-[6vw]">
+                  <p className="text-2xl md:text-[4vw] md:leading-[6vw]">
                     <motion.span
                       variants={slideVariants}
                       initial={`initial`}
@@ -237,7 +237,7 @@ const Hero = () => {
                       exit={`exit`}
                       transition={{ ...slideTransition, delay:(2 * slideParagraphDelay) + (3 * slideSpanDelay) }}
                     >
-                      <strong className="font-extrabold tracking-wider text-[4.5vw] scale-y-105">
+                      <strong className="font-extrabold md:tracking-wider text-2xl md:text-[4.5vw] scale-y-105">
                         Cairo
                       </strong>
                     </motion.span>
@@ -247,19 +247,19 @@ const Hero = () => {
             )}
             {slide === 2 && (
               <div className="h-full flex flex-col justify-center">
-                <p className="text-[4vw] leading-[6vw]">
+                <p className="text-2xl md:text-[4vw] md:leading-[6vw]">
                   <span className="font-thin">Focused on </span>
                   <span className="font-extralight">building </span>
                 </p>
-                <p className="text-[4vw] leading-[6vw]">
+                <p className="text-2xl md:text-[4vw] md:leading-[6vw]">
                   <span className="font-extralight">blazing-fast </span>
-                  <strong className="font-extrabold tracking-wider text-[4.5vw] scale-y-105">
+                  <strong className="font-extrabold md:tracking-wider text-2xl md:text-[4.5vw] scale-y-105">
                     performant, scalable,
                   </strong>
                 </p>
-                <p className="text-[4vw] leading-[6vw]">
+                <p className="text-2xl md:text-[4vw] md:leading-[6vw]">
                   <span className="font-thin">and </span>
-                  <strong className="font-extrabold tracking-wider text-[4.5vw] scale-y-105">
+                  <strong className="font-extrabold md:tracking-wider text-2xl md:text-[4.5vw] scale-y-105">
                     seamlessly integrated
                   </strong>
                   <span className="font-extralight"> web apps </span>
@@ -268,21 +268,21 @@ const Hero = () => {
             )}
             {slide === 3 && (
               <div className="h-full flex flex-col justify-center">
-                <p className="text-[4vw] leading-[6vw]">
+                <p className="text-2xl md:text-[4vw] md:leading-[6vw]">
                   <span className="font-thin"> With </span>
                   <span className="font-light">Code Speaks </span>
-                  <strong className="font-extrabold tracking-wider text-[4.5vw] scale-y-105">
+                  <strong className="font-extrabold md:tracking-wider text-2xl md:text-[4.5vw] scale-y-105">
                     Performance
                   </strong>
                 </p>
-                <p className="text-[4vw] leading-[6vw]">
+                <p className="text-2xl md:text-[4vw] md:leading-[6vw]">
                   <span className="font-thing">I </span>
                   <span className="font-extralight">value </span>
-                  <strong className="font-extrabold tracking-wider text-[4.5vw] scale-y-105">
+                  <strong className="font-extrabold md:tracking-wider text-2xl md:text-[4.5vw] scale-y-105">
                     Quality
                   </strong>
                   <span className="font-light"> over </span>
-                  <span className="font-thin opacity-90 text-[3.5rem] text-neutral-300">
+                  <span className="font-thin opacity-90 text-2xl md:text-[3.5rem] text-neutral-300">
                     Quantity
                   </span>
                 </p>
@@ -290,21 +290,21 @@ const Hero = () => {
             )}
           </SwiperSlide>
         ))}
-        <div className="absolute [transition:opacity_0.3s] z-10 bottom-[7vh] top-[var(--swiper-pagination-top, auto)] left-[0] flex gap-[6vw]">
+        <div className="absolute [transition:opacity_0.3s] z-10 bottom-[7vh] top-[var(--swiper-pagination-top, auto)] left-[0] flex gap-[6vw] w-full">
           {[1, 2, 3].map((slider) => {
             const isActive = slider === activeSlide;
             return (
-              <div className="flex items-center gap-[2vw]" key={slider}>
+              <div className={cn("flex items-center gap-[2vw]", isActive ? "grow": "" )} key={slider}>
                 <span
                   className={cn(
-                    "text-center text-[1.1rem] text-foreground cursor-pointer",
+                    "text-center text-2xl md:text-[1.1rem] text-foreground cursor-pointer",
                     `font-${isActive ? "bold" : "thin"}`
                   )}
                 >
                   0{slider}.
                 </span>
                 {isActive && (
-                  <div className="h-[0.01rem] w-[65vw] bg-muted">
+                  <div className="h-[0.01rem] w-full bg-muted">
                     <div
                       className="h-full bg-foreground"
                       style={{
