@@ -3,7 +3,7 @@ import { memo } from "react";
 
 import dynamic from "next/dynamic";
 import Loading from "@/components/custom/Loading";
-import { useInView, motion } from "framer-motion";
+import {motion } from "framer-motion";
 
 const Description = dynamic(
   () => import("@/components/modules/home/about/Description"),
@@ -82,15 +82,15 @@ const About = () => {
             >
               <ResponsiveWeb />
             </motion.div>
-            {/* <motion.div
+            <motion.div
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.5 }}
               variants={animationDelayedVariants}
               layout
-            > */}
+            >
               <Performance />
-            {/* </motion.div> */}
+            </motion.div>
         </div>
         <div className="grid md:grid-cols-[repeat(3,calc(33.33333%-1.666666666rem))] gap-10 ">
           <SPA />

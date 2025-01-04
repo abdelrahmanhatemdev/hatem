@@ -9,17 +9,21 @@ const About = dynamic(() => import("@/components/modules/home/About"), {
   loading: Loading,
 });
 
+const Expertise = dynamic(() => import("@/components/modules/home/Expertise"), {
+  loading: Loading,
+});
+
+const WorkProcess = dynamic(() => import("@/components/modules/home/WorkProcess"), {
+  loading: Loading,
+});
+
 const Home = () => {
   return (
     <>
       <Hero />
-      {/* <div>Images</div> */}
-      <About/>
-      {/* <div>Projects</div>
-      <div>Images</div>
-      <div>Area of Expertise</div> */}
-
-
+      <About />
+      <Expertise />
+      <WorkProcess/>
     </>
   );
 };
