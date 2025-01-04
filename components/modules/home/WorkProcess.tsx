@@ -61,8 +61,8 @@ const WorkProcess = () => {
             variants={animationVariants}
             layout
           >
-            <div className="grid lg:grid-cols-[calc(35%-1.25rem)_calc(65%-1.25rem)] gap-5 lg:gap-10 border-b border-b-neutral-800 pb-12">
-              <div className="flex flex-col gap-3">
+            <div className="grid lg:grid-cols-[calc(35%-1.25rem)_calc(65%-1.25rem)] gap-5 lg:gap-10 border-b border-b-neutral-800 pb-20 md:pb-12">
+              <div className="flex flex-col gap-3 pt-8 lg:pt-0">
                 <h2 className="text-3xl bg-gradient-to-b from-sky-600 to-sky-400 bg-clip-text text-transparent">
                   01.
                 </h2>
@@ -80,8 +80,10 @@ const WorkProcess = () => {
                 <Swiper
                   modules={[Autoplay]}
                   className="w-full relative"
-                  slidesPerView={4}
-                  spaceBetween={20}
+                  breakpoints={{
+                    320: { slidesPerView: 3, speed: 8000, spaceBetween: 10 },
+                    768: { slidesPerView: 4, speed: 15000, spaceBetween: 20 },
+                  }}
                   loop={true}
                   autoplay={{
                     delay: 0,
@@ -100,7 +102,7 @@ const WorkProcess = () => {
                   ].map((item) => (
                     <SwiperSlide key={item}>
                       <div className="flex justify-center items-center">
-                        <div className="bg-gradient-to-bl from-neutral-950 to-[#202020] py-4 px-8 rounded-full flex justify-center items-center text-sm border border-neutral-900">
+                        <div className="bg-gradient-to-bl from-neutral-950 to-[#202020] py-2 px-4 md:py-4 md:px-8 rounded-full flex justify-center items-center text-sm border border-neutral-900">
                           {item}
                         </div>
                       </div>
@@ -118,8 +120,8 @@ const WorkProcess = () => {
             variants={animationVariants}
             layout
           >
-            <div className="grid lg:grid-cols-[calc(35%-1.25rem)_calc(65%-1.25rem)] gap-5 lg:gap-10 border-b border-b-neutral-800 pb-12">
-              <div className="flex flex-col gap-3">
+            <div className="grid lg:grid-cols-[calc(35%-1.25rem)_calc(65%-1.25rem)] gap-5 lg:gap-10 border-b border-b-neutral-800 pb-20 md:pb-12">
+              <div className="flex flex-col gap-3 pt-8 lg:pt-0">
                 <h2 className="text-3xl bg-gradient-to-b from-sky-600 to-sky-400 bg-clip-text text-transparent">
                   02.
                 </h2>
@@ -138,18 +140,16 @@ const WorkProcess = () => {
                 <Swiper
                   modules={[Autoplay]}
                   className="w-full relative"
-                  slidesPerView={4}
-                  spaceBetween={20}
+                  breakpoints={{
+                    320: { slidesPerView: 3, speed: 8000, spaceBetween: 10 },
+                    768: { slidesPerView: 4, speed: 15000, spaceBetween: 20 },
+                  }}
                   loop={true}
                   autoplay={{
                     delay: 0,
                     disableOnInteraction: false,
                     reverseDirection: true,
-                  }}
-                  speed={15000}
-                  direction="horizontal"
-                  dir="ltr"
-                >
+                  }}>
                   <div className="h-full w-40 bg-gradient-to-r from-black to-transparent absolute inset-0 z-10"></div>
                   {[
                     "Trends",
@@ -161,7 +161,7 @@ const WorkProcess = () => {
                   ].map((item) => (
                     <SwiperSlide key={item}>
                       <div className="flex justify-center items-center">
-                        <div className="bg-gradient-to-bl from-neutral-950 to-[#202020] py-4 px-8 rounded-full flex justify-center items-center text-sm border border-neutral-900">
+                        <div className="bg-gradient-to-bl from-neutral-950 to-[#202020] py-2 px-4 md:py-4 md:px-8 rounded-full flex justify-center items-center text-sm border border-neutral-900">
                           {item}
                         </div>
                       </div>
@@ -179,8 +179,8 @@ const WorkProcess = () => {
             variants={animationVariants}
             layout
           >
-            <div className="grid lg:grid-cols-[calc(35%-1.25rem)_calc(65%-1.25rem)] gap-5 lg:gap-10 border-b border-b-neutral-800 pb-12">
-              <div className="flex flex-col gap-3">
+            <div className="grid lg:grid-cols-[calc(35%-1.25rem)_calc(65%-1.25rem)] gap-5 lg:gap-10 border-b border-b-neutral-800 pb-20 md:pb-12">
+              <div className="flex flex-col gap-3 pt-8 lg:pt-0">
                 <h2 className="text-3xl bg-gradient-to-b from-sky-600 to-sky-400 bg-clip-text text-transparent">
                   03.
                 </h2>
@@ -199,17 +199,15 @@ const WorkProcess = () => {
                 <Swiper
                   modules={[Autoplay]}
                   className="w-full relative"
-                  slidesPerView={4}
-                  spaceBetween={20}
+                  breakpoints={{
+                    320: { slidesPerView: 3, speed: 8000, spaceBetween: 10 },
+                    768: { slidesPerView: 4, speed: 15000, spaceBetween: 20 },
+                  }}
                   loop={true}
                   autoplay={{
                     delay: 0,
                     disableOnInteraction: false,
-                  }}
-                  speed={15000}
-                  direction="horizontal"
-                  dir="ltr"
-                >
+                  }}>
                   <div className="h-full w-40 bg-gradient-to-r from-black to-transparent absolute inset-0 z-10"></div>
                   {[
                     "Coding",
@@ -221,7 +219,7 @@ const WorkProcess = () => {
                   ].map((item) => (
                     <SwiperSlide key={item}>
                       <div className="flex justify-center items-center">
-                        <div className="bg-gradient-to-bl from-neutral-950 to-[#202020] py-4 px-8 rounded-full flex justify-center items-center text-sm border border-neutral-900">
+                        <div className="bg-gradient-to-bl from-neutral-950 to-[#202020] py-2 px-4 md:py-4 md:px-8 rounded-full flex justify-center items-center text-sm border border-neutral-900">
                           {item}
                         </div>
                       </div>
@@ -239,8 +237,8 @@ const WorkProcess = () => {
             variants={animationVariants}
             layout
           >
-            <div className="grid lg:grid-cols-[calc(35%-1.25rem)_calc(65%-1.25rem)] gap-5 lg:gap-10 border-b border-b-neutral-800 pb-12">
-              <div className="flex flex-col gap-3">
+            <div className="grid lg:grid-cols-[calc(35%-1.25rem)_calc(65%-1.25rem)] gap-5 lg:gap-10 border-b border-b-neutral-800 pb-20 md:pb-12">
+              <div className="flex flex-col gap-3 pt-8 lg:pt-0">
                 <h2 className="text-3xl bg-gradient-to-b from-sky-600 to-sky-400 bg-clip-text text-transparent">
                   04.
                 </h2>
@@ -248,24 +246,26 @@ const WorkProcess = () => {
               </div>
               <div className="grid gap-10">
                 <p className="text-neutral-500 text-lg font-semibold">
-                Once the development is complete, I rigorously test every element of your application. I go beyond basic checks, examining usability, accessibility, and performance across devices and browsers. I ensure your application is smooth, fast, and free of errors, so you can launch with confidence.
+                  Once the development is complete, I rigorously test every
+                  element of your application. I go beyond basic checks,
+                  examining usability, accessibility, and performance across
+                  devices and browsers. I ensure your application is smooth,
+                  fast, and free of errors, so you can launch with confidence.
                 </p>
 
                 <Swiper
                   modules={[Autoplay]}
                   className="w-full relative"
-                  slidesPerView={4}
-                  spaceBetween={20}
+                  breakpoints={{
+                    320: { slidesPerView: 3, speed: 8000, spaceBetween: 10 },
+                    768: { slidesPerView: 4, speed: 15000, spaceBetween: 20 },
+                  }}
                   loop={true}
                   autoplay={{
                     delay: 0,
                     disableOnInteraction: false,
                     reverseDirection: true,
-                  }}
-                  speed={15000}
-                  direction="horizontal"
-                  dir="ltr"
-                >
+                  }}>
                   <div className="h-full w-40 bg-gradient-to-r from-black to-transparent absolute inset-0 z-10"></div>
                   {[
                     "Testing",
@@ -277,7 +277,7 @@ const WorkProcess = () => {
                   ].map((item) => (
                     <SwiperSlide key={item}>
                       <div className="flex justify-center items-center">
-                        <div className="bg-gradient-to-bl from-neutral-950 to-[#202020] py-4 px-8 rounded-full flex justify-center items-center text-sm border border-neutral-900">
+                        <div className="bg-gradient-to-bl from-neutral-950 to-[#202020] py-2 px-4 md:py-4 md:px-8 rounded-full flex justify-center items-center text-sm border border-neutral-900">
                           {item}
                         </div>
                       </div>
@@ -295,8 +295,8 @@ const WorkProcess = () => {
             variants={animationVariants}
             layout
           >
-            <div className="grid lg:grid-cols-[calc(35%-1.25rem)_calc(65%-1.25rem)] gap-5 lg:gap-10 border-b border-b-neutral-800 pb-12">
-              <div className="flex flex-col gap-3">
+            <div className="grid lg:grid-cols-[calc(35%-1.25rem)_calc(65%-1.25rem)] gap-5 lg:gap-10 border-b border-b-neutral-800 pb-20 md:pb-12">
+              <div className="flex flex-col gap-3 pt-8 lg:pt-0">
                 <h2 className="text-3xl bg-gradient-to-b from-sky-600 to-sky-400 bg-clip-text text-transparent">
                   05.
                 </h2>
@@ -304,23 +304,25 @@ const WorkProcess = () => {
               </div>
               <div className="grid gap-10">
                 <p className="text-neutral-500 text-lg font-semibold">
-                After final testing, I handle the deployment process myself, using platforms like Vercel or netlify for seamless delivery. Post-launch, I continue to monitor and fine-tune the application, ensuring it adapts perfectly to real-world usage and delivers exceptional performance for your users.
+                  After final testing, I handle the deployment process myself,
+                  using platforms like Vercel or netlify for seamless delivery.
+                  Post-launch, I continue to monitor and fine-tune the
+                  application, ensuring it adapts perfectly to real-world usage
+                  and delivers exceptional performance for your users.
                 </p>
 
                 <Swiper
                   modules={[Autoplay]}
                   className="w-full relative"
-                  slidesPerView={4}
-                  spaceBetween={20}
+                  breakpoints={{
+                    320: { slidesPerView: 3, speed: 8000, spaceBetween: 10 },
+                    768: { slidesPerView: 4, speed: 15000, spaceBetween: 20 },
+                  }}
                   loop={true}
                   autoplay={{
                     delay: 0,
                     disableOnInteraction: false,
-                  }}
-                  speed={15000}
-                  direction="horizontal"
-                  dir="ltr"
-                >
+                  }}>
                   <div className="h-full w-40 bg-gradient-to-r from-black to-transparent absolute inset-0 z-10"></div>
                   {[
                     "Deploy",
@@ -332,7 +334,7 @@ const WorkProcess = () => {
                   ].map((item) => (
                     <SwiperSlide key={item}>
                       <div className="flex justify-center items-center">
-                        <div className="bg-gradient-to-bl from-neutral-950 to-[#202020] py-4 px-8 rounded-full flex justify-center items-center text-sm border border-neutral-900">
+                        <div className="bg-gradient-to-bl from-neutral-950 to-[#202020] py-2 px-4 md:py-4 md:px-8 rounded-full flex justify-center items-center text-sm border border-neutral-900">
                           {item}
                         </div>
                       </div>
