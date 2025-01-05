@@ -13,9 +13,19 @@ const Expertise = dynamic(() => import("@/components/modules/home/Expertise"), {
   loading: Loading,
 });
 
-const WorkProcess = dynamic(() => import("@/components/modules/home/WorkProcess"), {
-  loading: Loading,
-});
+const WorkProcess = dynamic(
+  () => import("@/components/modules/home/WorkProcess"),
+  {
+    loading: Loading,
+  }
+);
+
+const StartProject = dynamic(
+  () => import("@/components/modules/home/StartProject"),
+  {
+    loading: Loading,
+  }
+);
 
 const Home = () => {
   return (
@@ -23,7 +33,9 @@ const Home = () => {
       <Hero />
       <About />
       <Expertise />
-      <WorkProcess/>
+      <WorkProcess />
+      <StartProject />
+      
     </>
   );
 };

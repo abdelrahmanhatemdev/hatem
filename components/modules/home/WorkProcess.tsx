@@ -13,42 +13,6 @@ const WorkProcess = () => {
     hidden: { opacity: 0, scale: 0.8 },
   };
 
-  const boxTwoVariants = {
-    ...animationVariants,
-    visible: {
-      ...animationVariants.visible,
-      transition: { ...animationVariants.visible.transition, delay: 0.3 },
-    },
-  };
-  const boxThreeVariants = {
-    ...animationVariants,
-    visible: {
-      ...animationVariants.visible,
-      transition: { ...animationVariants.visible.transition, delay: 0.6 },
-    },
-  };
-  const boxFourVariants = {
-    ...animationVariants,
-    visible: {
-      ...animationVariants.visible,
-      transition: { ...animationVariants.visible.transition, delay: 0.9 },
-    },
-  };
-  const boxFiveVariants = {
-    ...animationVariants,
-    visible: {
-      ...animationVariants.visible,
-      transition: { ...animationVariants.visible.transition, delay: 1.2 },
-    },
-  };
-  const boxSixVariants = {
-    ...animationVariants,
-    visible: {
-      ...animationVariants.visible,
-      transition: { ...animationVariants.visible.transition, delay: 1.5 },
-    },
-  };
-
   return (
     <section className="w-full mt-32 px-10">
       <div className="2xl:w-[80vw] mx-auto flex flex-col gap-10">
@@ -149,7 +113,8 @@ const WorkProcess = () => {
                     delay: 0,
                     disableOnInteraction: false,
                     reverseDirection: true,
-                  }}>
+                  }}
+                >
                   <div className="h-full w-40 bg-gradient-to-r from-black to-transparent absolute inset-0 z-10"></div>
                   {[
                     "Trends",
@@ -207,7 +172,8 @@ const WorkProcess = () => {
                   autoplay={{
                     delay: 0,
                     disableOnInteraction: false,
-                  }}>
+                  }}
+                >
                   <div className="h-full w-40 bg-gradient-to-r from-black to-transparent absolute inset-0 z-10"></div>
                   {[
                     "Coding",
@@ -265,7 +231,8 @@ const WorkProcess = () => {
                     delay: 0,
                     disableOnInteraction: false,
                     reverseDirection: true,
-                  }}>
+                  }}
+                >
                   <div className="h-full w-40 bg-gradient-to-r from-black to-transparent absolute inset-0 z-10"></div>
                   {[
                     "Testing",
@@ -322,7 +289,8 @@ const WorkProcess = () => {
                   autoplay={{
                     delay: 0,
                     disableOnInteraction: false,
-                  }}>
+                  }}
+                >
                   <div className="h-full w-40 bg-gradient-to-r from-black to-transparent absolute inset-0 z-10"></div>
                   {[
                     "Deploy",

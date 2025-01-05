@@ -13,7 +13,8 @@ import { TbBrandLinkedinFilled } from "react-icons/tb";
 
 function Header() {
   return (
-    <nav className="fixed inset-4 z-10 flex items-center justify-between bg-neutral-950 bg-opacity-40 h-fit rounded-full py-2 md:px-10 px-6">
+    <header className="fixed inset-0 z-10 w-[94vw] p-4 h-12">
+    <nav className="flex items-center justify-between bg-neutral-950 bg-opacity-40 h-fit rounded-full md:px-10 px-6 py-2">
       <div className="uppercase font-bold text-lg">HATEM</div>
       <div className="flex gap-6 items-center justify-start">
         <ul className="gap-6 items-center justify-start hidden md:flex ">
@@ -87,6 +88,7 @@ function Header() {
         </div>
       </div>
     </nav>
+    </header>
   );
 }
 export default Header;

@@ -8,10 +8,10 @@ const Header = dynamic(() => import("@/components/modules/header/Header"), {
 
 function AppLayout({ children }: Readonly<{ children: ReactNode }>) {
   return (
-    <main className="relative">
+    <main className="relative w-[94vw]">
       <Header />
-
       {children}
+      <div className="mt-40">Footer</div>
     </main>
   );
 }
