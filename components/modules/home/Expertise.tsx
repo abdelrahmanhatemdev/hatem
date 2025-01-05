@@ -25,28 +25,28 @@ const Expertise = () => {
     ...animationVariants,
     visible: {
       ...animationVariants.visible,
-      transition: { ...animationVariants.visible.transition, delay: 0.6 },
+      transition: { ...animationVariants.visible.transition, delay: 0.5 },
     },
   };
   const boxFourVariants = {
     ...animationVariants,
     visible: {
       ...animationVariants.visible,
-      transition: { ...animationVariants.visible.transition, delay: 0.9 },
+      transition: { ...animationVariants.visible.transition, delay: 0.3 },
     },
   };
   const boxFiveVariants = {
     ...animationVariants,
     visible: {
       ...animationVariants.visible,
-      transition: { ...animationVariants.visible.transition, delay: 1.2 },
+      transition: { ...animationVariants.visible.transition, delay: 0.5 },
     },
   };
   const boxSixVariants = {
     ...animationVariants,
     visible: {
       ...animationVariants.visible,
-      transition: { ...animationVariants.visible.transition, delay: 1.5 },
+      transition: { ...animationVariants.visible.transition, delay: 0.7 },
     },
   };
 
@@ -173,7 +173,6 @@ const Expertise = () => {
               </p>
             </div>
           </motion.div>
-
           <motion.div
             initial="hidden"
             whileInView="visible"

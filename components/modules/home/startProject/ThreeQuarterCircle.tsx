@@ -1,21 +1,23 @@
 import { memo } from "react";
 
-const ThreeQuarterDashedCircle = ({
-  size = 64, 
-  strokeColor = "#191919", 
-  strokeWidth = 1, 
-  dashLength = 4, 
+const ThreeQuarterCircle = ({
+  size = 64,
+  strokeColor = "#191919",
+  strokeWidth = 1,
+  dashLength = 4,
   gapLength = 2,
   gapCorner = "rb",
   className = "",
-
 }) => {
-  const radius = (size - strokeWidth) / 2; 
-  const circumference = 2 * Math.PI * radius; 
-  const arcLength = (3 / 4) * circumference; 
-  const dashArray = Array.from({ length: 30 }, () => `${dashLength} ${gapLength}`)
-  .map((dash) => dash)
-  .join(" ");
+  const radius = (size - strokeWidth) / 2;
+  const circumference = 2 * Math.PI * radius;
+  const arcLength = (3 / 4) * circumference;
+  const dashArray = Array.from(
+    { length: 30 },
+    () => `${dashLength} ${gapLength}`
+  )
+    .map((dash) => dash)
+    .join(" ");
 
   return (
     <svg
@@ -32,12 +34,14 @@ const ThreeQuarterDashedCircle = ({
         fill="none"
         stroke={strokeColor}
         strokeWidth={strokeWidth}
-        strokeDasharray={`${dashArray} ${arcLength}`} // Dashed pattern
-        strokeDashoffset={-circumference / 4} // Offset to position the gap
-        transform={`rotate(${gapCorner === "lt" ? 180 : 0} ${size / 2} ${size / 2})`} // Rotate to start at the top
+        strokeDasharray={`${dashArray} ${arcLength}`}
+        strokeDashoffset={-circumference / 4}
+        transform={`rotate(${gapCorner === "lt" ? 180 : 0} ${size / 2} ${
+          size / 2
+        })`}
       />
     </svg>
   );
 };
 
-export default memo(ThreeQuarterDashedCircle);
+export default memo(ThreeQuarterCircle);
