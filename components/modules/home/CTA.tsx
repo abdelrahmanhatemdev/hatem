@@ -6,20 +6,20 @@ import dynamic from "next/dynamic";
 import Loading from "@/components/custom/Loading";
 
 const ThreeQuarterCircle = dynamic(
-  () => import("@/components/modules/home/startProject/ThreeQuarterCircle"),
+  () => import("@/components/modules/home/cta/ThreeQuarterCircle"),
   {
     loading: Loading,
   }
 );
 
-const StartProject = () => {
+const CTA = () => {
   const mainVariants = {
-    visible: { opacity: 1, transition: { duration: 3 } },
+    visible: { opacity: 1, transition: { duration: 2 } },
     hidden: { opacity: 0 },
   };
 
   const animationVariants = {
-    visible: { opacity: 1, scale: 1, transition: { duration: 1.5 } },
+    visible: { opacity: 1, scale: 1, transition: { duration: 1 } },
     hidden: { opacity: 0, scale: 0.9 },
   };
 
@@ -27,7 +27,7 @@ const StartProject = () => {
     ...animationVariants,
     visible: {
       ...animationVariants.visible,
-      transition: { ...animationVariants.visible.transition, delay: 2 },
+      transition: { ...animationVariants.visible.transition, delay: 1.5 },
     },
   };
 
@@ -35,7 +35,7 @@ const StartProject = () => {
     ...animationVariants,
     visible: {
       ...animationVariants.visible,
-      transition: { ...animationVariants.visible.transition, delay: 2.5 },
+      transition: { ...animationVariants.visible.transition, delay: 2 },
     },
   };
 
@@ -43,7 +43,7 @@ const StartProject = () => {
     ...animationVariants,
     visible: {
       ...animationVariants.visible,
-      transition: { ...animationVariants.visible.transition, delay: 3 },
+      transition: { ...animationVariants.visible.transition, delay: 2.5 },
     },
   };
 
@@ -164,15 +164,25 @@ const StartProject = () => {
           border-[#191919] border-x-0 border-t-0"
             ></div>
             <div className="bg-neutral-950 bg-opacity-10 hover:bg-opacity-70 transition-colors duration-500"></div>
-            <div className="h-full lg:border border-dashed border-[#191919] border-y-transparent flex items-center justify-center p-12 relative">
+            <div className="h-full lg:border border-dashed border-[#191919] border-y-transparent flex items-center justify-center gap-4 p-12 relative">
               <motion.div
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.5 }}
                 variants={boxThreeVariants}
               >
-                <button className="bg-neutral-950 py-4 lg:py-6 px-6 lg:px-[1.2vw] xl:px-[2vw] text-xl lg:text-[1.5vw] xl:text-[1.7vw] font-bold rounded-full cursor-pointer hover:bg-neutral-900 text-white transition-colors shadow-lg border border-neutral-900">
-                  Start Project
+                <button className="bg-neutral-50 py-4 px-6 font-medium text-lg rounded-lg cursor-pointer hover:bg-neutral-300 text-neutral-950 transition-colors shadow-lg border border-neutral-900">
+                  Start a Project
+                </button>
+              </motion.div>
+              <motion.div
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.5 }}
+                variants={boxThreeVariants}
+              >
+                <button className="bg-neutral-950 py-4 px-6 font-medium text-lg rounded-lg cursor-pointer hover:bg-neutral-900 text-white transition-colors shadow-lg border border-neutral-900">
+                  Join a Team
                 </button>
               </motion.div>
               <ThreeQuarterCircle
@@ -192,4 +202,4 @@ const StartProject = () => {
     </section>
   );
 };
-export default memo(StartProject);
+export default memo(CTA);

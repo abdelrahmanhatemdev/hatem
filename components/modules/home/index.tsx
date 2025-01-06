@@ -20,8 +20,8 @@ const WorkProcess = dynamic(
   }
 );
 
-const StartProject = dynamic(
-  () => import("@/components/modules/home/StartProject"),
+const CTA = dynamic(
+  () => import("@/components/modules/home/CTA"),
   {
     loading: Loading,
   }
@@ -34,7 +34,7 @@ const Home = () => {
       <About />
       <Expertise />
       <WorkProcess />
-      <StartProject />
+      <CTA />
       
     </>
   );

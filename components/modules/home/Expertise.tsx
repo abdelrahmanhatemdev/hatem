@@ -52,7 +52,7 @@ const Expertise = () => {
 
   return (
     <section className="w-full mt-32 px-10">
-      <div className="2xl:w-[80vw] mx-auto flex flex-col gap-10">
+      <div className="2xl:w-[70vw] mx-auto flex flex-col gap-10">
         <h2 className="md:text-6xl  text-center p-4">Areas of Expertise</h2>
         <div className="grid md:grid-cols-[repeat(3,calc(33.33333%-1.666666666rem))] gap-5 lg:gap-10 ">
           <motion.div
