@@ -43,7 +43,7 @@ const Stack = () => {
 
   return (
     <section className="w-[80vw] md:w-[70vw] mx-auto mt-40">
-      <div className="lg:hidden flex flex-col gap-4">
+      <div className="flex flex-col gap-4">
         <h2 className="text-7xl font-semibold text-white leading-[3rem]">
           Stack
         </h2>
@@ -61,19 +61,19 @@ const Stack = () => {
             <div className="col-span-2 grid grid-cols-2 order-3 md:order-1">
               <div className="hidden md:block col-span-2  row-span-2 h-[calc(70vw/6)]"></div>
               <div className="hidden md:flex col-span-2  row-span-2 h-[calc(70vw/6)] md:flex-col md:gap-4 p-4">
-                <h2 className="text-[6vw] font-semibold text-white leading-[6vw]">
+                {/* <h2 className="text-[6vw] font-semibold text-white leading-[6vw]">
                   Stack
                 </h2>
                 <p className="text-sm md:text-md 2xl:text-lg text-neutral-100">
                   My preferred tools and the foundation behind my proficiency to
                   create seamless high-performance applications.
-                </p>
+                </p> */}
               </div>
               <div className="hidden md:block w-[calc(80vw/2)] h-[calc(80vw/2)] md:w-[calc(70vw/6)] md:h-[calc(70vw/6)]"></div>
               <div className="hidden md:block border-b border-neutral-800  w-[calc(80vw/2)] h-[calc(80vw/2)] md:w-[calc(70vw/6)] md:h-[calc(70vw/6)]"></div>
               <div className="hidden md:block border-b border-neutral-800  w-[calc(80vw/2)] h-[calc(80vw/2)] md:w-[calc(70vw/6)] md:h-[calc(70vw/6)]"></div>
-             
-              <div className="group border-e md:boder-e-none border-b border-s border-neutral-800 w-[calc(80vw/2)] h-[calc(80vw/2)] md:w-[calc(70vw/6)] md:h-[calc(70vw/6)] flex flex-col items-center justify-center p-5 md:p-[1.2vw] cursor-pointer hover:bg-neutral-950 transition-colors relative">
+
+              <div className="group border-e md:border-e-transparent border-b border-s border-neutral-800 w-[calc(80vw/2)] h-[calc(80vw/2)] md:w-[calc(70vw/6)] md:h-[calc(70vw/6)] flex flex-col items-center justify-center p-5 md:p-[1.2vw] cursor-pointer hover:bg-neutral-950 transition-colors relative">
                 <Image
                   src={`/assets/media/stack/github.png`}
                   alt={`React`}
@@ -83,7 +83,7 @@ const Stack = () => {
                   className="transition duration-500 ease-in-out brightness-0 contrast-200 invert"
                 />
                 <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-500 absolute w-full bottom-0 left-0 p-1 leading-3 text-sm">
-                Github
+                  Github
                 </div>
               </div>
               <div className="group border-b border-neutral-800 w-[calc(80vw/2)] h-[calc(80vw/2)] md:w-[calc(70vw/6)] md:h-[calc(70vw/6)] flex flex-col items-center justify-center p-5 md:p-[1.2vw] cursor-pointer hover:bg-neutral-950 transition-colors relative">
@@ -99,7 +99,7 @@ const Stack = () => {
                   Firebase
                 </div>
               </div>
-              <div className="group border-e md:boder-e-none border-b border-s  border-neutral-800 w-[calc(80vw/2)] h-[calc(80vw/2)] md:w-[calc(70vw/6)] md:h-[calc(70vw/6)] flex flex-col items-center justify-center p-5 md:p-[1.2vw] cursor-pointer hover:bg-neutral-950 transition-colors relative">
+              <div className="group border-e md:border-e-transparent border-b border-s  border-neutral-800 w-[calc(80vw/2)] h-[calc(80vw/2)] md:w-[calc(70vw/6)] md:h-[calc(70vw/6)] flex flex-col items-center justify-center p-5 md:p-[1.2vw] cursor-pointer hover:bg-neutral-950 transition-colors relative">
                 <Image
                   src={`/assets/media/stack/mysql.png`}
                   alt={`React`}

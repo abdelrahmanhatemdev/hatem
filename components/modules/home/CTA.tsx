@@ -55,7 +55,7 @@ const CTA = () => {
         viewport={{ once: true, amount: 0.5 }}
         variants={mainVariants}
       >
-        <div className="w-[98%] xs:w-[calc(95%-80px)] md:w-[65vw] mx-auto h-full relative pt-4 z-10">
+        <div className="xs:w-[calc(95%-80px)] w-[80vw] md:w-[70vw] mx-auto h-full relative pt-4 z-10">
           <div
             className="w-full h-16 grid lg:grid-cols-3 absolute left-0 -top-12 border border-dashed 
           border-[#191919] border-y-0"
@@ -164,12 +164,13 @@ const CTA = () => {
           border-[#191919] border-x-0 border-t-0"
             ></div>
             <div className="bg-neutral-950 bg-opacity-10 hover:bg-opacity-70 transition-colors duration-500"></div>
-            <div className="h-full lg:border border-dashed border-[#191919] border-y-transparent flex items-center justify-center gap-4 p-12 relative">
+            <div className="h-full lg:border border-dashed border-[#191919] border-y-transparent flex flex-col lg:flex-row items-center justify-center gap-4 p-12 relative">
               <motion.div
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.5 }}
                 variants={boxThreeVariants}
+                className="w-full md:w-auto"
               >
                 <button className="bg-neutral-50 py-3 px-4 font-medium text-lg rounded-xl cursor-pointer hover:bg-neutral-300 text-neutral-950 transition-colors shadow-lg border border-neutral-900">
                   Join a Team
@@ -180,6 +181,7 @@ const CTA = () => {
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.5 }}
                 variants={boxThreeVariants}
+                className="w-full md:w-auto"
               >
                 <button className="bg-neutral-950 py-3 px-4 font-medium text-lg rounded-xl cursor-pointer hover:bg-neutral-900 text-white transition-colors shadow-lg border border-neutral-900">
                   Start a Project
