@@ -171,8 +171,8 @@ const CTA = () => {
                 viewport={{ once: true, amount: 0.5 }}
                 variants={boxThreeVariants}
               >
-                <button className="bg-neutral-50 py-4 px-6 font-medium text-lg rounded-lg cursor-pointer hover:bg-neutral-300 text-neutral-950 transition-colors shadow-lg border border-neutral-900">
-                  Start a Project
+                <button className="bg-neutral-50 py-3 px-4 font-medium text-lg rounded-xl cursor-pointer hover:bg-neutral-300 text-neutral-950 transition-colors shadow-lg border border-neutral-900">
+                  Join a Team
                 </button>
               </motion.div>
               <motion.div
@@ -181,8 +181,8 @@ const CTA = () => {
                 viewport={{ once: true, amount: 0.5 }}
                 variants={boxThreeVariants}
               >
-                <button className="bg-neutral-950 py-4 px-6 font-medium text-lg rounded-lg cursor-pointer hover:bg-neutral-900 text-white transition-colors shadow-lg border border-neutral-900">
-                  Join a Team
+                <button className="bg-neutral-950 py-3 px-4 font-medium text-lg rounded-xl cursor-pointer hover:bg-neutral-900 text-white transition-colors shadow-lg border border-neutral-900">
+                  Start a Project
                 </button>
               </motion.div>
               <ThreeQuarterCircle

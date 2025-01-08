@@ -20,12 +20,13 @@ const WorkProcess = dynamic(
   }
 );
 
-const CTA = dynamic(
-  () => import("@/components/modules/home/CTA"),
-  {
-    loading: Loading,
-  }
-);
+const Stack = dynamic(() => import("@/components/modules/home/Stack"), {
+  loading: Loading,
+});
+
+const CTA = dynamic(() => import("@/components/modules/home/CTA"), {
+  loading: Loading,
+});
 
 const Home = () => {
   return (
@@ -34,8 +35,8 @@ const Home = () => {
       <About />
       <Expertise />
       <WorkProcess />
+      <Stack />
       <CTA />
-      
     </>
   );
 };
