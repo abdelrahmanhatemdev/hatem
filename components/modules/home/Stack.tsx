@@ -5,23 +5,29 @@ import { memo } from "react";
 import dynamic from "next/dynamic";
 import Loading from "@/components/custom/Loading";
 import Image from "next/image";
+import { cn } from "@/lib/utils";
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/components/ui/popover";
 
 const Stack = () => {
   const mainVariants = {
-    visible: { opacity: 1, transition: { duration: 2 } },
-    hidden: { opacity: 0 },
+    visible: { opacity: 1, y: 0, transition: { duration: 1 } },
+    hidden: { opacity: 0, y: -200 },
   };
 
   const animationVariants = {
-    visible: { opacity: 1, scale: 1, transition: { duration: 1 } },
-    hidden: { opacity: 0, scale: 0.9 },
+    visible: { opacity: 1, transition: { duration: 1 } },
+    hidden: { opacity: 0 },
   };
 
   const boxOneVariants = {
     ...animationVariants,
     visible: {
       ...animationVariants.visible,
-      transition: { ...animationVariants.visible.transition, delay: 1.5 },
+      transition: { ...animationVariants.visible.transition, delay: 0.5 },
     },
   };
 
@@ -41,238 +47,186 @@ const Stack = () => {
     },
   };
 
+  const technolegy = [
+    {
+      src: "react",
+      title: "React",
+      link: "https://react.dev/",
+      description: [
+        "React helps me build interactive and efficient user interfaces with ease.",
+        "Its declarative nature simplifies how I manage the UI, while the virtual DOM ensures everything runs smoothly.",
+        "With React's component-based structure, I can create reusable and maintainable code, which speeds up development and keeps things organized.",
+      ],
+    },
+    {
+      src: "nextjs",
+      hoverSrc: "nextjs",
+      title: "Next.js",
+      link: "",
+      description: "",
+    },
+    {
+      src: "typescript",
+      hoverSrc: "typescript-origin",
+      title: "Typescript",
+      link: "",
+      description: "",
+    },
+    {
+      src: "Zod",
+      hoverSrc: "zod-origin",
+      title: "Zod",
+      link: "",
+      description: "",
+    },
+    { src: "tailwind", title: "Tailwind", link: "", description: "" },
+    { src: "shadcn", title: "Shadcn", link: "", description: "" },
+    { src: "chatGPt", title: "ChatGPt", link: "", description: "" },
+    {
+      src: "eSlint",
+      hoverSrc: "eslint-origin",
+      title: "ESlint",
+      link: "",
+      description: "",
+    },
+    { src: "vercel", title: "Vercel", link: "", description: "" },
+    {
+      src: "framer",
+      hoverSrc: "framer-origin",
+      title: "Framer Motion",
+      link: "",
+      description: "",
+    },
+    { src: "github", title: "Github", link: "", description: "" },
+    {
+      src: "zustand",
+      hoverSrc: "zustand-origin",
+      title: "Zustand",
+      link: "",
+      description: "",
+    },
+    { src: "cloudflare", title: "Cloudflare", link: "", description: "" },
+    { src: "firebase", title: "Firebase", link: "", description: "" },
+    { src: "mySQL", title: "MySQL", link: "", description: "" },
+    {
+      src: "react-hook-form",
+      hoverSrc: "react-hook-form-origin",
+      title: "React Hook Form",
+    },
+  ];
+
   return (
     <section className="w-[80vw] md:w-[70vw] mx-auto mt-40">
-      <div className="flex flex-col gap-4">
-        <h2 className="text-7xl font-semibold text-white leading-[3rem]">
-          Stack
-        </h2>
-        <p className="text-sm md:text-md 2xl:text-lg text-neutral-100">
-          My preferred tools and the foundation behind my proficiency to create
-          seamless high-performance applications.
-        </p>
-      </div>
-      <div className="relative mt-12">
-        <div className="w-full border border-dashed border-neutral-800 border-y-0">
-          <div className="w-[105%] h-[5rem] md:h-[10vw] bg-gradient-to-b from-black to-transparent absolute top-0 -left-[2%] z-10"></div>
-          <div className="w-[105%] h-[5rem] md:h-[10vw] bg-gradient-to-t from-black to-transparent absolute bottom-0 -left-[2%] z-10"></div>
-
-          <div className="grid grid-cols-2 md:grid-cols-6">
-            <div className="col-span-2 grid grid-cols-2 order-3 md:order-1">
-              <div className="hidden md:block col-span-2  row-span-2 h-[calc(70vw/6)]"></div>
-              <div className="hidden md:flex col-span-2  row-span-2 h-[calc(70vw/6)] md:flex-col md:gap-4 p-4">
-                {/* <h2 className="text-[6vw] font-semibold text-white leading-[6vw]">
-                  Stack
-                </h2>
-                <p className="text-sm md:text-md 2xl:text-lg text-neutral-100">
-                  My preferred tools and the foundation behind my proficiency to
-                  create seamless high-performance applications.
-                </p> */}
-              </div>
-              <div className="hidden md:block w-[calc(80vw/2)] h-[calc(80vw/2)] md:w-[calc(70vw/6)] md:h-[calc(70vw/6)]"></div>
-              <div className="hidden md:block border-b border-neutral-800  w-[calc(80vw/2)] h-[calc(80vw/2)] md:w-[calc(70vw/6)] md:h-[calc(70vw/6)]"></div>
-              <div className="hidden md:block border-b border-neutral-800  w-[calc(80vw/2)] h-[calc(80vw/2)] md:w-[calc(70vw/6)] md:h-[calc(70vw/6)]"></div>
-
-              <div className="group border-e md:border-e-transparent border-b border-s border-neutral-800 w-[calc(80vw/2)] h-[calc(80vw/2)] md:w-[calc(70vw/6)] md:h-[calc(70vw/6)] flex flex-col items-center justify-center p-5 md:p-[1.2vw] cursor-pointer hover:bg-neutral-950 transition-colors relative">
-                <Image
-                  src={`/assets/media/stack/github.png`}
-                  alt={`React`}
-                  width={200}
-                  height={200}
-                  priority={true}
-                  className="transition duration-500 ease-in-out brightness-0 contrast-200 invert"
-                />
-                <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-500 absolute w-full bottom-0 left-0 p-1 leading-3 text-sm">
-                  Github
-                </div>
-              </div>
-              <div className="group border-b border-neutral-800 w-[calc(80vw/2)] h-[calc(80vw/2)] md:w-[calc(70vw/6)] md:h-[calc(70vw/6)] flex flex-col items-center justify-center p-5 md:p-[1.2vw] cursor-pointer hover:bg-neutral-950 transition-colors relative">
-                <Image
-                  src={`/assets/media/stack/firebase.png`}
-                  alt={`React`}
-                  width={200}
-                  height={200}
-                  priority={true}
-                  className="transition duration-500 ease-in-out brightness-0 contrast-200 invert"
-                />
-                <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-500 absolute w-full bottom-0 left-0 p-1 leading-3 text-sm">
-                  Firebase
-                </div>
-              </div>
-              <div className="group border-e md:border-e-transparent border-b border-s  border-neutral-800 w-[calc(80vw/2)] h-[calc(80vw/2)] md:w-[calc(70vw/6)] md:h-[calc(70vw/6)] flex flex-col items-center justify-center p-5 md:p-[1.2vw] cursor-pointer hover:bg-neutral-950 transition-colors relative">
-                <Image
-                  src={`/assets/media/stack/mysql.png`}
-                  alt={`React`}
-                  width={200}
-                  height={200}
-                  priority={true}
-                  className="transition duration-500 ease-in-out brightness-0 contrast-200 invert"
-                />
-                <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-500 absolute w-full bottom-0 left-0 p-1 leading-3 text-sm">
-                  MySQL
-                </div>
-              </div>
-              <div className="col-span-2 h-[calc(70vw/6)]"></div>
-            </div>
-
-            <div className="col-span-2 grid grid-cols-2 order-2">
-              <div className="hidden md:block col-span-2 row-span-2 h-[calc(70vw/6)]"></div>
-              <div className="group border-b border-neutral-800  w-[calc(80vw/2)] h-[calc(80vw/2)] md:w-[calc(70vw/6)] md:h-[calc(70vw/6)]"></div>
-              <div className="group border-y border-s  border-neutral-800 w-[calc(80vw/2)] h-[calc(80vw/2)] md:w-[calc(70vw/6)] md:h-[calc(70vw/6)] flex flex-col items-center justify-center p-5 md:p-[1.2vw] cursor-pointer hover:bg-neutral-950 transition-colors relative">
-                <Image
-                  src={`/assets/media/stack/zod.png`}
-                  alt={`React`}
-                  width={200}
-                  height={200}
-                  priority={true}
-                  className="transition duration-500 ease-in-out brightness-0 contrast-200 invert"
-                />
-                <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-500 absolute w-full bottom-0 left-0 p-1 leading-3 text-sm">
-                  Zod
-                </div>
-              </div>
-              <div className="group border-b border-s  border-neutral-800 w-[calc(80vw/2)] h-[calc(80vw/2)] md:w-[calc(70vw/6)] md:h-[calc(70vw/6)] flex flex-col items-center justify-center p-5 md:p-[1.2vw] cursor-pointer hover:bg-neutral-950 transition-colors relative">
-                <Image
-                  src={`/assets/media/stack/framer.png`}
-                  alt={`React`}
-                  width={200}
-                  height={200}
-                  priority={true}
-                  className="transition duration-500 ease-in-out brightness-0 contrast-200 invert"
-                />
-                <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-500 absolute w-full bottom-0 left-0 p-1 leading-3 text-sm">
-                  Framer Motion
-                </div>
-              </div>
-              <div className="group border-b border-s  border-neutral-800 w-[calc(80vw/2)] h-[calc(80vw/2)] md:w-[calc(70vw/6)] md:h-[calc(70vw/6)] flex flex-col items-center justify-center p-5 md:p-[1.2vw] cursor-pointer hover:bg-neutral-950 transition-colors relative">
-                <Image
-                  src={`/assets/media/stack/shadcn.png`}
-                  alt={`React`}
-                  width={200}
-                  height={200}
-                  priority={true}
-                  className="transition duration-500 ease-in-out brightness-0 contrast-200 invert"
-                />
-                <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-500 absolute w-full bottom-0 left-0 p-1 leading-3 text-sm">
-                  Shadcn
-                </div>
-              </div>
-              <div className="group border-b border-s  border-neutral-800 w-[calc(80vw/2)] h-[calc(80vw/2)] md:w-[calc(70vw/6)] md:h-[calc(70vw/6)] flex flex-col items-center justify-center p-5 md:p-[1.2vw] cursor-pointer hover:bg-neutral-950 transition-colors relative">
-                <Image
-                  src={`/assets/media/stack/eslint.png`}
-                  alt={`React`}
-                  width={200}
-                  height={200}
-                  priority={true}
-                  className="transition duration-500 ease-in-out brightness-0 contrast-200 invert"
-                />
-                <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-500 absolute w-full bottom-0 left-0 p-1 leading-3 text-sm">
-                  ESLint
-                </div>
-              </div>
-              <div className="group border-b border-s  border-neutral-800 w-[calc(80vw/2)] h-[calc(80vw/2)] md:w-[calc(70vw/6)] md:h-[calc(70vw/6)] flex flex-col items-center justify-center p-5 md:p-[1.2vw] cursor-pointer hover:bg-neutral-950 transition-colors relative">
-                <Image
-                  src={`/assets/media/stack/Zustand.png`}
-                  alt={`React`}
-                  width={200}
-                  height={200}
-                  priority={true}
-                  className="transition duration-500 ease-in-out brightness-0 contrast-200 invert"
-                />
-                <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-500 absolute w-full bottom-0 left-0 p-1 leading-3 text-sm">
-                  Zustand
-                </div>
-              </div>
-              <div className="group border-b border-x border-neutral-800 w-[calc(80vw/2)] h-[calc(80vw/2)] md:w-[calc(70vw/6)] md:h-[calc(70vw/6)] flex flex-col items-center justify-center p-5 md:p-[1.2vw] cursor-pointer hover:bg-neutral-950 transition-colors relative">
-                <Image
-                  src={`/assets/media/stack/vercel.png`}
-                  alt={`React`}
-                  width={200}
-                  height={200}
-                  priority={true}
-                  className="transition duration-500 ease-in-out brightness-0 contrast-200 invert"
-                />
-                <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-500 absolute w-full bottom-0 left-0 p-1 leading-3 text-sm">
-                  Vercel
-                </div>
-              </div>
-              <div className="md:col-span-2 border-b md:border-s  border-neutral-800 h-[calc(80vw/2)] md:h-[calc(70vw/6)]"></div>
-            </div>
-
-            <div className="col-span-2 grid grid-cols-2 order-1 md:order-3">
-              <div className="col-span-2 border-s  border-neutral-800 row-span-2 h-[calc(70vw/6)]"></div>
-              <div className="group border-y border-x border-neutral-800 w-[calc(80vw/2)] h-[calc(80vw/2)] md:w-[calc(70vw/6)] md:h-[calc(70vw/6)] flex flex-col items-center justify-center p-5 md:p-[1.2vw] cursor-pointer hover:bg-neutral-950 transition-colors relative">
-                <Image
-                  src={`/assets/media/stack/react.png`}
-                  alt={`React`}
-                  width={200}
-                  height={200}
-                  priority={true}
-                  className="transition duration-500 ease-in-out brightness-0 contrast-200 invert"
-                />
-                <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-500 absolute w-full bottom-0 left-0 p-1 leading-3 text-sm">
-                  React
-                </div>
-              </div>
-              <div className="group border-y w-[calc(80vw/2)] h-[calc(80vw/2)] md:w-[calc(70vw/6)] md:h-[calc(70vw/6)] flex flex-col items-center justify-center p-5 md:p-[1.2vw] cursor-pointer hover:bg-neutral-950 transition-colors relative">
-                <Image
-                  src={`/assets/media/stack/nextjs.png`}
-                  alt={`React`}
-                  width={200}
-                  height={200}
-                  priority={true}
-                  className="transition duration-500 ease-in-out brightness-0 contrast-200 invert"
-                />
-                <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-500 absolute w-full bottom-0 left-0 p-1 leading-3 text-sm">
-                  Next.js
-                </div>
-              </div>
-              <div className="group border-b border-x border-neutral-800 w-[calc(80vw/2)] h-[calc(80vw/2)] md:w-[calc(70vw/6)] md:h-[calc(70vw/6)] flex flex-col items-center justify-center p-5 md:p-[1.2vw] cursor-pointer hover:bg-neutral-950 transition-colors relative">
-                <Image
-                  src={`/assets/media/stack/tailwind.png`}
-                  alt={`React`}
-                  width={200}
-                  height={200}
-                  priority={true}
-                  className="transition duration-500 ease-in-out brightness-0 contrast-200 invert"
-                />
-                <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-500 absolute w-full bottom-0 left-0 p-1 leading-3 text-sm">
-                  Tailwind
-                </div>
-              </div>
-              <div className="group border-b  border-neutral-800 w-[calc(80vw/2)] h-[calc(80vw/2)] md:w-[calc(70vw/6)] md:h-[calc(70vw/6)] flex flex-col items-center justify-center p-5 md:p-[1.2vw] cursor-pointer hover:bg-neutral-950 transition-colors relative">
-                <Image
-                  src={`/assets/media/stack/typescript.png`}
-                  alt={`React`}
-                  width={200}
-                  height={200}
-                  priority={true}
-                  className="transition duration-500 ease-in-out brightness-0 contrast-200 invert"
-                />
-                <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-500 absolute w-full bottom-0 left-0 p-1 leading-3 text-sm">
-                  Typescript
-                </div>
-              </div>
-              <div className="group border-b border-x border-neutral-800 w-[calc(80vw/2)] h-[calc(80vw/2)] md:w-[calc(70vw/6)] md:h-[calc(70vw/6)] flex flex-col items-center justify-center p-5 md:p-[1.2vw] cursor-pointer hover:bg-neutral-950 transition-colors relative">
-                <Image
-                  src={`/assets/media/stack/chatgpt.png`}
-                  alt={`React`}
-                  width={200}
-                  height={200}
-                  priority={true}
-                  className="transition duration-500 ease-in-out brightness-0 contrast-200 invert"
-                />
-                <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-500 absolute w-full bottom-0 left-0 p-1 leading-3 text-sm">
-                  ChatGPT
-                </div>
-              </div>
-              <div className="hidden md:block w-[calc(80vw/2)] h-[calc(80vw/2)] md:w-[calc(70vw/6)] md:h-[calc(70vw/6)] "></div>
-              <div className="hidden md:block w-[calc(80vw/2)] h-[calc(80vw/2)] md:w-[calc(70vw/6)] md:h-[calc(70vw/6)] "></div>
-              <div className="hidden md:block col-span-2 row-span-2 h-[calc(70vw/6)]"></div>
-            </div>
-          </div>
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.5 }}
+        variants={boxOneVariants}
+      >
+        <div className="flex flex-col gap-4 text-center">
+          <h2 className="text-3xl md:text-6xl  text-center">Stack</h2>
+          <p className="text-sm md:text-md 2xl:text-lg text-neutral-400">
+            My preferred tools and the foundation behind my proficiency to
+            create seamless high-performance applications.
+          </p>
         </div>
-      </div>
+      </motion.div>
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.5 }}
+        variants={mainVariants}
+      >
+        <div className="grid grid-cols-2 md:grid-cols-8 mt-10 gap-y-10">
+          {technolegy.map((tech, index) => (
+            <motion.div
+              key={`${tech.src}`}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.5 }}
+              variants={{
+                ...animationVariants,
+                visible: {
+                  ...animationVariants.visible,
+                  transition: {
+                    ...animationVariants.visible.transition,
+                    delay: 0.1 * (index + 1),
+                  },
+                },
+              }}
+              layout
+            >
+              <Popover>
+                <PopoverTrigger>
+                  <div className="px-10 flex flex-col gap-4">
+                    <div className="group flex flex-col items-center justify-center cursor-pointer p-6 bg-neutral-900 transition-colors rounded-2xl">
+                      <div className="relative">
+                        <Image
+                          src={`/assets/media/stack/${tech.src}.png`}
+                          alt={`${tech.title}`}
+                          width={200}
+                          height={200}
+                          priority={true}
+                          className={cn(
+                            "transition duration-500 ease-in-out brightness-0 contrast-200 invert",
+                            tech.hoverSrc
+                              ? "group-hover:opacity-0"
+                              : "group-hover:brightness-100 group-hover:contrast-100 group-hover:invert-0"
+                          )}
+                        />
+                        {tech.hoverSrc ? (
+                          <Image
+                            src={`/assets/media/stack/${tech.hoverSrc}.png`}
+                            alt={`${tech.title}`}
+                            width={200}
+                            height={200}
+                            priority={true}
+                            className="opacity-0 group-hover:opacity-100 absolute inset-0 transition duration-500 ease-in-out group-hover:brightness-100 group-hover:contrast-100 group-hover:invert-0"
+                          />
+                        ) : (
+                          <></>
+                        )}
+                      </div>
+                    </div>
+                    <div className="transition-opacity duration-500 w-full p-1 leading-3 text-sm text-center">
+                      {tech.title}
+                    </div>
+                  </div>
+                </PopoverTrigger>
+                <PopoverContent className="rounded-lg">
+                  <div className="grid gap-4">
+                    <div className="space-y-2">
+                      <div className="flex items-center gap-2">
+                        <Image
+                          src={`/assets/media/stack/${
+                            tech.hoverSrc ? tech.hoverSrc : tech.src
+                          }.png`}
+                          alt={`${tech.title}`}
+                          width={200}
+                          height={200}
+                          priority={true}
+                          className={"w-8 h-8"}
+                        />
+                        <h4 className="text-lg">{tech.title}</h4>
+                      </div>
+                      <div>
+                        {tech.description && tech.description.length > 0 
+                        ? (
+                          tech.description.map(paragraph => <></>)
+                        )
+                        : <></>
+                        }
+                      </div>
+                      <p className="text-neutral-400">{tech.description}</p>
+                    </div>
+                    <div className="grid gap-2"></div>
+                  </div>
+                </PopoverContent>
+              </Popover>
+            </motion.div>
+          ))}
+        </div>
+      </motion.div>
     </section>
   );
 };

@@ -16,7 +16,7 @@ const WorkProcess = () => {
   return (
     <section className="w-full mt-32 px-10">
       <div className="2xl:w-[70vw] mx-auto flex flex-col gap-10">
-        <h2 className="text-2xl md:text-6xl  text-center p-4">My Work Process</h2>
+        <h2 className="text-3xl md:text-6xl  text-center p-4">My Work Process</h2>
         <div className="grid gap-5 lg:gap-10 ">
           <motion.div
             initial="hidden"
