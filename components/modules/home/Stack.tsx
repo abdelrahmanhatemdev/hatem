@@ -63,51 +63,51 @@ const Stack = () => {
       hoverSrc: "nextjs",
       title: "Next.js",
       link: "",
-      description: "",
+      description: [],
     },
     {
       src: "typescript",
       hoverSrc: "typescript-origin",
       title: "Typescript",
       link: "",
-      description: "",
+      description: [],
     },
     {
       src: "Zod",
       hoverSrc: "zod-origin",
       title: "Zod",
       link: "",
-      description: "",
+      description: [],
     },
-    { src: "tailwind", title: "Tailwind", link: "", description: "" },
-    { src: "shadcn", title: "Shadcn", link: "", description: "" },
-    { src: "chatGPt", title: "ChatGPt", link: "", description: "" },
+    { src: "tailwind", title: "Tailwind", link: "", description: [] },
+    { src: "shadcn", title: "Shadcn", link: "", description: [] },
+    { src: "chatGPt", title: "ChatGPt", link: "", description: [] },
     {
       src: "eSlint",
       hoverSrc: "eslint-origin",
       title: "ESlint",
       link: "",
-      description: "",
+      description: [],
     },
-    { src: "vercel", title: "Vercel", link: "", description: "" },
+    { src: "vercel", title: "Vercel", link: "", description: [] },
     {
       src: "framer",
       hoverSrc: "framer-origin",
       title: "Framer Motion",
       link: "",
-      description: "",
+      description: [],
     },
-    { src: "github", title: "Github", link: "", description: "" },
+    { src: "github", title: "Github", link: "", description: [] },
     {
       src: "zustand",
       hoverSrc: "zustand-origin",
       title: "Zustand",
       link: "",
-      description: "",
+      description: [],
     },
-    { src: "cloudflare", title: "Cloudflare", link: "", description: "" },
-    { src: "firebase", title: "Firebase", link: "", description: "" },
-    { src: "mySQL", title: "MySQL", link: "", description: "" },
+    { src: "cloudflare", title: "Cloudflare", link: "", description: [] },
+    { src: "firebase", title: "Firebase", link: "", description: [] },
+    { src: "mySQL", title: "MySQL", link: "", description: [] },
     {
       src: "react-hook-form",
       hoverSrc: "react-hook-form-origin",
@@ -209,17 +209,18 @@ const Stack = () => {
                         />
                         <h4 className="text-lg">{tech.title}</h4>
                       </div>
-                      <div>
+                      <div className="flex flex-col gap-2 text-neutral-400">
                         {tech.description && tech.description.length > 0 
                         ? (
-                          tech.description.map(paragraph => <></>)
+                          tech.description.map((paragraph, index) => <p key={index}>{paragraph}</p>)
                         )
                         : <></>
                         }
                       </div>
-                      <p className="text-neutral-400">{tech.description}</p>
                     </div>
-                    <div className="grid gap-2"></div>
+                    <div className="grid gap-2">
+                      
+                    </div>
                   </div>
                 </PopoverContent>
               </Popover>
