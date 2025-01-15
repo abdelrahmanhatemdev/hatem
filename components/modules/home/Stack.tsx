@@ -219,7 +219,7 @@ const Stack = () => {
   ];
 
   return (
-    <section className="w-[80vw] md:w-[70vw] mx-auto mt-40">
+    <section className="mt-40">
       <motion.div
         initial="hidden"
         whileInView="visible"
@@ -240,7 +240,7 @@ const Stack = () => {
         viewport={{ once: true, amount: 0.5 }}
         variants={mainVariants}
       >
-        <div className="grid grid-cols-2 md:grid-cols-8 mt-10 gap-y-10">
+        <div className="w-[50vw] md:w-[75vw] mx-auto grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 mt-10 gap-[3vw] lg:gap-[1vw]">
           {technolegy.map((tech, index) => (
             <motion.div
               key={`${tech.src}`}
@@ -260,9 +260,9 @@ const Stack = () => {
               layout
             >
               <Popover>
-                <PopoverTrigger>
-                  <div className="px-10 flex flex-col gap-4">
-                    <div className="group flex flex-col items-center justify-center cursor-pointer p-6 bg-neutral-900 transition-colors rounded-2xl">
+                <PopoverTrigger className="w-full">
+                  <div className="flex flex-col gap-4 items-center">
+                    <div className="group flex flex-col items-center justify-center cursor-pointer p-[3vw] md:p-[2vw]  lg:p-[1vw] bg-neutral-900 transition-colors rounded-2xl">
                       <div className="relative">
                         <Image
                           src={`/assets/media/stack/${tech.src}.png`}
@@ -271,7 +271,7 @@ const Stack = () => {
                           height={200}
                           priority={true}
                           className={cn(
-                            "transition duration-500 ease-in-out brightness-0 contrast-200 invert",
+                            "transition duration-500 ease-in-out brightness-0 contrast-200 invert w-[15vw] h-[15vw] md:w-[10vw] md:h-[10vw] lg:w-[5vw] lg:h-[5vw]",
                             tech.hoverSrc
                               ? "group-hover:opacity-0"
                               : "group-hover:brightness-100 group-hover:contrast-100 group-hover:invert-0"
