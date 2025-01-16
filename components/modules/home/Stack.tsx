@@ -226,7 +226,7 @@ const Stack = () => {
         viewport={{ once: true, amount: 0.5 }}
         variants={boxOneVariants}
       >
-        <div className="flex flex-col gap-4 text-center">
+        <div className="flex flex-col gap-4 text-center p-10">
           <h2 className="text-3xl md:text-6xl  text-center">Stack</h2>
           <p className="text-sm md:text-md 2xl:text-lg text-neutral-400">
             My preferred tools and the foundation behind my proficiency to
@@ -240,7 +240,7 @@ const Stack = () => {
         viewport={{ once: true, amount: 0.5 }}
         variants={mainVariants}
       >
-        <div className="w-[50vw] md:w-[75vw] mx-auto grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 mt-10 gap-[3vw] lg:gap-[1vw]">
+        <div className="w-[70vw] sm:w-[60vw] mx-auto grid grid-cols-2 md:grid-cols-4 xl:grid-cols-8 mt-10 gap-[3vw] lg:gap-[1vw]">
           {technolegy.map((tech, index) => (
             <motion.div
               key={`${tech.src}`}
@@ -262,7 +262,7 @@ const Stack = () => {
               <Popover>
                 <PopoverTrigger className="w-full">
                   <div className="flex flex-col gap-4 items-center">
-                    <div className="group flex flex-col items-center justify-center cursor-pointer p-[3vw] md:p-[2vw]  lg:p-[1vw] bg-neutral-900 transition-colors rounded-2xl">
+                    <div className="group flex flex-col items-center justify-center cursor-pointer p-4 bg-neutral-900 transition-colors rounded-2xl">
                       <div className="relative">
                         <Image
                           src={`/assets/media/stack/${tech.src}.png`}
@@ -271,7 +271,7 @@ const Stack = () => {
                           height={200}
                           priority={true}
                           className={cn(
-                            "transition duration-500 ease-in-out brightness-0 contrast-200 invert w-[15vw] h-[15vw] md:w-[10vw] md:h-[10vw] lg:w-[5vw] lg:h-[5vw]",
+                            "transition duration-500 ease-in-out brightness-0 contrast-200 invert",
                             tech.hoverSrc
                               ? "group-hover:opacity-0"
                               : "group-hover:brightness-100 group-hover:contrast-100 group-hover:invert-0"
