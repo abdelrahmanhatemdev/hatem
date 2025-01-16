@@ -9,8 +9,8 @@ const Logo = dynamic(() => import("@/components/custom/Logo"), {
 
 const Footer = () => {
   return (
-    <footer className="w-full mt-72 px-10 mb-10">
-      <div className="0 border border-neutral-800 lg:p-20 lg:pb-10 p-10  rounded-xl 2xl:w-[70vw] mx-auto bg-gradient-to-r from-neutral-900 to-[#1f1f1f] flex flex-col lg:gap-20 gap-10">
+    <footer className="w-full mt-72 mb-10">
+      <div className="0 border border-neutral-800 lg:p-20 lg:pb-10 p-10 rounded-xl 2xl:w-[75%] mx-auto bg-gradient-to-r from-neutral-900 to-[#1f1f1f] flex flex-col lg:gap-20 gap-10">
         <div className="flex justify-between w-full lg:gap-20 gap-10 flex-col lg:flex-row">
           <div className="flex flex-col lg:gap-10 gap-5">
             <h2 className="text-4xl lg:text-6xl max-w-64 lg:max-w-96 font-medium">

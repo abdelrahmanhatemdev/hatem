@@ -19,8 +19,8 @@ const Logo = dynamic(() => import("@/components/custom/Logo"), {
 
 function Header() {
   return (
-    <header className="fixed inset-0 z-10 w-[94vw] p-4 h-12">
-      <nav className="flex items-center justify-between bg-neutral-950 bg-opacity-40 h-fit rounded-full md:px-10 px-6 py-2">
+    <header className="fixed top-4 left-[5%] z-50 w-[90%] h-12">
+      <nav className="flex items-center justify-between bg-neutral-950 bg-opacity-40 h-fit rounded-full md:px-10 px-6 py-2 backdrop-blur-lg">
         <Link
           href="/"
           className="group uppercase font-bold text-lg flex gap-2 items-center justify-center cursor-pointer relative"
