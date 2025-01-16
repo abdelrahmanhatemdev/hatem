@@ -64,11 +64,11 @@ const Hero = () => {
             return `<span class="${className}">0${index + 1}.</span>`;
           },
         }}
-        autoplay={{
-          delay: autoplayDelay,
-          disableOnInteraction: false,
-        }}
-        loop={true}
+        // autoplay={{
+        //   delay: autoplayDelay,
+        //   disableOnInteraction: false,
+        // }}
+        // loop={true}
         className="h-full w-[85%] mx-auto hero-swiper relative"
         onSlideChange={(swiper) => {
           const newIndex = swiper.realIndex + 1;
@@ -249,8 +249,15 @@ const Hero = () => {
                         delay: 2 * slideParagraphDelay + 3 * slideSpanDelay,
                       }}
                     >
-                      <strong className="font-extrabold md:tracking-wider text-[2.3rem] sm:text-[3rem] md:text-[3.5vw] scale-y-105">
+                      <strong className="font-extrabold md:tracking-wider text-[2.3rem] sm:text-[3rem] md:text-[3.5vw] scale-y-105 relative group">
                         Cairo
+                        <Image
+                          src={"/assets/media/pyramids.png"}
+                          alt="Egyptian Pyramids"
+                          width={300}
+                          height={130}
+                          className="absolute top-0 left-0 scale-150 z-50 opacity-75 group-hover:opacity-100 transition-opacity"
+                        />
                       </strong>
                     </motion.span>
                   </p>
