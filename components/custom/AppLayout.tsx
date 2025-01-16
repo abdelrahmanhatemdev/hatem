@@ -6,12 +6,16 @@ const Header = dynamic(() => import("@/components/modules/header/Header"), {
   loading: Loading,
 });
 
+const Footer = dynamic(() => import("@/components/modules/footer/Footer"), {
+  loading: Loading,
+});
+
 function AppLayout({ children }: Readonly<{ children: ReactNode }>) {
   return (
     <main className="relative w-[98vw]">
       <Header />
       {children}
-      <div className="mt-40">Footer</div>
+      <Footer />
     </main>
   );
 }

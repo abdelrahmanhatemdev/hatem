@@ -64,12 +64,10 @@ const Hero = () => {
             return `<span class="${className}">0${index + 1}.</span>`;
           },
         }}
-        autoplay={
-          {
-            delay: autoplayDelay,
-            disableOnInteraction: false,
-          }
-        }
+        autoplay={{
+          delay: autoplayDelay,
+          disableOnInteraction: false,
+        }}
         loop={true}
         className="h-full w-[85%] mx-auto hero-swiper relative"
         onSlideChange={(swiper) => {
@@ -94,21 +92,66 @@ const Hero = () => {
           <SwiperSlide key={index}>
             {slide === 1 && (
               <div className="h-full flex flex-col justify-center">
-                <div className="bg-gradient-to-l from-[#000] to-[#040404] p-10 rounded-3xl">
-                  <p className="text-[2.3rem] sm:text-[3rem] md:text-[3.5vw] md:leading-[5vw] flex items-center gap-[1vw]">
-                    <motion.span
-                      variants={slideVariants}
-                      initial={`initial`}
-                      animate={activeSlide === index + 1 ? `active` : `initial`}
-                      exit={`exit`}
-                      transition={{ ...slideTransition, delay: 0 }}
-                    >
-                      <span>
-                        <span className="font-extralight">I</span>
-                        <span className="font-extralight">'m </span>
-                      </span>
-                      <span className="font-thin">a</span>
-                    </motion.span>
+                <p className="text-[2.3rem] sm:text-[3rem] md:text-[3.5vw] md:leading-[5vw] flex items-center gap-[1vw]">
+                  <motion.span
+                    variants={slideVariants}
+                    initial={`initial`}
+                    animate={activeSlide === index + 1 ? `active` : `initial`}
+                    exit={`exit`}
+                    transition={{ ...slideTransition, delay: 0 }}
+                  >
+                    <span>
+                      <span className="font-extralight">I</span>
+                      <span className="font-extralight">'m </span>
+                    </span>
+                    <span className="font-thin">a</span>
+                  </motion.span>
+                  <motion.span
+                    variants={slideVariants}
+                    initial={`initial`}
+                    animate={activeSlide === index + 1 ? `active` : `initial`}
+                    exit={`exit`}
+                    transition={{
+                      ...slideTransition,
+                      delay: 1 * slideSpanDelay,
+                    }}
+                    className="w-[10vw] h-[5vw] relative inline-block"
+                  >
+                    <span>
+                      <Image
+                        src="/assets/media/nextjs.png"
+                        fill
+                        alt="Next.js"
+                      />
+                    </span>
+                  </motion.span>
+                  <motion.span
+                    variants={slideVariants}
+                    initial={`initial`}
+                    animate={activeSlide === index + 1 ? `active` : `initial`}
+                    exit={`exit`}
+                    transition={{
+                      ...slideTransition,
+                      delay: 2 * slideSpanDelay,
+                    }}
+                  >
+                    <strong className="font-extrabold md:tracking-wider text-[2.3rem] sm:text-[3rem] md:text-[3.5vw] scale-y-105">
+                      Developer
+                    </strong>
+                  </motion.span>
+                </p>
+
+                <motion.span
+                  variants={slideVariants}
+                  initial={`initial`}
+                  animate={activeSlide === index + 1 ? `active` : `initial`}
+                  exit={`exit`}
+                  transition={{
+                    ...slideTransition,
+                    delay: 1 * slideParagraphDelay,
+                  }}
+                >
+                  <p className="text-[2.3rem] sm:text-[3rem] md:text-[3.5vw] md:leading-[5vw]">
                     <motion.span
                       variants={slideVariants}
                       initial={`initial`}
@@ -116,17 +159,10 @@ const Hero = () => {
                       exit={`exit`}
                       transition={{
                         ...slideTransition,
-                        delay: 1 * slideSpanDelay,
+                        delay: 1 * slideParagraphDelay + slideSpanDelay,
                       }}
-                      className="w-[10vw] h-[5vw] relative inline-block"
                     >
-                      <span>
-                        <Image
-                          src="/assets/media/nextjs.png"
-                          fill
-                          alt="Next.js"
-                        />
-                      </span>
+                      <span className="font-light">Specialized </span>
                     </motion.span>
                     <motion.span
                       variants={slideVariants}
@@ -135,191 +171,133 @@ const Hero = () => {
                       exit={`exit`}
                       transition={{
                         ...slideTransition,
-                        delay: 2 * slideSpanDelay,
+                        delay: 1 * slideParagraphDelay + 2 * slideSpanDelay,
+                      }}
+                    >
+                      <span className="font-thin">in </span>
+                    </motion.span>
+                    <motion.span
+                      variants={slideVariants}
+                      initial={`initial`}
+                      animate={activeSlide === index + 1 ? `active` : `initial`}
+                      exit={`exit`}
+                      transition={{
+                        ...slideTransition,
+                        delay: 1 * slideParagraphDelay + 3 * slideSpanDelay,
                       }}
                     >
                       <strong className="font-extrabold md:tracking-wider text-[2.3rem] sm:text-[3rem] md:text-[3.5vw] scale-y-105">
-                        Developer
+                        Frontend First, Full-Stack-Ready
+                      </strong>
+                    </motion.span>
+                    <motion.span
+                      variants={slideVariants}
+                      initial={`initial`}
+                      animate={activeSlide === index + 1 ? `active` : `initial`}
+                      exit={`exit`}
+                      transition={{
+                        ...slideTransition,
+                        delay: 1 * slideParagraphDelay + 4 * slideSpanDelay,
+                      }}
+                    >
+                      <strong className="font-light"> Development</strong>
+                    </motion.span>
+                  </p>
+                </motion.span>
+                <motion.span
+                  variants={slideVariants}
+                  initial={`initial`}
+                  animate={activeSlide === index + 1 ? `active` : `initial`}
+                  exit={`exit`}
+                  transition={{
+                    ...slideTransition,
+                    delay: 2 * slideParagraphDelay,
+                  }}
+                >
+                  <p className="text-[2.3rem] sm:text-[3rem] md:text-[3.5vw] md:leading-[5vw]">
+                    <motion.span
+                      variants={slideVariants}
+                      initial={`initial`}
+                      animate={activeSlide === index + 1 ? `active` : `initial`}
+                      exit={`exit`}
+                      transition={{
+                        ...slideTransition,
+                        delay: 2 * slideParagraphDelay + 1 * slideSpanDelay,
+                      }}
+                    >
+                      <span className="font-extralight">Based </span>
+                    </motion.span>
+                    <motion.span
+                      variants={slideVariants}
+                      initial={`initial`}
+                      animate={activeSlide === index + 1 ? `active` : `initial`}
+                      exit={`exit`}
+                      transition={{
+                        ...slideTransition,
+                        delay: 2 * slideParagraphDelay + 2 * slideSpanDelay,
+                      }}
+                    >
+                      <span className="font-thin">in </span>
+                    </motion.span>
+                    <motion.span
+                      variants={slideVariants}
+                      initial={`initial`}
+                      animate={activeSlide === index + 1 ? `active` : `initial`}
+                      exit={`exit`}
+                      transition={{
+                        ...slideTransition,
+                        delay: 2 * slideParagraphDelay + 3 * slideSpanDelay,
+                      }}
+                    >
+                      <strong className="font-extrabold md:tracking-wider text-[2.3rem] sm:text-[3rem] md:text-[3.5vw] scale-y-105">
+                        Cairo
                       </strong>
                     </motion.span>
                   </p>
-
-                  <motion.span
-                    variants={slideVariants}
-                    initial={`initial`}
-                    animate={activeSlide === index + 1 ? `active` : `initial`}
-                    exit={`exit`}
-                    transition={{
-                      ...slideTransition,
-                      delay: 1 * slideParagraphDelay,
-                    }}
-                  >
-                    <p className="text-[2.3rem] sm:text-[3rem] md:text-[3.5vw] md:leading-[5vw]">
-                      <motion.span
-                        variants={slideVariants}
-                        initial={`initial`}
-                        animate={
-                          activeSlide === index + 1 ? `active` : `initial`
-                        }
-                        exit={`exit`}
-                        transition={{
-                          ...slideTransition,
-                          delay: 1 * slideParagraphDelay + slideSpanDelay,
-                        }}
-                      >
-                        <span className="font-light">Specialized </span>
-                      </motion.span>
-                      <motion.span
-                        variants={slideVariants}
-                        initial={`initial`}
-                        animate={
-                          activeSlide === index + 1 ? `active` : `initial`
-                        }
-                        exit={`exit`}
-                        transition={{
-                          ...slideTransition,
-                          delay: 1 * slideParagraphDelay + 2 * slideSpanDelay,
-                        }}
-                      >
-                        <span className="font-thin">in </span>
-                      </motion.span>
-                      <motion.span
-                        variants={slideVariants}
-                        initial={`initial`}
-                        animate={
-                          activeSlide === index + 1 ? `active` : `initial`
-                        }
-                        exit={`exit`}
-                        transition={{
-                          ...slideTransition,
-                          delay: 1 * slideParagraphDelay + 3 * slideSpanDelay,
-                        }}
-                      >
-                        <strong className="font-extrabold md:tracking-wider text-[2.3rem] sm:text-[3rem] md:text-[3.5vw] scale-y-105">
-                          Frontend First, Full-Stack-Ready
-                        </strong>
-                      </motion.span>
-                      <motion.span
-                        variants={slideVariants}
-                        initial={`initial`}
-                        animate={
-                          activeSlide === index + 1 ? `active` : `initial`
-                        }
-                        exit={`exit`}
-                        transition={{
-                          ...slideTransition,
-                          delay: 1 * slideParagraphDelay + 4 * slideSpanDelay,
-                        }}
-                      >
-                        <strong className="font-light"> Development</strong>
-                      </motion.span>
-                    </p>
-                  </motion.span>
-                  <motion.span
-                    variants={slideVariants}
-                    initial={`initial`}
-                    animate={activeSlide === index + 1 ? `active` : `initial`}
-                    exit={`exit`}
-                    transition={{
-                      ...slideTransition,
-                      delay: 2 * slideParagraphDelay,
-                    }}
-                  >
-                    <p className="text-[2.3rem] sm:text-[3rem] md:text-[3.5vw] md:leading-[5vw]">
-                      <motion.span
-                        variants={slideVariants}
-                        initial={`initial`}
-                        animate={
-                          activeSlide === index + 1 ? `active` : `initial`
-                        }
-                        exit={`exit`}
-                        transition={{
-                          ...slideTransition,
-                          delay: 2 * slideParagraphDelay + 1 * slideSpanDelay,
-                        }}
-                      >
-                        <span className="font-extralight">Based </span>
-                      </motion.span>
-                      <motion.span
-                        variants={slideVariants}
-                        initial={`initial`}
-                        animate={
-                          activeSlide === index + 1 ? `active` : `initial`
-                        }
-                        exit={`exit`}
-                        transition={{
-                          ...slideTransition,
-                          delay: 2 * slideParagraphDelay + 2 * slideSpanDelay,
-                        }}
-                      >
-                        <span className="font-thin">in </span>
-                      </motion.span>
-                      <motion.span
-                        variants={slideVariants}
-                        initial={`initial`}
-                        animate={
-                          activeSlide === index + 1 ? `active` : `initial`
-                        }
-                        exit={`exit`}
-                        transition={{
-                          ...slideTransition,
-                          delay: 2 * slideParagraphDelay + 3 * slideSpanDelay,
-                        }}
-                      >
-                        <strong className="font-extrabold md:tracking-wider text-[2.3rem] sm:text-[3rem] md:text-[3.5vw] scale-y-105">
-                          Cairo
-                        </strong>
-                      </motion.span>
-                    </p>
-                  </motion.span>
-                </div>
+                </motion.span>
               </div>
             )}
             {slide === 2 && (
               <div className="h-full flex flex-col justify-center">
-                <div className="bg-gradient-to-l from-[#000] to-[#040404] p-10 rounded-3xl">
-                  <p className="text-[2.3rem] sm:text-[3rem] md:text-[3.5vw] md:leading-[5vw]">
-                    <span className="font-thin">Focused on </span>
-                    <span className="font-extralight">building </span>
-                  </p>
-                  <p className="text-[2.3rem] sm:text-[3rem] md:text-[3.5vw] md:leading-[5vw]">
-                    <span className="font-extralight">blazing-fast </span>
-                    <strong className="font-extrabold md:tracking-wider text-[2.3rem] sm:text-[3rem] md:text-[3.5vw] scale-y-105">
-                      performant, scalable,
-                    </strong>
-                  </p>
-                  <p className="text-[2.3rem] sm:text-[3rem] md:text-[3.5vw] md:leading-[5vw]">
-                    <span className="font-thin">and </span>
-                    <strong className="font-extrabold md:tracking-wider text-[2.3rem] sm:text-[3rem] md:text-[3.5vw] scale-y-105">
-                      seamlessly integrated
-                    </strong>
-                    <span className="font-extralight"> web apps </span>
-                  </p>
-                </div>
+                <p className="text-[2.3rem] sm:text-[3rem] md:text-[3.5vw] md:leading-[5vw]">
+                  <span className="font-thin">Focused on </span>
+                  <span className="font-extralight">building </span>
+                </p>
+                <p className="text-[2.3rem] sm:text-[3rem] md:text-[3.5vw] md:leading-[5vw]">
+                  <span className="font-extralight">blazing-fast </span>
+                  <strong className="font-extrabold md:tracking-wider text-[2.3rem] sm:text-[3rem] md:text-[3.5vw] scale-y-105">
+                    performant, scalable,
+                  </strong>
+                </p>
+                <p className="text-[2.3rem] sm:text-[3rem] md:text-[3.5vw] md:leading-[5vw]">
+                  <span className="font-thin">and </span>
+                  <strong className="font-extrabold md:tracking-wider text-[2.3rem] sm:text-[3rem] md:text-[3.5vw] scale-y-105">
+                    seamlessly integrated
+                  </strong>
+                  <span className="font-extralight"> web apps </span>
+                </p>
               </div>
             )}
             {slide === 3 && (
               <div className="h-full flex flex-col justify-center">
-                <div className="bg-gradient-to-l from-[#000] to-[#040404] p-10 rounded-3xl">
-                  <p className="text-[2.3rem] sm:text-[3rem] md:text-[3.5vw] md:leading-[5vw]">
-                    <span className="font-thin"> With </span>
-                    <span className="font-light">Code Speaks </span>
-                    <strong className="font-extrabold md:tracking-wider text-[2.3rem] sm:text-[3rem] md:text-[3.5vw] scale-y-105">
-                      Performance
-                    </strong>
-                  </p>
-                  <p className="text-[2.3rem] sm:text-[3rem] md:text-[3.5vw] md:leading-[5vw]">
-                    <span className="font-thing">I </span>
-                    <span className="font-extralight">value </span>
-                    <strong className="font-extrabold md:tracking-wider text-[2.3rem] sm:text-[3rem] md:text-[3.5vw] scale-y-105">
-                      Quality
-                    </strong>
-                    <span className="font-light"> over </span>
-                    <span className="font-thin opacity-90 text-[2.3rem] sm:text-[3rem] md:text-[3.5rem] text-neutral-300">
-                      Quantity
-                    </span>
-                  </p>
-                </div>
+                <p className="text-[2.3rem] sm:text-[3rem] md:text-[3.5vw] md:leading-[5vw]">
+                  <span className="font-thin"> With </span>
+                  <span className="font-light">Code Speaks </span>
+                  <strong className="font-extrabold md:tracking-wider text-[2.3rem] sm:text-[3rem] md:text-[3.5vw] scale-y-105">
+                    Performance
+                  </strong>
+                </p>
+                <p className="text-[2.3rem] sm:text-[3rem] md:text-[3.5vw] md:leading-[5vw]">
+                  <span className="font-thing">I </span>
+                  <span className="font-extralight">value </span>
+                  <strong className="font-extrabold md:tracking-wider text-[2.3rem] sm:text-[3rem] md:text-[3.5vw] scale-y-105">
+                    Quality
+                  </strong>
+                  <span className="font-light"> over </span>
+                  <span className="font-thin opacity-90 text-[2.3rem] sm:text-[3rem] md:text-[3.5rem] text-neutral-300">
+                    Quantity
+                  </span>
+                </p>
               </div>
             )}
           </SwiperSlide>
