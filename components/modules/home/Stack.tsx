@@ -253,7 +253,7 @@ const Stack = () => {
                   ...animationVariants.visible,
                   transition: {
                     ...animationVariants.visible.transition,
-                    delay: 0.1 * (index + 1),
+                    delay: 0.15 * (index + 1),
                   },
                 },
               }}

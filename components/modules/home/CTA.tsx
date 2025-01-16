@@ -14,7 +14,7 @@ const ThreeQuarterCircle = dynamic(
 
 const CTA = () => {
   const mainVariants = {
-    visible: { opacity: 1, transition: { duration: 2 } },
+    visible: { opacity: 1, transition: { duration: 1.5 } },
     hidden: { opacity: 0 },
   };
 
@@ -27,7 +27,7 @@ const CTA = () => {
     ...animationVariants,
     visible: {
       ...animationVariants.visible,
-      transition: { ...animationVariants.visible.transition, delay: 1.5 },
+      transition: { ...animationVariants.visible.transition, delay: 1 },
     },
   };
 
@@ -35,7 +35,7 @@ const CTA = () => {
     ...animationVariants,
     visible: {
       ...animationVariants.visible,
-      transition: { ...animationVariants.visible.transition, delay: 2 },
+      transition: { ...animationVariants.visible.transition, delay: 1.5 },
     },
   };
 
@@ -43,7 +43,15 @@ const CTA = () => {
     ...animationVariants,
     visible: {
       ...animationVariants.visible,
-      transition: { ...animationVariants.visible.transition, delay: 2.5 },
+      transition: { ...animationVariants.visible.transition, delay: 2 },
+    },
+  };
+
+  const boxFourVariants = {
+    ...animationVariants,
+    visible: {
+      ...animationVariants.visible,
+      transition: { ...animationVariants.visible.transition, delay: 2.2 },
     },
   };
 
@@ -180,7 +188,7 @@ const CTA = () => {
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.5 }}
-                variants={boxThreeVariants}
+                variants={boxFourVariants}
                 className="min-w-fit"
               >
                 <button className="bg-neutral-950 py-3 px-4 font-medium text-lg rounded-xl cursor-pointer hover:bg-neutral-900 text-white transition-colors shadow-lg border border-neutral-900">
