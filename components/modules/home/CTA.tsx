@@ -164,15 +164,15 @@ const CTA = () => {
           border-[#191919] border-x-0 border-t-0"
             ></div>
             <div className="bg-neutral-950 bg-opacity-10 hover:bg-opacity-70 transition-colors duration-500"></div>
-            <div className="h-full lg:border border-dashed border-[#191919] border-y-transparent flex flex-col lg:flex-row items-center justify-center gap-4 p-12 relative">
+            <div className="h-full lg:border border-dashed border-[#191919] border-y-transparent flex items-center justify-center flex-wrap gap-4 p-12 relative">
               <motion.div
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.5 }}
                 variants={boxThreeVariants}
-                className="w-full md:w-auto"
+                className="min-w-fit"
               >
-                <button className="bg-neutral-50 py-3 px-4 font-medium text-lg rounded-xl cursor-pointer hover:bg-neutral-300 text-neutral-950 transition-colors shadow-lg border border-neutral-900">
+                <button className="bg-neutral-50 py-3 px-6 font-medium text-lg rounded-xl cursor-pointer hover:bg-neutral-300 text-neutral-950 transition-colors shadow-lg border border-neutral-900">
                   Join a Team
                 </button>
               </motion.div>
@@ -181,7 +181,7 @@ const CTA = () => {
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.5 }}
                 variants={boxThreeVariants}
-                className="w-full md:w-auto"
+                className="min-w-fit"
               >
                 <button className="bg-neutral-950 py-3 px-4 font-medium text-lg rounded-xl cursor-pointer hover:bg-neutral-900 text-white transition-colors shadow-lg border border-neutral-900">
                   Start a Project
