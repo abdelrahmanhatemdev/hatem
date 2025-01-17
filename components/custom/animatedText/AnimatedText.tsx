@@ -14,13 +14,6 @@ const AnimatedText = ({
 
   return (
     <>
-      <motion.span
-        initial={{ opacity: 0, y: 10 }}
-        animate={{ opacity: 1, y: 0 }}
-        whileHover={{ opacity: 0.5, y: 5 }}
-        transition={{ delay:  0 }}
-        className="inline-block mr-1"
-      >
         {letters.map((word, index) => (
           <motion.span
             key={index}
@@ -32,7 +25,6 @@ const AnimatedText = ({
             {word}
           </motion.span>
         ))}
-      </motion.span>
     </>
   );
 };

@@ -23,9 +23,11 @@ const AnimateTextOnHover = dynamic(
 
 const Footer = () => {
   const animationVariants = {
-    visible: { opacity: 1, transition: { duration: 1.5 } },
+    visible: { opacity: 1, transition: { duration: 2} },
     hidden: { opacity: 0 },
   };
+
+  const contactDelay = 1;
 
   return (
     <>
@@ -40,13 +42,25 @@ const Footer = () => {
           <div className="0 border border-neutral-800 lg:p-20 lg:pb-10 p-10 rounded-xl 2xl:w-[75%] mx-auto bg-gradient-to-r from-neutral-900 to-[#1f1f1f] flex flex-col lg:gap-20 gap-10">
             <div className="flex justify-between w-full lg:gap-20 gap-10 flex-col lg:flex-row">
               <div className="flex flex-col lg:gap-10 gap-5">
-                <h2 className="text-4xl lg:text-6xl max-w-64 lg:max-w-96 font-medium">
-                  
-                  Let’s create something great together
+                <h2 className="text-4xl lg:text-6xl font-medium">
+                  <div>
+                    <AnimatedText text="Let’s " direction="vertical" />{" "}
+                    <AnimatedText text="create " direction="vertical" />{" "}
+                  </div>
+                  <AnimatedText text="something " direction="vertical" />{" "}
+                  <AnimatedText text="great " direction="vertical" />{" "}
+                  <div>
+                    <AnimatedText text="together" direction="vertical" />
+                  </div>
                 </h2>
-                <p className="group text-neutral-400 uppercase lg:text-sm text-[.7rem]">
-                  Based In <span className="group-hover:text-white transition-colors">Cairo</span> - Working Worldwide
-                </p>
+                <div className="group text-neutral-400 uppercase lg:text-sm text-[.7rem]">
+                  <AnimatedText text="Based" /> <AnimatedText text="In" />{" "}
+                  <span className="group-hover:text-white transition-colors">
+                    <AnimatedText text="Cairo" />
+                  </span>{" "}
+                  <AnimatedText text="-" /> <AnimatedText text="Working" />{" "}
+                  <AnimatedText text="Worldwide" />
+                </div>
               </div>
               <div className="flex flex-col gap-5 justify-end">
                 <a
@@ -56,30 +70,36 @@ const Footer = () => {
                 >
                   <span>
                     <strong className="font-bold text-2xl lg:text-4xl">
-                      <AnimatedText text="A" />
+                      <AnimatedText text="A" delay={contactDelay} />
                     </strong>
-                    <AnimatedText text="bdelrahman" delay={0.1} />
+                    <AnimatedText
+                      text="bdelrahman"
+                      delay={contactDelay + 0.1}
+                    />
                   </span>
                   <span className="text-neutral-400">
-                    <AnimatedText text="." delay={1.2} />
+                    <AnimatedText text="." delay={contactDelay + 1.2} />
                   </span>
                   <span>
                     <strong className="font-bold text-2xl lg:text-4xl">
-                      <AnimatedText text="H" delay={1.3} />
+                      <AnimatedText text="H" delay={contactDelay + 1.3} />
                     </strong>
-                    <AnimatedText text="atem" delay={1.4} />
+                    <AnimatedText text="atem" delay={contactDelay + 1.4} />
                   </span>
                   <span className="text-neutral-400">
-                    <AnimatedText text="." delay={1.8} />
+                    <AnimatedText text="." delay={contactDelay + 1.8} />
                   </span>
                   <span>
                     <strong className="font-bold text-2xl lg:text-4xl">
-                      <AnimatedText text="D" delay={1.9} />
+                      <AnimatedText text="D" delay={contactDelay + 1.9} />
                     </strong>
-                    <AnimatedText text="ev" delay={2.1} />
+                    <AnimatedText text="ev" delay={contactDelay + 2.1} />
                   </span>
                   <span className="text-neutral-700">
-                    <AnimatedText text="@gmail.com" delay={2.2} />
+                    <AnimatedText
+                      text="@gmail.com"
+                      delay={contactDelay + 2.2}
+                    />
                   </span>
                 </a>
                 <a
@@ -88,64 +108,76 @@ const Footer = () => {
                   title="CALL ME NOW"
                 >
                   <span className="text-neutral-700">
-                    <AnimatedText text="002" delay={3} />
+                    <AnimatedText text="002" delay={contactDelay + 3} />
                   </span>
                   <span>
-                    <AnimatedText text="01070070745" delay={3.3} />
+                    <AnimatedText
+                      text="01070070745"
+                      delay={contactDelay + 3.3}
+                    />
                   </span>
                 </a>
               </div>
             </div>
-            <div className="grid md:grid-cols-[25%_45%_30%] lg:grid-cols-3 items-center border-t border-neutral-800 pt-10 gap-10">
-              <div className="flex justify-between items-center order-2 md:order-1 flex-wrap">
-                <Link
-                  href="/"
-                  className="group uppercase font-bold text-lg flex gap-2 items-center cursor-pointer relative"
-                >
-                  <Logo className="w-10 opacity-100 group-hover:opacity-0 transition-opacity duration-500" />
-                  <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-500 absolute inset-0 h-full flex items-center text-sm md:text-2xl lg:text-5xl">
-                    HATEM
-                  </span>
-                </Link>
-                <p className="flex-col md:items-end order-3 flex md:hidden">
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              className="inline-block"
+            >
+              <div className="grid md:grid-cols-[25%_45%_30%] lg:grid-cols-3 items-center border-t border-neutral-800 pt-10 gap-10">
+                <div className="flex justify-between items-center order-2 md:order-1 flex-wrap">
+                  <Link
+                    href="/"
+                    className="group uppercase font-bold text-lg flex gap-2 items-center cursor-pointer relative"
+                  >
+                    <Logo className="w-10 opacity-100 group-hover:opacity-0 transition-opacity duration-500" />
+                    <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-500 absolute inset-0 h-full flex items-center text-sm md:text-2xl lg:text-5xl">
+                      HATEM
+                    </span>
+                  </Link>
+                  <p className="flex-col md:items-end order-3 flex md:hidden">
+                    <strong className="font-semibold">&copy; 2025 Hatem</strong>
+                    <span className="text-sm text-neutral-500">
+                      All rights reserved
+                    </span>
+                  </p>
+                </div>
+
+                <ul className="flex justify-between gap-10 font-medium order-1 md:order-2  flex-wrap">
+                  <li>
+                    <a
+                      href="https://github.com/abdulrahmanhatem"
+                      target="_blank"
+                    >
+                      <AnimateTextOnHover text="Github" />
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.linkedin.com/in/abdelrahmanhatemdev/"
+                      target="_blank"
+                    >
+                      <AnimateTextOnHover text="Linkedin" />
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://stackoverflow.com/users/16331715/abdelrahman-hatem"
+                      target="_blank"
+                    >
+                      <AnimateTextOnHover text="Stackoverflow" />
+                    </a>
+                  </li>
+                </ul>
+
+                <p className="flex-col md:items-end order-3 hidden md:flex">
                   <strong className="font-semibold">&copy; 2025 Hatem</strong>
                   <span className="text-sm text-neutral-500">
                     All rights reserved
                   </span>
                 </p>
               </div>
-
-              <ul className="flex justify-between gap-10 font-medium order-1 md:order-2  flex-wrap">
-                <li>
-                  <a href="https://github.com/abdulrahmanhatem" target="_blank">
-                    <AnimateTextOnHover text="Github" />
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://www.linkedin.com/in/abdelrahmanhatemdev/"
-                    target="_blank"
-                  >
-                    <AnimateTextOnHover text="Linkedin" />
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://stackoverflow.com/users/16331715/abdelrahman-hatem"
-                    target="_blank"
-                  >
-                    <AnimateTextOnHover text="Stackoverflow" />
-                  </a>
-                </li>
-              </ul>
-
-              <p className="flex-col md:items-end order-3 hidden md:flex">
-                <strong className="font-semibold">&copy; 2025 Hatem</strong>
-                <span className="text-sm text-neutral-500">
-                  All rights reserved
-                </span>
-              </p>
-            </div>
+            </motion.div>
           </div>
         </footer>
       </motion.div>
