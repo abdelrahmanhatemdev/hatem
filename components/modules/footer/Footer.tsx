@@ -41,6 +41,7 @@ const Footer = () => {
             <div className="flex justify-between w-full lg:gap-20 gap-10 flex-col lg:flex-row">
               <div className="flex flex-col lg:gap-10 gap-5">
                 <h2 className="text-4xl lg:text-6xl max-w-64 lg:max-w-96 font-medium">
+                  
                   Let’s create something great together
                 </h2>
                 <p className="group text-neutral-400 uppercase lg:text-sm text-[.7rem]">
