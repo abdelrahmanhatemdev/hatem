@@ -249,18 +249,39 @@ const Hero = () => {
                         delay: 2 * slideParagraphDelay + 3 * slideSpanDelay,
                       }}
                     >
-                      <span className="inline-block relative group">
+                      <span className="inline-block relative">
                         <strong className="font-extrabold md:tracking-wider text-[2.3rem] sm:text-[3rem] md:text-[3.5vw] scale-y-105">
                           Cairo
                         </strong>
-                        <Image
-                          src={"/assets/media/pyramids.png"}
-                          alt="Egyptian Pyramids"
-                          width={300}
-                          height={130}
-                          className="absolute inset-0 scale-150 opacity-75 group-hover:opacity-100 transition-opacity"
-                        />
+                       
                       </span>
+                      <span className=" group">
+                          <motion.span
+                            variants={slideVariants}
+                            initial={{ opacity: 0, x: -100 }}
+                            animate={
+                              activeSlide === index + 1
+                                ? { opacity: 1, x: 0 }
+                                : { opacity: 0, x: -100 }
+                            }
+                            exit={{ opacity: 0, x: -100 }}
+                            transition={{
+                              ...slideTransition,
+                              delay:
+                                2 * slideParagraphDelay + 2 * slideSpanDelay,
+                              duration: 1,
+                            }}
+                            className="inline-block"
+                          >
+                            <Image
+                              src={"/assets/media/pyramids.png"}
+                              alt="Egyptian Pyramids"
+                              width={200}
+                              height={70}
+                              className=" scale-150 opacity-75 group-hover:opacity-100 transition-opacity inline-block"
+                            />
+                          </motion.span>
+                        </span>
                     </motion.span>
                   </p>
                 </motion.span>
