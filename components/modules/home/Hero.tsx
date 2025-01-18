@@ -11,8 +11,9 @@ const Hero = () => {
   const [activeSlide, setActiveSlide] = useState<number | null>(1);
   const [progress, setProgress] = useState<number>(0);
   const [isAutoplaying, setIsAutoplaying] = useState<boolean>(false);
+  const [isProgressing, setIsProgressing] = useState<boolean>(false);
 
-  const autoplayDelay = 8000;
+  const autoplayDelay = 4000;
 
   const slideVariants = {
     initial: { opacity: 0, x: 200 },
@@ -29,7 +30,7 @@ const Hero = () => {
     const easeInOut = cubicBezier(0.9, 0, 0.2, 1);
     const duration = autoplayDelay;
     let startTime: number | null = null;
-    let lastTime: number = 0;
+    let animationFrameId: number;
 
     const animateProgress = (now: number) => {
       if (startTime === null) startTime = now;
@@ -37,22 +38,33 @@ const Hero = () => {
 
       const linearProgress = elapsed / duration;
 
-      if (linearProgress >= 1.038) {
+      if (linearProgress >= 1) {
         startTime = now;
+        setIsProgressing(false);
+        setIsAutoplaying(false)
+        setProgress(100);
+        return;
       }
 
       const easedProgress = easeInOut(Math.min(linearProgress, 1));
+
       setProgress(easedProgress * 100);
 
-      requestAnimationFrame(animateProgress);
+      animationFrameId = requestAnimationFrame(animateProgress);
     };
 
-    if (isAutoplaying) {
-      requestAnimationFrame(animateProgress);
+    if ((isAutoplaying && isProgressing) ) {
+      animationFrameId = requestAnimationFrame(animateProgress);
     }
 
-    return () => cancelAnimationFrame(lastTime);
-  }, [isAutoplaying]);
+    return () => {
+      cancelAnimationFrame(animationFrameId); // Cancel the animation frame.
+    };
+  }, [isAutoplaying, isProgressing, autoplayDelay]);
+
+  // console.log("isAutoplaying", isAutoplaying);
+  // console.log("isProgressing", isProgressing);
+  // console.log("activeSlide", activeSlide);
 
   return (
     <section className="h-screen 2xl:w-[80vw] mx-auto">
@@ -73,13 +85,22 @@ const Hero = () => {
         onSlideChange={(swiper) => {
           const newIndex = swiper.realIndex + 1;
 
+          // console.log("loopedSlice", swiper);
+          
+
           if (newIndex === activeSlide) {
             return;
           }
-
+          setProgress(0);
           setActiveSlide(newIndex);
           setIsAutoplaying(true);
+          setIsProgressing(true);
         }}
+        // onSwiper={(swiper) => {
+          
+        //   setIsAutoplaying(true);
+        //   setIsProgressing(true);
+        // }}
         onAutoplayStart={() => setIsAutoplaying(true)}
         onAutoplayStop={() => {
           setIsAutoplaying(false);
@@ -253,35 +274,33 @@ const Hero = () => {
                         <strong className="font-extrabold md:tracking-wider text-[2.3rem] sm:text-[3rem] md:text-[3.5vw] scale-y-105">
                           Cairo
                         </strong>
-                       
                       </span>
                       <span className=" group">
-                          <motion.span
-                            variants={slideVariants}
-                            initial={{ opacity: 0, x: -100 }}
-                            animate={
-                              activeSlide === index + 1
-                                ? { opacity: 1, x: 0 }
-                                : { opacity: 0, x: -100 }
-                            }
-                            exit={{ opacity: 0, x: -100 }}
-                            transition={{
-                              ...slideTransition,
-                              delay:
-                                2 * slideParagraphDelay + 2 * slideSpanDelay,
-                              duration: 1,
-                            }}
-                            className="inline-block"
-                          >
-                            <Image
-                              src={"/assets/media/pyramids.png"}
-                              alt="Egyptian Pyramids"
-                              width={200}
-                              height={70}
-                              className=" scale-150 opacity-75 group-hover:opacity-100 transition-opacity inline-block"
-                            />
-                          </motion.span>
-                        </span>
+                        <motion.span
+                          variants={slideVariants}
+                          initial={{ opacity: 0, x: -100 }}
+                          animate={
+                            activeSlide === index + 1
+                              ? { opacity: 1, x: 0 }
+                              : { opacity: 0, x: -100 }
+                          }
+                          exit={{ opacity: 0, x: -100 }}
+                          transition={{
+                            ...slideTransition,
+                            delay: 2 * slideParagraphDelay + 2 * slideSpanDelay,
+                            duration: 1,
+                          }}
+                          className="inline-block"
+                        >
+                          <Image
+                            src={"/assets/media/pyramids.png"}
+                            alt="Egyptian Pyramids"
+                            width={200}
+                            height={70}
+                            className=" scale-150 opacity-75 group-hover:opacity-100 transition-opacity inline-block"
+                          />
+                        </motion.span>
+                      </span>
                     </motion.span>
                   </p>
                 </motion.span>
