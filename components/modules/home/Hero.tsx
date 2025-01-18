@@ -13,7 +13,7 @@ const Hero = () => {
   const [isAutoplaying, setIsAutoplaying] = useState<boolean>(false);
   const [isProgressing, setIsProgressing] = useState<boolean>(false);
 
-  const autoplayDelay = 4000;
+  const autoplayDelay = 8000;
 
   const slideVariants = {
     initial: { opacity: 0, x: 200 },
@@ -60,10 +60,10 @@ const Hero = () => {
     return () => {
       cancelAnimationFrame(animationFrameId); // Cancel the animation frame.
     };
-  }, [isAutoplaying, isProgressing, autoplayDelay]);
+  }, [isAutoplaying, isProgressing, autoplayDelay, activeSlide]);
 
   // console.log("isAutoplaying", isAutoplaying);
-  // console.log("isProgressing", isProgressing);
+  console.log("isProgressing", isProgressing);
   // console.log("activeSlide", activeSlide);
 
   return (
@@ -85,9 +85,6 @@ const Hero = () => {
         onSlideChange={(swiper) => {
           const newIndex = swiper.realIndex + 1;
 
-          // console.log("loopedSlice", swiper);
-          
-
           if (newIndex === activeSlide) {
             return;
           }
@@ -96,18 +93,16 @@ const Hero = () => {
           setIsAutoplaying(true);
           setIsProgressing(true);
         }}
-        // onSwiper={(swiper) => {
-          
-        //   setIsAutoplaying(true);
-        //   setIsProgressing(true);
-        // }}
-        onAutoplayStart={() => setIsAutoplaying(true)}
+        onAutoplayStart={() => {
+          setIsAutoplaying(true)
+          setIsProgressing(true);
+        }}
         onAutoplayStop={() => {
           setIsAutoplaying(false);
+          setIsProgressing(false);
           setProgress(0);
         }}
         spaceBetween={20}
-        speed={3000}
       >
         {[1, 2, 3].map((slide, index) => (
           <SwiperSlide key={index}>
