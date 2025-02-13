@@ -45,7 +45,7 @@ const PixelPerfect = dynamic(
 );
 
 const TrustedBrands = dynamic(
-  () => import("@/components/modules/home/about/TrustedBrands"),
+  () => import("@/components/modules/home/TrustedBrands"),
   {
     loading: Loading,
   }

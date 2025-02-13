@@ -36,9 +36,6 @@ function Header() {
               Projects
             </li>
             <li className="hover:bg-neutral-800 px-3 py-1 rounded-lg cursor-pointer transition-colors">
-              Featured
-            </li>
-            <li className="hover:bg-neutral-800 px-3 py-1 rounded-lg cursor-pointer transition-colors">
               Contact
             </li>
           </ul>

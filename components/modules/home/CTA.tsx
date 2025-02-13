@@ -35,7 +35,7 @@ const CTA = () => {
     ...animationVariants,
     visible: {
       ...animationVariants.visible,
-      transition: { ...animationVariants.visible.transition, delay: 1.5 },
+      transition: { ...animationVariants.visible.transition, delay: 1.2 },
     },
   };
 
@@ -43,7 +43,7 @@ const CTA = () => {
     ...animationVariants,
     visible: {
       ...animationVariants.visible,
-      transition: { ...animationVariants.visible.transition, delay: 2 },
+      transition: { ...animationVariants.visible.transition, delay: 1.5 },
     },
   };
 
@@ -51,7 +51,7 @@ const CTA = () => {
     ...animationVariants,
     visible: {
       ...animationVariants.visible,
-      transition: { ...animationVariants.visible.transition, delay: 2.2 },
+      transition: { ...animationVariants.visible.transition, delay: 1.7 },
     },
   };
 

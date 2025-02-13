@@ -62,12 +62,8 @@ const Hero = () => {
     };
   }, [isAutoplaying, isProgressing, autoplayDelay, activeSlide]);
 
-  // console.log("isAutoplaying", isAutoplaying);
-  console.log("isProgressing", isProgressing);
-  // console.log("activeSlide", activeSlide);
-
   return (
-    <section className="h-screen 2xl:w-[80vw] mx-auto">
+    <section className="h-screen 2xl:w-[80vw] mx-auto ">
       <Swiper
         modules={[Autoplay]}
         pagination={{
