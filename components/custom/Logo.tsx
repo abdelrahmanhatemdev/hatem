@@ -1,16 +1,18 @@
 import Image from "next/image";
 import { memo } from "react";
 
-const Logo = ({className}: {className?: string}) => {
+const Logo = ({ className }: { className?: string }) => {
   return (
-    <Image
-      src={`/assets/media/logo.png`}
-      alt="Hatem Developer"
-      height={100}
-      width={100}
-      priority={true}
-      className={className}
-    />
+    <div className="font-satoshi flex gap-2 text-2xl">
+      <div className="size-60 perspective-dramatic ">
+        <h2>Abdelrahman</h2>
+        <p className="rotate-">Frontend</p>
+      </div>
+      <div>
+        <h2>Hatem</h2>
+        <p>Developer</p>
+      </div>
+    </div>
   );
 };
 export default memo(Logo);

@@ -19,10 +19,13 @@ const SelectedWorks = () => {
   return (
     <section className="w-full mt-32 px-10">
       <div className="mx-auto flex flex-col gap-10">
-        <h2 className="md:text-6xl  text-center p-4">Selected Works</h2>
+        <h2 className="md:text-6xl  text-center p-4">Selected Work</h2>
         <div className="grid grid-cols-1 gap-32 py-32">
           <div className="grid md:grid-cols-1 lg:grid-cols-[calc(100%-820px)_820px] gap-5 lg:gap-0 ">
-            <div className="flex flex-col gap-10">
+            <div className="flex flex-col justify-between">
+              <div className="flex flex-col gap-24">
+
+              
               <div className="grid grid-cols-1 lg:grid-cols-[60%_40%]">
                 <h2 className="uppercase text-6xl font-bold">Vogue</h2>
                 <div className="text-sm flex flex-col justify-end gap-2">
@@ -31,18 +34,43 @@ const SelectedWorks = () => {
                 </div>
               </div>
               <div className="grid grid-cols-1 lg:grid-cols-[60%_40%]">
-               
-                <div className="text-sm flex flex-col justify-end gap-2">
+                <div className="text-sm flex flex-col justify-start gap-2">
                   <span className="text-neutral-600 font-extrabold">Description</span>
-                  <p className="text-neutral-400">Frontend / backend</p>
+                  <p className="text-neutral-400 max-w-64">Vogue Admin is a modern e-commerce dashboard built with cutting-edge tech, offering seamless platform management with essential admin modules.</p>
                 </div>
-                <div className="text-sm flex flex-col justify-end gap-2">
-                  <span className="text-neutral-600 font-extrabold">Role</span>
-                  <p className="text-neutral-400">Frontend / backend</p>
+                <div className="text-sm flex flex-col justify-start gap-2">
+                  <span className="text-neutral-600 font-extrabold">Stack</span>
+                  <div className="text-neutral-400">
+                    <p>Nextjs</p>
+                    <p>React</p>
+                    <p>Typescript</p>
+                    <p>Tailwind</p>
+                    <p>Shadcn</p>
+                    <p>React form hook</p>
+                    <p>Zod</p>
+                    <p>ESLint</p>
+                    <p>Tanstack</p>
+                    <p>Framer Motion</p>
+                    <p>Swiper</p>
+                    <p>Recharts</p>
+                    <p>Firebase</p>
+                    <p>Vercel</p>
+                  </div>
+                </div>
+              </div>
+              </div>
+              <div className="grid grid-cols-1 lg:grid-cols-[60%_40%]">
+                <div className="text-sm flex flex-col justify-start gap-2">
+                  <p className="text-neutral-400 max-w-64">Dashboard</p>
+                </div>
+                <div className="text-sm flex flex-col justify-start gap-2">
+                  <div className="text-neutral-400">
+                    <p>&copy; 2025</p>
+                  </div>
                 </div>
               </div>
             </div>
-            <div className="relative flex justify-center lg:justify-end h-[500px]">
+            <div className="relative flex justify-center lg:justify-end h-[650px]">
               <motion.div
                 initial="hidden"
                 whileInView="visible"
@@ -66,7 +94,7 @@ const SelectedWorks = () => {
                 viewport={{ once: true, amount: 0.5 }}
                 variants={boxTwoVariants}
                 layout
-                className="absolute right-0 -bottom-32"
+                className="absolute right-0 bottom-0"
               >
                 <Image
                   src="/assets/media/works/vogue-admin/dashboard-sm-light.png"
