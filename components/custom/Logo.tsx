@@ -1,16 +1,29 @@
-import Image from "next/image";
 import { memo } from "react";
 
 const Logo = ({ className }: { className?: string }) => {
   return (
     <div className="font-satoshi flex gap-2 text-2xl">
-      <div className="size-60 perspective-dramatic ">
-        <h2>Abdelrahman</h2>
-        <p className="rotate-">Frontend</p>
-      </div>
-      <div>
-        <h2>Hatem</h2>
-        <p>Developer</p>
+      <div className="relative group perspective-dramatic h-6 min-w-40">
+        <div>
+          <h2 className="text-neutral-600 absolute inset-0 flex transition-all group-hover:rotate-x-90 duration-300 ease-in">
+            <span>A</span>
+            <span className="lowercase">bdelrahman</span>
+          </h2>
+          <h2 className="absolute inset-0 flex transition-all -rotate-x-90 translate-y-6 group-hover:rotate-x-0 group-hover:translate-y-0 group-hover:opacity-100 duration-300 ease-in">
+            <span>F</span>
+            <span className="lowercase">rontend</span>
+          </h2>
+        </div>
+        <div>
+          <h2 className="absolute top-0 left-[10.2rem] flex transition-all group-hover:-rotate-x-90 duration-300 ease-in">
+            <span>H</span>
+            <span className="lowercase">atem</span>
+          </h2>
+          <h2 className="text-neutral-600 absolute itop-0 left-[7rem] flex transition-all rotate-x-90 -translate-y-6 group-hover:rotate-x-0 group-hover:translate-y-0 group-hover:opacity-100 duration-300 ease-in">
+            <span>D</span>
+            <span className="lowercase">eveloper</span>
+          </h2>
+        </div>
       </div>
     </div>
   );
