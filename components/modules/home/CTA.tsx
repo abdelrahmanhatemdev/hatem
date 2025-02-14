@@ -63,7 +63,7 @@ const CTA = () => {
         viewport={{ once: true, amount: 0.5 }}
         variants={mainVariants}
       >
-        <div className="xs:w-[calc(95%-80px)] w-[80vw] md:w-[70vw] mx-auto h-full relative pt-4 z-10">
+        <div className="xs:w-[calc(95%-80px)] w-[80%] md:w-[78%] mx-auto h-full relative pt-4 z-10">
           <div
             className="w-full h-16 grid lg:grid-cols-3 absolute left-0 -top-12 border border-dashed 
           border-[#191919] border-y-0"

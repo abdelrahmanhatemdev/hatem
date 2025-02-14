@@ -19,7 +19,7 @@ const SelectedWorks = () => {
   return (
     <section className="w-full mt-32 px-10">
       <div className="mx-auto flex flex-col gap-10">
-        <h2 className="md:text-6xl  text-center p-4">Selected Work</h2>
+        <h2 className="text-4xl text-center p-4">Selected Work</h2>
         <div className="grid grid-cols-1 gap-32 py-32">
           <div className="grid md:grid-cols-1 lg:grid-cols-[calc(100%-820px)_820px] gap-5 lg:gap-0 ">
             <div className="flex flex-col justify-between">

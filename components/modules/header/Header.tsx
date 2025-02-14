@@ -19,16 +19,13 @@ const Logo = dynamic(() => import("@/components/custom/Logo"), {
 
 function Header() {
   return (
-    <header className="fixed top-4 left-[5%] z-50 w-[90%] h-12">
+    <header className="fixed top-4 left-[5%] lg:left-[2%] z-50 w-[90%] lg:w-[96%] h-12">
       <nav className="flex items-center justify-between bg-neutral-950 bg-opacity-40 h-fit rounded-full md:px-10 px-6 py-2 backdrop-blur-lg">
         <Link
           href="/"
           className="group uppercase font-bold text-lg flex gap-2 items-center justify-center cursor-pointer relative"
         >
           <Logo className="w-10 opacity-100 group-hover:opacity-0 transition-opacity duration-500"/>
-          {/* <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-500 absolute inset-0 h-full flex items-center">
-            HATEM
-          </span> */}
         </Link>
         <div className="flex gap-6 items-center justify-start">
           <ul className="gap-6 items-center justify-start hidden md:flex ">

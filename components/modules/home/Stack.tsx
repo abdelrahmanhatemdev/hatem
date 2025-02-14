@@ -227,7 +227,7 @@ const Stack = () => {
         variants={boxOneVariants}
       >
         <div className="flex flex-col gap-4 text-center p-10">
-          <h2 className="text-3xl md:text-6xl  text-center">Stack</h2>
+          <h2 className="text-4xl md:text-6xl  text-center">Stack</h2>
           <p className="text-sm md:text-md 2xl:text-lg text-neutral-400">
             My preferred tools and the foundation behind my proficiency to
             create seamless high-performance applications.
@@ -240,7 +240,7 @@ const Stack = () => {
         viewport={{ once: true, amount: 0.5 }}
         variants={mainVariants}
       >
-        <div className="w-[70vw] sm:w-[60vw] mx-auto grid grid-cols-2 md:grid-cols-4 xl:grid-cols-8 mt-10 gap-[3vw] lg:gap-[1vw]">
+        <div className="w-[70%] sm:w-[60%] mx-auto grid grid-cols-2 md:grid-cols-4 xl:grid-cols-8 mt-10 gap-[3vw] lg:gap-[1vw]">
           {technolegy.map((tech, index) => (
             <motion.div
               key={`${tech.src}`}

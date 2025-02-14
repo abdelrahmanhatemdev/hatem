@@ -63,7 +63,7 @@ const Hero = () => {
   }, [isAutoplaying, isProgressing, autoplayDelay, activeSlide]);
 
   return (
-    <section className="h-screen 2xl:w-[80vw] mx-auto ">
+    <section className="h-screen w-[90%] 2xl:w-[70%] mx-auto ">
       <Swiper
         modules={[Autoplay]}
         pagination={{
@@ -77,7 +77,7 @@ const Hero = () => {
           disableOnInteraction: false,
         }}
         loop={true}
-        className="h-full w-[85%] mx-auto hero-swiper relative"
+        className="h-full lg:w-[85%] mx-auto hero-swiper relative"
         onSlideChange={(swiper) => {
           const newIndex = swiper.realIndex + 1;
 
@@ -288,7 +288,7 @@ const Hero = () => {
                             alt="Egyptian Pyramids"
                             width={200}
                             height={70}
-                            className=" scale-150 opacity-75 group-hover:opacity-100 transition-opacity inline-block"
+                            className=" scale-150 opacity-70 group-hover:opacity-100 transition-opacity inline-block"
                           />
                         </motion.span>
                       </span>

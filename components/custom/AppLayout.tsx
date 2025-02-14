@@ -12,7 +12,7 @@ const Footer = dynamic(() => import("@/components/modules/footer/Footer"), {
 
 function AppLayout({ children }: Readonly<{ children: ReactNode }>) {
   return (
-    <main className="relative w-[98vw]">
+    <main className="relative">
       <Header />
       {children}
       <Footer />

@@ -76,7 +76,7 @@ const Performance = () => {
           </div>
         </motion.div>
       </div>
-      <div className="grid grid-cols-2 gap-8">
+      <div className="grid grid-cols-2 lg:gap-8 gap-5">
         <motion.div
           initial="hidden"
           whileInView="visible"

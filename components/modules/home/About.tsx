@@ -68,7 +68,7 @@ const About = () => {
 
   return (
     <section className="w-full mt-24">
-      <div className="2xl:w-[1225px] mx-auto flex flex-col gap-10">
+      <div className="w-[90%] 2xl:w-[70%] mx-auto flex flex-col gap-10">
         <Description />
         <div className="grid md:grid-cols-[calc(50%-1.25rem)_calc(50%-1.25rem)] gap-10">
          

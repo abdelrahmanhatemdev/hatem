@@ -38,7 +38,7 @@ const Footer = () => {
         variants={animationVariants}
         layout
       >
-        <footer className="w-full mt-72 mb-10">
+        <footer className="w-[90%] mx-auto lg:w-full mt-72 mb-10">
           <div className="0 border border-neutral-800 lg:p-20 lg:pb-10 p-10 rounded-xl 2xl:w-[75%] mx-auto bg-gradient-to-r from-neutral-900 to-[#1f1f1f] flex flex-col lg:gap-20 gap-10">
             <div className="flex justify-between w-full lg:gap-20 gap-10 flex-col lg:flex-row">
               <div className="flex flex-col lg:gap-10 gap-5">
@@ -129,10 +129,8 @@ const Footer = () => {
                   <Link
                     href="/"
                     className="group uppercase font-bold text-lg flex gap-2 items-center cursor-pointer relative"
-                  >
-                    <Logo className="w-10 opacity-100 group-hover:opacity-0 transition-opacity duration-500" />
-                    <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-500 absolute inset-0 h-full flex items-center text-sm md:text-2xl lg:text-5xl">
-                      HATEM
+                  ><span className="h-full flex items-center text-2xl lg:text-5xl font-satoshi">
+                       <span>H</span> <span className="lowercase">ATEM</span> 
                     </span>
                   </Link>
                   <p className="flex-col md:items-end order-3 flex md:hidden">
