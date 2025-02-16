@@ -42,7 +42,7 @@ const MobileFirst = () => {
           </Link>
         </div>
 
-        <div className="h-[16rem] md:h-[19rem]  overflow-hidden flex gap-10 relative">
+        <div className="h-[16rem] md:h-[19rem] overflow-hidden flex gap-10 relative">
           <video
             autoPlay
             loop
@@ -53,7 +53,7 @@ const MobileFirst = () => {
             <source src="/assets/media/about/mobile-first.mp4" />
             Your browser does not support the video tag.
           </video>
-          <div className="absolute start-[calc(43%+1.5rem)] md:start-[calc(43%+.5rem)] max-w-[45%] h-auto border border-neutral-800 rounded-t-2xl overflow-hidden">
+          <div className="absolute start-[calc(43%+1.5rem)] md:start-[calc(25%+.5rem)] lg:start-[calc(43%+.5rem)] max-w-[45%] md:max-w-[65%] lg:max-w-[45%] h-auto border border-neutral-800 rounded-t-2xl overflow-hidden">
             <motion.div
               initial={{ y: "0%" }}
               animate={{ y: "-77%" }}

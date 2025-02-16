@@ -6,6 +6,10 @@ const Header = dynamic(() => import("@/components/modules/header/Header"), {
   loading: Loading,
 });
 
+const CTA = dynamic(() => import("@/components/modules/cta"), {
+  loading: Loading,
+});
+
 const Footer = dynamic(() => import("@/components/modules/footer/Footer"), {
   loading: Loading,
 });
@@ -15,6 +19,7 @@ function AppLayout({ children }: Readonly<{ children: ReactNode }>) {
     <main className="relative">
       <Header />
       {children}
+      <CTA/>
       <Footer />
     </main>
   );

@@ -48,7 +48,7 @@ const Performance = () => {
   };
 
   return (
-    <div className="grid md:grid-cols-[calc(60%-1.25rem)_calc(40%-1.25rem)] gap-10 ">
+    <div className="grid md:grid-cols-[calc(60%-1.25rem)_calc(40%-1.25rem)] gap-10">
       <div className="h-full">
         <motion.div
           initial="hidden"
@@ -56,13 +56,13 @@ const Performance = () => {
           viewport={{ once: true, amount: 0.5 }}
           variants={descriptionVariants}
           layout
-          className="bg-gradient-to-r from-neutral-900 to-[#1f1f1f] rounded-3xl border p-6 md:p-16 border-neutral-800 h-full flex flex-col gap-4 justify-center"
+          className="bg-gradient-to-r from-neutral-900 to-[#1f1f1f] rounded-3xl border p-6 lg:p-16 border-neutral-800 h-full flex flex-col gap-4 justify-center"
         >
           <h2 className="text-lg md:text-3xl font-semibold">
             Crafting Code with Precision and Purpose
           </h2>
           <div>
-            <span className="md:text-xl text-neutral-400 leading-6 font-normal">
+            <span className="lg:text-xl text-neutral-400 leading-6 font-normal">
               I am passionate and dedicated for creating high-performing,
               seamless web applications. With expertise in building scalable and
               efficient frontend solutions, I specialize in turning complex

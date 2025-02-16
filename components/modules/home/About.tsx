@@ -92,7 +92,7 @@ const About = () => {
               <Performance />
             </motion.div>
         </div>
-        <div className="grid md:grid-cols-[repeat(3,calc(33.33333%-1.666666666rem))] gap-10 ">
+        <div className="grid lg:grid-cols-[repeat(3,calc(33.33333%-1.666666666rem))] gap-10 ">
           <SPA />
           <MobileFirst />
           <PixelPerfect />

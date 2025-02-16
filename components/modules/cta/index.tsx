@@ -6,7 +6,7 @@ import dynamic from "next/dynamic";
 import Loading from "@/components/custom/Loading";
 
 const ThreeQuarterCircle = dynamic(
-  () => import("@/components/modules/home/cta/ThreeQuarterCircle"),
+  () => import("@/components/modules/cta/ThreeQuarterCircle"),
   {
     loading: Loading,
   }

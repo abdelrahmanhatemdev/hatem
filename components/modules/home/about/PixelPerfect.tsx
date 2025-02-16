@@ -44,7 +44,7 @@ const PixelPerfect = () => {
                   loop
                   muted
                   playsInline
-                  className="rounded-2xl  -ml-6  -mb-24 md:-ml-10 max-w-[19rem] border border-neutral-800"
+                  className="rounded-2xl  -ml-6 md:-ml-4 -mb-24 md:mb-24 lg:-ml-10 max-w-[19rem] md:max-w-[35rem] lg:max-w-[19rem] border border-neutral-800"
                 >
                   <source src="/assets/media/about/pixel-perfect.mp4" />
                   Your browser does not support the video tag.

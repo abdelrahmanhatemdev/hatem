@@ -38,13 +38,13 @@ const SPA = () => {
             </div>
           </Link>
         </div>
-        <div className="h-[16rem] md:h-[19rem]  overflow-hidden">
+        <div className="h-[16rem] md:h-[20rem] lg:h-[19rem]  overflow-hidden">
           <video
             autoPlay
             loop
             muted
             playsInline
-            className="rounded-2xl -ml-6  md:-mb-24 md:-ml-10 max-w-[19rem] md:max-w-96 border border-neutral-800"
+            className="rounded-2xl -ml-6 lg:-mb-24 lg:-ml-10 max-w-[19rem] md:max-w-[50rem]  lg:max-w-96 border border-neutral-800"
           >
             <source src="/assets/media/about/spa.mp4" />
             Your browser does not support the video tag.

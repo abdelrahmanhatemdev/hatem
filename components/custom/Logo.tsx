@@ -2,7 +2,7 @@ import { memo } from "react";
 
 const Logo = ({ className }: { className?: string }) => {
   return (
-    <div className="font-satoshi flex gap-2 text-2xl">
+    <div className="font-satoshi flex gap-2 lg:text-2xl">
       <div className="relative group perspective-dramatic h-8 min-w-40">
         <div>
           <h2 className="text-neutral-600 absolute inset-0 flex transition-all group-hover:rotate-x-90 duration-300 ease-in">
@@ -15,7 +15,7 @@ const Logo = ({ className }: { className?: string }) => {
           </h2>
         </div>
         <div>
-          <h2 className="absolute top-0 left-[10.2rem] flex transition-all group-hover:-rotate-x-90 duration-300 ease-in">
+          <h2 className="absolute top-0 left-[7.8rem] lg:left-[10.2rem] flex transition-all group-hover:-rotate-x-90 duration-300 ease-in">
             <span>H</span>
             <span className="lowercase">atem</span>
           </h2>
