@@ -1,9 +1,9 @@
 import { memo } from "react";
 const Details = () => {
   return (
-    <div className="px-6">
+    <section className="px-6">
       <h1 className="py-36 text-9xl font-black font-satoshi">Vogue Admin</h1>
-      <div className="grid grid-cols-1 lg:grid-cols-2">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-0">
         <div className="grid grid-cols-1 sm:grid-cols-[35%_65%]">
           <div className="flex flex-col gap-5">
             <div className="flex flex-col *:leading-6">
@@ -25,7 +25,7 @@ const Details = () => {
               <p className="text-2xl tracking-widest font-medium">Visit Site</p>
             </div>
           </div>
-          <div className="border-s border-neutral-200 px-2 text-neutral-500 font-semibold text-sm">
+          <div className="border-s border-neutral-200 px-2 text-neutral-500 font-semibold text-sm pb-5">
             <p>Nextjs</p>
             <p>React</p>
             <p>Typescript</p>
@@ -44,9 +44,20 @@ const Details = () => {
             <p>Vercel</p>
           </div>
         </div>
-        <div>Description</div>
+        <div className="text-2xl font-medium text-neutral-200">
+          I designed Vogue Admin as a powerful e-commerce management platform to
+          help brands streamline operations and scale with ease. It provides
+          intuitive control over products, categories, and administrators while
+          ensuring a seamless and structured workflow. With a strong focus on
+          brand consistency, it offers customizable settings for appearance,
+          currency management, and global notifications. Advanced state
+          management ensures smooth performance, while real-time updates keep
+          businesses agile. From organizing product catalogs to optimizing
+          administrative tasks, Vogue Admin empowers brands to operate
+          efficiently and maintain a strong online presence.
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 export default memo(Details);

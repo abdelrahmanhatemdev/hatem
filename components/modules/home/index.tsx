@@ -9,7 +9,7 @@ const About = dynamic(() => import("@/components/modules/home/About"), {
   loading: Loading,
 });
 
-const SelectedWorks = dynamic(() => import("@/components/modules/home/SelectedWorks"), {
+const SelectedWorks = dynamic(() => import("@/components/modules/home/Works"), {
   loading: Loading,
 });
 

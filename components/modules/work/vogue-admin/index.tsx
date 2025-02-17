@@ -7,10 +7,15 @@ const Details = dynamic(() => import("@/components/modules/work/vogue-admin/Deta
   loading: Loading,
 });
 
+const Gallery = dynamic(() => import("@/components/modules/work/vogue-admin/Gallery"), {
+  loading: Loading,
+});
+
 const Work = () => {
   return (
     <div className="pt-16">
       <Details/>
+      <Gallery/>
     </div>
   )
 }
