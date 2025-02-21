@@ -114,7 +114,7 @@ const Hero = () => {
                   >
                     <span>
                       <span className="font-extralight">I</span>
-                      <span className="font-extralight">'m </span>
+                      <span className="font-extralight">&apos;m </span>
                     </span>
                     <span className="font-thin">a</span>
                   </motion.span>

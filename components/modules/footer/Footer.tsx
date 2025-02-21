@@ -3,9 +3,9 @@ import { motion } from "framer-motion";
 import dynamic from "next/dynamic";
 import Loading from "@/components/custom/Loading";
 
-const Logo = dynamic(() => import("@/components/custom/Logo"), {
-  loading: Loading,
-});
+// const Logo = dynamic(() => import("@/components/custom/Logo"), {
+//   loading: Loading,
+// });
 
 const AnimatedText = dynamic(
   () => import("@/components/custom/animatedText/AnimatedText"),

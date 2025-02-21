@@ -1,9 +1,6 @@
 "use client";
 import { memo } from "react";
-
 import { motion } from "framer-motion";
-
-import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 

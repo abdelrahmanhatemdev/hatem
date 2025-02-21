@@ -1,11 +1,6 @@
 "use client";
 import { memo } from "react";
-
-import dynamic from "next/dynamic";
-import Loading from "@/components/custom/Loading";
-import { useInView, motion } from "framer-motion";
-
-import { TbBrandNextjs } from "react-icons/tb";
+import { motion } from "framer-motion";
 import Image from "next/image";
 
 const Expertise = () => {
@@ -71,7 +66,7 @@ const Expertise = () => {
               />
               <h3 className="text-lg font-semibold ">Next.js Development</h3>
               <p className="text-sm font-semibold text-neutral-400 line-clamp-6">
-                Next.js is more than just a React framework; it's the backbone
+                Next.js is more than just a React framework; i&apos;s the backbone
                 of modern web applications. With expertise in server-side
                 rendering, static site generation, and API integrations, I build
                 fast, scalable, and SEO-friendly web applications tailored to
@@ -119,7 +114,7 @@ const Expertise = () => {
               <h3 className="text-lg font-semibold ">Full-Stack Development</h3>
               <p className="text-sm font-semibold text-neutral-400 line-clamp-6">
                 From the user interface to the database, I bring expertise in
-                creating end-to-end solutions. Whether it's integrating MySQL or
+                creating end-to-end solutions. Whether it&apos;s integrating MySQL or
                 using serverless architectures, I deliver reliable, scalable,
                 and maintainable applications.
               </p>
@@ -191,7 +186,7 @@ const Expertise = () => {
               <p className="text-sm font-semibold text-neutral-400 line-clamp-6">
                 A great website is one that everyone can use and find. I
                 implement technical SEO strategies, structured data, and
-                accessibility best practices to maximize your site's reach and
+                accessibility best practices to maximize your site&apos;s reach and
                 usability.
               </p>
             </div>

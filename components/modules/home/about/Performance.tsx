@@ -1,6 +1,6 @@
 "use client";
 import { memo, useRef } from "react";
-import { AnimatePresence, motion, useInView } from "framer-motion";
+import {motion, useInView } from "framer-motion";
 import Image from "next/image";
 const Performance = () => {
   const performanceRef = useRef(null);

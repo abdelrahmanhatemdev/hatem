@@ -3,10 +3,8 @@ import { memo } from "react";
 
 const AnimateTextOnHover = ({
   text,
-  delay = 0,
 }: {
   text: string;
-  delay?: number;
 }) => {
   const letters = text.split("");
 

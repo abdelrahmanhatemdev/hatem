@@ -19,7 +19,7 @@ function MainLayout({ children }: Readonly<{ children: ReactNode }>) {
       window.removeEventListener("online", handleOnline);
       window.removeEventListener("offline", handleOffline);
     };
-  });
+  }, [setIsOnline]);
 
   return !isOnline ? (
     <NoInternet />

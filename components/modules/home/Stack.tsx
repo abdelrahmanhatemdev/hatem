@@ -1,9 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
 import { memo } from "react";
-
-import dynamic from "next/dynamic";
-import Loading from "@/components/custom/Loading";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 import {
@@ -29,22 +26,6 @@ const Stack = () => {
     visible: {
       ...animationVariants.visible,
       transition: { ...animationVariants.visible.transition, delay: 0.5 },
-    },
-  };
-
-  const boxTwoVariants = {
-    ...animationVariants,
-    visible: {
-      ...animationVariants.visible,
-      transition: { ...animationVariants.visible.transition, delay: 2 },
-    },
-  };
-
-  const boxThreeVariants = {
-    ...animationVariants,
-    visible: {
-      ...animationVariants.visible,
-      transition: { ...animationVariants.visible.transition, delay: 2.5 },
     },
   };
 

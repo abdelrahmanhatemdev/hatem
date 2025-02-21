@@ -1,8 +1,9 @@
+import { cn } from "@/lib/utils";
 import { memo } from "react";
 
-const Logo = ({ className }: { className?: string }) => {
+const Logo = ({ className = "" }: { className?: string }) => {
   return (
-    <div className="font-satoshi flex gap-2 lg:text-2xl">
+    <div className={cn("font-satoshi flex gap-2 lg:text-2xl", className)}>
       <div className="relative group perspective-dramatic h-8 min-w-40">
         <div>
           <h2 className="text-neutral-600 absolute inset-0 flex transition-all group-hover:rotate-x-90 duration-300 ease-in">
