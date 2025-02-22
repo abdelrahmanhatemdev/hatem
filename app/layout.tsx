@@ -67,7 +67,7 @@ const ogg = localFont({
       style: "normal",
     }
   ],
-  variable: "--font-satoshi",
+  variable: "--font-ogg",
 });
 
 export const metadata: Metadata = {
@@ -83,7 +83,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${interTight.className} ${interTight.variable} ${satoshi.variable} antialiased`}
+        className={`${interTight.className} ${interTight.variable} ${satoshi.variable} ${ogg.variable} antialiased`}
       >
         {children}
       </body>
