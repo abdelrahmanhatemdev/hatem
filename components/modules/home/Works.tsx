@@ -98,14 +98,14 @@ const SelectedWorks = () => {
                   layout
                 >
                   <Image
-                    src="/assets/media/work/vogue-admin/dashboard-light.png"
+                    src="/assets/media/work/vogue-admin/dashboard-light.webp"
                     alt="Next.js Development"
                     className="rounded-md border border-neutral-800 w-[97%] absolute inset-0 group-hover:opacity-0 transition-all duration-700"
                     width={800}
                     height={495}
                   />
                   <Image
-                    src="/assets/media/work/vogue-admin/dashboard.png"
+                    src="/assets/media/work/vogue-admin/dashboard.webp"
                     alt="Next.js Development"
                     className="rounded-md border border-neutral-800 w-[97%] absolute inset-0 opacity-0 group-hover:opacity-100 transition-all duration-700"
                     width={800}
@@ -120,14 +120,14 @@ const SelectedWorks = () => {
                   layout
                 >
                   <Image
-                    src="/assets/media/work/vogue-admin/dashboard-sm-light.png"
+                    src="/assets/media/work/vogue-admin/dashboard-sm-light.webp"
                     alt="Next.js Development"
                     className="rounded-lg border border-neutral-200 w-[20vw] lg:w-[9vw] absolute -right-2 lg:right-0 bottom-0 group-hover:opacity-0 transition-all duration-700"
                     width={153}
                     height={300}
                   />
                   <Image
-                    src="/assets/media/work/vogue-admin/dashboard-sm.png"
+                    src="/assets/media/work/vogue-admin/dashboard-sm.webp"
                     alt="Next.js Development"
                     className="rounded-lg border border-neutral-800 w-[20vw] lg:w-[9vw] absolute -right-2 lg:right-0 bottom-0 opacity-0 group-hover:opacity-100 transition-all duration-700"
                     width={153}

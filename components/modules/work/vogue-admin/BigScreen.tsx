@@ -1,10 +1,40 @@
 import Image from "next/image";
 import { memo } from "react";
 
-const DashboardMobile = () => {
+const BigScreen = () => {
   return (
     <section className="py-32 px-6 w-full">
       <div className="grid grid-cols-1 md:grid-cols-[40%_60%] p-28 sticky top-0">
+        
+        <div className="relative lg:h-[1000] min-w-[620]">
+          <div className="absolute right-0 top-0">
+            <Image
+              src="/assets/media/work/vogue-admin/dashboard-sm-light.webp"
+              alt="Next.js Development"
+              className="rounded-[3rem] border border-neutral-800"
+              width={306}
+              height={600}
+            />
+          </div>
+          <div className="absolute right-[356] top-96">
+            <Image
+              src="/assets/media/work/vogue-admin/dashboard-sm-light.webp"
+              alt="Next.js Development"
+              className="rounded-[3rem] border border-neutral-800"
+              width={306}
+              height={600}
+            />
+          </div>
+          <div className="absolute right-0 top-[620]">
+            <Image
+              src="/assets/media/work/vogue-admin/dashboard-sm-light.webp"
+              alt="Next.js Development"
+              className="rounded-[3rem] border border-neutral-800"
+              width={306}
+              height={600}
+            />
+          </div>
+        </div>
         <div className="flex flex-col gap-10 sticky top-0">
           <h2 className="font-ogg text-6xl">
             <p>Manage with Ease</p>
@@ -40,37 +70,8 @@ const DashboardMobile = () => {
             </div>
           </div>
         </div>
-        <div className="relative lg:h-[1000] min-w-[620]">
-          <div className="absolute right-0 top-0">
-            <Image
-              src="/assets/media/work/vogue-admin/dashboard-sm-light.webp"
-              alt="Next.js Development"
-              className="rounded-[3rem] border border-neutral-800"
-              width={306}
-              height={600}
-            />
-          </div>
-          <div className="absolute right-[356] top-96">
-            <Image
-              src="/assets/media/work/vogue-admin/dashboard-sm-light.webp"
-              alt="Next.js Development"
-              className="rounded-[3rem] border border-neutral-800"
-              width={306}
-              height={600}
-            />
-          </div>
-          <div className="absolute right-0 top-[620]">
-            <Image
-              src="/assets/media/work/vogue-admin/dashboard-sm-light.webp"
-              alt="Next.js Development"
-              className="rounded-[3rem] border border-neutral-800"
-              width={306}
-              height={600}
-            />
-          </div>
-        </div>
       </div>
     </section>
   );
 };
-export default memo(DashboardMobile);
+export default memo(BigScreen);

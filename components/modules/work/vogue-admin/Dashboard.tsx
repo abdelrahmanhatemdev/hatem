@@ -10,7 +10,7 @@ const Dashboard = () => {
           </div>
           <div className="flex flex-col gap-24">
             <Image
-              src={`/assets/media/work/vogue-admin/dashboard-light.png`}
+              src={`/assets/media/work/vogue-admin/dashboard-light.webp`}
               alt="Vogue Admin Dashboard"
               className="max-w-full h-auto rounded-2xl"
               width={1000}

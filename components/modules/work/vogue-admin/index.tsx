@@ -15,12 +15,18 @@ const DashboardMobile = dynamic(() => import("@/components/modules/work/vogue-ad
   loading: Loading,
 });
 
+
+const Brand = dynamic(() => import("@/components/modules/work/vogue-admin/Brand"), {
+  loading: Loading,
+});
+
 const Work = () => {
   return (
     <div className="pt-16">
       <Details/>
       <Dashboard/>
       <DashboardMobile/>
+      <Brand/>
     </div>
   )
 }
