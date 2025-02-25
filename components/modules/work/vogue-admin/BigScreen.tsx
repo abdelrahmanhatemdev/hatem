@@ -27,38 +27,18 @@ const BigScreen = () => {
         </div>
         <div className="flex flex-col gap-10 sticky top-0">
           <h2 className="font-ogg text-6xl">
-            <p>Manage with Ease</p>
-            <p>Anytime</p>
-            <p>Anywhere</p>
+            <p>Built for Efficiency</p>
+            <p>Made for You</p>
           </h2>
           <p className="text-lg font-medium text-neutral-400">
-            I built a responsive, user-friendly dashboard that adapts seamlessly
-            to any device, ensuring a smooth experience. Its structured layout
-            helps users stay focused, making key insights and actions easily
-            accessible.
+            I designed it to simplify e-commerce management, making
+            tasks faster and more intuitive. With a clean interface and smart
+            features, it helps businesses stay organized and efficient. Every
+            element is built for productivity, giving users seamless control
+            over their store with minimal effort.
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-2">
-            <div className="pe-4">
-              <div className="bg-gradient-to-r from-neutral-900/50 to-[#1f1f1f]/50 rounded-3xl border p-10 border-neutral-800 h-full flex flex-col gap-4 justify-center">
-                <h3 className="text-xl font-semibold">Real-Time Updates</h3>
-                <p className="font-semibold text-neutral-400">
-                  Instantly reflects changes and new data, keeping users
-                  informed without manual refreshes.
-                </p>
-              </div>
-            </div>
-            <div className="ps-4">
-              <div className="bg-gradient-to-r from-neutral-900/50 to-[#1f1f1f]/50 rounded-3xl border p-10 border-neutral-800 h-full flex flex-col gap-4 justify-center">
-                <h3 className="text-xl font-semibold">
-                  Intelligent Navigation
-                </h3>
-                <p className="font-semibold text-neutral-400">
-                  A well-structured menu and shortcuts allow users to access key
-                  sections effortlessly.
-                </p>
-              </div>
-            </div>
-          </div>
+          <p className="text-lg font-medium text-neutral-400">I focused on creating a smooth, hassle-free experience where every action feels natural and efficient. From managing products to tracking key metrics, Vogue Admin ensures users can navigate effortlessly and make informed decisions without distractions.</p>
+         
         </div>
       </div>
     </section>

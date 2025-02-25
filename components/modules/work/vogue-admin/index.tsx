@@ -37,6 +37,19 @@ const BigScreen = dynamic(
   }
 );
 
+const DarkCaption = dynamic(
+  () => import("@/components/modules/work/vogue-admin/DarkCaption"),
+  {
+    loading: Loading,
+  }
+);
+const Dark = dynamic(
+  () => import("@/components/modules/work/vogue-admin/Dark"),
+  {
+    loading: Loading,
+  }
+);
+
 const Work = () => {
   return (
     <div className="pt-16">
@@ -45,6 +58,8 @@ const Work = () => {
       <DashboardMobile />
       <Brand />
       <BigScreen />
+      <DarkCaption/>
+      <Dark/>
     </div>
   );
 };
