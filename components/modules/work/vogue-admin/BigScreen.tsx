@@ -3,35 +3,25 @@ import { memo } from "react";
 
 const BigScreen = () => {
   return (
-    <section className="py-32 px-6 w-full">
-      <div className="grid grid-cols-1 md:grid-cols-[40%_60%] p-28 sticky top-0">
-        
-        <div className="relative lg:h-[1000] min-w-[620]">
-          <div className="absolute right-0 top-0">
+    <section className="py-6 px-6 w-full">
+      <div className="grid grid-cols-1 md:grid-cols-[60%_40%] p-28 div bg-neutral-950/50">
+        <div className="flex flex-col gap-10">
+          <div className="max-w-[750px]">
             <Image
-              src="/assets/media/work/vogue-admin/dashboard-sm-light.webp"
+              src="/assets/media/work/vogue-admin/dashboard-light.webp"
               alt="Next.js Development"
-              className="rounded-[3rem] border border-neutral-800"
-              width={306}
-              height={600}
+              className="rounded-[3rem] border-[10px] border-neutral-900/50 w-full"
+              width={1000}
+              height={620}
             />
           </div>
-          <div className="absolute right-[356] top-96">
+          <div className="max-w-[750px]">
             <Image
-              src="/assets/media/work/vogue-admin/dashboard-sm-light.webp"
+              src="/assets/media/work/vogue-admin/dashboard-light.webp"
               alt="Next.js Development"
-              className="rounded-[3rem] border border-neutral-800"
-              width={306}
-              height={600}
-            />
-          </div>
-          <div className="absolute right-0 top-[620]">
-            <Image
-              src="/assets/media/work/vogue-admin/dashboard-sm-light.webp"
-              alt="Next.js Development"
-              className="rounded-[3rem] border border-neutral-800"
-              width={306}
-              height={600}
+              className="rounded-[3rem] border-[10px] border-neutral-900/50 w-full"
+              width={1000}
+              height={620}
             />
           </div>
         </div>
