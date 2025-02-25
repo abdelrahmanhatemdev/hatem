@@ -49,6 +49,12 @@ const Dark = dynamic(
     loading: Loading,
   }
 );
+const Features = dynamic(
+  () => import("@/components/modules/work/vogue-admin/Features"),
+  {
+    loading: Loading,
+  }
+);
 
 const Work = () => {
   return (
@@ -58,8 +64,9 @@ const Work = () => {
       <DashboardMobile />
       <Brand />
       <BigScreen />
-      <DarkCaption/>
-      <Dark/>
+      <DarkCaption />
+      <Dark />
+      <Features />
     </div>
   );
 };
