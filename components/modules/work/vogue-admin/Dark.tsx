@@ -35,12 +35,12 @@ const Dark = () => {
               />
             </div>
           </div>
-          <div className="flex flex-col gap-10 sticky top-0 px-32 w-full">
+          <div className="flex flex-col gap-10 sticky top-0 px-6 lg:px-32 w-full">
             <h2 className="font-ogg text-6xl">
               <p className="leading-20">Breathtaking Experience</p>
               <p className="leading-20"> In Light and Dark</p>
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 max-w-[800px]">
+            <div className="grid grid-cols-1 md:grid-cols-2 max-w-[800px] gap-5">
               <p className="text-lg font-medium text-neutral-400">
                 Dark mode improves visual comfort by minimizing glare and
                 reducing eye fatigue, making extended screen use easier on the

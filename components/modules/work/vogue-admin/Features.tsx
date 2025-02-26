@@ -83,7 +83,7 @@ const Features = () => {
         {featues.map((featue, index) => (
           <div
             className={cn(
-              "flex justify-between items-end group cursor-pointer",
+              "flex flex-col md:flex-row justify-between md:items-end group cursor-pointer",
               index !== featues.length - 1
                 ? "border-b-[5px] border-neutral-50 pb-5"
                 : ""
@@ -95,10 +95,9 @@ const Features = () => {
               {featue.list.map((item, i) => {
                 return (
                   <li
-                    className="font-satoshi font-medium opacity-0 group-hover:opacity-100 transition-all duration-500"
+                    className="font-satoshi font-medium lg:opacity-0 lg:group-hover:opacity-100 transition-all duration-500"
                     style={{
-                      transitionDelay:
-                        i !== 0 ? `${i * 80}ms` : "",
+                      transitionDelay: i !== 0 ? `${i * 50}ms` : "",
                     }}
                     key={i}
                   >

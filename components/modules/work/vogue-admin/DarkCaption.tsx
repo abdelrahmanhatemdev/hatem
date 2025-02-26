@@ -3,7 +3,7 @@ import { memo } from "react";
 
 const DarkCaption = () => {
   return (
-    <section className="py-32">
+    <section className="py-32 px-6">
       <div className="flex flex-col gap-16 justify-center items-center">
         <div>
           <Image

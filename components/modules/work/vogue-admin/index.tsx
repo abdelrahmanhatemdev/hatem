@@ -55,18 +55,25 @@ const Features = dynamic(
     loading: Loading,
   }
 );
+const Links = dynamic(
+  () => import("@/components/modules/work/vogue-admin/Links"),
+  {
+    loading: Loading,
+  }
+);
 
 const Work = () => {
   return (
     <div className="pt-16">
-      <Details />
-      <Dashboard />
+      {/* <Details /> */}
+      {/* <Dashboard />
       <DashboardMobile />
       <Brand />
       <BigScreen />
       <DarkCaption />
       <Dark />
       <Features />
+      <Links/> */}
     </div>
   );
 };

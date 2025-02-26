@@ -4,8 +4,8 @@ import { memo } from "react";
 const BigScreen = () => {
   return (
     <section className="py-6 px-6 w-full">
-      <div className="grid grid-cols-1 md:grid-cols-[60%_40%] p-28 div bg-neutral-950/50">
-        <div className="flex flex-col gap-10">
+      <div className="grid grid-cols-1 xl:grid-cols-[60%_40%] gap-20 xl:gap-0 p-28 div bg-neutral-950/50">
+        <div className="flex flex-col items-center xl:items-start gap-10  order-2 xl:order-1 ">
           <div className="max-w-[750px]">
             <Image
               src="/assets/media/work/vogue-admin/dashboard-light.webp"
@@ -25,7 +25,7 @@ const BigScreen = () => {
             />
           </div>
         </div>
-        <div className="flex flex-col gap-10 sticky top-0">
+        <div className="flex flex-col gap-10 order-1 xl:order-2">
           <h2 className="font-ogg text-6xl">
             <p>Built for Efficiency</p>
             <p>Made for You</p>

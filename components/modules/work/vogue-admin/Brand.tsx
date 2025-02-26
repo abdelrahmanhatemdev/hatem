@@ -4,7 +4,7 @@ import { memo } from "react";
 const Brand = () => {
   return (
     <section className="px-6">
-      <div className="grid grid-cols-1 lg:grid-cols-2 ">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-20 md:gap-0">
         <div className="border-[12px] border-neutral-950/50">
           <div className="flex justify-center items-center bg-black aspect-square">
             <div className=" flex flex-col justify-center items-center w-full h-full p-3">
