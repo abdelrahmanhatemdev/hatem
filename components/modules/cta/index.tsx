@@ -56,7 +56,7 @@ const CTA = () => {
   };
 
   return (
-    <section className="w-full mt-64 px-10 relative">
+    <section className="w-full mt-40 md:mt-64 px-10 relative">
       <motion.div
         initial="hidden"
         whileInView="visible"

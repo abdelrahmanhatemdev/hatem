@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const Dashboard = () => {
   return (
-    <section className="py-10 lg:py-32 px-6 w-full">
+    <section className="py-10 lg:py-32 px-3 md:px-6 w-full">
       <div className="bg-neutral-950/50">
         <div className="w-full grid grid-cols-1 md:grid-cols-[35%_65%] p-3 lg:p-28 gap-4">
           <div className="flex items-end grow-0 max-w-96 text-lg order-2 md:order-1">

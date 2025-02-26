@@ -3,11 +3,11 @@ import { memo } from "react";
 
 const Dark = () => {
   return (
-    <section className="px-6">
-      <div className=" bg-neutral-950/50 pt-32 overflow-hidden ">
+    <section className="py-10 lg:py-32 px-3 md:px-6">
+      <div className=" bg-neutral-950/50 pt-10 md:pt-32 overflow-hidden ">
         <div className="flex flex-col gap-32 justify-center items-center">
-          <div className="grid grid-cols-1 md:grid-cols-3 max-w-[900px]">
-            <div className="px-5">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-0 max-w-[900px]">
+            <div className="px-3 md:px-5">
               <Image
                 src="/assets/media/work/vogue-admin/dashboard-sm.webp"
                 alt="Dark Theme 1"
@@ -16,7 +16,7 @@ const Dark = () => {
                 height={620}
               />
             </div>
-            <div className="px-5 pt-16">
+            <div className="px-3 md:px-5 md:pt-16">
               <Image
                 src="/assets/media/work/vogue-admin/dashboard-sm.webp"
                 alt="Dark Theme 1"
@@ -25,7 +25,7 @@ const Dark = () => {
                 height={620}
               />
             </div>
-            <div className="px-5 pt-32">
+            <div className="px-3 md:px-5 md:pt-32">
               <Image
                 src="/assets/media/work/vogue-admin/dashboard-sm.webp"
                 alt="Dark Theme 1"
@@ -36,9 +36,9 @@ const Dark = () => {
             </div>
           </div>
           <div className="flex flex-col gap-10 sticky top-0 px-6 lg:px-32 w-full">
-            <h2 className="font-ogg text-6xl">
-              <p className="leading-20">Breathtaking Experience</p>
-              <p className="leading-20"> In Light and Dark</p>
+            <h2 className="font-ogg text-4xl md:text-6xl">
+              <p className="laeding-10 md:leading-20">Breathtaking Experience</p>
+              <p className="laeding-10 md:leading-20"> In Light and Dark</p>
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 max-w-[800px] gap-5">
               <p className="text-lg font-medium text-neutral-400">

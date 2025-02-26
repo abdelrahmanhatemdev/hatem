@@ -3,7 +3,7 @@ import { memo } from "react";
 
 const Links = () => {
   return (
-    <section className="my-32 px-6">
+    <section className="py-10 lg:py-32 px-3 md:px-6">
       <div className="flex justify-between flex-wrap gap-20">
         <div className="flex flex-col gap-10 min-w-fit">
           <div className="flex flex-col *:leading-6">

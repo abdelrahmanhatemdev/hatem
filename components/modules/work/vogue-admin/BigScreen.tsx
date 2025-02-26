@@ -3,14 +3,14 @@ import { memo } from "react";
 
 const BigScreen = () => {
   return (
-    <section className="py-6 px-6 w-full">
-      <div className="grid grid-cols-1 xl:grid-cols-[60%_40%] gap-20 xl:gap-0 p-28 div bg-neutral-950/50">
+    <section className="py-10 lg:py-32 px-3 md:px-6">
+      <div className="grid grid-cols-1 xl:grid-cols-[60%_40%] gap-20 xl:gap-0 px-3 pt-10 md:p-28 div bg-neutral-950/50">
         <div className="flex flex-col items-center xl:items-start gap-10  order-2 xl:order-1 ">
           <div className="max-w-[750px]">
             <Image
               src="/assets/media/work/vogue-admin/dashboard-light.webp"
               alt="Next.js Development"
-              className="rounded-[3rem] border-[10px] border-neutral-900/50 w-full"
+              className="rounded-lg md:rounded-[3rem] border-4 md:border-[10px] border-neutral-900/50 w-full"
               width={1000}
               height={620}
             />
@@ -19,14 +19,14 @@ const BigScreen = () => {
             <Image
               src="/assets/media/work/vogue-admin/dashboard-light.webp"
               alt="Next.js Development"
-              className="rounded-[3rem] border-[10px] border-neutral-900/50 w-full"
+              className="rounded-lg md:rounded-[3rem] border-4 md:border-[10px] border-neutral-900/50 w-full"
               width={1000}
               height={620}
             />
           </div>
         </div>
         <div className="flex flex-col gap-10 order-1 xl:order-2">
-          <h2 className="font-ogg text-6xl">
+          <h2 className="font-ogg text-4xl md:text-6xl">
             <p>Built for Efficiency</p>
             <p>Made for You</p>
           </h2>

@@ -103,6 +103,7 @@ const SelectedWorks = () => {
                     className="rounded-md border border-neutral-800 w-[97%] absolute inset-0 group-hover:opacity-0 transition-all duration-700"
                     width={800}
                     height={495}
+                    priority={true}
                   />
                   <Image
                     src="/assets/media/work/vogue-admin/dashboard.webp"
@@ -110,6 +111,7 @@ const SelectedWorks = () => {
                     className="rounded-md border border-neutral-800 w-[97%] absolute inset-0 opacity-0 group-hover:opacity-100 transition-all duration-700"
                     width={800}
                     height={495}
+                    priority={true}
                   />
                 </motion.div>
                 <motion.div
@@ -125,6 +127,7 @@ const SelectedWorks = () => {
                     className="rounded-lg border border-neutral-200 w-[20vw] lg:w-[9vw] absolute -right-2 lg:right-0 bottom-0 group-hover:opacity-0 transition-all duration-700"
                     width={153}
                     height={300}
+                    priority={true}
                   />
                   <Image
                     src="/assets/media/work/vogue-admin/dashboard-sm.webp"
@@ -132,6 +135,7 @@ const SelectedWorks = () => {
                     className="rounded-lg border border-neutral-800 w-[20vw] lg:w-[9vw] absolute -right-2 lg:right-0 bottom-0 opacity-0 group-hover:opacity-100 transition-all duration-700"
                     width={153}
                     height={300}
+                    priority={true}
                   />
                 </motion.div>
               </div>

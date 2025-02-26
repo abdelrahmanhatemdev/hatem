@@ -38,7 +38,7 @@ const Footer = () => {
         variants={animationVariants}
         layout
       >
-        <footer className="w-[90%] mx-auto lg:w-full mt-72 mb-10">
+        <footer className="w-[90%] mx-auto lg:w-full mt-64 md:mt-72 mb-10">
           <div className="0 border border-neutral-800 lg:p-20 lg:pb-10 p-10 rounded-xl 2xl:w-[75%] mx-auto bg-gradient-to-r from-neutral-900 to-[#1f1f1f] flex flex-col lg:gap-20 gap-10">
             <div className="flex justify-between w-full lg:gap-20 gap-10 flex-col lg:flex-row">
               <div className="flex flex-col lg:gap-10 gap-5">

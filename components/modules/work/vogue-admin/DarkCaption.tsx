@@ -3,7 +3,7 @@ import { memo } from "react";
 
 const DarkCaption = () => {
   return (
-    <section className="py-32 px-6">
+    <section className="py-10 lg:py-32 px-3 md:px-6">
       <div className="flex flex-col gap-16 justify-center items-center">
         <div>
           <Image
@@ -14,7 +14,7 @@ const DarkCaption = () => {
             height={620}
           />
         </div>
-        <p className="text-2xl max-w-[600px] text-center font-satoshi text-neutral-500">
+        <p className="text-lg md:text-2xl max-w-[600px] text-center font-satoshi text-neutral-500">
           User research showed that a{" "}
           <strong className="font-semibold text-white">
             dark theme reduces eye strain, fatigue and enhances usability

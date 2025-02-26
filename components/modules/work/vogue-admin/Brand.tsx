@@ -3,11 +3,11 @@ import { memo } from "react";
 
 const Brand = () => {
   return (
-    <section className="px-6">
+    <section className="py-10 lg:py-32 px-3 md:px-6">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-20 md:gap-0">
-        <div className="border-[12px] border-neutral-950/50">
+        <div className="md:border-[12px] md:border-neutral-950/50">
           <div className="flex justify-center items-center bg-black aspect-square">
-            <div className=" flex flex-col justify-center items-center w-full h-full p-3">
+            <div className=" flex flex-col justify-center items-center w-full h-full md:p-3">
               <div className="relative flex flex-col gap-10 items-center justify-center font-satoshi border-[15px] border-neutral-950/50 p-6 aspect-square">
                 <div className="absolute right-3 top-3">
                   <Image
@@ -28,9 +28,9 @@ const Brand = () => {
             </div>
           </div>
         </div>
-        <div className="border-[12px] border-neutral-100/95">
+        <div className="md:border-[12px] md:border-neutral-100/95">
           <div className="flex justify-center items-center bg-white aspect-square ">
-            <div className=" flex flex-col justify-center items-center w-full h-full p-3">
+            <div className=" flex flex-col justify-center items-center w-full h-full md:p-3">
               <div className="relative flex flex-col gap-10 items-center justify-center font-satoshi border-[15px] border-neutral-200/50 p-6 aspect-square text-black">
                 <div className="absolute right-3 top-3">
                   <Image

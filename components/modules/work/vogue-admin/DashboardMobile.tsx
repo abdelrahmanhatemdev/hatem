@@ -3,10 +3,10 @@ import { memo } from "react";
 
 const DashboardMobile = () => {
   return (
-    <section className="py-32 px-6 w-full">
-      <div className="flex justify-between flex-wrap gap-20 px-6 lg:px-28 w-full">
+    <section className="py-10 md:py-32 px-3 md:px-6 w-full">
+      <div className="flex justify-between flex-wrap gap-20 md:px-6 lg:px-28 w-full">
         <div className="flex flex-col gap-10 w-[600px] ">
-          <h2 className="font-ogg text-6xl">
+          <h2 className="font-ogg text-4xl md:text-6xl">
             <p>Manage with Ease</p>
             <p>Anytime</p>
             <p>Anywhere</p>
@@ -34,7 +34,7 @@ const DashboardMobile = () => {
             </div>
           </div>
         </div>
-        <div className="flex justify-center items-center gap-10 grow lg:min-w-[600px] ">
+        <div className="flex flex-col sm:flex-row justify-center items-center gap-10 grow lg:min-w-[600px]">
           <div className="flex items-center">
             <Image
               src="/assets/media/work/vogue-admin/dashboard-sm-light.webp"

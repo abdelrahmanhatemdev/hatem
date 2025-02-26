@@ -65,15 +65,15 @@ const Links = dynamic(
 const Work = () => {
   return (
     <div className="pt-16">
-      {/* <Details /> */}
-      {/* <Dashboard />
+      <Details />
+      <Dashboard />
       <DashboardMobile />
       <Brand />
       <BigScreen />
       <DarkCaption />
       <Dark />
       <Features />
-      <Links/> */}
+      <Links/>
     </div>
   );
 };
