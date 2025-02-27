@@ -225,14 +225,13 @@ const Stack = () => {
               key={`${tech.src}`}
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true, amount: 0.5 }}
               variants={{
                 ...animationVariants,
                 visible: {
                   ...animationVariants.visible,
                   transition: {
                     ...animationVariants.visible.transition,
-                    delay: 0.15 * (index + 1),
+                    delay: 0.1 * (index + 1),
                   },
                 },
               }}
