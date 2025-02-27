@@ -7,6 +7,12 @@ body {
 
 
 @layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
   :root {
     --background: 0 0% 0%;
     --foreground: 0 0% 100%;
@@ -61,14 +67,21 @@ body {
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
   }
-}
-
-@layer base {
-  * {
-    @apply border-border;
+  ::-webkit-scrollbar {
+    width: 15px;
   }
-  body {
-    @apply bg-background text-foreground;
+
+  ::-webkit-scrollbar-track {
+    background: #222;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #000;
+    cursor: pointer;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #111;
   }
 }
 
