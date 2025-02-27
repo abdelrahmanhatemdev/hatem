@@ -53,7 +53,6 @@ const TrustedBrands = () => {
                   },
                 },
               }}
-              layout
             >
               <div className="group cursor-pointer p-4 bg-neutral-900 rounded-3xl border border-neutral-800  transition-colors duration-500 ease-in-out">
                 <Image
