@@ -204,7 +204,6 @@ const Stack = () => {
       <motion.div
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, amount: 0.5 }}
         variants={boxOneVariants}
       >
         <div className="flex flex-col gap-4 text-center p-10">
@@ -218,7 +217,6 @@ const Stack = () => {
       <motion.div
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, amount: 0.5 }}
         variants={mainVariants}
       >
         <div className="w-[70%] sm:w-[60%] mx-auto grid grid-cols-2 md:grid-cols-4 xl:grid-cols-8 mt-10 gap-[3vw] lg:gap-[1vw]">

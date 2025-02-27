@@ -18,7 +18,6 @@ const WorkProcess = () => {
           <motion.div
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.5 }}
             variants={animationVariants}
             layout
           >
@@ -77,7 +76,6 @@ const WorkProcess = () => {
           <motion.div
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.5 }}
             variants={animationVariants}
             layout
           >
@@ -137,7 +135,6 @@ const WorkProcess = () => {
           <motion.div
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.5 }}
             variants={animationVariants}
             layout
           >
@@ -196,7 +193,6 @@ const WorkProcess = () => {
           <motion.div
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.5 }}
             variants={animationVariants}
             layout
           >
@@ -255,7 +251,6 @@ const WorkProcess = () => {
           <motion.div
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.5 }}
             variants={animationVariants}
             layout
           >

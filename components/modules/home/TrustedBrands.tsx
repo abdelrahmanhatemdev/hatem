@@ -28,7 +28,6 @@ const TrustedBrands = () => {
     <motion.div
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, amount: 0.5 }}
       variants={animationVariants}
       layout
     >
@@ -38,9 +37,9 @@ const TrustedBrands = () => {
         Trusted By Innovative Brands
         </h3>
         <div className="grid grid-cols-2 lg:grid-cols-7 gap-4 ">
-          {brands.map((brand, index) => (
+          {brands.map((brand, i) => (
             <motion.div
-              key={`${brand}`}
+              key={`${i}`}
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.5 }}
@@ -50,7 +49,7 @@ const TrustedBrands = () => {
                   ...animationVariants.visible,
                   transition: {
                     ...animationVariants.visible.transition,
-                    delay: 0.1 * (index + 1),
+                    delay: 0.05 * (i + 1),
                   },
                 },
               }}

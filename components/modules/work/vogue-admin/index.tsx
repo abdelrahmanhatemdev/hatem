@@ -73,7 +73,7 @@ const Work = () => {
       <DarkCaption />
       <Dark />
       <Features />
-      <Links/>
+      <Links />
     </div>
   );
 };

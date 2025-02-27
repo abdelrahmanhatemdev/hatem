@@ -1,10 +1,29 @@
 "use client";
 import { memo } from "react";
 
-import { motion } from "framer-motion";
+import { easeInOut, motion } from "framer-motion";
 
 import Image from "next/image";
 import Link from "next/link";
+
+export const stack = [
+  "Nextjs",
+  "React",
+  "Typescript",
+  "Tailwind",
+  "Shadcn",
+  "Zustand",
+  "React form hook",
+  "Zod",
+  "Tanstack",
+  "Framer Motion",
+  "Swiper",
+  "Recharts",
+  "Firebase",
+  "Redis",
+  "ESLint",
+  "Vercel",
+];
 
 const VogueAdmin = () => {
   const animationVariants = {
@@ -16,7 +35,7 @@ const VogueAdmin = () => {
     ...animationVariants,
     visible: {
       ...animationVariants.visible,
-      transition: { ...animationVariants.visible.transition, delay: 0.3 },
+      transition: { ...animationVariants.visible.transition, delay: 0.2 },
     },
   };
   const boxThreeVariants = {
@@ -30,7 +49,7 @@ const VogueAdmin = () => {
     ...animationVariants,
     visible: {
       ...animationVariants.visible,
-      transition: { ...animationVariants.visible.transition, delay: 0.3 },
+      transition: { ...animationVariants.visible.transition, delay: 0.5 },
     },
   };
   const boxFiveVariants = {
@@ -106,22 +125,21 @@ const VogueAdmin = () => {
               <div className="text-sm hidden lg:flex flex-col justify-start gap-2 ">
                 <span className="text-neutral-600 font-extrabold">Stack</span>
                 <div className="text-neutral-400">
-                  <p>Nextjs</p>
-                  <p>React</p>
-                  <p>Typescript</p>
-                  <p>Tailwind</p>
-                  <p>Shadcn</p>
-                  <p>Zustand</p>
-                  <p>React form hook</p>
-                  <p>Zod</p>
-                  <p>Tanstack</p>
-                  <p>Framer Motion</p>
-                  <p>Swiper</p>
-                  <p>Recharts</p>
-                  <p>Firebase</p>
-                  <p>Redis</p>
-                  <p>ESLint</p>
-                  <p>Vercel</p>
+                  {stack.map((tech, i) => (
+                    <motion.p
+                      key={i}
+                      initial={{ opacity: 0, y: -5 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{
+                        duration: 0.3,
+                        delay:
+                          boxFourVariants.visible.transition.delay + i * 0.1,
+                        ease: easeInOut,
+                      }}
+                    >
+                      {tech}
+                    </motion.p>
+                  ))}
                 </div>
               </div>
             </motion.div>
@@ -131,7 +149,6 @@ const VogueAdmin = () => {
           <motion.div
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.5 }}
             variants={boxFiveVariants}
             layout
           >
@@ -164,7 +181,6 @@ const VogueAdmin = () => {
           <motion.div
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.5 }}
             variants={boxTwoVariants}
             className="absolute inset-0"
             layout
@@ -186,11 +202,10 @@ const VogueAdmin = () => {
               priority={true}
             />
           </motion.div>
-  
+
           <motion.div
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.5 }}
             variants={boxThreeVariants}
             className="absolute -right-2 bottom-0"
             layout

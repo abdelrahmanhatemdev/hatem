@@ -75,7 +75,6 @@ const About = () => {
             <motion.div
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true, amount: 0.5 }}
               variants={animationVariants}
               layout
               className="max-w-full"
@@ -85,7 +84,6 @@ const About = () => {
             <motion.div
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true, amount: 0.5 }}
               variants={animationDelayedVariants}
               layout
             >
