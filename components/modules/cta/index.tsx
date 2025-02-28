@@ -14,7 +14,7 @@ const ThreeQuarterCircle = dynamic(
 
 const CTA = () => {
   const mainVariants = {
-    visible: { opacity: 1, transition: { duration: 1.5 } },
+    visible: { opacity: 1, transition: { duration: 1 } },
     hidden: { opacity: 0 },
   };
 
@@ -27,7 +27,7 @@ const CTA = () => {
     ...animationVariants,
     visible: {
       ...animationVariants.visible,
-      transition: { ...animationVariants.visible.transition, delay: 1 },
+      transition: { ...animationVariants.visible.transition, delay: .4 },
     },
   };
 
@@ -35,7 +35,7 @@ const CTA = () => {
     ...animationVariants,
     visible: {
       ...animationVariants.visible,
-      transition: { ...animationVariants.visible.transition, delay: 1.2 },
+      transition: { ...animationVariants.visible.transition, delay: .5 },
     },
   };
 
@@ -43,7 +43,7 @@ const CTA = () => {
     ...animationVariants,
     visible: {
       ...animationVariants.visible,
-      transition: { ...animationVariants.visible.transition, delay: 1.5 },
+      transition: { ...animationVariants.visible.transition, delay: .7 },
     },
   };
 
@@ -51,7 +51,7 @@ const CTA = () => {
     ...animationVariants,
     visible: {
       ...animationVariants.visible,
-      transition: { ...animationVariants.visible.transition, delay: 1.7 },
+      transition: { ...animationVariants.visible.transition, delay: .8 },
     },
   };
 
@@ -60,7 +60,6 @@ const CTA = () => {
       <motion.div
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, amount: 0.5 }}
         variants={mainVariants}
       >
         <div className="xs:w-[calc(95%-80px)] w-[80%] md:w-[78%] mx-auto h-full relative pt-4 z-10">
@@ -99,7 +98,6 @@ const CTA = () => {
             <motion.div
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true, amount: 0.5 }}
               variants={boxOneVariants}
             >
               <h2 className="text-3xl lg:text-[3.2vw] bg-gradient-to-b from-neutral-50 to-neutral-300 bg-clip-text text-transparent font-extrabold lg:leading-[5rem] leading-10">
@@ -122,7 +120,6 @@ const CTA = () => {
             <motion.div
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true, amount: 0.5 }}
               variants={boxTwoVariants}
             >
               <p className="lg:text-2xl text-neutral-500 text-center max-w-[800px] sm:leading-7 lg:leading-10">
@@ -176,7 +173,6 @@ const CTA = () => {
               <motion.div
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: true, amount: 0.5 }}
                 variants={boxThreeVariants}
                 className="min-w-fit"
               >
@@ -187,7 +183,6 @@ const CTA = () => {
               <motion.div
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: true, amount: 0.5 }}
                 variants={boxFourVariants}
                 className="min-w-fit"
               >

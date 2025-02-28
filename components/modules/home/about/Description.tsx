@@ -53,7 +53,6 @@ const Performance = () => {
         <motion.div
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.5 }}
           variants={descriptionVariants}
           layout
           className="bg-gradient-to-r from-neutral-900 to-[#1f1f1f] rounded-3xl border p-6 lg:p-16 border-neutral-800 h-full flex flex-col gap-4 justify-center"
@@ -80,7 +79,6 @@ const Performance = () => {
         <motion.div
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.5 }}
           variants={boxOneVariants}
           layout
           className="bg-gradient-to-r from-neutral-900 to-[#1f1f1f] rounded-3xl border border-neutral-800 p-10 flex flex-col gap-2 items-center justify-center"
@@ -97,7 +95,6 @@ const Performance = () => {
         <motion.div
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.5 }}
           variants={boxTwoVariants}
           layout
           className="bg-gradient-to-r from-neutral-900 to-[#1f1f1f] rounded-3xl border border-neutral-800 p-10 flex flex-col gap-2 items-center justify-center"
@@ -114,7 +111,6 @@ const Performance = () => {
         <motion.div
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.5 }}
           variants={boxThreeVariants}
           layout
           className="bg-gradient-to-r from-neutral-900 to-[#1f1f1f] rounded-3xl border border-neutral-800 p-10 flex flex-col gap-2 items-center justify-center"
@@ -132,7 +128,6 @@ const Performance = () => {
         <motion.div
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.5 }}
           variants={boxFourVariants}
           layout
           className="bg-gradient-to-r from-neutral-900 to-[#1f1f1f] rounded-3xl border border-neutral-800 p-10 flex flex-col gap-2 items-center justify-center"

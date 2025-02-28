@@ -75,7 +75,6 @@ const VogueAdmin = () => {
             <motion.div
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true, amount: 0.5 }}
               variants={animationVariants}
               layout
             >
@@ -86,7 +85,6 @@ const VogueAdmin = () => {
             <motion.div
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true, amount: 0.5 }}
               variants={boxTwoVariants}
               layout
             >
@@ -100,7 +98,6 @@ const VogueAdmin = () => {
             <motion.div
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true, amount: 0.5 }}
               variants={boxThreeVariants}
               layout
             >
@@ -118,7 +115,6 @@ const VogueAdmin = () => {
             <motion.div
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true, amount: 0.5 }}
               variants={boxFourVariants}
               layout
             >
@@ -160,7 +156,6 @@ const VogueAdmin = () => {
             <motion.div
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true, amount: 0.5 }}
               variants={boxSixVariants}
               layout
             >
