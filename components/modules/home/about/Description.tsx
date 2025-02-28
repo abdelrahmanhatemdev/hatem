@@ -81,7 +81,7 @@ const Performance = () => {
           whileInView="visible"
           variants={boxOneVariants}
           layout
-          className="bg-gradient-to-r from-neutral-900 to-[#1f1f1f] rounded-3xl border border-neutral-800 p-10 flex flex-col gap-2 items-center justify-center"
+          className="bg-gradient-to-r from-neutral-900 to-[#1f1f1f] aspect-square md:aspect-auto rounded-3xl border border-neutral-800 md:p-10 flex flex-col gap-2 items-center justify-center"
         >
           <h3 className="text-3xl md:text-5xl font-medium bg-gradient-to-b from-sky-600 to-sky-400 bg-clip-text text-transparent flex gap-1 items-center">
             <span className="text-2xl">+</span>
@@ -97,7 +97,7 @@ const Performance = () => {
           whileInView="visible"
           variants={boxTwoVariants}
           layout
-          className="bg-gradient-to-r from-neutral-900 to-[#1f1f1f] rounded-3xl border border-neutral-800 p-10 flex flex-col gap-2 items-center justify-center"
+          className="bg-gradient-to-r from-neutral-900 to-[#1f1f1f] aspect-square md:aspect-auto rounded-3xl border border-neutral-800 md:p-10 flex flex-col gap-2 items-center justify-center"
         >
           <h3 className="text-3xl md:text-5xl font-medium bg-gradient-to-b from-sky-600 to-sky-400 bg-clip-text text-transparent flex gap-1 items-center">
             <span className="text-2xl">+</span>
@@ -113,7 +113,7 @@ const Performance = () => {
           whileInView="visible"
           variants={boxThreeVariants}
           layout
-          className="bg-gradient-to-r from-neutral-900 to-[#1f1f1f] rounded-3xl border border-neutral-800 p-10 flex flex-col gap-2 items-center justify-center"
+          className="bg-gradient-to-r from-neutral-900 to-[#1f1f1f] aspect-square md:aspect-auto rounded-3xl border border-neutral-800 md:p-10 flex flex-col gap-2 items-center justify-center"
         >
           {" "}
           <h3 className="text-3xl md:text-5xl font-medium bg-gradient-to-b from-sky-600 to-sky-400 bg-clip-text text-transparent flex gap-1 items-center">
@@ -130,7 +130,7 @@ const Performance = () => {
           whileInView="visible"
           variants={boxFourVariants}
           layout
-          className="bg-gradient-to-r from-neutral-900 to-[#1f1f1f] rounded-3xl border border-neutral-800 p-10 flex flex-col gap-2 items-center justify-center"
+          className="bg-gradient-to-r from-neutral-900 to-[#1f1f1f] aspect-square md:aspect-auto rounded-3xl border border-neutral-800 md:p-10 flex flex-col gap-2 items-center justify-center"
         >
           {" "}
           <h3 className="text-3xl md:text-5xl font-medium bg-gradient-to-b from-sky-600 to-sky-400 bg-clip-text text-transparent flex gap-1 items-center">
