@@ -2,6 +2,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import dynamic from "next/dynamic";
 import Loading from "@/components/custom/Loading";
+import { fade } from "@/lib/animation";
 
 // const Logo = dynamic(() => import("@/components/custom/Logo"), {
 //   loading: Loading,
@@ -22,21 +23,11 @@ const AnimateTextOnHover = dynamic(
 );
 
 const Footer = () => {
-  const animationVariants = {
-    visible: { opacity: 1, transition: { duration: 2} },
-    hidden: { opacity: 0 },
-  };
-
   const contactDelay = 1;
 
   return (
     <>
-      <motion.div
-        initial="hidden"
-        whileInView="visible"
-        variants={animationVariants}
-        layout
-      >
+      <motion.div initial="hidden" whileInView="visible" variants={fade} layout>
         <footer className="w-[90%] mx-auto lg:w-full mt-64 md:mt-72 mb-10">
           <div className="0 border border-neutral-800 lg:p-20 lg:pb-10 p-10 rounded-xl 2xl:w-[75%] mx-auto bg-gradient-to-r from-neutral-900 to-[#1f1f1f] flex flex-col lg:gap-20 gap-10">
             <div className="flex justify-between w-full lg:gap-20 gap-10 flex-col lg:flex-row">
@@ -128,8 +119,9 @@ const Footer = () => {
                   <Link
                     href="/"
                     className="group uppercase font-bold text-lg flex gap-2 items-center cursor-pointer relative"
-                  ><span className="h-full flex items-center text-2xl lg:text-5xl font-satoshi">
-                       <span>H</span> <span className="lowercase">ATEM</span> 
+                  >
+                    <span className="h-full flex items-center text-2xl lg:text-5xl font-satoshi">
+                      <span>H</span> <span className="lowercase">ATEM</span>
                     </span>
                   </Link>
                   <p className="flex-col md:items-end order-3 flex md:hidden">

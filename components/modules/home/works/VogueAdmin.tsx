@@ -5,67 +5,10 @@ import { easeInOut, motion } from "framer-motion";
 
 import Image from "next/image";
 import Link from "next/link";
-
-export const stack = [
-  "Nextjs",
-  "React",
-  "Typescript",
-  "Tailwind",
-  "Shadcn",
-  "Zustand",
-  "React form hook",
-  "Zod",
-  "Tanstack",
-  "Framer Motion",
-  "Swiper",
-  "Recharts",
-  "Firebase",
-  "Redis",
-  "ESLint",
-  "Vercel",
-];
+import { stack } from "@/components/modules/work/vogue-admin/Details";
+import { fadeScale, fadeScaleD1, fadeScaleD2, fadeScaleD3, fadeScaleD4, fadeScaleD5 } from "@/lib/animation";
 
 const VogueAdmin = () => {
-  const animationVariants = {
-    visible: { opacity: 1, scale: 1, transition: { duration: 0.8 } },
-    hidden: { opacity: 0, scale: 0.8 },
-  };
-
-  const boxTwoVariants = {
-    ...animationVariants,
-    visible: {
-      ...animationVariants.visible,
-      transition: { ...animationVariants.visible.transition, delay: 0.2 },
-    },
-  };
-  const boxThreeVariants = {
-    ...animationVariants,
-    visible: {
-      ...animationVariants.visible,
-      transition: { ...animationVariants.visible.transition, delay: 0.4 },
-    },
-  };
-  const boxFourVariants = {
-    ...animationVariants,
-    visible: {
-      ...animationVariants.visible,
-      transition: { ...animationVariants.visible.transition, delay: 0.5 },
-    },
-  };
-  const boxFiveVariants = {
-    ...animationVariants,
-    visible: {
-      ...animationVariants.visible,
-      transition: { ...animationVariants.visible.transition, delay: 0.5 },
-    },
-  };
-  const boxSixVariants = {
-    ...animationVariants,
-    visible: {
-      ...animationVariants.visible,
-      transition: { ...animationVariants.visible.transition, delay: 0.7 },
-    },
-  };
 
   return (
     <div className="grid md:grid-cols-1 lg:grid-cols-[calc(100%-48vw)_48vw] gap-5 lg:gap-0 ">
@@ -75,7 +18,7 @@ const VogueAdmin = () => {
             <motion.div
               initial="hidden"
               whileInView="visible"
-              variants={animationVariants}
+              variants={fadeScale}
               layout
             >
               <Link href={`/work/vogue-admin`}>
@@ -85,7 +28,7 @@ const VogueAdmin = () => {
             <motion.div
               initial="hidden"
               whileInView="visible"
-              variants={boxTwoVariants}
+              variants={fadeScaleD1}
               layout
             >
               <div className="text-sm flex flex-col justify-end gap-2">
@@ -98,7 +41,7 @@ const VogueAdmin = () => {
             <motion.div
               initial="hidden"
               whileInView="visible"
-              variants={boxThreeVariants}
+              variants={fadeScaleD2}
               layout
             >
               <div className="flex flex-col justify-start gap-2">
@@ -115,7 +58,7 @@ const VogueAdmin = () => {
             <motion.div
               initial="hidden"
               whileInView="visible"
-              variants={boxFourVariants}
+              variants={fadeScaleD3}
               layout
             >
               <div className="text-sm hidden lg:flex flex-col justify-start gap-2 ">
@@ -129,7 +72,7 @@ const VogueAdmin = () => {
                       transition={{
                         duration: 0.3,
                         delay:
-                          boxFourVariants.visible.transition.delay + i * 0.1,
+                          fadeScaleD3.visible.transition.delay + i * 0.1,
                         ease: easeInOut,
                       }}
                     >
@@ -145,7 +88,7 @@ const VogueAdmin = () => {
           <motion.div
             initial="hidden"
             whileInView="visible"
-            variants={boxFiveVariants}
+            variants={fadeScaleD4}
             layout
           >
             <div className="text-sm flex flex-col justify-start gap-2">
@@ -156,7 +99,7 @@ const VogueAdmin = () => {
             <motion.div
               initial="hidden"
               whileInView="visible"
-              variants={boxSixVariants}
+              variants={fadeScaleD5}
               layout
             >
               <div className="text-neutral-400">
@@ -176,7 +119,7 @@ const VogueAdmin = () => {
           <motion.div
             initial="hidden"
             whileInView="visible"
-            variants={boxTwoVariants}
+            variants={fadeScaleD1}
             className="absolute inset-0"
             layout
           >
@@ -201,7 +144,7 @@ const VogueAdmin = () => {
           <motion.div
             initial="hidden"
             whileInView="visible"
-            variants={boxThreeVariants}
+            variants={fadeScaleD3}
             className="absolute -right-2 bottom-0"
             layout
           >

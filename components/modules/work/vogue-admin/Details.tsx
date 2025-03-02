@@ -1,6 +1,66 @@
 import { memo } from "react";
-import { stack } from "@/components/modules/home/works/VogueAdmin";
+
+export const stack = [
+  "Nextjs",
+  "React",
+  "Typescript",
+  "Tailwind",
+  "Shadcn",
+  "Zustand",
+  "React form hook",
+  "Zod",
+  "Tanstack",
+  "Framer Motion",
+  "Swiper",
+  "Recharts",
+  "Firebase",
+  "Redis",
+  "ESLint",
+  "Vercel",
+];
+
 const Details = () => {
+  const animationVariants = {
+    visible: { opacity: 1, scale: 1, transition: { duration: 0.8 } },
+    hidden: { opacity: 0, scale: 0.8 },
+  };
+
+  const boxTwoVariants = {
+    ...animationVariants,
+    visible: {
+      ...animationVariants.visible,
+      transition: { ...animationVariants.visible.transition, delay: 0.2 },
+    },
+  };
+  const boxThreeVariants = {
+    ...animationVariants,
+    visible: {
+      ...animationVariants.visible,
+      transition: { ...animationVariants.visible.transition, delay: 0.4 },
+    },
+  };
+  const boxFourVariants = {
+    ...animationVariants,
+    visible: {
+      ...animationVariants.visible,
+      transition: { ...animationVariants.visible.transition, delay: 0.5 },
+    },
+  };
+  const boxFiveVariants = {
+    ...animationVariants,
+    visible: {
+      ...animationVariants.visible,
+      transition: { ...animationVariants.visible.transition, delay: 0.5 },
+    },
+  };
+  const boxSixVariants = {
+    ...animationVariants,
+    visible: {
+      ...animationVariants.visible,
+      transition: { ...animationVariants.visible.transition, delay: 0.7 },
+    },
+  };
+  
   return (
     <section className="px-3 md:px-6">
       <h1 className="py-8 lg:py-16 text-[10vw] md:text-[9vw] font-black font-satoshi">

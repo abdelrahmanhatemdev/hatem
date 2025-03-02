@@ -28,8 +28,6 @@ const Stack = dynamic(() => import("@/components/modules/home/Stack"), {
   loading: Loading,
 });
 
-
-
 const Home = () => {
   return (
     <>

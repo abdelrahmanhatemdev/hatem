@@ -6,6 +6,7 @@ import Image from "next/image";
 import { memo, useEffect, useState } from "react";
 import { cn, cubicBezier } from "@/lib/utils";
 import { motion } from "framer-motion";
+import { slideTransition, slideVariants } from "@/lib/animation/slider";
 
 const Hero = () => {
   const [activeSlide, setActiveSlide] = useState<number | null>(1);
@@ -14,14 +15,6 @@ const Hero = () => {
   const [isProgressing, setIsProgressing] = useState<boolean>(false);
 
   const autoplayDelay = 8000;
-
-  const slideVariants = {
-    initial: { opacity: 0, x: 200 },
-    active: { opacity: 1, x: 0 },
-    exit: { opacity: 0, x: 200 },
-  };
-
-  const slideTransition = { duration: 1, ease: [0.4, 0, 0.2, 1] };
 
   const slideParagraphDelay = 0.4;
   const slideSpanDelay = 0.2;

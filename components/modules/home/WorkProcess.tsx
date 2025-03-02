@@ -3,6 +3,7 @@ import { memo } from "react";
 import { motion } from "framer-motion";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
+import { fade } from "@/lib/animation";
 
 const list = [
   {
@@ -65,10 +66,6 @@ const list = [
 ];
 
 const WorkProcess = () => {
-  const animationVariants = {
-    visible: { opacity: 1, transition: { duration: 1 } },
-    hidden: { opacity: 0 },
-  };
 
   return (
     <section className="w-full mt-32">
@@ -83,11 +80,11 @@ const WorkProcess = () => {
               initial="hidden"
               whileInView="visible"
               variants={{
-                ...animationVariants,
+                ...fade,
                 visible: {
-                  ...animationVariants.visible,
+                  ...fade.visible,
                   transition: {
-                    ...animationVariants.visible.transition,
+                    ...fade.visible.transition,
                     delay: 0.05 * (i + 1),
                   },
                 },

@@ -1,18 +1,15 @@
+import { fadeScale } from "@/lib/animation";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { memo } from "react";
 import { HiArrowLongRight } from "react-icons/hi2";
 
 const SPA = () => {
-  const animationVariants = {
-    visible: { opacity: 1, scale: 1, transition: { duration: 0.8 } },
-    hidden: { opacity: 0, scale: 0.8 },
-  };
   return (
     <motion.div
       initial="hidden"
       whileInView="visible"
-      variants={animationVariants}
+      variants={fadeScale}
       layout
     >
       <div className="bg-gradient-to-r from-neutral-900 to-[#1f1f1f] rounded-3xl border pt-10 border-neutral-800 h-full flex flex-col gap-10 justify-center overflow-hidden">

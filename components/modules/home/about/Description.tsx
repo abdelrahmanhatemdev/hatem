@@ -1,51 +1,8 @@
+import { fadeScale, fadeScaleD1, fadeScaleD2, fadeScaleD3, fadeScaleD4 } from "@/lib/animation";
 import { motion } from "framer-motion";
 import { memo } from "react";
 
 const Performance = () => {
-  const animationVariants = {
-    visible: { opacity: 1, scale: 1, transition: { duration: 0.8 } },
-    hidden: { opacity: 0, scale: 0.8 },
-  };
-
-  const descriptionVariants = {
-    ...animationVariants,
-    visible: {
-      ...animationVariants.visible,
-      transition: { ...animationVariants.visible.transition, duration: 1.2 },
-    },
-  };
-
-  const boxOneVariants = {
-    ...animationVariants,
-    visible: {
-      ...animationVariants.visible,
-      transition: { ...animationVariants.visible.transition },
-    },
-  };
-
-  const boxTwoVariants = {
-    ...animationVariants,
-    visible: {
-      ...animationVariants.visible,
-      transition: { ...animationVariants.visible.transition, delay: 0.3 },
-    },
-  };
-
-  const boxThreeVariants = {
-    ...animationVariants,
-    visible: {
-      ...animationVariants.visible,
-      transition: { ...animationVariants.visible.transition, delay: 0.4 },
-    },
-  };
-
-  const boxFourVariants = {
-    ...animationVariants,
-    visible: {
-      ...animationVariants.visible,
-      transition: { ...animationVariants.visible.transition, delay: 0.5 },
-    },
-  };
 
   return (
     <div className="grid md:grid-cols-[calc(60%-1.25rem)_calc(40%-1.25rem)] gap-10">
@@ -53,7 +10,7 @@ const Performance = () => {
         <motion.div
           initial="hidden"
           whileInView="visible"
-          variants={descriptionVariants}
+          variants={fadeScale}
           layout
           className="bg-gradient-to-r from-neutral-900 to-[#1f1f1f] rounded-3xl border p-6 lg:p-16 border-neutral-800 h-full flex flex-col gap-4 justify-center"
         >
@@ -79,7 +36,7 @@ const Performance = () => {
         <motion.div
           initial="hidden"
           whileInView="visible"
-          variants={boxOneVariants}
+          variants={fadeScaleD1}
           layout
           className="bg-gradient-to-r from-neutral-900 to-[#1f1f1f] aspect-square md:aspect-auto rounded-3xl border border-neutral-800 md:p-10 flex flex-col gap-2 items-center justify-center"
         >
@@ -95,7 +52,7 @@ const Performance = () => {
         <motion.div
           initial="hidden"
           whileInView="visible"
-          variants={boxTwoVariants}
+          variants={fadeScaleD2}
           layout
           className="bg-gradient-to-r from-neutral-900 to-[#1f1f1f] aspect-square md:aspect-auto rounded-3xl border border-neutral-800 md:p-10 flex flex-col gap-2 items-center justify-center"
         >
@@ -111,7 +68,7 @@ const Performance = () => {
         <motion.div
           initial="hidden"
           whileInView="visible"
-          variants={boxThreeVariants}
+          variants={fadeScaleD3}
           layout
           className="bg-gradient-to-r from-neutral-900 to-[#1f1f1f] aspect-square md:aspect-auto rounded-3xl border border-neutral-800 md:p-10 flex flex-col gap-2 items-center justify-center"
         >
@@ -128,7 +85,7 @@ const Performance = () => {
         <motion.div
           initial="hidden"
           whileInView="visible"
-          variants={boxFourVariants}
+          variants={fadeScaleD4}
           layout
           className="bg-gradient-to-r from-neutral-900 to-[#1f1f1f] aspect-square md:aspect-auto rounded-3xl border border-neutral-800 md:p-10 flex flex-col gap-2 items-center justify-center"
         >

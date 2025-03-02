@@ -2,6 +2,7 @@
 import { memo } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { fadeScale } from "@/lib/animation";
 
 const expertiseList = [
   {
@@ -56,10 +57,6 @@ const expertiseList = [
 ];
 
 const Expertise = () => {
-  const animationVariants = {
-    visible: { opacity: 1, scale: 1, transition: { duration: 0.8 } },
-    hidden: { opacity: 0, scale: 0.8 },
-  };
 
   return (
     <section className="w-full mt-32">
@@ -72,11 +69,11 @@ const Expertise = () => {
               initial="hidden"
               whileInView="visible"
               variants={{
-                ...animationVariants,
+                ...fadeScale,
                 visible: {
-                  ...animationVariants.visible,
+                  ...fadeScale.visible,
                   transition: {
-                    ...animationVariants.visible.transition,
+                    ...fadeScale.visible.transition,
                     delay: 0.05 * (i + 1),
                   },
                 },

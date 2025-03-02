@@ -1,9 +1,9 @@
 "use client";
 import { memo } from "react";
-
 import dynamic from "next/dynamic";
 import Loading from "@/components/custom/Loading";
 import {motion } from "framer-motion";
+import { fadeScale, fadeScaleD1 } from "@/lib/animation";
 
 const Description = dynamic(
   () => import("@/components/modules/home/about/Description"),
@@ -53,19 +53,6 @@ const TrustedBrands = dynamic(
 
 const About = () => {
 
-  const animationVariants = {
-    visible: { opacity: 1, scale: 1, transition: { duration: 0.8 } },
-    hidden: { opacity: 0, scale: 0.8 },
-  };
-
-  const animationDelayedVariants = {
-    ...animationVariants,
-    visible: {
-      ...animationVariants.visible,
-      transition: { ...animationVariants.visible.transition, delay: 0.4 },
-    },
-  };
-
   return (
     <section className="w-full mt-24">
       <div className="w-[90%] 2xl:w-[70%] mx-auto flex flex-col gap-10">
@@ -75,7 +62,7 @@ const About = () => {
             <motion.div
               initial="hidden"
               whileInView="visible"
-              variants={animationVariants}
+              variants={fadeScale}
               layout
               className="max-w-full"
             >
@@ -84,7 +71,7 @@ const About = () => {
             <motion.div
               initial="hidden"
               whileInView="visible"
-              variants={animationDelayedVariants}
+              variants={fadeScaleD1}
               layout
             >
               <Performance />

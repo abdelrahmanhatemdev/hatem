@@ -1,3 +1,4 @@
+import { fadeScaleD1 } from "@/lib/animation";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
@@ -5,19 +6,12 @@ import { memo } from "react";
 import { HiArrowLongRight } from "react-icons/hi2";
 
 const MobileFirst = () => {
-  const animationVariants = {
-    visible: {
-      opacity: 1,
-      scale: 1,
-      transition: { duration: 0.8, delay: 0.3 },
-    },
-    hidden: { opacity: 0, scale: 0.8 },
-  };
+
   return (
     <motion.div
       initial="hidden"
       whileInView="visible"
-      variants={animationVariants}
+      variants={fadeScaleD1}
     >
       <div className="bg-gradient-to-r from-neutral-900 to-[#1f1f1f] rounded-3xl border pt-10 border-neutral-800 h-full flex flex-col gap-10 justify-center overflow-hidden relative">
         <div className="flex flex-col gap-4 items-start px-8">

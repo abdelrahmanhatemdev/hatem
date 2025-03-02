@@ -1,18 +1,8 @@
 "use client";
-import { memo, useRef } from "react";
-import { motion, useInView } from "framer-motion";
+import { memo } from "react";
+import { motion } from "framer-motion";
 import Image from "next/image";
 const Performance = () => {
-  const performanceRef = useRef(null);
-  const performanceIsInView = useInView(performanceRef, {
-    once: false,
-    margin: "0px",
-  });
-
-  const animationVariants = {
-    visible: { opacity: 1, y: 0, transition: { duration: 1, delay: 0.3 } },
-    hidden: { opacity: 0, y: 200 },
-  };
 
   return (
     <div className="bg-gradient-to-r from-neutral-900 to-[#1f1f1f] rounded-3xl border border-neutral-800 pt-10 flex flex-col gap-10 justify-between">

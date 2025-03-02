@@ -4,6 +4,7 @@ import { memo } from "react";
 
 import dynamic from "next/dynamic";
 import Loading from "@/components/custom/Loading";
+import { fade, fadeScaleD1, fadeScaleD2, fadeScaleD3, fadeScaleD4 } from "@/lib/animation";
 
 const ThreeQuarterCircle = dynamic(
   () => import("@/components/modules/cta/ThreeQuarterCircle"),
@@ -13,56 +14,15 @@ const ThreeQuarterCircle = dynamic(
 );
 
 const CTA = () => {
-  const mainVariants = {
-    visible: { opacity: 1, transition: { duration: 1 } },
-    hidden: { opacity: 0 },
-  };
-
-  const animationVariants = {
-    visible: { opacity: 1, scale: 1, transition: { duration: 1 } },
-    hidden: { opacity: 0, scale: 0.9 },
-  };
-
-  const boxOneVariants = {
-    ...animationVariants,
-    visible: {
-      ...animationVariants.visible,
-      transition: { ...animationVariants.visible.transition, delay: .4 },
-    },
-  };
-
-  const boxTwoVariants = {
-    ...animationVariants,
-    visible: {
-      ...animationVariants.visible,
-      transition: { ...animationVariants.visible.transition, delay: .5 },
-    },
-  };
-
-  const boxThreeVariants = {
-    ...animationVariants,
-    visible: {
-      ...animationVariants.visible,
-      transition: { ...animationVariants.visible.transition, delay: .7 },
-    },
-  };
-
-  const boxFourVariants = {
-    ...animationVariants,
-    visible: {
-      ...animationVariants.visible,
-      transition: { ...animationVariants.visible.transition, delay: .8 },
-    },
-  };
 
   return (
-    <section className="w-full mt-40 px-10 relative">
+    <section className="w-full mt-40 px-8 relative">
       <motion.div
         initial="hidden"
         whileInView="visible"
-        variants={mainVariants}
+        variants={fade}
       >
-        <div className="xs:w-[calc(95%-80px)] w-[80%] md:w-[78%] mx-auto h-full relative pt-4 z-10">
+        <div className="xs:w-[calc(95%-80px)] md:w-[78%] mx-auto h-full relative pt-4 z-10">
           <div
             className="w-full h-16 grid lg:grid-cols-3 absolute left-0 -top-12 border border-dashed 
           border-[#191919] border-y-0"
@@ -98,7 +58,7 @@ const CTA = () => {
             <motion.div
               initial="hidden"
               whileInView="visible"
-              variants={boxOneVariants}
+              variants={fadeScaleD1}
             >
               <h2 className="text-3xl lg:text-[3.2vw] bg-gradient-to-b from-neutral-50 to-neutral-300 bg-clip-text text-transparent font-extrabold lg:leading-[5rem] leading-10">
                 Turn Your Vision Into a Stunning Reality!
@@ -120,7 +80,7 @@ const CTA = () => {
             <motion.div
               initial="hidden"
               whileInView="visible"
-              variants={boxTwoVariants}
+              variants={fadeScaleD2}
             >
               <p className="lg:text-2xl text-neutral-500 text-center max-w-[800px] sm:leading-7 lg:leading-10">
                 I provide the
@@ -169,24 +129,24 @@ const CTA = () => {
           border-[#191919] border-x-0 border-t-0"
             ></div>
             <div className="bg-neutral-950 bg-opacity-10 hover:bg-opacity-70 transition-colors duration-500"></div>
-            <div className="h-full lg:border border-dashed border-[#191919] border-y-transparent flex items-center justify-center flex-wrap gap-4 p-12 relative">
+            <div className="h-full lg:border border-dashed border-[#191919] border-y-transparent flex items-center justify-center flex-wrap gap-4 py-12 relative">
               <motion.div
                 initial="hidden"
                 whileInView="visible"
-                variants={boxThreeVariants}
+                variants={fadeScaleD3}
                 className="min-w-fit"
               >
-                <button className="bg-neutral-50 py-3 px-6 font-medium text-lg rounded-xl cursor-pointer hover:bg-neutral-300 text-neutral-950 transition-colors shadow-lg border border-neutral-900">
+                <button className="bg-neutral-50 py-3 px-[5vw] md:px-6 font-medium text-[4vw] sm:text-lg rounded-xl cursor-pointer hover:bg-neutral-300 text-neutral-950 transition-colors shadow-lg border border-neutral-900">
                   Join a Team
                 </button>
               </motion.div>
               <motion.div
                 initial="hidden"
                 whileInView="visible"
-                variants={boxFourVariants}
+                variants={fadeScaleD4}
                 className="min-w-fit"
               >
-                <button className="bg-neutral-950 py-3 px-4 font-medium text-lg rounded-xl cursor-pointer hover:bg-neutral-900 text-white transition-colors shadow-lg border border-neutral-900">
+                <button className="bg-neutral-950 py-3 px-[5vw] md:px-4 font-medium text-[4vw] sm:text-lg rounded-xl cursor-pointer hover:bg-neutral-900 text-white transition-colors shadow-lg border border-neutral-900">
                   Start a Project
                 </button>
               </motion.div>
