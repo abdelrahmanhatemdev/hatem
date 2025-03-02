@@ -1,4 +1,7 @@
+"use client";
 import { memo } from "react";
+import { easeInOut, motion } from "framer-motion";
+import { fade, fadeD5, fadeScaleD2 } from "@/lib/animation";
 
 export const stack = [
   "Nextjs",
@@ -19,108 +22,110 @@ export const stack = [
   "Vercel",
 ];
 
-const Details = () => {
-  const animationVariants = {
-    visible: { opacity: 1, scale: 1, transition: { duration: 0.8 } },
-    hidden: { opacity: 0, scale: 0.8 },
-  };
+const details = [
+  {
+    title: "Timeframe",
+    value: "2 months",
+  },
+  {
+    title: "Role",
+    value: "Frontend/Backend",
+  },
+  {
+    title: "Type",
+    value: "Dashboard",
+  },
+  {
+    title: "Link",
+    value: "Visit Site",
+    href: "/",
+  },
+  {
+    title: "Git",
+    value: "Visit Git",
+    href: "https://github.com/abdulrahmanhatem/vogue-admin",
+  },
+];
 
-  const boxTwoVariants = {
-    ...animationVariants,
-    visible: {
-      ...animationVariants.visible,
-      transition: { ...animationVariants.visible.transition, delay: 0.2 },
-    },
-  };
-  const boxThreeVariants = {
-    ...animationVariants,
-    visible: {
-      ...animationVariants.visible,
-      transition: { ...animationVariants.visible.transition, delay: 0.4 },
-    },
-  };
-  const boxFourVariants = {
-    ...animationVariants,
-    visible: {
-      ...animationVariants.visible,
-      transition: { ...animationVariants.visible.transition, delay: 0.5 },
-    },
-  };
-  const boxFiveVariants = {
-    ...animationVariants,
-    visible: {
-      ...animationVariants.visible,
-      transition: { ...animationVariants.visible.transition, delay: 0.5 },
-    },
-  };
-  const boxSixVariants = {
-    ...animationVariants,
-    visible: {
-      ...animationVariants.visible,
-      transition: { ...animationVariants.visible.transition, delay: 0.7 },
-    },
-  };
-  
+const Details = () => {
   return (
     <section className="px-3 md:px-6">
-      <h1 className="py-8 lg:py-16 text-[10vw] md:text-[9vw] font-black font-satoshi">
+      <motion.h1
+        variants={fade}
+        initial="hidden"
+        whileInView="visible"
+        className="py-8 lg:py-16 text-[10vw] md:text-[9vw] font-black font-satoshi"
+      >
         Vogue Admin
-      </h1>
+      </motion.h1>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-0">
         <div className="flex gap-5 lg:gap-20">
           <div className="flex flex-col gap-2 lg:gap-5">
-            <div className="flex flex-col *:leading-6">
-              <h2 className="text-neutral-400 font-semibold">Timeframe</h2>
-              <p className="text-xs lg:text-2xl tracking-widest font-medium">
-                2 months
-              </p>
-            </div>
-            <div className="flex flex-col *:leading-6">
-              <h2 className="text-neutral-400 font-semibold">Role</h2>
-              <p className="text-xs lg:text-2xl tracking-widest font-medium">
-                Frontend/Backend
-              </p>
-            </div>
-            <div className="flex flex-col *:leading-6">
-              <h2 className="text-neutral-400 font-semibold">Type</h2>
-              <p className="text-xs lg:text-2xl tracking-widest font-medium">
-                Dashboard
-              </p>
-            </div>
-            <div className="flex flex-col *:leading-6">
-              <h2 className="text-neutral-400 font-semibold">Link</h2>
-              <a
-                target="_blank"
-                href="/"
-                className="text-xs lg:text-2xl tracking-widest font-medium"
-              >
-                Visit Site
-              </a>
-            </div>
-            <div className="flex flex-col *:leading-6">
-              <h2 className="text-neutral-400 font-semibold">Git</h2>
-              <a
-                target="_blank"
-                href="https://github.com/abdulrahmanhatem/vogue-admin"
-                className="text-xs lg:text-2xl tracking-widest font-medium"
-              >
-                Visit Git
-              </a>
-            </div>
+            {details.map((item, i) => {
+              const valueClass =
+                "text-xs lg:text-2xl tracking-widest font-medium";
+              return (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  transition={{
+                    duration: 0.3,
+                    delay: i * 0.1,
+                    ease: easeInOut,
+                  }}
+                  className="flex flex-col *:leading-6"
+                >
+                  <h2 className="text-neutral-400 font-semibold">
+                    {item.title}
+                  </h2>
+                  {item?.href ? (
+                    <a
+                      target="_blank"
+                      href={`${item.href}`}
+                      className={valueClass}
+                    >
+                      {item.value}
+                    </a>
+                  ) : (
+                    <p className={valueClass}>{item.value}</p>
+                  )}
+                </motion.div>
+              );
+            })}
           </div>
-          <div className="border-s border-neutral-200 px-2 text-neutral-500 font-semibold text-xs md:text-sm pb-5">
+          <motion.div 
+          initial= {{opacity: 0, height: 0}}
+          whileInView={{opacity:1, height: 350, transition: {duration: 2.5, ease: easeInOut}}}
+          
+          className="border-s border-neutral-200 px-2 text-neutral-500 font-semibold text-xs md:text-sm pb-5">
             {stack.map((tech, i) => (
-              <p key={i}>{tech}</p>
+              <motion.p
+                key={i}
+                initial={{ opacity: 0, y: -5 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{
+                  duration: 0.3,
+                  delay: fadeScaleD2.visible.transition.delay + i * 0.1,
+                  ease: easeInOut,
+                }}
+              >
+                {tech}
+              </motion.p>
             ))}
-          </div>
+          </motion.div>
         </div>
-        <div className="text-base md:text-3xl font-medium text-neutral-200">
+        <motion.div 
+        variants={fadeD5}
+        initial="hidden"
+        whileInView="visible"
+        className="text-base md:text-3xl font-medium text-neutral-200">
           I designed Vogue Admin as a powerful e-commerce platform to streamline
           operations and scale with ease. It offers intuitive control over
           products, categories, and administrators while ensuring a seamless
           workflow. With customizable settings for branding and real-time
           updates, it keeps businesses agile and efficient.
-        </div>
+        </motion.div>
       </div>
     </section>
   );

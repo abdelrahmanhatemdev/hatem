@@ -18,6 +18,34 @@ export const fadeD1 = {
     transition: { ...fade.visible.transition, delay},
   },
 };
+export const fadeD2 = {
+  ...fade,
+  visible: {
+    ...fade.visible,
+    transition: { ...fade.visible.transition, delay: delay + 0.1},
+  },
+};
+export const fadeD3 = {
+  ...fade,
+  visible: {
+    ...fade.visible,
+    transition: { ...fade.visible.transition, delay: delay + 0.3},
+  },
+};
+export const fadeD4 = {
+  ...fade,
+  visible: {
+    ...fade.visible,
+    transition: { ...fade.visible.transition, delay: delay + 0.4},
+  },
+};
+export const fadeD5 = {
+  ...fade,
+  visible: {
+    ...fade.visible,
+    transition: { ...fade.visible.transition, delay: delay + 0.5},
+  },
+};
 
 // Fade Scale 
 export const fadeScale = {

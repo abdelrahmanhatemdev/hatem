@@ -63,7 +63,6 @@ const About = () => {
               initial="hidden"
               whileInView="visible"
               variants={fadeScale}
-              layout
               className="max-w-full"
             >
               <ResponsiveWeb />
