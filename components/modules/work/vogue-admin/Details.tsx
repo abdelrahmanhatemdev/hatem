@@ -1,7 +1,7 @@
 "use client";
 import { memo } from "react";
 import { easeInOut, motion } from "framer-motion";
-import { fade, fadeD5, fadeScaleD2 } from "@/lib/animation";
+import { fade, fadeD2, fadeD5, fadeScaleD2 } from "@/lib/animation";
 
 export const stack = [
   "Nextjs",
@@ -60,21 +60,14 @@ const Details = () => {
       </motion.h1>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-0">
         <div className="flex gap-5 lg:gap-20">
-          <div className="flex flex-col gap-2 lg:gap-5">
+          <motion.div variants={fadeD2} initial="hidden" whileInView="visible" className="flex flex-col gap-2 lg:gap-5">
             {details.map((item, i) => {
               const valueClass =
                 "text-xs lg:text-2xl tracking-widest font-medium";
               return (
-                <motion.div
-                  key={i}
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 1 }}
-                  transition={{
-                    duration: 0.3,
-                    delay: i * 0.1,
-                    ease: easeInOut,
-                  }}
+                <div
                   className="flex flex-col *:leading-6"
+                  key={i}
                 >
                   <h2 className="text-neutral-400 font-semibold">
                     {item.title}
@@ -90,10 +83,10 @@ const Details = () => {
                   ) : (
                     <p className={valueClass}>{item.value}</p>
                   )}
-                </motion.div>
+                </div>
               );
             })}
-          </div>
+          </motion.div>
           <motion.div 
           initial= {{opacity: 0, height: 0}}
           whileInView={{opacity:1, height: 350, transition: {duration: 2.5, ease: easeInOut}}}
