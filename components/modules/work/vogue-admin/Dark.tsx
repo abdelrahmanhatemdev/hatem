@@ -59,7 +59,7 @@ const Dark = () => {
             </div>
           </div>
         </div>
-        <motion.div variants={fadeDu3D3} initial="hidden" whileInView="visible" className="font-ogg text-[40vw] h-[36vw] flex justify-center">Dark</motion.div>
+        <motion.div variants={fadeDu2} initial="hidden" whileInView="visible" className="font-ogg text-[40vw] h-[36vw] flex justify-center">Dark</motion.div>
       </div>
     </section>
   );
