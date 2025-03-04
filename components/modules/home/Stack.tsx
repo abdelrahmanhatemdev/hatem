@@ -76,7 +76,7 @@ const technolegy = [
     ],
   },
   {
-    src: "chatGpt",
+    src: "chatgpt",
     title: "ChatGPt",
     link: "https://chat.openai.com/",
     description: [
