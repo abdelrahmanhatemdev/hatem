@@ -215,7 +215,7 @@ const Stack = () => {
                   ...fadeD1.visible,
                   transition: {
                     ...fadeD1.visible.transition,
-                    delay: 0.1 * (index + 1),
+                    delay: 0.1 ,
                   },
                 },
               }}
