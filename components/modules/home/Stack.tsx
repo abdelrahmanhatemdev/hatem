@@ -45,7 +45,7 @@ const technolegy = [
     ],
   },
   {
-    src: "Zod",
+    src: "zod",
     hoverSrc: "zod-origin",
     title: "Zod",
     link: "https://zod.dev/",
@@ -76,7 +76,7 @@ const technolegy = [
     ],
   },
   {
-    src: "chatGPt",
+    src: "chatGpt",
     title: "ChatGPt",
     link: "https://chat.openai.com/",
     description: [
@@ -86,7 +86,7 @@ const technolegy = [
     ],
   },
   {
-    src: "eSlint",
+    src: "eslint",
     hoverSrc: "eslint-origin",
     title: "ESlint",
     link: "https://eslint.org/",
@@ -159,7 +159,7 @@ const technolegy = [
     ],
   },
   {
-    src: "mySQL",
+    src: "mysql",
     title: "MySQL",
     link: "https://www.mysql.com/",
     description: [
