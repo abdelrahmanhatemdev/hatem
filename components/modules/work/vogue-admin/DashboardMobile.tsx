@@ -2,7 +2,7 @@
 import Image from "next/image";
 import { memo } from "react";
 import {motion} from "framer-motion"
-import { fade, fadeD1, fadeD2, fadeD3, fadeD4, fadeScale, fadeScaleD1, fadeScaleD4, fadeScaleD5 } from "@/lib/animation";
+import { fade, fadeD1, fadeD2, fadeD3, fadeD4, fadeDu1, fadeDu2, fadeDu3, fadeScale, fadeScaleD1, fadeScaleD4, fadeScaleD5 } from "@/lib/animation";
 
 const DashboardMobile = () => {
   return (
@@ -38,7 +38,7 @@ const DashboardMobile = () => {
           </div>
         </div>
         <div className="flex flex-col sm:flex-row justify-center items-center gap-10 grow lg:min-w-[600px]">
-          <motion.div variants={fadeD2} initial="hidden" whileInView="visible"  className="flex items-center">
+          <motion.div variants={fadeDu2} initial="hidden" whileInView="visible"  className="flex items-center">
             <Image
               src="/assets/media/work/vogue-admin/dashboard-sm-light.webp"
               alt="Next.js Development"
@@ -48,7 +48,7 @@ const DashboardMobile = () => {
             />
           </motion.div>
           <div className="flex flex-col gap-10">
-            <motion.div variants={fade} initial="hidden" whileInView="visible" >
+            <motion.div variants={fadeDu1} initial="hidden" whileInView="visible" >
               <Image
                 src="/assets/media/work/vogue-admin/dashboard-sm-light.webp"
                 alt="Next.js Development"
@@ -57,7 +57,7 @@ const DashboardMobile = () => {
                 height={600}
               />
             </motion.div>
-            <motion.div variants={fadeD3} initial="hidden" whileInView="visible" >
+            <motion.div variants={fadeDu3} initial="hidden" whileInView="visible" >
               <Image
                 src="/assets/media/work/vogue-admin/dashboard-sm-light.webp"
                 alt="Next.js Development"

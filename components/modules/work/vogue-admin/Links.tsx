@@ -1,6 +1,5 @@
-import { cn } from "@/lib/utils";
 import { memo } from "react";
-
+import {motion} from "framer-motion"
 const Links = () => {
   return (
     <section className="py-10 lg:py-32 px-3 md:px-6">
