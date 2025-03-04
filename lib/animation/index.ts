@@ -47,6 +47,29 @@ export const fadeD5 = {
   },
 };
 
+export const fadeDu1 = {
+  ...fade,
+  visible: {
+    ...fade.visible,
+    transition: { ...fade.visible.transition, duration: duration + 1},
+  },
+};
+
+export const fadeDu2 = {
+  ...fade,
+  visible: {
+    ...fade.visible,
+    transition: { ...fade.visible.transition, duration: duration + 2},
+  },
+};
+export const fadeDu3 = {
+  ...fade,
+  visible: {
+    ...fade.visible,
+    transition: { ...fade.visible.transition, duration: duration + 3},
+  },
+};
+
 // Fade Scale 
 export const fadeScale = {
   visible: { opacity: opacityVisible, scale: scaleTo, transition: { duration } },
