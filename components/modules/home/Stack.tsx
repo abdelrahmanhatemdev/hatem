@@ -204,7 +204,7 @@ const Stack = () => {
         variants={fade}
       >
         <div className="w-[70%] sm:w-[60%] mx-auto grid grid-cols-2 md:grid-cols-4 xl:grid-cols-8 mt-10 gap-[3vw] lg:gap-[1vw]">
-          {technolegy.map((tech, index) => (
+          {technolegy.map(tech => (
             <motion.div
               key={`${tech.src}`}
               initial="hidden"
