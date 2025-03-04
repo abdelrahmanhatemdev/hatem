@@ -1,5 +1,7 @@
+"use client"
 import { cn } from "@/lib/utils";
 import { memo } from "react";
+import {easeInOut, motion} from "framer-motion"
 
 const featues = [
   {
@@ -80,15 +82,22 @@ const Features = () => {
   return (
     <section className="py-10 lg:py-32 px-3 md:px-6">
       <div className="bg-neutral-950/50 rounded-2xl md:rounded-[7rem] p-3 md:p-[5rem] flex flex-col gap-5 md:gap-10">
-        {featues.map((featue, index) => (
-          <div
+        {featues.map((featue, i) => (
+          <motion.div
+          key={i}
+          initial={{ opacity: 0, y: -5 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{
+            duration: 2,
+            delay:  i * 0.1,
+            ease: easeInOut,
+          }}
             className={cn(
               "flex flex-col md:flex-row justify-between md:items-end group cursor-pointer",
-              index !== featues.length - 1
+              i !== featues.length - 1
                 ? "border-b-[5px] border-neutral-50 pb-5"
                 : ""
             )}
-            key={index}
           >
             <h2 className="text-4xl md:text-[5vw] font-ogg leading-16 md:leading-24">{featue.title}</h2>
             <ul className="flex flex-col gap-3 w-[280px]">
@@ -106,7 +115,7 @@ const Features = () => {
                 );
               })}
             </ul>
-          </div>
+          </motion.div>
         ))}
       </div>
     </section>
