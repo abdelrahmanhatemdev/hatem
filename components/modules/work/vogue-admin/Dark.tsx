@@ -2,7 +2,7 @@
 import Image from "next/image";
 import { memo } from "react";
 import {motion} from "framer-motion"
-import { fade, fadeD1, fadeD2, fadeDu1, fadeDu1D1, fadeDu1D3, fadeDu2, fadeDu3, fadeDu3D3 } from "@/lib/animation";
+import { fade, fadeD1, fadeDu1, fadeDu1D1, fadeDu1D3, fadeDu2, fadeDu3 } from "@/lib/animation";
 
 const Dark = () => {
   return (

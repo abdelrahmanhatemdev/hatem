@@ -2,7 +2,7 @@
 import Image from "next/image";
 import { memo } from "react";
 import {motion} from "framer-motion"
-import { fadeD1, fadeD2, fadeD3, fadeDu1, fadeDu1D2, fadeDu1D3, fadeDu3 } from "@/lib/animation";
+import { fadeD1, fadeD2, fadeDu1, fadeDu1D2, fadeDu1D3 } from "@/lib/animation";
 
 const BigScreen = () => {
   return (

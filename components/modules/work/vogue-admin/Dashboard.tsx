@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import { easeInOut, motion } from "framer-motion";
-import { fadeScale, fadeScaleD1, fadeScaleD4 } from "@/lib/animation";
+import { fadeScale, fadeScaleD4 } from "@/lib/animation";
 const Dashboard = () => {
   return (
     <section className="py-10 lg:py-32 px-3 md:px-6 w-full">

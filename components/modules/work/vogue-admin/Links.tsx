@@ -1,7 +1,7 @@
 "use client";
 import { memo } from "react";
 import { motion } from "framer-motion";
-import { fadeD1, fadeD2, fadeDu1D1, fadeDu1D2, fadeDu1D3 } from "@/lib/animation";
+import { fadeD1, fadeDu1D1, fadeDu1D2, fadeDu1D3 } from "@/lib/animation";
 
 const links = [
   {
@@ -55,9 +55,9 @@ const Links = () => {
             className=" font-medium"
           >
             I crafted Vogue Admin with dedication and vision, shaping every
-            detail with care. It’s more than just a project—it's a journey of
-            constant refinement and innovation. I’m always working to make it
-            better, and I’d love to collaborate and take it even further
+            detail with care. It&apos;s more than just a project—it&apos;s a journey of
+            constant refinement and innovation. I&apos;m always working to make it
+            better, and I&apos;d love to collaborate and take it even further
             together.
           </motion.p>
           <div className="flex flex-col">

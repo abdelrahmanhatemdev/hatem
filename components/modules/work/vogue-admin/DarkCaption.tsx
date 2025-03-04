@@ -2,7 +2,7 @@
 import Image from "next/image";
 import { memo } from "react";
 import {motion} from "framer-motion"
-import { fadeD1, fadeD2, fadeD5, fadeScaleD1 } from "@/lib/animation";
+import { fadeD1, fadeD5, fadeScaleD1 } from "@/lib/animation";
 
 const DarkCaption = () => {
   return (

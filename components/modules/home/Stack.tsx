@@ -182,13 +182,6 @@ const technolegy = [
 ];
 
 const Stack = () => {
-  const mainVariants = {
-    visible: { opacity: 1, y: 0, transition: { duration: 1 } },
-    hidden: { opacity: 0, y: -200 },
-  };
-
- 
-  
 
   return (
     <section className="mt-40">

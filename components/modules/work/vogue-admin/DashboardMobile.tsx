@@ -2,7 +2,7 @@
 import Image from "next/image";
 import { memo } from "react";
 import {motion} from "framer-motion"
-import { fade, fadeD1, fadeD2, fadeD3, fadeD4, fadeDu1, fadeDu2, fadeDu3, fadeScale, fadeScaleD1, fadeScaleD4, fadeScaleD5 } from "@/lib/animation";
+import { fadeD1, fadeD2, fadeD3, fadeD4, fadeDu1, fadeDu2, fadeDu3, fadeScaleD4, fadeScaleD5 } from "@/lib/animation";
 
 const DashboardMobile = () => {
   return (
