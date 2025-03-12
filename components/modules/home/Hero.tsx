@@ -192,7 +192,7 @@ const Hero = () => {
                       }}
                     >
                       <strong className="font-extrabold md:tracking-wider text-[2.3rem] sm:text-[3rem] md:text-[3.5vw] scale-y-105">
-                        Frontend First, Full-Stack-Ready
+                        Frontend
                       </strong>
                     </motion.span>
                     <motion.span
