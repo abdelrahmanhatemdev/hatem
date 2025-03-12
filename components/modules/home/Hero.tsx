@@ -192,20 +192,8 @@ const Hero = () => {
                       }}
                     >
                       <strong className="font-extrabold md:tracking-wider text-[2.3rem] sm:text-[3rem] md:text-[3.5vw] scale-y-105">
-                        Frontend
+                        Frontend Development
                       </strong>
-                    </motion.span>
-                    <motion.span
-                      variants={slideVariants}
-                      initial={`initial`}
-                      animate={activeSlide === index + 1 ? `active` : `initial`}
-                      exit={`exit`}
-                      transition={{
-                        ...slideTransition,
-                        delay: 1 * slideParagraphDelay + 4 * slideSpanDelay,
-                      }}
-                    >
-                      <strong className="font-light"> Development</strong>
                     </motion.span>
                   </p>
                 </motion.span>
