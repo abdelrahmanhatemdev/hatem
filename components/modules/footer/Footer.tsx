@@ -55,7 +55,7 @@ const Footer = () => {
               <div className="flex flex-col gap-5 justify-end">
                 <a
                   className="text-2xl lg:text-4xl flex flex-wrap"
-                  href="mailto:abdelrahmanhatem.dev@gmail.com"
+                  href="mailto:abdelrahmanhatemdev@gmail.com"
                   title="SEND ME AN EMAIL"
                 >
                   <span>
@@ -67,17 +67,11 @@ const Footer = () => {
                       delay={contactDelay + 0.1}
                     />
                   </span>
-                  <span className="text-neutral-400">
-                    <AnimatedText text="." delay={contactDelay + 1.2} />
-                  </span>
                   <span>
                     <strong className="font-bold text-2xl lg:text-4xl">
                       <AnimatedText text="H" delay={contactDelay + 1.3} />
                     </strong>
                     <AnimatedText text="atem" delay={contactDelay + 1.4} />
-                  </span>
-                  <span className="text-neutral-400">
-                    <AnimatedText text="." delay={contactDelay + 1.8} />
                   </span>
                   <span>
                     <strong className="font-bold text-2xl lg:text-4xl">
@@ -93,17 +87,35 @@ const Footer = () => {
                   </span>
                 </a>
                 <a
-                  className="text-xl lg:text-4xl font-bold"
+                  className="text-xl lg:text-4xl font-bold flex gap-2"
                   href="tel:00201070070745"
                   title="CALL ME NOW"
                 >
                   <span className="text-neutral-700">
-                    <AnimatedText text="002" delay={contactDelay + 3} />
+                    <AnimatedText text="+20" delay={contactDelay + 3} />
                   </span>
                   <span>
                     <AnimatedText
-                      text="01070070745"
-                      delay={contactDelay + 3.3}
+                      text="010"
+                      delay={contactDelay + 3.5}
+                    />
+                  </span>
+                  <span>
+                    <AnimatedText
+                      text="700"
+                      delay={contactDelay + 3.7}
+                    />
+                  </span>
+                  <span>
+                    <AnimatedText
+                      text="707"
+                      delay={contactDelay + 3.9}
+                    />
+                  </span>
+                  <span>
+                    <AnimatedText
+                      text="45"
+                      delay={contactDelay + 4.1}
                     />
                   </span>
                 </a>
