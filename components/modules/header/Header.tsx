@@ -25,7 +25,7 @@ function Header() {
           href="/"
           className="group uppercase font-bold text-lg flex gap-2 items-center justify-center cursor-pointer relative"
         >
-          <Logo className="w-10 opacity-100 group-hover:opacity-0 transition-opacity duration-500"/>
+          <Logo className="w-10 transition-opacity duration-500"/>
         </Link>
         <div className="flex gap-6 items-center justify-start">
           <ul className="gap-6 items-center justify-start hidden md:flex ">
