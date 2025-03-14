@@ -14,7 +14,7 @@ const Brand = () => {
               <motion.div variants={fadeScale} initial="hidden" whileInView="visible" className="relative flex flex-col gap-10 items-center justify-center font-satoshi border-[15px] border-neutral-950/50 p-6 aspect-square">
                 <div className="absolute right-3 top-3">
                   <Image
-                    src={`/assets/media/work/vogue-admin/logo-light.png`}
+                    src={`/assets/media/work/vogue-admin/logo-light.webp`}
                     alt="Vogue Admin Logo"
                     width={50}
                     height={30}
@@ -37,7 +37,7 @@ const Brand = () => {
               <motion.div variants={fadeScaleD2} initial="hidden" whileInView="visible" className="relative flex flex-col gap-10 items-center justify-center font-satoshi border-[15px] border-neutral-200/50 p-6 aspect-square text-black">
                 <div className="absolute right-3 top-3">
                   <Image
-                    src={`/assets/media/work/vogue-admin/logo.png`}
+                    src={`/assets/media/work/vogue-admin/logo.webp`}
                     alt="Vogue Admin Logo"
                     width={50}
                     height={30}

@@ -227,7 +227,7 @@ const Stack = () => {
                     <div className="group flex flex-col items-center justify-center cursor-pointer p-4 bg-neutral-900 transition-colors rounded-2xl">
                       <div className="relative">
                         <Image
-                          src={`/assets/media/stack/${tech.src}.png`}
+                          src={`/assets/media/stack/${tech.src}.webp`}
                           alt={`${tech.title}`}
                           width={200}
                           height={200}
@@ -241,7 +241,7 @@ const Stack = () => {
                         />
                         {tech.hoverSrc ? (
                           <Image
-                            src={`/assets/media/stack/${tech.hoverSrc}.png`}
+                            src={`/assets/media/stack/${tech.hoverSrc}.webp`}
                             alt={`${tech.title}`}
                             width={200}
                             height={200}
@@ -265,7 +265,7 @@ const Stack = () => {
                         <Image
                           src={`/assets/media/stack/${
                             tech.hoverSrc ? tech.hoverSrc : tech.src
-                          }.png`}
+                          }.webp`}
                           alt={`${tech.title}`}
                           width={200}
                           height={200}

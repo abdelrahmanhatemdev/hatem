@@ -124,7 +124,7 @@ const Hero = () => {
                   >
                     <span>
                       <Image
-                        src="/assets/media/nextjs.png"
+                        src="/assets/media/nextjs.webp"
                         fill
                         alt="Next.js"
                       />
@@ -265,7 +265,7 @@ const Hero = () => {
                           className="inline-block"
                         >
                           <Image
-                            src={"/assets/media/pyramids.png"}
+                            src={"/assets/media/pyramids.webp"}
                             alt="Egyptian Pyramids"
                             width={200}
                             height={70}
