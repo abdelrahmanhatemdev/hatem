@@ -22,7 +22,7 @@ const Performance = () => {
           >
             <Image
               src="/assets/media/about/performance.webp"
-              alt="Responsive Web"
+              alt="Performance"
               width={1366}
               height={3024}
               priority={true}

@@ -12,7 +12,7 @@ const DarkCaption = () => {
           <motion.div variants={fadeD1} initial="hidden" whileInView="visible">
             <Image
               src="/assets/media/work/vogue-admin/dashboard-light.webp"
-              alt="Next.js Development"
+              alt="Dashboard Light"
               className="rounded-2xl border-[10px] border-neutral-950/50 w-full"
               width={1000}
               height={620}
@@ -21,7 +21,7 @@ const DarkCaption = () => {
           <motion.div variants={fadeD5} initial="hidden" whileInView="visible" className="absolute inset-0 w-full h-full">
             <Image
               src="/assets/media/work/vogue-admin/dashboard.webp"
-              alt="Next.js Development"
+              alt="Dashboard"
               className="rounded-xl border-[10px] border-neutral-950/50 w-full"
               width={1000}
               height={620}

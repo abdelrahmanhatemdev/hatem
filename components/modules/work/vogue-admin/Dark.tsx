@@ -13,7 +13,7 @@ const Dark = () => {
             <motion.div variants={fadeDu1} initial="hidden" whileInView="visible" className="px-3 md:px-5">
               <Image
                 src="/assets/media/work/vogue-admin/dashboard-sm.webp"
-                alt="Dark Theme 1"
+                alt="Dashboard Phone"
                 className="rounded-2xl border-[5px] border-neutral-950/50"
                 width={1000}
                 height={620}
@@ -22,7 +22,7 @@ const Dark = () => {
             <motion.div variants={fadeDu2} initial="hidden" whileInView="visible" className="px-3 md:px-5 md:pt-16">
               <Image
                 src="/assets/media/work/vogue-admin/dashboard-sm.webp"
-                alt="Dark Theme 1"
+                alt="Dashboard Phone"
                 className="rounded-2xl border-[5px] border-neutral-950/50"
                 width={1000}
                 height={620}
@@ -31,7 +31,7 @@ const Dark = () => {
             <motion.div variants={fadeDu3} initial="hidden" whileInView="visible" className="px-3 md:px-5 md:pt-32">
               <Image
                 src="/assets/media/work/vogue-admin/dashboard-sm.webp"
-                alt="Dark Theme 1"
+                alt="Dashboard Phone"
                 className="rounded-2xl border-[5px] border-neutral-950/50"
                 width={1000}
                 height={620}

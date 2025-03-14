@@ -12,7 +12,7 @@ const BigScreen = () => {
           <motion.div variants={fadeDu1} initial="hidden" whileInView="visible" className="max-w-[750px]">
             <Image
               src="/assets/media/work/vogue-admin/dashboard-light.webp"
-              alt="Next.js Development"
+              alt="Dashboard Light"
               className="rounded-lg md:rounded-[3rem] border-4 md:border-[10px] border-neutral-900/50 w-full"
               width={1000}
               height={620}
@@ -21,7 +21,7 @@ const BigScreen = () => {
           <motion.div variants={fadeDu1} initial="hidden" whileInView="visible" className="max-w-[750px]">
             <Image
               src="/assets/media/work/vogue-admin/dashboard-light.webp"
-              alt="Next.js Development"
+              alt="Dashboard Light"
               className="rounded-lg md:rounded-[3rem] border-4 md:border-[10px] border-neutral-900/50 w-full"
               width={1000}
               height={620}

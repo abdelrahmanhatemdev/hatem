@@ -15,7 +15,7 @@ const Brand = () => {
                 <div className="absolute right-3 top-3">
                   <Image
                     src={`/assets/media/work/vogue-admin/logo-light.webp`}
-                    alt="Vogue Admin Logo"
+                    alt="Vogue Admin Logo Light"
                     width={50}
                     height={30}
                   />
