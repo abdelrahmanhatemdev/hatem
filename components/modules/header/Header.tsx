@@ -52,10 +52,10 @@ function Header() {
               >
                 <DropdownMenuGroup className="p-2 flex flex-col gap-2">
                   <DropdownMenuItem className="rounded-lg">
-                    <a href="/#works" className="w-full py-1">Projects</a>
+                    <Link href="/#works" className="w-full py-1">Projects</Link>
                   </DropdownMenuItem>
                   <DropdownMenuItem className="rounded-lg">
-                    <a href="/#contact" className="w-full py-1">Contact</a>
+                    <Link href="/#contact" className="w-full py-1">Contact</Link>
                   </DropdownMenuItem>
                 </DropdownMenuGroup>
                 <DropdownMenuSeparator className="w-[95%] m-auto" />
