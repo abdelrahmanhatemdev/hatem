@@ -89,7 +89,7 @@ const Details = () => {
           </motion.div>
           <motion.div 
           initial= {{opacity: 0, height: 0}}
-          whileInView={{opacity:1, height: 350, transition: {duration: 2.5, ease: easeInOut}}}
+          whileInView={{opacity:1, height: "100%", transition: {duration: 2.5, ease: easeInOut}}}
           
           className="border-s border-neutral-200 px-2 text-neutral-500 font-semibold text-xs md:text-sm pb-5">
             {stack.map((tech, i) => (
