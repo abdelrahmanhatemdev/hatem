@@ -8,7 +8,7 @@ const expertiseList = [
   {
     title: "Next.js Development",
     icon: "nextjs",
-    details: `Next.js is more than just a React framework; i&apos;s the backbone
+    details: `Next.js is more than just a React framework; it's the backbone
                 of modern web applications. With expertise in server-side
                 rendering, static site generation, and API integrations, I build
                 fast, scalable, and SEO-friendly web applications tailored to
@@ -26,7 +26,7 @@ const expertiseList = [
     title: "Full-Stack Development",
     icon: "fullstack",
     details: `From the user interface to the database, I bring expertise in
-                creating end-to-end solutions. Whether it&apos;s integrating
+                creating end-to-end solutions. Whether it's integrating
                 MySQL or using serverless architectures, I deliver reliable,
                 scalable, and maintainable applications.`,
   },
@@ -51,7 +51,7 @@ const expertiseList = [
     icon: "seo",
     details: `A great website is one that everyone can use and find. I
                 implement technical SEO strategies, structured data, and
-                accessibility best practices to maximize your site&apos;s reach
+                accessibility best practices to maximize your site's reach
                 and usability.`,
   },
 ];

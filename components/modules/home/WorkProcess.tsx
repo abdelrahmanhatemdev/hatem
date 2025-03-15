@@ -8,7 +8,7 @@ import { fade } from "@/lib/animation";
 const list = [
   {
     title: "Discovery and Planning",
-    details: `I start every project by taking the time to understand your goals, your audience, and your unique requirements. Together, we&apos;ll collaborate closely to create a well-defined roadmap that ensures the project is built on a solid foundation and aligns with your long-term objectives.`,
+    details: `I start every project by taking the time to understand your goals, your audience, and your unique requirements. Together, we'll collaborate closely to create a well-defined roadmap that ensures the project is built on a solid foundation and aligns with your long-term objectives.`,
     keywords: [
       "Discovery",
       "Planning",
@@ -22,7 +22,7 @@ const list = [
     title: "Researching and Brainstorming",
     details: `I dive into market trends, analyze your competitors, and
                   explore user behaviors to uncover opportunities for
-                  innovation. This isn&apos;t just about following best practices; I
+                  innovation. This isn't just about following best practices; I
                   actively seek creative and original ideas that will make your
                   project stand out. My goal is to deliver something unique and
                   effective, inspired by a deep understanding of your industry.`,
@@ -30,7 +30,7 @@ const list = [
   },
   {
     title: "Building and Developing",
-    details: `Here&apos;s where I turn ideas into reality. Using Next.js, I
+    details: `Here's where I turn ideas into reality. Using Next.js, I
                   personally build every aspect of your application. From
                   setting up robust APIs to crafting reusable components, I
                   ensure that your application is high-performing, scalable, and
