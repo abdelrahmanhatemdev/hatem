@@ -16,7 +16,7 @@ const ThreeQuarterCircle = dynamic(
 const CTA = () => {
 
   return (
-    <section className="w-full mt-40 px-8 relative">
+    <section className="w-full pt-40 px-8 relative" id="contact">
       <motion.div
         initial="hidden"
         whileInView="visible"

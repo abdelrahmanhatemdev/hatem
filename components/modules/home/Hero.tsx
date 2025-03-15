@@ -56,7 +56,7 @@ const Hero = () => {
   }, [isAutoplaying, isProgressing, autoplayDelay, activeSlide]);
 
   return (
-    <section className="h-screen w-[90%] 2xl:w-[70%] mx-auto ">
+    <section className="h-screen w-[90%] 2xl:w-[70%] mx-auto">
       <Swiper
         modules={[Autoplay]}
         pagination={{

@@ -9,7 +9,7 @@ const VogeAdmin = dynamic(
 
 const SelectedWorks = () => {
   return (
-    <section className="w-full mt-32">
+    <section className="w-full mt-32" id="works">
       <div className="w-[90%] mx-auto flex flex-col gap-10">
         <h2 className="text-4xl text-center p-4">Selected Works</h2>
         <div className="grid grid-cols-1 gap-8 lg:gap-32 py-8 lg:py-32">

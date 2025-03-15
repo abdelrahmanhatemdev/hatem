@@ -25,15 +25,18 @@ function Header() {
           href="/"
           className="group uppercase font-bold text-lg flex gap-2 items-center justify-center cursor-pointer relative"
         >
-          <Logo className="w-10 transition-opacity duration-500"/>
+          <Logo className="w-10 transition-opacity duration-500" />
         </Link>
         <div className="flex gap-6 items-center justify-start">
-          <ul className="gap-6 items-center justify-start hidden md:flex ">
+          <ul className="gap-6 items-center justify-start hidden md:flex">
             <li className="hover:bg-neutral-800 px-3 py-1 rounded-lg cursor-pointer transition-colors">
-              Projects
+              <a href="https://drive.google.com/file/d/1r_rv6Iit1LrPtmJIASR-4bGGoKgPPbbB/view" target="_blank">CV</a>
             </li>
             <li className="hover:bg-neutral-800 px-3 py-1 rounded-lg cursor-pointer transition-colors">
-              Contact
+              <a href="#works">Projects</a>
+            </li>
+            <li className="hover:bg-neutral-800 px-3 py-1 rounded-lg cursor-pointer transition-colors">
+              <a href="#contact">Contact</a>
             </li>
           </ul>
           <div className="hover:bg-neutral-800 px-[0.4rem] py-[0.4rem] rounded-lg cursor-pointer transition-colors">
@@ -49,19 +52,10 @@ function Header() {
               >
                 <DropdownMenuGroup className="p-2 flex flex-col gap-2">
                   <DropdownMenuItem className="rounded-lg">
-                    <Link href="/projects" className="w-full py-1">
-                      Projects
-                    </Link>
+                    <a href="/#works" className="w-full py-1">Projects</a>
                   </DropdownMenuItem>
                   <DropdownMenuItem className="rounded-lg">
-                    <Link href="/features" className="w-full py-1">
-                      Features
-                    </Link>
-                  </DropdownMenuItem>
-                  <DropdownMenuItem className="rounded-lg">
-                    <Link href="/contact" className="w-full py-1">
-                      Contact
-                    </Link>
+                    <a href="/#contact" className="w-full py-1">Contact</a>
                   </DropdownMenuItem>
                 </DropdownMenuGroup>
                 <DropdownMenuSeparator className="w-[95%] m-auto" />
@@ -80,7 +74,7 @@ function Header() {
                       </a>
                       <a
                         target="_blank"
-                        href="https://github.com/abdulrahmanhatem"
+                        href="https://github.com/abdelrahmanhatemdev"
                       >
                         <FaGithub
                           size={22}
