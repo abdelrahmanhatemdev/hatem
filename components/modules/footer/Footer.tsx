@@ -9,14 +9,14 @@ import { fade } from "@/lib/animation";
 // });
 
 const AnimatedText = dynamic(
-  () => import("@/components/custom/animatedText/AnimatedText"),
+  () => import("@/components/custom/animation/animatedText/AnimatedText"),
   {
     loading: Loading,
   }
 );
 
 const AnimateTextOnHover = dynamic(
-  () => import("@/components/custom/animatedText/AnimateTextOnHover"),
+  () => import("@/components/custom/animation/animatedText/AnimateTextOnHover"),
   {
     loading: Loading,
   }
