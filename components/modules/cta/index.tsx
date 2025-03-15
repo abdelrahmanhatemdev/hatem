@@ -4,7 +4,13 @@ import { memo } from "react";
 
 import dynamic from "next/dynamic";
 import Loading from "@/components/custom/Loading";
-import { fade, fadeScaleD1, fadeScaleD2, fadeScaleD3, fadeScaleD4 } from "@/lib/animation";
+import {
+  fade,
+  fadeScaleD1,
+  fadeScaleD2,
+  fadeScaleD3,
+  fadeScaleD4,
+} from "@/lib/animation";
 
 const ThreeQuarterCircle = dynamic(
   () => import("@/components/modules/cta/ThreeQuarterCircle"),
@@ -14,14 +20,9 @@ const ThreeQuarterCircle = dynamic(
 );
 
 const CTA = () => {
-
   return (
     <section className="w-full pt-40 px-8 relative" id="contact">
-      <motion.div
-        initial="hidden"
-        whileInView="visible"
-        variants={fade}
-      >
+      <motion.div initial="hidden" whileInView="visible" variants={fade}>
         <div className="xs:w-[calc(95%-80px)] md:w-[78%] mx-auto h-full relative pt-4 z-10">
           <div
             className="w-full h-16 grid lg:grid-cols-3 absolute left-0 -top-12 border border-dashed 
@@ -39,8 +40,8 @@ const CTA = () => {
             <div></div>
             <div className="hidden lg:block h-full border border-dashed border-[#191919] border-y-0 bg-neutral-950 bg-opacity-10 hover:bg-opacity-70 transition-colors duration-500"></div>
           </div>
-          <div className="hidden lg:block h-full w-16 bg-gradient-to-r from-black to-transparent absolute top-0 -left-16 z-10"></div>
-          <div className="hidden lg:block h-full w-16 bg-gradient-to-l from-black to-transparent absolute top-0 -right-16 z-10"></div>
+          <div className="hidden lg:block h-full w-16 bg-gradient-to-r from-black to-transparent absolute top-0 -left-8 md:-left-16 z-30"></div>
+          <div className="hidden lg:block h-full w-16 bg-gradient-to-l from-black to-transparent absolute top-0 -right-8 md:-right-16 z-30"></div>
           <ThreeQuarterCircle
             size={80}
             strokeColor="#262626"
@@ -65,11 +66,11 @@ const CTA = () => {
               </h2>
             </motion.div>
             <div
-              className="w-16 h-[calc(100%+2px)] absolute -top-[1px] -left-16 border border-dashed 
+              className="w-8 md:w-16 h-[calc(100%+2px)]  absolute -top-[1px] -left-8 md:-left-16 border border-dashed 
           border-[#191919] border-x-0"
             ></div>
             <div
-              className="w-16 h-[calc(100%+2px)] absolute -top-[1px] -right-16 border border-dashed 
+              className="w-8 md:w-16 h-[calc(100%+2px)] absolute -top-[1px] -right-8 md:-right-16 border border-dashed 
           border-[#191919] border-x-0"
             ></div>
           </div>
@@ -108,11 +109,11 @@ const CTA = () => {
             </motion.div>
 
             <div
-              className="w-16 h-[calc(100%+2px)] absolute -top-[1px] -left-16 border border-dashed 
+              className="w-8 md:w-16 h-[calc(100%+2px)] absolute -top-[1px] -left-8 md:-left-16 border border-dashed 
           border-[#191919] border-x-0 border-t-0"
             ></div>
             <div
-              className="w-16 h-[calc(100%+2px)] absolute -top-[1px] -right-16 border border-dashed 
+              className="w-8 md:w-16 h-[calc(100%+2px)] absolute -top-[1px] -right-8 md:-right-16 border border-dashed 
           border-[#191919] border-x-0 border-t-0"
             ></div>
           </div>
@@ -121,11 +122,11 @@ const CTA = () => {
           border-[#191919] border-t-0 relative"
           >
             <div
-              className="w-16 h-[calc(100%+2px)] absolute -top-[1px] -left-16 border border-dashed 
+              className="w-8 md:w-16 h-[calc(100%+2px)]  absolute -top-[1px] -left-8 md:-left-16 border border-dashed 
           border-[#191919] border-x-0 border-t-0"
             ></div>
             <div
-              className="w-16 h-[calc(100%+2px)] absolute -top-[1px] -right-16 border border-dashed 
+              className="w-8 md:w-16 h-[calc(100%+2px)]  absolute -top-[1px] -right-8 md:-right-16 border border-dashed 
           border-[#191919] border-x-0 border-t-0"
             ></div>
             <div className="bg-neutral-950 bg-opacity-10 hover:bg-opacity-70 transition-colors duration-500"></div>
