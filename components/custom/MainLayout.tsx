@@ -1,6 +1,7 @@
 "use client";
 import { ReactNode, useEffect, useState } from "react";
 import NoInternet from "./NoInternet";
+import { ReactLenis } from "lenis/react";
 import AppLayout from "./AppLayout";
 
 function MainLayout({ children }: Readonly<{ children: ReactNode }>) {
@@ -24,7 +25,9 @@ function MainLayout({ children }: Readonly<{ children: ReactNode }>) {
   return !isOnline ? (
     <NoInternet />
   ) : (
+    <ReactLenis root>
       <AppLayout>{children}</AppLayout>
+    </ReactLenis>
   );
 }
 
