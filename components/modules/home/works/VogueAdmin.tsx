@@ -6,10 +6,16 @@ import { easeInOut, motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { stack } from "@/components/modules/work/vogue-admin/Details";
-import { fadeScale, fadeScaleD1, fadeScaleD2, fadeScaleD3, fadeScaleD4, fadeScaleD5 } from "@/lib/animation";
+import {
+  fadeScale,
+  fadeScaleD1,
+  fadeScaleD2,
+  fadeScaleD3,
+  fadeScaleD4,
+  fadeScaleD5,
+} from "@/lib/animation";
 
 const VogueAdmin = () => {
-
   return (
     <div className="grid md:grid-cols-1 lg:grid-cols-[calc(100%-48vw)_48vw] gap-5 lg:gap-0 ">
       <div className="flex flex-col justify-between order-2 lg:order-1">
@@ -48,7 +54,7 @@ const VogueAdmin = () => {
                 <span className="text-neutral-600 font-bold lg:font-extrabold text-lg lg:text-sm">
                   Description
                 </span>
-                <p className="text-neutral-400 md:max-w-96 lg:max-w-64 text-base lg:text-sm">
+                <p className="text-neutral-400 md:max-w-96 lg:max-w-72 text-base lg:text-sm">
                   Vogue Admin is a modern e-commerce dashboard built with
                   cutting-edge tech, offering seamless platform management with
                   essential admin modules.
@@ -65,19 +71,18 @@ const VogueAdmin = () => {
                 <span className="text-neutral-600 font-extrabold">Stack</span>
                 <div className="text-neutral-400">
                   {stack.map((tech, i) => (
-                    <motion.p
+                    <motion.div
                       key={i}
                       initial={{ opacity: 0, y: -5 }}
                       whileInView={{ opacity: 1, y: 0 }}
                       transition={{
                         duration: 0.3,
-                        delay:
-                          fadeScaleD3.visible.transition.delay + i * 0.1,
+                        delay: fadeScaleD3.visible.transition.delay + i * 0.1,
                         ease: easeInOut,
                       }}
                     >
                       {tech}
-                    </motion.p>
+                    </motion.div>
                   ))}
                 </div>
               </div>
@@ -143,7 +148,7 @@ const VogueAdmin = () => {
             <Image
               src="/assets/media/work/vogue-admin/dashboard-sm-light.webp"
               alt="Dashboard Phone Light"
-              className="rounded-lg border border-neutral-200 w-[20vw] lg:w-[9vw] lg:right-0 group-hover:scale-95 transition-all duration-700"
+              className="rounded-lg border border-neutral-200 w-[20vw] lg:w-[9vw] lg:right-0 group-hover:scale-80 transition-all duration-700"
               width={153}
               height={300}
               priority={true}

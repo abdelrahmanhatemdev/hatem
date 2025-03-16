@@ -137,9 +137,11 @@ const CTA = () => {
                 variants={fadeScaleD3}
                 className="min-w-fit"
               >
-                <button className="bg-neutral-50 py-3 px-[5vw] md:px-6 font-medium text-[4vw] sm:text-lg rounded-xl cursor-pointer hover:bg-neutral-300 text-neutral-950 transition-colors shadow-lg border border-neutral-900">
+                <a href="mailto:abdelrahmanhatemdev@gmail.com?subject=Join%20a%20Team&body=Hi,%20I%20would%20like%20you%20to%20join%20our%20team."
+                  title="SEND ME AN EMAIL" 
+                  className="bg-neutral-50 py-3 px-[5vw] md:px-6 font-medium text-[4vw] sm:text-lg rounded-xl cursor-pointer hover:bg-neutral-300 text-neutral-950 transition-colors shadow-lg border border-neutral-900">
                   Join a Team
-                </button>
+                </a>
               </motion.div>
               <motion.div
                 initial="hidden"
@@ -147,9 +149,12 @@ const CTA = () => {
                 variants={fadeScaleD4}
                 className="min-w-fit"
               >
-                <button className="bg-neutral-950 py-3 px-[5vw] md:px-4 font-medium text-[4vw] sm:text-lg rounded-xl cursor-pointer hover:bg-neutral-900 text-white transition-colors shadow-lg border border-neutral-900">
+                <a href="mailto:abdelrahmanhatemdev@gmail.com?subject=Start%20a%20Project&body=Hi,%20I%20would%20like%20to%20start%20a%20project."
+                  title="SEND ME AN EMAIL"
+                
+                className="bg-neutral-950 py-3 px-[5vw] md:px-4 font-medium text-[4vw] sm:text-lg rounded-xl cursor-pointer hover:bg-neutral-900 text-white transition-colors shadow-lg border border-neutral-900">
                   Start a Project
-                </button>
+                </a>
               </motion.div>
               <ThreeQuarterCircle
                 size={80}
