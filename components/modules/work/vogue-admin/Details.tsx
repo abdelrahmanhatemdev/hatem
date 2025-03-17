@@ -112,7 +112,7 @@ const Details = () => {
         variants={fadeD5}
         initial="hidden"
         whileInView="visible"
-        className="text-base md:text-[2vw] font-medium text-neutral-200">
+        className="text-base md:text-[1.7vw] font-medium text-neutral-200">
           I designed Vogue Admin as a powerful e-commerce platform to streamline
           operations and scale with ease. It offers intuitive control over
           products, categories, and administrators while ensuring a seamless
