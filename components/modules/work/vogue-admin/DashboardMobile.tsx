@@ -41,7 +41,7 @@ const DashboardMobile = () => {
           <motion.div variants={fadeDu2} initial="hidden" whileInView="visible"  className="flex items-center">
             <Image
               src="/assets/media/work/vogue-admin/phone-1.webp"
-              alt="Dashboard Phone"
+              alt="Dashboard Phone 1"
               className="rounded-[2vw] border border-neutral-800"
               width={306}
               height={600}
@@ -51,7 +51,7 @@ const DashboardMobile = () => {
             <motion.div variants={fadeDu1} initial="hidden" whileInView="visible" >
               <Image
                 src="/assets/media/work/vogue-admin/phone-2.webp"
-                alt="Dashboard Phone"
+                alt="Dashboard Phone 2"
                 className="rounded-[2vw] border border-neutral-800"
                 width={306}
                 height={600}
@@ -60,7 +60,7 @@ const DashboardMobile = () => {
             <motion.div variants={fadeDu3} initial="hidden" whileInView="visible" >
               <Image
                 src="/assets/media/work/vogue-admin/dashboard-sm.webp"
-                alt="Dashboard Phone"
+                alt="Dashboard 3"
                 className="rounded-[2vw] border border-neutral-800"
                 width={306}
                 height={600}
