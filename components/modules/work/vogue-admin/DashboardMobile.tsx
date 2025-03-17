@@ -40,7 +40,7 @@ const DashboardMobile = () => {
         <div className="flex flex-col sm:flex-row justify-center items-center gap-10 grow lg:min-w-[600px]">
           <motion.div variants={fadeDu2} initial="hidden" whileInView="visible"  className="flex items-center">
             <Image
-              src="/assets/media/work/vogue-admin/dashboard-sm-light.webp"
+              src="/assets/media/work/vogue-admin/phone-1.webp"
               alt="Dashboard Phone"
               className="rounded-[2vw] border border-neutral-800"
               width={306}
@@ -50,7 +50,7 @@ const DashboardMobile = () => {
           <div className="flex flex-col gap-10">
             <motion.div variants={fadeDu1} initial="hidden" whileInView="visible" >
               <Image
-                src="/assets/media/work/vogue-admin/dashboard-sm-light.webp"
+                src="/assets/media/work/vogue-admin/phone-2.webp"
                 alt="Dashboard Phone"
                 className="rounded-[2vw] border border-neutral-800"
                 width={306}
@@ -59,7 +59,7 @@ const DashboardMobile = () => {
             </motion.div>
             <motion.div variants={fadeDu3} initial="hidden" whileInView="visible" >
               <Image
-                src="/assets/media/work/vogue-admin/dashboard-sm-light.webp"
+                src="/assets/media/work/vogue-admin/dashboard-sm.webp"
                 alt="Dashboard Phone"
                 className="rounded-[2vw] border border-neutral-800"
                 width={306}

@@ -12,29 +12,29 @@ const Dark = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-0 max-w-[900px]">
             <motion.div variants={fadeDu1} initial="hidden" whileInView="visible" className="px-3 md:px-5">
               <Image
-                src="/assets/media/work/vogue-admin/dashboard-sm.webp"
+                src="/assets/media/work/vogue-admin/dark-1.webp"
                 alt="Dashboard Phone"
                 className="rounded-2xl border-[5px] border-neutral-950/50"
-                width={1000}
-                height={620}
+                width={545}
+                height={1031}
               />
             </motion.div>
             <motion.div variants={fadeDu2} initial="hidden" whileInView="visible" className="px-3 md:px-5 md:pt-16">
               <Image
-                src="/assets/media/work/vogue-admin/dashboard-sm.webp"
+                src="/assets/media/work/vogue-admin/dark-2.webp"
                 alt="Dashboard Phone"
                 className="rounded-2xl border-[5px] border-neutral-950/50"
-                width={1000}
-                height={620}
+                width={545}
+                height={1031}
               />
             </motion.div>
             <motion.div variants={fadeDu3} initial="hidden" whileInView="visible" className="px-3 md:px-5 md:pt-32">
               <Image
-                src="/assets/media/work/vogue-admin/dashboard-sm.webp"
+                src="/assets/media/work/vogue-admin/dark-3.webp"
                 alt="Dashboard Phone"
                 className="rounded-2xl border-[5px] border-neutral-950/50"
-                width={1000}
-                height={620}
+                width={545}
+                height={1031}
               />
             </motion.div>
           </div>

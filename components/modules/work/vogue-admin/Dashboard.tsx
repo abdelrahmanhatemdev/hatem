@@ -28,8 +28,8 @@ const Dashboard = () => {
                 src={`/assets/media/work/vogue-admin/dashboard-light.webp`}
                 alt="Vogue Admin Dashboard"
                 className="max-w-full h-auto rounded-2xl"
-                width={1000}
-                height={620}
+                width={1017}
+                height={617}
               />
             </motion.div>
             <motion.p

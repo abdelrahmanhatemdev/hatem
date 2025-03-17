@@ -2,29 +2,20 @@
 import Image from "next/image";
 import { memo } from "react";
 import {motion} from "framer-motion"
-import { fadeD1, fadeD5, fadeScaleD1 } from "@/lib/animation";
+import { fadeDu1D3, fadeScaleD1 } from "@/lib/animation";
 
 const DarkCaption = () => {
   return (
     <section className="py-10 lg:py-32 px-3 md:px-6">
       <div className="flex flex-col gap-16 justify-center items-center">
-        <div className="relative">
-          <motion.div variants={fadeD1} initial="hidden" whileInView="visible">
-            <Image
-              src="/assets/media/work/vogue-admin/dashboard-light.webp"
-              alt="Dashboard Light"
-              className="rounded-2xl border-[10px] border-neutral-950/50 w-full"
-              width={1000}
-              height={620}
-            />
-          </motion.div>
-          <motion.div variants={fadeD5} initial="hidden" whileInView="visible" className="absolute inset-0 w-full h-full">
+        <div>
+          <motion.div variants={fadeDu1D3} initial="hidden" whileInView="visible" className="w-full h-full">
             <Image
               src="/assets/media/work/vogue-admin/dashboard.webp"
               alt="Dashboard"
               className="rounded-xl border-[10px] border-neutral-950/50 w-full"
-              width={1000}
-              height={620}
+              width={1017}
+              height={617}
             />
           </motion.div>
         </div>
