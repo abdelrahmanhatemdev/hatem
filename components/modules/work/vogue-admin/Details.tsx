@@ -54,22 +54,22 @@ const Details = () => {
         variants={fade}
         initial="hidden"
         whileInView="visible"
-        className="py-8 lg:py-16 text-[10vw] md:text-[9vw] font-black font-satoshi"
+        className="py-8 lg:py-[2vw] text-[12vw] md:text-[9vw] font-black font-satoshi"
       >
         Vogue Admin
       </motion.h1>
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-0">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-12 lg:gap-0">
         <div className="flex gap-5 lg:gap-20">
-          <motion.div variants={fadeD2} initial="hidden" whileInView="visible" className="flex flex-col gap-2 lg:gap-5">
+          <motion.div variants={fadeD2} initial="hidden" whileInView="visible" className="flex flex-col gap-2 lg:gap-[1vw]">
             {details.map((item, i) => {
               const valueClass =
-                "text-xs lg:text-2xl tracking-widest font-medium";
+                "text-xs lg:text-[1.5vw] tracking-widest font-medium";
               return (
                 <div
                   className="flex flex-col *:leading-6"
                   key={i}
                 >
-                  <h2 className="text-neutral-400 font-semibold">
+                  <h2 className="text-neutral-400 font-semibold md:text-[1vw]">
                     {item.title}
                   </h2>
                   {item?.href ? (
@@ -91,7 +91,7 @@ const Details = () => {
           initial= {{opacity: 0, height: 0}}
           whileInView={{opacity:1, height: "100%", transition: {duration: 2.5, ease: easeInOut}}}
           
-          className="border-s border-neutral-200 px-2 text-neutral-500 font-semibold text-xs md:text-sm pb-5">
+          className="border-s border-neutral-200 px-2 text-neutral-500 font-semibold text-xs md:text-[1vw] pb-5">
             {stack.map((tech, i) => (
               <motion.p
                 key={i}
@@ -112,7 +112,7 @@ const Details = () => {
         variants={fadeD5}
         initial="hidden"
         whileInView="visible"
-        className="text-base md:text-3xl font-medium text-neutral-200">
+        className="text-base md:text-[2vw] font-medium text-neutral-200">
           I designed Vogue Admin as a powerful e-commerce platform to streamline
           operations and scale with ease. It offers intuitive control over
           products, categories, and administrators while ensuring a seamless

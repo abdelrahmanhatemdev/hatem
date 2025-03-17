@@ -1,20 +1,29 @@
 "use client"
 import Image from "next/image";
-import { memo } from "react";
-import {motion} from "framer-motion"
+import { memo, useRef } from "react";
+import {motion, useScroll, useTransform} from "framer-motion"
 import { fade, fadeD1, fadeDu1, fadeDu1D1, fadeDu1D3, fadeDu2, fadeDu3 } from "@/lib/animation";
 
 const Dark = () => {
+
+  const containerRef = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start start", "end end"],
+  });
+
+  const y1 = useTransform(scrollYProgress, [0, 1], ["-40%", "0%"]);
+
   return (
-    <section className="py-10 lg:py-32 px-3 md:px-6">
+    <section ref={containerRef} className="py-10 lg:py-32 px-3 md:px-6">
       <div className=" bg-neutral-950/50 pt-10 md:pt-32 overflow-hidden ">
         <div className="flex flex-col gap-32 justify-center items-center">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-0 max-w-[900px]">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-0">
             <motion.div variants={fadeDu1} initial="hidden" whileInView="visible" className="px-3 md:px-5">
               <Image
                 src="/assets/media/work/vogue-admin/dark-1.webp"
                 alt="Dark 1"
-                className="rounded-2xl border-[5px] border-neutral-950/50"
+                className="rounded-2xl border-[5px] border-neutral-950/50 contrast-[105%] max-w-full md:max-w-[25vw] lg:max-w-[15vw] h-auto"
                 width={545}
                 height={1031}
               />
@@ -23,7 +32,7 @@ const Dark = () => {
               <Image
                 src="/assets/media/work/vogue-admin/dark-2.webp"
                 alt="Dark 2"
-                className="rounded-2xl border-[5px] border-neutral-950/50"
+                className="rounded-2xl border-[5px] border-neutral-950/50 contrast-[105%] max-w-full md:max-w-[25vw] lg:max-w-[15vw] h-auto"
                 width={545}
                 height={1031}
               />
@@ -32,7 +41,7 @@ const Dark = () => {
               <Image
                 src="/assets/media/work/vogue-admin/dark-3.webp"
                 alt="Dark 3"
-                className="rounded-2xl border-[5px] border-neutral-950/50"
+                className="rounded-2xl border-[5px] border-neutral-950/50 contrast-[105%] max-w-full md:max-w-[25vw] lg:max-w-[15vw] h-auto"
                 width={545}
                 height={1031}
               />
@@ -59,7 +68,7 @@ const Dark = () => {
             </div>
           </div>
         </div>
-        <motion.div variants={fadeDu2} initial="hidden" whileInView="visible" className="font-ogg text-[40vw] h-[36vw] flex justify-center">Dark</motion.div>
+        <motion.div className="font-ogg text-[40vw] h-[36vw] flex justify-center" style={{y: y1}}>Dark</motion.div>
       </div>
     </section>
   );

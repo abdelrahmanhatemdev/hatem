@@ -23,7 +23,7 @@ const Links = () => {
           variants={fadeD1}
           initial="hidden"
           whileInView="visible"
-          className="flex flex-col gap-2 lg:gap-5"
+          className="flex flex-col gap-2 lg:gap-5 order-2 md:order-1"
         >
           {links.map((item, i) => {
             const valueClass =
@@ -47,7 +47,7 @@ const Links = () => {
           })}
         </motion.div>
 
-        <div className="flex flex-col gap-5 text-2xl max-w-[800px]">
+        <div className="flex flex-col gap-5 md:text-[1.5vw] lg:text-[1.2vw] md:max-w-[40vw] order-1 md:order-2">
           <motion.p
             variants={fadeDu1D1}
             initial="hidden"
@@ -65,12 +65,15 @@ const Links = () => {
             variants={fadeDu1D2}
             initial="hidden"
             whileInView="visible" className="font-extrabold font-satoshi">
-              <span className="text-neutral-600">Abdelrahman</span> Hatem
+              <span className="text-neutral-600 md:text-[1.2vw] lg:text-[1vw]">Abdelrahman</span> Hatem
             </motion.p>
             <motion.p
             variants={fadeDu1D3}
             initial="hidden"
-            whileInView="visible" className="text-base">
+            whileInView="visible" 
+            className="text-base md:text-[1vw] lg:text-[0.8vw]"
+            
+            >
               Nextjs <span className="text-neutral-600">Developer</span>{" "}
             </motion.p>
           </div>

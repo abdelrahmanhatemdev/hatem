@@ -99,12 +99,12 @@ const Features = () => {
                 : ""
             )}
           >
-            <h2 className="text-4xl md:text-[5vw] font-ogg leading-16 md:leading-24">{featue.title}</h2>
-            <ul className="flex flex-col gap-3 w-[280px]">
+            <h2 className="text-4xl md:text-[4vw] font-ogg leading-16 md:leading-24">{featue.title}</h2>
+            <ul className="flex flex-col gap-3 md:w-[23vw] lg:w-[17vw]">
               {featue.list.map((item, i) => {
                 return (
                   <li
-                    className="text-sm md:text-base font-satoshi font-medium lg:opacity-0 lg:group-hover:opacity-100 transition-all duration-500"
+                    className="text-sm md:text-[1.3vw] lg:text-[1vw] font-satoshi font-medium lg:opacity-0 lg:group-hover:opacity-100 transition-all duration-500"
                     style={{
                       transitionDelay: i !== 0 ? `${i * 50}ms` : "",
                     }}

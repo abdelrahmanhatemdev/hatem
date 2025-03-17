@@ -13,7 +13,7 @@ const DarkCaption = () => {
             <Image
               src="/assets/media/work/vogue-admin/dashboard.webp"
               alt="Dashboard"
-              className="rounded-xl border-[10px] border-neutral-950/50 w-full"
+              className="rounded-xl border-[10px] border-neutral-950/50 max-w-full md:max-w-[50vw] h-auto"
               width={1017}
               height={617}
             />

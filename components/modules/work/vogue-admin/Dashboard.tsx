@@ -27,7 +27,7 @@ const Dashboard = () => {
               <Image
                 src={`/assets/media/work/vogue-admin/dashboard-light.webp`}
                 alt="Vogue Admin Dashboard"
-                className="max-w-full h-auto rounded-2xl"
+                className="max-w-full md:max-w-[50vw] h-auto rounded-2xl"
                 width={1017}
                 height={617}
               />

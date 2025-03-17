@@ -28,7 +28,7 @@ const Footer = () => {
   return (
     <>
       <motion.div initial="hidden" whileInView="visible" variants={fade} layout>
-        <footer className="w-[90%] mx-auto lg:w-full mt-64 md:mt-72 mb-10">
+        <footer className="w-[90%] mx-auto lg:w-full mt-64 md:mt-72 mb-10 md:p-5">
           <div className="0 border border-neutral-800 lg:p-20 lg:pb-10 p-10 rounded-xl 2xl:w-[75%] mx-auto bg-gradient-to-r from-neutral-900 to-[#1f1f1f] flex flex-col lg:gap-20 gap-10">
             <div className="flex justify-between w-full lg:gap-20 gap-10 flex-col lg:flex-row">
               <div className="flex flex-col lg:gap-10 gap-5">
@@ -126,7 +126,7 @@ const Footer = () => {
               animate={{ opacity: 1 }}
               className="inline-block"
             >
-              <div className="grid md:grid-cols-[25%_45%_30%] lg:grid-cols-3 items-center border-t border-neutral-800 pt-10 gap-10">
+              <div className="grid lg:grid-cols-3 items-center border-t border-neutral-800 pt-10 gap-10">
                 <div className="flex justify-between items-center order-2 md:order-1 flex-wrap">
                   <Link
                     href="/"
@@ -144,7 +144,7 @@ const Footer = () => {
                   </p>
                 </div>
 
-                <ul className="flex justify-between gap-10 font-medium order-1 md:order-2  flex-wrap">
+                <ul className="flex justify-between gap-10 md:gap-5 font-medium order-1 xl:order-2 flex-wrap">
                   <li>
                     <a
                       href="https://github.com/abdulrahmanhatem"
