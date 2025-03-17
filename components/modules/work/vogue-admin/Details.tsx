@@ -38,7 +38,7 @@ const details = [
   {
     title: "Link",
     value: "Visit Site",
-    href: "/",
+    href: "http://vogue-admin.vercel.app",
   },
   {
     title: "Git",
