@@ -41,7 +41,7 @@ function Header() {
           </ul>
           <div className="hover:bg-neutral-800 px-[0.4rem] py-[0.4rem] rounded-lg cursor-pointer transition-colors">
             <DropdownMenu modal={false}>
-              <DropdownMenuTrigger className="flex items-center ">
+              <DropdownMenuTrigger className="flex items-center" aria-label="Menu">
                 <TbMenu size={25} />
               </DropdownMenuTrigger>
               <DropdownMenuContent

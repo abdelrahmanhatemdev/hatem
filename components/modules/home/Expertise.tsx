@@ -83,7 +83,7 @@ const Expertise = () => {
               <div className="bg-gradient-to-r from-neutral-900 to-[#1f1f1f] rounded-3xl border p-10 border-neutral-800 h-full flex flex-col gap-2 overflow-hidden">
                 <Image
                   src={`/assets/media/icons/${item.icon}.webp`}
-                  alt={item.title}
+                  alt=""
                   width={40}
                   height={40}
                 />

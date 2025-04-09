@@ -228,7 +228,7 @@ const Stack = () => {
                       <div className="relative">
                         <Image
                           src={`/assets/media/stack/${tech.src}.webp`}
-                          alt={`${tech.title}`}
+                          alt=""
                           width={200}
                           height={200}
                           priority={true}
@@ -242,7 +242,7 @@ const Stack = () => {
                         {tech.hoverSrc ? (
                           <Image
                             src={`/assets/media/stack/${tech.hoverSrc}.webp`}
-                            alt={`${tech.title}`}
+                            alt=""
                             width={200}
                             height={200}
                             priority={true}
@@ -266,7 +266,7 @@ const Stack = () => {
                           src={`/assets/media/stack/${
                             tech.hoverSrc ? tech.hoverSrc : tech.src
                           }.webp`}
-                          alt={`${tech.title}`}
+                          alt=""
                           width={200}
                           height={200}
                           priority={true}
