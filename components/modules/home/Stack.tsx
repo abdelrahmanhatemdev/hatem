@@ -10,6 +10,7 @@ import {
 } from "@/components/ui/popover";
 import { GoArrowUpRight } from "react-icons/go";
 import { fade, fadeD1, fadeSlideDown } from "@/lib/animation";
+import LazyAnimation from "@/components/custom/animation/LazyAnimation";
 
 const technolegy = [
   {
@@ -182,124 +183,123 @@ const technolegy = [
 ];
 
 const Stack = () => {
-
   return (
     <section className="mt-40">
-      <motion.div
-        initial="hidden"
-        whileInView="visible"
-        variants={fadeSlideDown}
-      >
-        <div className="flex flex-col gap-4 text-center p-10">
-          <h2 className="text-4xl md:text-6xl  text-center">Stack</h2>
-          <p className="text-sm md:text-md 2xl:text-lg text-neutral-400">
-            My preferred tools and the foundation behind my proficiency to
-            create seamless high-performance applications.
-          </p>
-        </div>
-      </motion.div>
-      <motion.div
-        initial="hidden"
-        whileInView="visible"
-        variants={fade}
-      >
-        <div className="w-[70%] sm:w-[60%] mx-auto grid grid-cols-2 md:grid-cols-4 xl:grid-cols-8 mt-10 gap-[3vw] lg:gap-[1vw]">
-          {technolegy.map(tech => (
-            <motion.div
-              key={`${tech.src}`}
-              initial="hidden"
-              whileInView="visible"
-              variants={{
-                ...fadeD1,
-                visible: {
-                  ...fadeD1.visible,
-                  transition: {
-                    ...fadeD1.visible.transition,
-                    delay: 0.1 ,
+      <LazyAnimation>
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          variants={fadeSlideDown}
+        >
+          <div className="flex flex-col gap-4 text-center p-10">
+            <h2 className="text-4xl md:text-6xl  text-center">Stack</h2>
+            <p className="text-sm md:text-md 2xl:text-lg text-neutral-400">
+              My preferred tools and the foundation behind my proficiency to
+              create seamless high-performance applications.
+            </p>
+          </div>
+        </motion.div>
+      </LazyAnimation>
+      <LazyAnimation>
+        <motion.div initial="hidden" whileInView="visible" variants={fade}>
+          <div className="w-[70%] sm:w-[60%] mx-auto grid grid-cols-2 md:grid-cols-4 xl:grid-cols-8 mt-10 gap-[3vw] lg:gap-[1vw]">
+            {technolegy.map((tech) => (
+              <motion.div
+                key={`${tech.src}`}
+                initial="hidden"
+                whileInView="visible"
+                variants={{
+                  ...fadeD1,
+                  visible: {
+                    ...fadeD1.visible,
+                    transition: {
+                      ...fadeD1.visible.transition,
+                      delay: 0.1,
+                    },
                   },
-                },
-              }}
-              layout
-            >
-              <Popover>
-                <PopoverTrigger className="w-full">
-                  <div className="flex flex-col gap-4 items-center">
-                    <div className="group flex flex-col items-center justify-center cursor-pointer p-4 bg-neutral-900 transition-colors rounded-2xl">
-                      <div className="relative">
-                        <Image
-                          src={`/assets/media/stack/${tech.src}.webp`}
-                          alt=""
-                          width={200}
-                          height={200}
-                          priority={true}
-                          className={cn(
-                            "transition duration-500 ease-in-out brightness-0 contrast-200 invert",
-                            tech.hoverSrc
-                              ? "group-hover:opacity-0"
-                              : "group-hover:brightness-100 group-hover:contrast-100 group-hover:invert-0"
-                          )}
-                        />
-                        {tech.hoverSrc ? (
+                }}
+                layout
+              >
+                <Popover>
+                  <PopoverTrigger className="w-full">
+                    <div className="flex flex-col gap-4 items-center">
+                      <div className="group flex flex-col items-center justify-center cursor-pointer p-4 bg-neutral-900 transition-colors rounded-2xl">
+                        <div className="relative">
                           <Image
-                            src={`/assets/media/stack/${tech.hoverSrc}.webp`}
+                            src={`/assets/media/stack/${tech.src}.webp`}
                             alt=""
                             width={200}
                             height={200}
                             priority={true}
-                            className="opacity-0 group-hover:opacity-100 absolute inset-0 transition duration-500 ease-in-out group-hover:brightness-100 group-hover:contrast-100 group-hover:invert-0"
+                            className={cn(
+                              "transition duration-500 ease-in-out brightness-0 contrast-200 invert",
+                              tech.hoverSrc
+                                ? "group-hover:opacity-0"
+                                : "group-hover:brightness-100 group-hover:contrast-100 group-hover:invert-0"
+                            )}
                           />
-                        ) : (
-                          <></>
-                        )}
+                          {tech.hoverSrc ? (
+                            <Image
+                              src={`/assets/media/stack/${tech.hoverSrc}.webp`}
+                              alt=""
+                              width={200}
+                              height={200}
+                              priority={true}
+                              className="opacity-0 group-hover:opacity-100 absolute inset-0 transition duration-500 ease-in-out group-hover:brightness-100 group-hover:contrast-100 group-hover:invert-0"
+                            />
+                          ) : (
+                            <></>
+                          )}
+                        </div>
+                      </div>
+                      <div className="transition-opacity duration-500 w-full p-1 leading-3 text-sm text-center">
+                        {tech.title}
                       </div>
                     </div>
-                    <div className="transition-opacity duration-500 w-full p-1 leading-3 text-sm text-center">
-                      {tech.title}
-                    </div>
-                  </div>
-                </PopoverTrigger>
-                <PopoverContent className="rounded-lg">
-                  <div className="grid gap-4">
-                    <div className="space-y-2">
-                      <div className="flex items-center gap-2">
-                        <Image
-                          src={`/assets/media/stack/${
-                            tech.hoverSrc ? tech.hoverSrc : tech.src
-                          }.webp`}
-                          alt=""
-                          width={200}
-                          height={200}
-                          priority={true}
-                          className={"w-8 h-8"}
-                        />
-                        <h4 className="text-lg">{tech.title}</h4>
+                  </PopoverTrigger>
+                  <PopoverContent className="rounded-lg">
+                    <div className="grid gap-4">
+                      <div className="space-y-2">
+                        <div className="flex items-center gap-2">
+                          <Image
+                            src={`/assets/media/stack/${
+                              tech.hoverSrc ? tech.hoverSrc : tech.src
+                            }.webp`}
+                            alt=""
+                            width={200}
+                            height={200}
+                            priority={true}
+                            className={"w-8 h-8"}
+                          />
+                          <h4 className="text-lg">{tech.title}</h4>
+                        </div>
+                        <div className="flex flex-col gap-2 text-neutral-400">
+                          {tech.description && tech.description.length > 0 ? (
+                            tech.description.map((paragraph, index) => (
+                              <p key={index}>{paragraph}</p>
+                            ))
+                          ) : (
+                            <></>
+                          )}
+                        </div>
                       </div>
-                      <div className="flex flex-col gap-2 text-neutral-400">
-                        {tech.description && tech.description.length > 0 ? (
-                          tech.description.map((paragraph, index) => (
-                            <p key={index}>{paragraph}</p>
-                          ))
-                        ) : (
-                          <></>
-                        )}
+                      <div className="grid gap-2 border-t pt-4 border-neutral-500 w-full">
+                        <a
+                          href={`${tech.link}`}
+                          target="_blank"
+                          className="bg-neutral-200 text-neutral-950 rounded-md p-2 flex justify-center items-center gap-1 font-bold hover:bg-white transition-colors hover:text-black"
+                        >
+                          To {tech.title} <GoArrowUpRight size={20} />
+                        </a>
                       </div>
                     </div>
-                    <div className="grid gap-2 border-t pt-4 border-neutral-500 w-full">
-                      <a
-                        href={`${tech.link}`}
-                        target="_blank"
-                        className="bg-neutral-200 text-neutral-950 rounded-md p-2 flex justify-center items-center gap-1 font-bold hover:bg-white transition-colors hover:text-black"
-                      >
-                        To {tech.title} <GoArrowUpRight size={20} />
-                      </a>
-                    </div>
-                  </div>
-                </PopoverContent>
-              </Popover>
-            </motion.div>
-          ))}
-        </div>
-      </motion.div>
+                  </PopoverContent>
+                </Popover>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+      </LazyAnimation>
     </section>
   );
 };

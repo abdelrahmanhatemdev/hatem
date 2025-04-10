@@ -5,8 +5,9 @@ import "swiper/css";
 import Image from "next/image";
 import { memo, useEffect, useState } from "react";
 import { cn, cubicBezier } from "@/lib/utils";
-import { motion, LazyMotion, domAnimation } from "framer-motion";
+import { motion } from "framer-motion";
 import { slideTransition, slideVariants } from "@/lib/animation/slider";
+import LazyAnimation from "@/components/custom/animation/LazyAnimation";
 
 const Hero = () => {
   const [activeSlide, setActiveSlide] = useState<number | null>(1);
@@ -98,7 +99,7 @@ const Hero = () => {
             {slide === 1 && (
               <div className="h-full flex flex-col justify-center">
                 <p className="text-[2.3rem] sm:text-[3rem] md:text-[3.5vw] md:leading-[5vw] flex items-center gap-[1vw]">
-                  <LazyMotion features={domAnimation}>
+                  <LazyAnimation>
                     <motion.span
                       variants={slideVariants}
                       initial={`initial`}
@@ -112,8 +113,8 @@ const Hero = () => {
                       </span>
                       <span className="font-thin">a</span>
                     </motion.span>
-                  </LazyMotion>
-                  <LazyMotion features={domAnimation}>
+                  </LazyAnimation>
+                  <LazyAnimation>
                     <motion.span
                       variants={slideVariants}
                       initial={`initial`}
@@ -133,8 +134,8 @@ const Hero = () => {
                         />
                       </span>
                     </motion.span>
-                  </LazyMotion>
-                  <LazyMotion features={domAnimation}>
+                  </LazyAnimation>
+                  <LazyAnimation>
                     <motion.span
                       variants={slideVariants}
                       initial={`initial`}
@@ -149,9 +150,9 @@ const Hero = () => {
                         Developer
                       </strong>
                     </motion.span>
-                  </LazyMotion>
+                  </LazyAnimation>
                 </p>
-                <LazyMotion features={domAnimation}>
+                <LazyAnimation>
                   <motion.span
                     variants={slideVariants}
                     initial={`initial`}
@@ -209,8 +210,8 @@ const Hero = () => {
                       </motion.span>
                     </p>
                   </motion.span>
-                </LazyMotion>
-                <LazyMotion features={domAnimation}>
+                </LazyAnimation>
+                <LazyAnimation>
                   <motion.span
                     variants={slideVariants}
                     initial={`initial`}
@@ -297,7 +298,7 @@ const Hero = () => {
                       </motion.span>
                     </p>
                   </motion.span>
-                </LazyMotion>
+                </LazyAnimation>
               </div>
             )}
             {slide === 2 && (

@@ -3,6 +3,7 @@ import { memo } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { fadeScale } from "@/lib/animation";
+import LazyAnimation from "@/components/custom/animation/LazyAnimation";
 
 const expertiseList = [
   {
@@ -57,42 +58,43 @@ const expertiseList = [
 ];
 
 const Expertise = () => {
-
   return (
     <section className="w-full mt-32">
       <div className="w-[90%] 2xl:w-[70%] mx-auto flex flex-col gap-10">
         <h2 className="text-4xl text-center p-4">Areas of Expertise</h2>
         <div className="grid md:grid-cols-[repeat(3,calc(33.33333%-1.666666666rem))] gap-5 lg:gap-10 ">
           {expertiseList.map((item, i) => (
-            <motion.div
-              key={`${i}`}
-              initial="hidden"
-              whileInView="visible"
-              variants={{
-                ...fadeScale,
-                visible: {
-                  ...fadeScale.visible,
-                  transition: {
-                    ...fadeScale.visible.transition,
-                    delay: 0.05 * (i + 1),
+            <LazyAnimation>
+              <motion.div
+                key={`${i}`}
+                initial="hidden"
+                whileInView="visible"
+                variants={{
+                  ...fadeScale,
+                  visible: {
+                    ...fadeScale.visible,
+                    transition: {
+                      ...fadeScale.visible.transition,
+                      delay: 0.05 * (i + 1),
+                    },
                   },
-                },
-              }}
-              layout
-            >
-              <div className="bg-gradient-to-r from-neutral-900 to-[#1f1f1f] rounded-3xl border p-10 border-neutral-800 h-full flex flex-col gap-2 overflow-hidden">
-                <Image
-                  src={`/assets/media/icons/${item.icon}.webp`}
-                  alt=""
-                  width={40}
-                  height={40}
-                />
-                <h3 className="text-lg font-semibold ">{item.title}</h3>
-                <p className="text-sm font-semibold text-neutral-400 line-clamp-6">
-                  {item.details}
-                </p>
-              </div>
-            </motion.div>
+                }}
+                layout
+              >
+                <div className="bg-gradient-to-r from-neutral-900 to-[#1f1f1f] rounded-3xl border p-10 border-neutral-800 h-full flex flex-col gap-2 overflow-hidden">
+                  <Image
+                    src={`/assets/media/icons/${item.icon}.webp`}
+                    alt=""
+                    width={40}
+                    height={40}
+                  />
+                  <h3 className="text-lg font-semibold ">{item.title}</h3>
+                  <p className="text-sm font-semibold text-neutral-400 line-clamp-6">
+                    {item.details}
+                  </p>
+                </div>
+              </motion.div>
+            </LazyAnimation>
           ))}
         </div>
       </div>

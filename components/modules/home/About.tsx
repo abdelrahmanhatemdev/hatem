@@ -2,8 +2,9 @@
 import { memo } from "react";
 import dynamic from "next/dynamic";
 import Loading from "@/components/custom/Loading";
-import { domAnimation, LazyMotion, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { fadeScale, fadeScaleD1 } from "@/lib/animation";
+import LazyAnimation from "@/components/custom/animation/LazyAnimation";
 
 const Description = dynamic(
   () => import("@/components/modules/home/about/Description"),
@@ -64,7 +65,7 @@ const About = () => {
       <div className="w-[90%] 2xl:w-[70%] mx-auto flex flex-col gap-10">
         <Description />
         <div className="grid md:grid-cols-[calc(50%-1.25rem)_calc(50%-1.25rem)] gap-10">
-          <LazyMotion features={domAnimation}>
+          <LazyAnimation>
             <motion.div
               initial="hidden"
               whileInView="visible"
@@ -73,8 +74,8 @@ const About = () => {
             >
               <ResponsiveWeb />
             </motion.div>
-          </LazyMotion>
-          <LazyMotion features={domAnimation}>
+          </LazyAnimation>
+          <LazyAnimation>
             <motion.div
               initial="hidden"
               whileInView="visible"
@@ -83,7 +84,7 @@ const About = () => {
             >
               <Performance />
             </motion.div>
-          </LazyMotion>
+          </LazyAnimation>
         </div>
         <div className="grid lg:grid-cols-[repeat(3,calc(33.33333%-1.666666666rem))] gap-10 ">
           <SPA />
