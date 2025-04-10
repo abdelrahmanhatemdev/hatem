@@ -129,7 +129,8 @@ const Hero = () => {
                       <span>
                         <Image
                           src="/assets/media/nextjs.webp"
-                          fill
+                          width={135}
+                          height={68}
                           alt="Next.js"
                         />
                       </span>
