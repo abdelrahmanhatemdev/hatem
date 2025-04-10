@@ -6,7 +6,7 @@ const Logo = ({ className = "" }: { className?: string }) => {
     <div className={cn("font-satosh font-black flex gap-2 lg:text-2xl", className)}>
       <div className="relative group perspective-dramatic h-8 min-w-40">
         <div>
-          <h2 className="text-neutral-600 absolute inset-0 flex transition-all group-hover:rotate-x-90 duration-300 ease-in">
+          <h2 className="opacity-50 absolute inset-0 flex transition-all group-hover:rotate-x-90 duration-300 ease-in">
             <span>A</span>
             <span className="lowercase">bdelrahman</span>
           </h2>
@@ -20,7 +20,7 @@ const Logo = ({ className = "" }: { className?: string }) => {
             <span>H</span>
             <span className="lowercase">atem</span>
           </h2>
-          <h2 className="text-neutral-600 absolute itop-0 left-[7rem] flex transition-all rotate-x-90 -translate-y-6 group-hover:rotate-x-0 group-hover:translate-y-0 group-hover:opacity-100 duration-300 ease-in">
+          <h2 className="opacity-50 absolute itop-0 left-[7rem] flex transition-all rotate-x-90 -translate-y-6 group-hover:rotate-x-0 group-hover:translate-y-0 group-hover:opacity-50 duration-300 ease-in">
             <span>D</span>
             <span className="lowercase">eveloper</span>
           </h2>
