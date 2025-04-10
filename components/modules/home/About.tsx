@@ -9,6 +9,7 @@ const Description = dynamic(
   () => import("@/components/modules/home/about/Description"),
   {
     loading: Loading,
+    ssr: false
   }
 );
 
@@ -16,6 +17,7 @@ const ResponsiveWeb = dynamic(
   () => import("@/components/modules/home/about/ResponsiveWeb"),
   {
     loading: Loading,
+    ssr: false
   }
 );
 
@@ -23,17 +25,20 @@ const Performance = dynamic(
   () => import("@/components/modules/home/about/Performance"),
   {
     loading: Loading,
+    ssr: false
   }
 );
 
 const SPA = dynamic(() => import("@/components/modules/home/about/SPA"), {
   loading: Loading,
+  ssr: false
 });
 
 const MobileFirst = dynamic(
   () => import("@/components/modules/home/about/MobileFirst"),
   {
     loading: Loading,
+    ssr: false
   }
 );
 
@@ -41,6 +46,7 @@ const PixelPerfect = dynamic(
   () => import("@/components/modules/home/about/PixelPerfect"),
   {
     loading: Loading,
+    ssr: false
   }
 );
 
@@ -48,6 +54,7 @@ const TrustedBrands = dynamic(
   () => import("@/components/modules/home/TrustedBrands"),
   {
     loading: Loading,
+    ssr: false
   }
 );
 
