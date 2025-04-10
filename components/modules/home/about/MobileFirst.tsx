@@ -19,7 +19,7 @@ const MobileFirst = () => {
               smartphones to desktops.
             </p>
             <Link
-              href="/projects"
+              href="#works"
               className="group bg-neutral-900 border border-neutral-700 rounded-full py-1 px-4 flex gap-1 items-center hover:bg-neutral-950 hover:border-neutral-800 transition-all duration-300 ease-in-out"
             >
               <span className="text-sm font-semibold">Projects</span>
@@ -64,6 +64,7 @@ const MobileFirst = () => {
                     height={3024}
                     loading="lazy"
                     className="rounded-2xl"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   />
                 </motion.div>
               </LazyAnimation>
