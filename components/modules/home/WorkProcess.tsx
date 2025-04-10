@@ -75,9 +75,8 @@ const WorkProcess = () => {
         </h2>
         <div className="grid gap-5 lg:gap-10 ">
           {list.map((item, i) => (
-            <LazyAnimation>
+            <LazyAnimation key={`${i}`}>
               <motion.div
-                key={`${i}`}
                 initial="hidden"
                 whileInView="visible"
                 variants={{

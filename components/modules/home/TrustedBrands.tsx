@@ -37,9 +37,8 @@ const TrustedBrands = () => {
           </h3>
           <div className="grid grid-cols-2 lg:grid-cols-7 gap-4 ">
             {brands.map((brand, i) => (
-              <LazyAnimation>
+              <LazyAnimation key={`${i}`}>
                 <motion.div
-                  key={`${i}`}
                   initial="hidden"
                   whileInView="visible"
                   variants={{
