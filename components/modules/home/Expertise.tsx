@@ -64,9 +64,8 @@ const Expertise = () => {
         <h2 className="text-4xl text-center p-4">Areas of Expertise</h2>
         <div className="grid md:grid-cols-[repeat(3,calc(33.33333%-1.666666666rem))] gap-5 lg:gap-10 ">
           {expertiseList.map((item, i) => (
-            <LazyAnimation>
+            <LazyAnimation key={`${i}`}>
               <motion.div
-                key={`${i}`}
                 initial="hidden"
                 whileInView="visible"
                 variants={{
