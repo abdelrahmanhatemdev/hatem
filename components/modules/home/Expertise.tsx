@@ -79,20 +79,19 @@ const Expertise = () => {
                   },
                 }}
                 layout
+                className="bg-gradient-to-r from-neutral-900 to-[#1f1f1f] rounded-3xl border p-10 border-neutral-800 h-full flex flex-col gap-2 overflow-hidden"
               >
-                <div className="bg-gradient-to-r from-neutral-900 to-[#1f1f1f] rounded-3xl border p-10 border-neutral-800 h-full flex flex-col gap-2 overflow-hidden">
-                  <Image
-                    src={`/assets/media/icons/${item.icon}.webp`}
-                    alt=""
-                    width={40}
-                    height={40}
-                    loading="lazy"
-                  />
-                  <h3 className="text-lg font-semibold ">{item.title}</h3>
-                  <p className="text-sm font-semibold text-neutral-400 line-clamp-6">
-                    {item.details}
-                  </p>
-                </div>
+                <Image
+                  src={`/assets/media/icons/${item.icon}.webp`}
+                  alt=""
+                  width={40}
+                  height={40}
+                  loading="lazy"
+                />
+                <h3 className="text-lg font-semibold ">{item.title}</h3>
+                <p className="text-sm font-semibold text-neutral-400 line-clamp-6">
+                  {item.details}
+                </p>
               </motion.div>
             </LazyAnimation>
           ))}
