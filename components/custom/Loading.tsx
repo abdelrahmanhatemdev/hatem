@@ -7,8 +7,6 @@ function Loading() {
         color="hsl(0 0% 20%)"
         loading={true}
         size={30}
-        aria-label="Loading Spinner"
-        data-testid="loader"
       />
     </div>
   );
