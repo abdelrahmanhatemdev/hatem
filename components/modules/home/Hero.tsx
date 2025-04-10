@@ -110,18 +110,6 @@ const Hero = () => {
                       <span className="font-extralight">&apos;m </span>
                     </span>
                     <span className="font-thin">a</span>
-                  </motion.span>
-                  <motion.span
-                    variants={slideVariants}
-                    initial={`initial`}
-                    animate={activeSlide === index + 1 ? `active` : `initial`}
-                    exit={`exit`}
-                    transition={{
-                      ...slideTransition,
-                      delay: 1 * slideSpanDelay,
-                    }}
-                    className="w-[10vw] h-[5vw] relative inline-block"
-                  >
                     <span>
                       <Image
                         src="/assets/media/nextjs.webp"
@@ -129,21 +117,10 @@ const Hero = () => {
                         alt="Next.js"
                       />
                     </span>
-                  </motion.span>
-                  <motion.span
-                    variants={slideVariants}
-                    initial={`initial`}
-                    animate={activeSlide === index + 1 ? `active` : `initial`}
-                    exit={`exit`}
-                    transition={{
-                      ...slideTransition,
-                      delay: 2 * slideSpanDelay,
-                    }}
-                  >
                     <strong className="font-extrabold md:tracking-wider text-[2.3rem] sm:text-[3rem] md:text-[3.5vw] scale-y-105">
                       Developer
                     </strong>
-                  </motion.span>
+                    </motion.span>
                 </p>
 
                 <motion.span
@@ -157,44 +134,11 @@ const Hero = () => {
                   }}
                 >
                   <p className="text-[2.3rem] sm:text-[3rem] md:text-[3.5vw] md:leading-[5vw]">
-                    <motion.span
-                      variants={slideVariants}
-                      initial={`initial`}
-                      animate={activeSlide === index + 1 ? `active` : `initial`}
-                      exit={`exit`}
-                      transition={{
-                        ...slideTransition,
-                        delay: 1 * slideParagraphDelay + slideSpanDelay,
-                      }}
-                    >
                       <span className="font-light">Specialized </span>
-                    </motion.span>
-                    <motion.span
-                      variants={slideVariants}
-                      initial={`initial`}
-                      animate={activeSlide === index + 1 ? `active` : `initial`}
-                      exit={`exit`}
-                      transition={{
-                        ...slideTransition,
-                        delay: 1 * slideParagraphDelay + 2 * slideSpanDelay,
-                      }}
-                    >
                       <span className="font-thin">in </span>
-                    </motion.span>
-                    <motion.span
-                      variants={slideVariants}
-                      initial={`initial`}
-                      animate={activeSlide === index + 1 ? `active` : `initial`}
-                      exit={`exit`}
-                      transition={{
-                        ...slideTransition,
-                        delay: 1 * slideParagraphDelay + 3 * slideSpanDelay,
-                      }}
-                    >
                       <strong className="font-extrabold md:tracking-wider text-[2.3rem] sm:text-[3rem] md:text-[3.5vw] scale-y-105">
                         Frontend Development
                       </strong>
-                    </motion.span>
                   </p>
                 </motion.span>
                 <motion.span
@@ -219,29 +163,8 @@ const Hero = () => {
                       }}
                     >
                       <span className="font-extralight">Based </span>
-                    </motion.span>
-                    <motion.span
-                      variants={slideVariants}
-                      initial={`initial`}
-                      animate={activeSlide === index + 1 ? `active` : `initial`}
-                      exit={`exit`}
-                      transition={{
-                        ...slideTransition,
-                        delay: 2 * slideParagraphDelay + 2 * slideSpanDelay,
-                      }}
-                    >
                       <span className="font-thin">in </span>
-                    </motion.span>
-                    <motion.span
-                      variants={slideVariants}
-                      initial={`initial`}
-                      animate={activeSlide === index + 1 ? `active` : `initial`}
-                      exit={`exit`}
-                      transition={{
-                        ...slideTransition,
-                        delay: 2 * slideParagraphDelay + 3 * slideSpanDelay,
-                      }}
-                    >
+                    
                       <span className="inline-block relative">
                         <strong className="font-extrabold md:tracking-wider text-[2.3rem] sm:text-[3rem] md:text-[3.5vw] scale-y-105">
                           Cairo
