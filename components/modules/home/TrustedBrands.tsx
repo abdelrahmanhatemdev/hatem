@@ -1,3 +1,4 @@
+"use client";
 import { fadeScale } from "@/lib/animation";
 import { motion } from "framer-motion";
 import Image from "next/image";
