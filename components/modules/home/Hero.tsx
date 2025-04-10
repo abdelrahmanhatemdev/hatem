@@ -5,7 +5,7 @@ import "swiper/css";
 import Image from "next/image";
 import { memo, useEffect, useState } from "react";
 import { cn, cubicBezier } from "@/lib/utils";
-import { motion } from "framer-motion";
+import { motion, LazyMotion, domAnimation } from "framer-motion";
 import { slideTransition, slideVariants } from "@/lib/animation/slider";
 
 const Hero = () => {
@@ -34,7 +34,7 @@ const Hero = () => {
       if (linearProgress >= 1) {
         startTime = now;
         setIsProgressing(false);
-        setIsAutoplaying(false)
+        setIsAutoplaying(false);
         setProgress(100);
         return;
       }
@@ -46,7 +46,7 @@ const Hero = () => {
       animationFrameId = requestAnimationFrame(animateProgress);
     };
 
-    if ((isAutoplaying && isProgressing) ) {
+    if (isAutoplaying && isProgressing) {
       animationFrameId = requestAnimationFrame(animateProgress);
     }
 
@@ -83,7 +83,7 @@ const Hero = () => {
           setIsProgressing(true);
         }}
         onAutoplayStart={() => {
-          setIsAutoplaying(true)
+          setIsAutoplaying(true);
           setIsProgressing(true);
         }}
         onAutoplayStop={() => {
@@ -98,77 +98,22 @@ const Hero = () => {
             {slide === 1 && (
               <div className="h-full flex flex-col justify-center">
                 <p className="text-[2.3rem] sm:text-[3rem] md:text-[3.5vw] md:leading-[5vw] flex items-center gap-[1vw]">
-                  <motion.span
-                    variants={slideVariants}
-                    initial={`initial`}
-                    animate={activeSlide === index + 1 ? `active` : `initial`}
-                    exit={`exit`}
-                    transition={{ ...slideTransition, delay: 0 }}
-                  >
-                    <span>
-                      <span className="font-extralight">I</span>
-                      <span className="font-extralight">&apos;m </span>
-                    </span>
-                    <span className="font-thin">a</span>
-                  </motion.span>
-                  <motion.span
-                    variants={slideVariants}
-                    initial={`initial`}
-                    animate={activeSlide === index + 1 ? `active` : `initial`}
-                    exit={`exit`}
-                    transition={{
-                      ...slideTransition,
-                      delay: 1 * slideSpanDelay,
-                    }}
-                    className="w-[10vw] h-[5vw] relative inline-block"
-                  >
-                    <span>
-                      <Image
-                        src="/assets/media/nextjs.webp"
-                        fill
-                        alt="Next.js"
-                      />
-                    </span>
-                  </motion.span>
-                  <motion.span
-                    variants={slideVariants}
-                    initial={`initial`}
-                    animate={activeSlide === index + 1 ? `active` : `initial`}
-                    exit={`exit`}
-                    transition={{
-                      ...slideTransition,
-                      delay: 2 * slideSpanDelay,
-                    }}
-                  >
-                    <strong className="font-extrabold md:tracking-wider text-[2.3rem] sm:text-[3rem] md:text-[3.5vw] scale-y-105">
-                      Developer
-                    </strong>
-                  </motion.span>
-                </p>
-
-                <motion.span
-                  variants={slideVariants}
-                  initial={`initial`}
-                  animate={activeSlide === index + 1 ? `active` : `initial`}
-                  exit={`exit`}
-                  transition={{
-                    ...slideTransition,
-                    delay: 1 * slideParagraphDelay,
-                  }}
-                >
-                  <p className="text-[2.3rem] sm:text-[3rem] md:text-[3.5vw] md:leading-[5vw]">
+                  <LazyMotion features={domAnimation}>
                     <motion.span
                       variants={slideVariants}
                       initial={`initial`}
                       animate={activeSlide === index + 1 ? `active` : `initial`}
                       exit={`exit`}
-                      transition={{
-                        ...slideTransition,
-                        delay: 1 * slideParagraphDelay + slideSpanDelay,
-                      }}
+                      transition={{ ...slideTransition, delay: 0 }}
                     >
-                      <span className="font-light">Specialized </span>
+                      <span>
+                        <span className="font-extralight">I</span>
+                        <span className="font-extralight">&apos;m </span>
+                      </span>
+                      <span className="font-thin">a</span>
                     </motion.span>
+                  </LazyMotion>
+                  <LazyMotion features={domAnimation}>
                     <motion.span
                       variants={slideVariants}
                       initial={`initial`}
@@ -176,11 +121,20 @@ const Hero = () => {
                       exit={`exit`}
                       transition={{
                         ...slideTransition,
-                        delay: 1 * slideParagraphDelay + 2 * slideSpanDelay,
+                        delay: 1 * slideSpanDelay,
                       }}
+                      className="w-[10vw] h-[5vw] relative inline-block"
                     >
-                      <span className="font-thin">in </span>
+                      <span>
+                        <Image
+                          src="/assets/media/nextjs.webp"
+                          fill
+                          alt="Next.js"
+                        />
+                      </span>
                     </motion.span>
+                  </LazyMotion>
+                  <LazyMotion features={domAnimation}>
                     <motion.span
                       variants={slideVariants}
                       initial={`initial`}
@@ -188,94 +142,162 @@ const Hero = () => {
                       exit={`exit`}
                       transition={{
                         ...slideTransition,
-                        delay: 1 * slideParagraphDelay + 3 * slideSpanDelay,
+                        delay: 2 * slideSpanDelay,
                       }}
                     >
                       <strong className="font-extrabold md:tracking-wider text-[2.3rem] sm:text-[3rem] md:text-[3.5vw] scale-y-105">
-                        Frontend Development
+                        Developer
                       </strong>
                     </motion.span>
-                  </p>
-                </motion.span>
-                <motion.span
-                  variants={slideVariants}
-                  initial={`initial`}
-                  animate={activeSlide === index + 1 ? `active` : `initial`}
-                  exit={`exit`}
-                  transition={{
-                    ...slideTransition,
-                    delay: 2 * slideParagraphDelay,
-                  }}
-                >
-                  <p className="text-[2.3rem] sm:text-[3rem] md:text-[3.5vw] md:leading-[5vw]">
-                    <motion.span
-                      variants={slideVariants}
-                      initial={`initial`}
-                      animate={activeSlide === index + 1 ? `active` : `initial`}
-                      exit={`exit`}
-                      transition={{
-                        ...slideTransition,
-                        delay: 2 * slideParagraphDelay + 1 * slideSpanDelay,
-                      }}
-                    >
-                      <span className="font-extralight">Based </span>
-                    </motion.span>
-                    <motion.span
-                      variants={slideVariants}
-                      initial={`initial`}
-                      animate={activeSlide === index + 1 ? `active` : `initial`}
-                      exit={`exit`}
-                      transition={{
-                        ...slideTransition,
-                        delay: 2 * slideParagraphDelay + 2 * slideSpanDelay,
-                      }}
-                    >
-                      <span className="font-thin">in </span>
-                    </motion.span>
-                    <motion.span
-                      variants={slideVariants}
-                      initial={`initial`}
-                      animate={activeSlide === index + 1 ? `active` : `initial`}
-                      exit={`exit`}
-                      transition={{
-                        ...slideTransition,
-                        delay: 2 * slideParagraphDelay + 3 * slideSpanDelay,
-                      }}
-                    >
-                      <span className="inline-block relative">
+                  </LazyMotion>
+                </p>
+                <LazyMotion features={domAnimation}>
+                  <motion.span
+                    variants={slideVariants}
+                    initial={`initial`}
+                    animate={activeSlide === index + 1 ? `active` : `initial`}
+                    exit={`exit`}
+                    transition={{
+                      ...slideTransition,
+                      delay: 1 * slideParagraphDelay,
+                    }}
+                  >
+                    <p className="text-[2.3rem] sm:text-[3rem] md:text-[3.5vw] md:leading-[5vw]">
+                      <motion.span
+                        variants={slideVariants}
+                        initial={`initial`}
+                        animate={
+                          activeSlide === index + 1 ? `active` : `initial`
+                        }
+                        exit={`exit`}
+                        transition={{
+                          ...slideTransition,
+                          delay: 1 * slideParagraphDelay + slideSpanDelay,
+                        }}
+                      >
+                        <span className="font-light">Specialized </span>
+                      </motion.span>
+                      <motion.span
+                        variants={slideVariants}
+                        initial={`initial`}
+                        animate={
+                          activeSlide === index + 1 ? `active` : `initial`
+                        }
+                        exit={`exit`}
+                        transition={{
+                          ...slideTransition,
+                          delay: 1 * slideParagraphDelay + 2 * slideSpanDelay,
+                        }}
+                      >
+                        <span className="font-thin">in </span>
+                      </motion.span>
+                      <motion.span
+                        variants={slideVariants}
+                        initial={`initial`}
+                        animate={
+                          activeSlide === index + 1 ? `active` : `initial`
+                        }
+                        exit={`exit`}
+                        transition={{
+                          ...slideTransition,
+                          delay: 1 * slideParagraphDelay + 3 * slideSpanDelay,
+                        }}
+                      >
                         <strong className="font-extrabold md:tracking-wider text-[2.3rem] sm:text-[3rem] md:text-[3.5vw] scale-y-105">
-                          Cairo
+                          Frontend Development
                         </strong>
-                      </span>
-                      <span className=" group">
-                        <motion.span
-                          variants={slideVariants}
-                          initial={{ opacity: 0, x: -100 }}
-                          animate={
-                            activeSlide === index + 1
-                              ? { opacity: 1, x: 0 }
-                              : { opacity: 0, x: -100 }
-                          }
-                          exit={{ opacity: 0, x: -100 }}
-                          transition={{
-                            ...slideTransition,
-                            delay: 2 * slideParagraphDelay + 2 * slideSpanDelay,
-                            duration: 1,
-                          }}
-                          className="inline-block"
-                        >
-                          <Image
-                            src={"/assets/media/pyramids.webp"}
-                            alt="Egyptian Pyramids"
-                            width={200}
-                            height={70}
-                            className=" scale-150 opacity-70 group-hover:opacity-100 transition-opacity inline-block"
-                          />
-                        </motion.span>
-                      </span>
-                    </motion.span>
-                  </p>
-                </motion.span>
+                      </motion.span>
+                    </p>
+                  </motion.span>
+                </LazyMotion>
+                <LazyMotion features={domAnimation}>
+                  <motion.span
+                    variants={slideVariants}
+                    initial={`initial`}
+                    animate={activeSlide === index + 1 ? `active` : `initial`}
+                    exit={`exit`}
+                    transition={{
+                      ...slideTransition,
+                      delay: 2 * slideParagraphDelay,
+                    }}
+                  >
+                    <p className="text-[2.3rem] sm:text-[3rem] md:text-[3.5vw] md:leading-[5vw]">
+                      <motion.span
+                        variants={slideVariants}
+                        initial={`initial`}
+                        animate={
+                          activeSlide === index + 1 ? `active` : `initial`
+                        }
+                        exit={`exit`}
+                        transition={{
+                          ...slideTransition,
+                          delay: 2 * slideParagraphDelay + 1 * slideSpanDelay,
+                        }}
+                      >
+                        <span className="font-extralight">Based </span>
+                      </motion.span>
+                      <motion.span
+                        variants={slideVariants}
+                        initial={`initial`}
+                        animate={
+                          activeSlide === index + 1 ? `active` : `initial`
+                        }
+                        exit={`exit`}
+                        transition={{
+                          ...slideTransition,
+                          delay: 2 * slideParagraphDelay + 2 * slideSpanDelay,
+                        }}
+                      >
+                        <span className="font-thin">in </span>
+                      </motion.span>
+                      <motion.span
+                        variants={slideVariants}
+                        initial={`initial`}
+                        animate={
+                          activeSlide === index + 1 ? `active` : `initial`
+                        }
+                        exit={`exit`}
+                        transition={{
+                          ...slideTransition,
+                          delay: 2 * slideParagraphDelay + 3 * slideSpanDelay,
+                        }}
+                      >
+                        <span className="inline-block relative">
+                          <strong className="font-extrabold md:tracking-wider text-[2.3rem] sm:text-[3rem] md:text-[3.5vw] scale-y-105">
+                            Cairo
+                          </strong>
+                        </span>
+                        <span className=" group">
+                          <motion.span
+                            variants={slideVariants}
+                            initial={{ opacity: 0, x: -100 }}
+                            animate={
+                              activeSlide === index + 1
+                                ? { opacity: 1, x: 0 }
+                                : { opacity: 0, x: -100 }
+                            }
+                            exit={{ opacity: 0, x: -100 }}
+                            transition={{
+                              ...slideTransition,
+                              delay:
+                                2 * slideParagraphDelay + 2 * slideSpanDelay,
+                              duration: 1,
+                            }}
+                            className="inline-block"
+                          >
+                            <Image
+                              src={"/assets/media/pyramids.webp"}
+                              alt="Egyptian Pyramids"
+                              width={200}
+                              height={70}
+                              className=" scale-150 opacity-70 group-hover:opacity-100 transition-opacity inline-block"
+                            />
+                          </motion.span>
+                        </span>
+                      </motion.span>
+                    </p>
+                  </motion.span>
+                </LazyMotion>
               </div>
             )}
             {slide === 2 && (
