@@ -15,6 +15,7 @@ import Loading from "@/components/custom/Loading";
 
 const Logo = dynamic(() => import("@/components/custom/Logo"), {
   loading: Loading,
+  ssr: false,
 });
 
 function Header() {

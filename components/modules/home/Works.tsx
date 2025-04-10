@@ -5,7 +5,7 @@ import Loading from "@/components/custom/Loading";
 
 const VogeAdmin = dynamic(
   () => import("@/components/modules/home/works/VogueAdmin"),
-  { loading: Loading }
+  { loading: Loading, ssr: false }
 );
 
 const SelectedWorks = () => {

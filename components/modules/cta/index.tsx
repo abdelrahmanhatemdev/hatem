@@ -15,6 +15,7 @@ import {
 const ThreeQuarterCircle = dynamic(
   () => import("@/components/modules/cta/ThreeQuarterCircle"),
   {
+    ssr: false,
     loading: Loading,
   }
 );

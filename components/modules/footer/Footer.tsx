@@ -4,14 +4,11 @@ import dynamic from "next/dynamic";
 import Loading from "@/components/custom/Loading";
 import { fade } from "@/lib/animation";
 
-// const Logo = dynamic(() => import("@/components/custom/Logo"), {
-//   loading: Loading,
-// });
-
 const AnimatedText = dynamic(
   () => import("@/components/custom/animation/animatedText/AnimatedText"),
   {
     loading: Loading,
+    ssr: false,
   }
 );
 
@@ -19,6 +16,7 @@ const AnimateTextOnHover = dynamic(
   () => import("@/components/custom/animation/animatedText/AnimateTextOnHover"),
   {
     loading: Loading,
+    ssr: false,
   }
 );
 

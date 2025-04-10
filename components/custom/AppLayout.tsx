@@ -7,10 +7,12 @@ const Header = dynamic(() => import("@/components/modules/header/Header"), {
 });
 
 const CTA = dynamic(() => import("@/components/modules/cta"), {
+  ssr: false,
   loading: Loading,
 });
 
 const Footer = dynamic(() => import("@/components/modules/footer/Footer"), {
+  ssr: false,
   loading: Loading,
 });
 
