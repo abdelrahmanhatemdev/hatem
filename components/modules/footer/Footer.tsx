@@ -149,6 +149,7 @@ const Footer = () => {
                     <a
                       href="https://github.com/abdulrahmanhatem"
                       target="_blank"
+                      aria-label="Github"
                     >
                       <AnimateTextOnHover text="Github" />
                     </a>
@@ -157,6 +158,7 @@ const Footer = () => {
                     <a
                       href="https://www.linkedin.com/in/abdelrahmanhatemdev/"
                       target="_blank"
+                      aria-label="Linkedin"
                     >
                       <AnimateTextOnHover text="Linkedin" />
                     </a>
@@ -165,6 +167,7 @@ const Footer = () => {
                     <a
                       href="https://stackoverflow.com/users/16331715/abdelrahman-hatem"
                       target="_blank"
+                      aria-label="Stackoverflow"
                     >
                       <AnimateTextOnHover text="Stackoverflow" />
                     </a>
