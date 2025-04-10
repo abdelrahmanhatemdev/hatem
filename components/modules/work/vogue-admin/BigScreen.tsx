@@ -16,6 +16,7 @@ const BigScreen = () => {
               className="rounded-lg md:rounded-[3rem] border-4 md:border-[10px] border-neutral-900/50 max-w-full md:max-w-[90%] h-auto "
               width={1017}
               height={617}
+               loading="lazy"
             />
           </motion.div>
           <motion.div variants={fadeDu1} initial="hidden" whileInView="visible" className="max-w-[750px]">
@@ -25,6 +26,7 @@ const BigScreen = () => {
               className="rounded-lg md:rounded-[3rem] border-4 md:border-[10px] border-neutral-900/50 max-w-full md:max-w-[90%] h-auto "
               width={1017}
               height={617}
+               loading="lazy"
             />
           </motion.div>
         </div>

@@ -58,7 +58,7 @@ const TrustedBrands = () => {
                       alt={`${brand.replaceAll("-", " ")}`}
                       width={180}
                       height={180}
-                      priority={true}
+                      loading="lazy"
                       className="transition duration-500 ease-in-out
                        brightness-0 contrast-200 invert
                        group-hover:brightness-100 group-hover:contrast-100 group-hover:invert-0

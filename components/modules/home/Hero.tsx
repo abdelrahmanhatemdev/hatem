@@ -292,6 +292,7 @@ const Hero = () => {
                               alt="Egyptian Pyramids"
                               width={200}
                               height={70}
+                               loading="lazy"
                               className=" scale-150 opacity-70 group-hover:opacity-100 transition-opacity inline-block"
                             />
                           </motion.span>

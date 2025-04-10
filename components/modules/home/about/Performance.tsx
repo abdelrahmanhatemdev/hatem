@@ -26,7 +26,7 @@ const Performance = () => {
                 alt="Performance"
                 width={1366}
                 height={3024}
-                priority={true}
+                loading="lazy"
                 className="rounded-2xl"
               />
             </motion.div>

@@ -26,6 +26,7 @@ const Dark = () => {
                 className="rounded-2xl border-[5px] border-neutral-950/50 contrast-[105%] max-w-full md:max-w-[25vw] lg:max-w-[15vw] h-auto"
                 width={545}
                 height={1031}
+                 loading="lazy"
               />
             </motion.div>
             <motion.div variants={fadeDu2} initial="hidden" whileInView="visible" className="px-3 md:px-5 md:pt-16">
@@ -35,6 +36,7 @@ const Dark = () => {
                 className="rounded-2xl border-[5px] border-neutral-950/50 contrast-[105%] max-w-full md:max-w-[25vw] lg:max-w-[15vw] h-auto"
                 width={545}
                 height={1031}
+                 loading="lazy"
               />
             </motion.div>
             <motion.div variants={fadeDu3} initial="hidden" whileInView="visible" className="px-3 md:px-5 md:pt-32">
@@ -44,6 +46,7 @@ const Dark = () => {
                 className="rounded-2xl border-[5px] border-neutral-950/50 contrast-[105%] max-w-full md:max-w-[25vw] lg:max-w-[15vw] h-auto"
                 width={545}
                 height={1031}
+                 loading="lazy"
               />
             </motion.div>
           </div>

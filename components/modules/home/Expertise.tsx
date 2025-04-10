@@ -86,6 +86,7 @@ const Expertise = () => {
                     alt=""
                     width={40}
                     height={40}
+                    loading="lazy"
                   />
                   <h3 className="text-lg font-semibold ">{item.title}</h3>
                   <p className="text-sm font-semibold text-neutral-400 line-clamp-6">

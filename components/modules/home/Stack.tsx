@@ -230,7 +230,7 @@ const Stack = () => {
                             alt=""
                             width={200}
                             height={200}
-                            priority={true}
+                            loading="lazy"
                             className={cn(
                               "transition duration-500 ease-in-out brightness-0 contrast-200 invert",
                               tech.hoverSrc
@@ -244,7 +244,7 @@ const Stack = () => {
                               alt=""
                               width={200}
                               height={200}
-                              priority={true}
+                              loading="lazy"
                               className="opacity-0 group-hover:opacity-100 absolute inset-0 transition duration-500 ease-in-out group-hover:brightness-100 group-hover:contrast-100 group-hover:invert-0"
                             />
                           ) : (
@@ -268,7 +268,7 @@ const Stack = () => {
                             alt=""
                             width={200}
                             height={200}
-                            priority={true}
+                            loading="lazy"
                             className={"w-8 h-8"}
                           />
                           <h4 className="text-lg">{tech.title}</h4>

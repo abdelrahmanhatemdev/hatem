@@ -30,6 +30,7 @@ const Dashboard = () => {
                 className="max-w-full md:max-w-[50vw] h-auto rounded-2xl"
                 width={1017}
                 height={617}
+                 loading="lazy"
               />
             </motion.div>
             <motion.p
