@@ -10,13 +10,13 @@ import Link from "next/link";
 import { TbMenu } from "react-icons/tb";
 import { FaGithub } from "react-icons/fa";
 import { TbBrandLinkedinFilled } from "react-icons/tb";
-import dynamic from "next/dynamic";
-import Loading from "@/components/custom/Loading";
+// import dynamic from "next/dynamic";
+// import Loading from "@/components/custom/Loading";
 
-const Logo = dynamic(() => import("@/components/custom/Logo"), {
-  loading: Loading,
-  ssr: false,
-});
+// const Logo = dynamic(() => import("@/components/custom/Logo"), {
+//   loading: Loading,
+//   ssr: false,
+// });
 
 function Header() {
   return (
@@ -26,7 +26,7 @@ function Header() {
           href="/"
           className="group uppercase font-bold text-lg flex gap-2 items-center justify-center cursor-pointer relative"
         >
-          <Logo className="w-10 transition-opacity duration-500" />
+          {/* <Logo className="w-10 transition-opacity duration-500" /> */}
         </Link>
         <div className="flex gap-6 items-center justify-start">
           <ul className="gap-6 items-center justify-start hidden md:flex">
