@@ -17,10 +17,10 @@ const SelectedWorks = dynamic(() => import("@/components/modules/home/Works"), {
   ssr: false,
 });
 
-// const Expertise = dynamic(() => import("@/components/modules/home/Expertise"), {
-//   loading: () => <></>,
-//   ssr: false,
-// });
+const Expertise = dynamic(() => import("@/components/modules/home/Expertise"), {
+  loading: () => <></>,
+  ssr: false,
+});
 
 // const WorkProcess = dynamic(
 //   () => import("@/components/modules/home/WorkProcess"),
@@ -41,7 +41,7 @@ const Home = () => {
       {/* <Hero /> */}
       {/* <About /> */}
       <SelectedWorks/>
-      {/* <Expertise /> */}
+      <Expertise />
       {/* <WorkProcess /> */}
       <Stack />
     </>
