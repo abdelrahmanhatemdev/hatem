@@ -2,10 +2,10 @@
 import dynamic from "next/dynamic";
 import Loading from "@/components/custom/Loading";
 
-const Hero = dynamic(() => import("@/components/modules/home/Hero"), {
-  loading: Loading,
-  ssr: false 
-});
+// const Hero = dynamic(() => import("@/components/modules/home/Hero"), {
+//   loading: Loading,
+//   ssr: false 
+// });
 
 const About = dynamic(() => import("@/components/modules/home/About"), {
   loading: Loading,
