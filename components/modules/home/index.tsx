@@ -30,10 +30,10 @@ import Loading from "@/components/custom/Loading";
 //   }
 // );
 
-const Stack = dynamic(() => import("@/components/modules/home/Stack"), {
-  loading: Loading,
-  ssr: false,
-});
+// const Stack = dynamic(() => import("@/components/modules/home/Stack"), {
+//   loading: Loading,
+//   ssr: false,
+// });
 
 const Home = () => {
   return (
@@ -43,7 +43,7 @@ const Home = () => {
       <SelectedWorks/>
       <Expertise />
       <WorkProcess /> */}
-      <Stack />
+      {/* <Stack /> */}
     </>
   );
 };
