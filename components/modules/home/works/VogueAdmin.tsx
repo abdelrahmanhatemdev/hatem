@@ -158,7 +158,6 @@ const VogueAdmin = () => {
                 className="rounded-md border border-neutral-800 w-[97%] group-hover:scale-95 transition-all duration-700"
                 width={800}
                 height={495}
-                 loading="lazy"
               />
             </motion.div>
           </LazyAnimation>
@@ -178,7 +177,7 @@ const VogueAdmin = () => {
                 className="rounded-lg border border-neutral-200 w-[20vw] lg:w-[9vw] lg:right-0 group-hover:scale-80 transition-all duration-700"
                 width={153}
                 height={300}
-                 loading="lazy"
+                loading="lazy"
               />
             </motion.div>
           </LazyAnimation>
