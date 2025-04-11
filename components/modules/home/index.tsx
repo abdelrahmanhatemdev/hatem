@@ -41,7 +41,7 @@ const Home = () => {
       {/* <Hero /> */}
       {/* <About /> */}
       <SelectedWorks/>
-      <Expertise />
+      {/* <Expertise /> */}
       {/* <WorkProcess /> */}
       <Stack />
     </>
