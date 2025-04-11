@@ -39,7 +39,7 @@ const Home = () => {
   return (
     <>
       {/* <Hero /> */}
-      {/* <About /> */}
+      <About />
       <SelectedWorks/>
       {/* <Expertise /> */}
       {/* <WorkProcess /> */}
