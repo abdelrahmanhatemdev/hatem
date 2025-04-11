@@ -38,7 +38,7 @@ const Stack = dynamic(() => import("@/components/modules/home/Stack"), {
 const Home = () => {
   return (
     <>
-      <Hero />
+      {/* <Hero /> */}
       <About />
       <SelectedWorks/>
       <Expertise />
