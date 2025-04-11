@@ -74,7 +74,7 @@ const Expertise = () => {
                     ...fadeScale.visible,
                     transition: {
                       ...fadeScale.visible.transition,
-                      delay: 0.05 * (i + 1),
+                      delay: 0.05 ,
                     },
                   },
                 }}
