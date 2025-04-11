@@ -11,10 +11,9 @@ import { TbMenu } from "react-icons/tb";
 import { FaGithub } from "react-icons/fa";
 import { TbBrandLinkedinFilled } from "react-icons/tb";
 import dynamic from "next/dynamic";
-import Loading from "@/components/custom/Loading";
 
 const Logo = dynamic(() => import("@/components/custom/Logo"), {
-  loading: Loading,
+  loading: () => <></>,
   ssr: false,
 });
 

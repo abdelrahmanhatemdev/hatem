@@ -1,8 +1,16 @@
 "use client";
 import { ReactNode, useEffect, useState } from "react";
 import NoInternet from "./NoInternet";
-import { ReactLenis } from "lenis/react";
 import AppLayout from "./AppLayout";
+import dynamic from "next/dynamic";
+
+const LazyLenis = dynamic(
+  () => import("lenis/react").then((mod) => mod.ReactLenis),
+  {
+    ssr: false,
+    loading: () => <></>,
+  }
+);
 
 function MainLayout({ children }: Readonly<{ children: ReactNode }>) {
   const [isOnline, setIsOnline] = useState(true);
@@ -25,9 +33,9 @@ function MainLayout({ children }: Readonly<{ children: ReactNode }>) {
   return !isOnline ? (
     <NoInternet />
   ) : (
-    <ReactLenis root>
+    <LazyLenis root>
       <AppLayout>{children}</AppLayout>
-    </ReactLenis>
+    </LazyLenis>
   );
 }
 

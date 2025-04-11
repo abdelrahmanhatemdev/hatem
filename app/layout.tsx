@@ -6,6 +6,7 @@ import "@/app/globals.css";
 const interTight = Inter_Tight({
   variable: "--font-inter-tight",
   subsets: ["latin"],
+  display: "swap"
 });
 
 const satoshi = localFont({
@@ -37,6 +38,7 @@ const satoshi = localFont({
     }
   ],
   variable: "--font-satoshi",
+  display: "swap"
 });
 
 const ogg = localFont({

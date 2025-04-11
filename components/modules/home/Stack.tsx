@@ -9,7 +9,7 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover";
 import { GoArrowUpRight } from "react-icons/go";
-import { fade, fadeD1, fadeSlideDown } from "@/lib/animation";
+import { fade, fadeD1 } from "@/lib/animation";
 import LazyAnimation from "@/components/custom/animation/LazyAnimation";
 
 const technolegy = [
@@ -189,7 +189,8 @@ const Stack = () => {
         <motion.div
           initial="hidden"
           whileInView="visible"
-          variants={fadeSlideDown}
+          viewport={{ once: true, amount: 0.2 }}
+          variants={fadeD1}
         >
           <div className="flex flex-col gap-4 text-center p-10">
             <h2 className="text-4xl md:text-6xl  text-center">Stack</h2>
@@ -201,20 +202,26 @@ const Stack = () => {
         </motion.div>
       </LazyAnimation>
       <LazyAnimation>
-        <motion.div initial="hidden" whileInView="visible" variants={fade}>
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          variants={fade}
+          viewport={{ once: true, amount: 0.2 }}
+        >
           <div className="w-[70%] sm:w-[60%] mx-auto grid grid-cols-2 md:grid-cols-4 xl:grid-cols-8 mt-10 gap-[3vw] lg:gap-[1vw]">
             {technolegy.map((tech, i) => (
               <motion.div
                 key={`${tech.src}`}
                 initial="hidden"
                 whileInView="visible"
+                viewport={{ once: true, amount: 0.2 }}
                 variants={{
                   ...fadeD1,
                   visible: {
                     ...fadeD1.visible,
                     transition: {
                       ...fadeD1.visible.transition,
-                
+
                       delay: 0.05 * (i + 1),
                     },
                   },

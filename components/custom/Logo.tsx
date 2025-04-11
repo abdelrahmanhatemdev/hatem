@@ -3,24 +3,41 @@ import { memo } from "react";
 
 const Logo = ({ className = "" }: { className?: string }) => {
   return (
-    <div className={cn("font-satosh font-black flex gap-2 lg:text-2xl", className)}>
+    <div className={cn("font-satoshi font-black flex gap-2 lg:text-2xl", className)}>
+      {/* Wrapping with a single div for better layout control */}
       <div className="relative group perspective-dramatic h-8 min-w-40">
-        <div>
-          <h2 className="opacity-60 absolute inset-0 flex transition-all group-hover:rotate-x-90 duration-300 ease-in">
+        {/* Wrapper for both parts of the text */}
+        <div className="relative">
+          {/* The first set of animations for the 'Abdelrahman' and 'Frontend' */}
+          <h2
+            className="opacity-50 absolute inset-0 flex transition-transform duration-300 ease-in transform group-hover:rotate-x-90"
+            style={{ transformOrigin: 'center' }}
+          >
             <span>A</span>
             <span className="lowercase">bdelrahman</span>
           </h2>
-          <h2 className="absolute inset-0 flex transition-all -rotate-x-90 translate-y-6 group-hover:rotate-x-0 group-hover:translate-y-0 group-hover:opacity-100 duration-300 ease-in">
+          <h2
+            className="absolute inset-0 flex transition-transform duration-300 ease-in transform -rotate-x-90 translate-y-6 group-hover:rotate-x-0 group-hover:translate-y-0 group-hover:opacity-100"
+            style={{ transformOrigin: 'center' }}
+          >
             <span>F</span>
             <span className="lowercase">rontend</span>
           </h2>
         </div>
-        <div>
-          <h2 className="absolute top-0 left-[7.8rem] lg:left-[10.2rem] flex transition-all group-hover:-rotate-x-90 duration-300 ease-in">
+
+        {/* The second part for 'Hatem' and 'Developer' */}
+        <div className="relative">
+          <h2
+            className="absolute top-0 left-[7.8rem] lg:left-[10.2rem] flex transition-transform duration-300 ease-in transform group-hover:-rotate-x-90"
+            style={{ transformOrigin: 'center' }}
+          >
             <span>H</span>
             <span className="lowercase">atem</span>
           </h2>
-          <h2 className="opacity-60 absolute itop-0 left-[7rem] flex transition-all rotate-x-90 -translate-y-6 group-hover:rotate-x-0 group-hover:translate-y-0 group-hover:opacity-50 duration-300 ease-in">
+          <h2
+            className="opacity-50 absolute top-0 left-[7rem] flex transition-transform duration-300 ease-in transform rotate-x-90 -translate-y-6 group-hover:rotate-x-0 group-hover:translate-y-0 group-hover:opacity-50"
+            style={{ transformOrigin: 'center' }}
+          >
             <span>D</span>
             <span className="lowercase">eveloper</span>
           </h2>
@@ -29,4 +46,5 @@ const Logo = ({ className = "" }: { className?: string }) => {
     </div>
   );
 };
+
 export default memo(Logo);

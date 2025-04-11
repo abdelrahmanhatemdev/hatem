@@ -1,9 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import { memo } from "react";
-
 import dynamic from "next/dynamic";
-import Loading from "@/components/custom/Loading";
 import {
   fade,
   fadeScaleD1,
@@ -16,14 +14,19 @@ const ThreeQuarterCircle = dynamic(
   () => import("@/components/modules/cta/ThreeQuarterCircle"),
   {
     ssr: false,
-    loading: Loading,
+    loading: () => <></>,
   }
 );
 
 const CTA = () => {
   return (
     <section className="w-full pt-40 px-8 relative" id="contact">
-      <motion.div initial="hidden" whileInView="visible" variants={fade}>
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        variants={fade}
+        viewport={{ once: true, amount: 0.2 }}
+      >
         <div className="xs:w-[calc(95%-80px)] md:w-[78%] mx-auto h-full relative pt-4 z-10">
           <div
             className="w-full h-16 grid lg:grid-cols-3 absolute left-0 -top-12 border border-dashed 
@@ -60,6 +63,7 @@ const CTA = () => {
             <motion.div
               initial="hidden"
               whileInView="visible"
+              viewport={{ once: true, amount: 0.2 }}
               variants={fadeScaleD1}
             >
               <h2 className="text-3xl lg:text-[3.2vw] bg-gradient-to-b from-neutral-50 to-neutral-300 bg-clip-text text-transparent font-extrabold lg:leading-[5rem] leading-10">
@@ -82,6 +86,7 @@ const CTA = () => {
             <motion.div
               initial="hidden"
               whileInView="visible"
+              viewport={{ once: true, amount: 0.2 }}
               variants={fadeScaleD2}
             >
               <p className="lg:text-2xl text-neutral-500 text-center max-w-[800px] sm:leading-7 lg:leading-10">
@@ -136,24 +141,29 @@ const CTA = () => {
                 initial="hidden"
                 whileInView="visible"
                 variants={fadeScaleD3}
+                viewport={{ once: true, amount: 0.2 }}
                 className="min-w-fit"
               >
-                <a href="mailto:abdelrahmanhatemdev@gmail.com?subject=Join%20a%20Team&body=Hi,%20I%20would%20like%20you%20to%20join%20our%20team."
-                  title="SEND ME AN EMAIL" 
-                  className="bg-neutral-50 py-3 px-[5vw] md:px-6 font-medium text-[4vw] sm:text-lg rounded-xl cursor-pointer hover:bg-neutral-300 text-neutral-950 transition-colors shadow-lg border border-neutral-900">
+                <a
+                  href="mailto:abdelrahmanhatemdev@gmail.com?subject=Join%20a%20Team&body=Hi,%20I%20would%20like%20you%20to%20join%20our%20team."
+                  title="SEND ME AN EMAIL"
+                  className="bg-neutral-50 py-3 px-[5vw] md:px-6 font-medium text-[4vw] sm:text-lg rounded-xl cursor-pointer hover:bg-neutral-300 text-neutral-950 transition-colors shadow-lg border border-neutral-900"
+                >
                   Join a Team
                 </a>
               </motion.div>
               <motion.div
                 initial="hidden"
                 whileInView="visible"
+                viewport={{ once: true, amount: 0.2 }}
                 variants={fadeScaleD4}
                 className="min-w-fit"
               >
-                <a href="mailto:abdelrahmanhatemdev@gmail.com?subject=Start%20a%20Project&body=Hi,%20I%20would%20like%20to%20start%20a%20project."
+                <a
+                  href="mailto:abdelrahmanhatemdev@gmail.com?subject=Start%20a%20Project&body=Hi,%20I%20would%20like%20to%20start%20a%20project."
                   title="SEND ME AN EMAIL"
-                
-                className="bg-neutral-950 py-3 px-[5vw] md:px-4 font-medium text-[4vw] sm:text-lg rounded-xl cursor-pointer hover:bg-neutral-900 text-white transition-colors shadow-lg border border-neutral-900">
+                  className="bg-neutral-950 py-3 px-[5vw] md:px-4 font-medium text-[4vw] sm:text-lg rounded-xl cursor-pointer hover:bg-neutral-900 text-white transition-colors shadow-lg border border-neutral-900"
+                >
                   Start a Project
                 </a>
               </motion.div>
