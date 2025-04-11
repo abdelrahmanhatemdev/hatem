@@ -27,6 +27,7 @@ const VogueAdmin = () => {
                 initial="hidden"
                 whileInView="visible"
                 variants={fadeScale}
+                viewport={{ once: true, amount: 0.2 }}
                 layout
               >
                 <Link href={`/work/vogue-admin`}>
@@ -40,6 +41,7 @@ const VogueAdmin = () => {
                 initial="hidden"
                 whileInView="visible"
                 variants={fadeScaleD1}
+                viewport={{ once: true, amount: 0.2 }}
                 layout
               >
                 <div className="text-sm flex flex-col justify-end gap-2">
@@ -55,6 +57,7 @@ const VogueAdmin = () => {
                 initial="hidden"
                 whileInView="visible"
                 variants={fadeScaleD2}
+                viewport={{ once: true, amount: 0.2 }}
                 layout
               >
                 <div className="flex flex-col justify-start gap-2">
@@ -75,6 +78,7 @@ const VogueAdmin = () => {
                 initial="hidden"
                 whileInView="visible"
                 variants={fadeScaleD3}
+                viewport={{ once: true, amount: 0.2 }}
                 layout
               >
                 <div className="text-sm hidden lg:flex flex-col justify-start gap-2 ">
@@ -106,6 +110,7 @@ const VogueAdmin = () => {
               initial="hidden"
               whileInView="visible"
               variants={fadeScaleD4}
+              viewport={{ once: true, amount: 0.2 }}
               layout
             >
               <div className="text-sm flex flex-col justify-start gap-2">
@@ -120,6 +125,7 @@ const VogueAdmin = () => {
                 initial="hidden"
                 whileInView="visible"
                 variants={fadeScaleD5}
+                viewport={{ once: true, amount: 0.2 }}
                 layout
               >
                 <div className="text-neutral-400">
@@ -143,6 +149,7 @@ const VogueAdmin = () => {
               whileInView="visible"
               variants={fadeScaleD1}
               className="absolute inset-0"
+              viewport={{ once: true, amount: 0.2 }}
               layout
             >
               <Image
@@ -162,6 +169,7 @@ const VogueAdmin = () => {
               whileInView="visible"
               variants={fadeScaleD3}
               className="absolute -right-2 bottom-0"
+              viewport={{ once: true, amount: 0.2 }}
               layout
             >
               <Image
