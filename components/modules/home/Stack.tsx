@@ -203,7 +203,7 @@ const Stack = () => {
       <LazyAnimation>
         <motion.div initial="hidden" whileInView="visible" variants={fade}>
           <div className="w-[70%] sm:w-[60%] mx-auto grid grid-cols-2 md:grid-cols-4 xl:grid-cols-8 mt-10 gap-[3vw] lg:gap-[1vw]">
-            {technolegy.map((tech) => (
+            {technolegy.map((tech, i) => (
               <motion.div
                 key={`${tech.src}`}
                 initial="hidden"
@@ -214,7 +214,8 @@ const Stack = () => {
                     ...fadeD1.visible,
                     transition: {
                       ...fadeD1.visible.transition,
-                      delay: 0.1,
+                
+                      delay: 0.05 * (i + 1),
                     },
                   },
                 }}
@@ -230,7 +231,6 @@ const Stack = () => {
                             alt=""
                             width={200}
                             height={200}
-                            loading="lazy"
                             className={cn(
                               "transition duration-500 ease-in-out brightness-0 contrast-200 invert",
                               tech.hoverSrc
@@ -244,7 +244,6 @@ const Stack = () => {
                               alt=""
                               width={200}
                               height={200}
-                              loading="lazy"
                               className="opacity-0 group-hover:opacity-100 absolute inset-0 transition duration-500 ease-in-out group-hover:brightness-100 group-hover:contrast-100 group-hover:invert-0"
                             />
                           ) : (
