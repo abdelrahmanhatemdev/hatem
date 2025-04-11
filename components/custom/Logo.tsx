@@ -7,12 +7,10 @@ const Logo = ({ className = "" }: { className?: string }) => {
       <div className="relative group perspective-dramatic h-8 min-w-40">
         <div>
           <h2 className="opacity-50 absolute inset-0 flex transition-all group-hover:rotate-x-90 duration-300 ease-in">
-            <span>A</span>
-            <span className="lowercase">bdelrahman</span>
+            <span>Abdelrahman</span>
           </h2>
           <h2 className="absolute inset-0 flex transition-all -rotate-x-90 translate-y-6 group-hover:rotate-x-0 group-hover:translate-y-0 group-hover:opacity-100 duration-300 ease-in">
-            <span>F</span>
-            <span className="lowercase">rontend</span>
+            <span>Frontend</span>
           </h2>
         </div>
         <div>
