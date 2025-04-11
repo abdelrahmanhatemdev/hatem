@@ -99,7 +99,7 @@ const Hero = () => {
             {slide === 1 && (
               <div className="h-full flex flex-col justify-center">
                 <p className="text-[2.3rem] sm:text-[3rem] md:text-[3.5vw] md:leading-[5vw] flex items-center gap-[1vw]">
-                  {/* <LazyAnimation>
+                  <LazyAnimation>
                     <motion.span
                       variants={slideVariants}
                       initial={`initial`}
@@ -113,7 +113,7 @@ const Hero = () => {
                       </span>
                       <span className="font-thin">a</span>
                     </motion.span>
-                  </LazyAnimation> */}
+                  </LazyAnimation>
                   <LazyAnimation>
                     <motion.span
                       variants={slideVariants}
