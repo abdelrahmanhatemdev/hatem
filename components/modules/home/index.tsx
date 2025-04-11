@@ -7,20 +7,20 @@ import dynamic from "next/dynamic";
 //   ssr: false
 // });
 
-// const About = dynamic(() => import("@/components/modules/home/About"), {
-//   loading: Loading,
-//   ssr: false,
-// });
+const About = dynamic(() => import("@/components/modules/home/About"), {
+  loading: () => <></>,
+  ssr: false,
+});
 
 const SelectedWorks = dynamic(() => import("@/components/modules/home/Works"), {
   loading: () => <></>,
   ssr: false,
 });
 
-const Expertise = dynamic(() => import("@/components/modules/home/Expertise"), {
-  loading: () => <></>,
-  ssr: false,
-});
+// const Expertise = dynamic(() => import("@/components/modules/home/Expertise"), {
+//   loading: () => <></>,
+//   ssr: false,
+// });
 
 // const WorkProcess = dynamic(
 //   () => import("@/components/modules/home/WorkProcess"),
@@ -41,7 +41,7 @@ const Home = () => {
       {/* <Hero /> */}
       {/* <About /> */}
       <SelectedWorks/>
-      <Expertise />
+      {/* <Expertise /> */}
       {/* <WorkProcess /> */}
       <Stack />
     </>
