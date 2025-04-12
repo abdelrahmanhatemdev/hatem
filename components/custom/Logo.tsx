@@ -4,11 +4,8 @@ import { memo } from "react";
 const Logo = ({ className = "" }: { className?: string }) => {
   return (
     <div className={cn("font-satoshi font-black flex gap-2 lg:text-2xl", className)}>
-      {/* Wrapping with a single div for better layout control */}
       <div className="relative group perspective-dramatic h-8 min-w-40">
-        {/* Wrapper for both parts of the text */}
         <div className="relative">
-          {/* The first set of animations for the 'Abdelrahman' and 'Frontend' */}
           <h2
             className="opacity-50 absolute inset-0 flex transition-transform duration-300 ease-in transform group-hover:rotate-x-90"
             style={{ transformOrigin: 'center' }}

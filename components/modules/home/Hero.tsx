@@ -193,7 +193,7 @@ const Hero = () => {
                       >
                         <span className="font-thin">in </span>
                       </motion.span>
-                      <motion.span
+                      {/* <motion.span
                         variants={slideVariants}
                         initial={`initial`}
                         animate={
@@ -204,11 +204,11 @@ const Hero = () => {
                           ...slideTransition,
                           delay: 1 * slideParagraphDelay + 3 * slideSpanDelay,
                         }}
-                      >
+                      > */}
                         <strong className="font-extrabold md:tracking-wider text-[2.3rem] sm:text-[3rem] md:text-[3.5vw] scale-y-105">
                           Frontend Development
                         </strong>
-                      </motion.span>
+                      {/* </motion.span> */}
                     </p>
                   </motion.span>
                 </LazyAnimation>
