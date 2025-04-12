@@ -165,12 +165,50 @@ const Hero = () => {
                     }}
                   >
                     <p className="text-[2.3rem] sm:text-[3rem] md:text-[3.5vw] md:leading-[5vw]">
-                      <span className="font-light">Specialized </span>
-
-                      <span className="font-thin">in </span>
-                      <strong className="font-extrabold md:tracking-wider text-[2.3rem] sm:text-[3rem] md:text-[3.5vw] scale-y-105">
-                        Frontend Development
-                      </strong>
+                      <motion.span
+                        variants={slideVariants}
+                        initial={`initial`}
+                        animate={
+                          activeSlide === index + 1 ? `active` : `initial`
+                        }
+                        exit={`exit`}
+                        transition={{
+                          ...slideTransition,
+                          delay: 1 * slideParagraphDelay + slideSpanDelay,
+                        }}
+                      >
+                        <span className="font-light">Specialized </span>
+                      </motion.span>
+                      <motion.span
+                        variants={slideVariants}
+                        initial={`initial`}
+                        animate={
+                          activeSlide === index + 1 ? `active` : `initial`
+                        }
+                        exit={`exit`}
+                        transition={{
+                          ...slideTransition,
+                          delay: 1 * slideParagraphDelay + 2 * slideSpanDelay,
+                        }}
+                      >
+                        <span className="font-thin">in </span>
+                      </motion.span>
+                      <motion.span
+                        variants={slideVariants}
+                        initial={`initial`}
+                        animate={
+                          activeSlide === index + 1 ? `active` : `initial`
+                        }
+                        exit={`exit`}
+                        transition={{
+                          ...slideTransition,
+                          delay: 1 * slideParagraphDelay + 3 * slideSpanDelay,
+                        }}
+                      >
+                        <strong className="font-extrabold md:tracking-wider text-[2.3rem] sm:text-[3rem] md:text-[3.5vw] scale-y-105">
+                          Frontend Development
+                        </strong>
+                      </motion.span>
                     </p>
                   </motion.span>
                 </LazyAnimation>
@@ -254,7 +292,7 @@ const Hero = () => {
                               alt="Egyptian Pyramids"
                               width={200}
                               height={70}
-                              loading="lazy"
+                               loading="lazy"
                               className=" scale-150 opacity-70 group-hover:opacity-100 transition-opacity inline-block"
                             />
                           </motion.span>
