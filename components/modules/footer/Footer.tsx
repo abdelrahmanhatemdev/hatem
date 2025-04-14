@@ -43,12 +43,6 @@ const Footer = () => {
                 </h2>
                 <div className="group text-neutral-400 uppercase lg:text-sm text-[.7rem]">
                   Based In Cairo
-                  {/* <AnimatedText text="Based" /> <AnimatedText text="In" />{" "}
-                  <span className="group-hover:text-white transition-colors">
-                    <AnimatedText text="Cairo" />
-                  </span>{" "}
-                  <AnimatedText text="-" /> <AnimatedText text="Working" />{" "}
-                  <AnimatedText text="Worldwide" /> */}
                 </div>
               </div>
               <div className="flex flex-col gap-5 justify-end">
