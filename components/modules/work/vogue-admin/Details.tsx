@@ -62,6 +62,7 @@ const Details = () => {
         <div className="flex gap-5 lg:gap-20">
           <motion.div variants={fadeD2} initial="hidden" whileInView="visible" className="flex flex-col gap-2 lg:gap-[1vw]">
             {details.map((item, i) => {
+              
               const valueClass =
                 "text-xs lg:text-[1.5vw] tracking-widest font-medium";
               return (
@@ -86,7 +87,7 @@ const Details = () => {
                 </div>
               );
             })}
-            
+
           </motion.div>
           <motion.div 
           initial= {{opacity: 0, height: 0}}
