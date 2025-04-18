@@ -65,7 +65,6 @@ const TrustedBrands = () => {
                        "
                     />
                   </div>
-                  
                 </motion.div>
               </LazyAnimation>
             ))}
