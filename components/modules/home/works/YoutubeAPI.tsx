@@ -5,7 +5,9 @@ import { easeInOut, motion } from "framer-motion";
 
 import Image from "next/image";
 import Link from "next/link";
-import { basic, stack } from "@/data/vogueAdmin";
+
+import { basic, stack } from "@/data/youtube-api";
+
 import {
   fadeScale,
   fadeScaleD1,
@@ -16,7 +18,7 @@ import {
 } from "@/lib/animation";
 import LazyAnimation from "@/components/custom/animation/LazyAnimation";
 
-const VogueAdmin = () => {
+const YoutubeAPI = () => {
   return (
     <div className="grid md:grid-cols-1 lg:grid-cols-[calc(100%-48vw)_48vw] gap-5 lg:gap-0 ">
       <div className="flex flex-col justify-between order-2 lg:order-1">
@@ -30,7 +32,7 @@ const VogueAdmin = () => {
                 viewport={{ once: true, amount: 0.2 }}
                 layout
               >
-                <Link href={`/work/vogue-admin`}>
+                <Link href={`/work/youtube-api`}>
                   <h2 className="uppercase text-6xl font-bold">{basic.name}</h2>
                 </Link>
               </motion.div>
@@ -65,8 +67,7 @@ const VogueAdmin = () => {
                     Description
                   </span>
                   <p className="text-neutral-400 md:max-w-96 lg:max-w-72 text-base lg:text-sm">
-                    {basic.description}
-                  </p>
+                  {basic.description}</p>
                 </div>
               </motion.div>
             </LazyAnimation>
@@ -135,11 +136,11 @@ const VogueAdmin = () => {
         </div>
       </div>
       <div className="lg:hidden mb-4">
-        <Link href={`/work/vogue-admin`}>
+        <Link href={`/work/youtube-api`}>
           <h2 className="uppercase text-6xl font-bold">{basic.name}</h2>
         </Link>
       </div>
-      <Link href={`/work/vogue-admin`} className=" order-1 lg:order-2">
+      <Link href={`/work/youtube-api`} className=" order-1 lg:order-2">
         <div className="group relative flex justify-center h-[70vw] lg:h-[35vw]">
           <LazyAnimation>
             <motion.div
@@ -151,7 +152,7 @@ const VogueAdmin = () => {
               layout
             >
               <Image
-                src="/assets/media/work/vogue-admin/dashboard-light.webp"
+                src="/assets/media/work/youtube-api/home-light.webp"
                 alt="Dashboard Light"
                 className="rounded-md border border-neutral-800 w-[97%] group-hover:scale-95 transition-all duration-700"
                 width={800}
@@ -170,7 +171,7 @@ const VogueAdmin = () => {
               layout
             >
               <Image
-                src="/assets/media/work/vogue-admin/dashboard-sm.webp"
+                src="/assets/media/work/youtube-api/home-sm.webp"
                 alt="Dashboard Phone"
                 className="rounded-lg border border-neutral-200 w-[20vw] lg:w-[9vw] lg:right-0 group-hover:scale-80 transition-all duration-700"
                 width={153}
@@ -184,4 +185,4 @@ const VogueAdmin = () => {
     </div>
   );
 };
-export default memo(VogueAdmin);
+export default memo(YoutubeAPI);

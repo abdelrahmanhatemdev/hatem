@@ -1,0 +1,52 @@
+"use client";
+import Image from "next/image";
+import { easeInOut, motion } from "framer-motion";
+import { fadeScale, fadeScaleD4 } from "@/lib/animation";
+const Dashboard = () => {
+  return (
+    <section className="py-10 lg:py-32 px-3 md:px-6 w-full">
+      <div className="bg-neutral-950/50">
+        <div className="w-full grid grid-cols-1 md:grid-cols-[35%_65%] p-3 lg:p-28 gap-4">
+          <motion.div
+            variants={fadeScaleD4}
+            initial="hidden"
+            whileInView={"visible"}
+            className="flex items-end grow-0 max-w-96 text-lg order-2 md:order-1"
+          >
+            Dive into a stream of real-time video content with a sleek,
+            scrollable interface that puts trending and recommended videos at
+            your fingertips.
+          </motion.div>
+          <div className="flex flex-col gap-24 order-1 md:order-2">
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{
+                opacity: 1,
+                transition: { duration: 3, ease: easeInOut },
+              }}
+            >
+              <Image
+                src={`/assets/media/work/youtube-api/home-light.webp`}
+                alt="Vogue Admin Dashboard"
+                className="max-w-full md:max-w-[50vw] h-auto rounded-2xl"
+                width={1017}
+                height={617}
+                loading="lazy"
+              />
+            </motion.div>
+            <motion.p
+              variants={fadeScale}
+              initial="hidden"
+              whileInView={"visible"}
+              className="max-w-96 text-lg"
+            >
+              Paired with intelligent search, every interaction feels fast, fluid, and addictive—just
+              like the YouTube experience, reimagined.
+            </motion.p>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+export default Dashboard;

@@ -8,6 +8,11 @@ const VogeAdmin = dynamic(
   { loading: Loading, ssr: false }
 );
 
+const YoutubeAPI = dynamic(
+  () => import("@/components/modules/home/works/YoutubeAPI"),
+  { loading: Loading, ssr: false }
+);
+
 const SelectedWorks = () => {
   return (
     <section className="w-full mt-32" id="works">
@@ -15,6 +20,7 @@ const SelectedWorks = () => {
         <h2 className="text-4xl text-center p-4">Selected Works</h2>
         <div className="grid grid-cols-1 gap-8 lg:gap-32 py-8 lg:py-32">
           <VogeAdmin />
+          <YoutubeAPI />
         </div>
       </div>
     </section>
