@@ -124,7 +124,7 @@ const Hero = () => {
                         ...slideTransition,
                         delay: 1 * slideSpanDelay,
                       }}
-                      className="w-[10vw] h-[5vw] relative inline-block"
+                      className=" relative inline-block"
                     >
                       <span>
 Frontend 
