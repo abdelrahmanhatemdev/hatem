@@ -127,12 +127,8 @@ const Hero = () => {
                       className="w-[10vw] h-[5vw] relative inline-block"
                     >
                       <span>
-                        <Image
-                          src="/assets/media/nextjs.webp"
-                          width={135}
-                          height={68}
-                          alt="Next.js"
-                        />
+Frontend 
+                        
                       </span>
                     </motion.span>
                   </LazyAnimation>
@@ -206,7 +202,12 @@ const Hero = () => {
                         }}
                       >
                         <strong className="font-extrabold md:tracking-wider text-[2.3rem] sm:text-[3rem] md:text-[3.5vw] scale-y-105">
-                          Frontend Development
+                          <Image
+                          src="/assets/media/nextjs.webp"
+                          width={135}
+                          height={68}
+                          alt="Next.js"
+                        />
                         </strong>
                       </motion.span>
                     </p>
