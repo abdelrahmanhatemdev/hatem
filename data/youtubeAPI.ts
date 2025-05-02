@@ -17,6 +17,19 @@ export const stack = [
   "Github Pages",
 ];
 
+export const links = [
+  {
+    title: "Link",
+    value: "Visit Site",
+    href: "https://abdelrahmanhatemdev.github.io/youtube-api/",
+  },
+  {
+    title: "Git",
+    value: "Visit Git",
+    href: "https://github.com/abdelrahmanhatemdev/youtube-api",
+  },
+];
+
 export const details = [
   {
     title: "Timeframe",
@@ -30,14 +43,5 @@ export const details = [
     title: "Type",
     value: "Streaming UI",
   },
-  {
-    title: "Link",
-    value: "Visit Site",
-    href: "https://abdelrahmanhatemdev.github.io/youtube-api/",
-  },
-  {
-    title: "Git",
-    value: "Visit Git",
-    href: "https://github.com/abdelrahmanhatemdev/youtube-api",
-  },
+  ...links,
 ];

@@ -2,19 +2,8 @@
 import { memo } from "react";
 import { motion } from "framer-motion";
 import { fadeD1, fadeDu1D1, fadeDu1D2, fadeDu1D3 } from "@/lib/animation";
+import { links } from "@/data/vogueAdmin";
 
-const links = [
-  {
-    title: "Link",
-    value: "Visit Site",
-    href: "http://vogue-admin.vercel.app/",
-  },
-  {
-    title: "Git",
-    value: "Visit Git",
-    href: "https://github.com/abdulrahmanhatem/vogue-admin",
-  },
-];
 const Links = () => {
   return (
     <section className="py-10 lg:py-32 px-3 md:px-6">

@@ -6,7 +6,7 @@ import { easeInOut, motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 
-import { basic, stack } from "@/data/youtube-api";
+import { basic, stack } from "@/data/youtubeAPI";
 
 import {
   fadeScale,

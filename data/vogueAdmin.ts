@@ -28,6 +28,19 @@ export const stack = [
     "Vercel",
   ];
 
+  export const links = [
+    {
+      title: "Link",
+      value: "Visit Site",
+      href: "http://vogue-admin.vercel.app/",
+    },
+    {
+      title: "Git",
+      value: "Visit Git",
+      href: "https://github.com/abdulrahmanhatem/vogue-admin",
+    },
+  ];
+
   export const details = [
     {
       title: "Timeframe",
@@ -41,14 +54,6 @@ export const stack = [
       title: "Type",
       value: "Dashboard",
     },
-    {
-      title: "Link",
-      value: "Visit Site",
-      href: "http://vogue-admin.vercel.app",
-    },
-    {
-      title: "Git",
-      value: "Visit Git",
-      href: "https://github.com/abdulrahmanhatem/vogue-admin",
-    },
+   ...links
   ];
+

@@ -2,19 +2,8 @@
 import { memo } from "react";
 import { motion } from "framer-motion";
 import { fadeD1, fadeDu1D1, fadeDu1D2, fadeDu1D3 } from "@/lib/animation";
+import { links } from "@/data/youtubeAPI";
 
-const links = [
-  {
-    title: "Link",
-    value: "Visit Site",
-    href: "http://vogue-admin.vercel.app/",
-  },
-  {
-    title: "Git",
-    value: "Visit Git",
-    href: "https://github.com/abdulrahmanhatem/vogue-admin",
-  },
-];
 const Links = () => {
   return (
     <section className="py-10 lg:py-32 px-3 md:px-6">
@@ -54,25 +43,29 @@ const Links = () => {
             whileInView="visible"
             className=" font-medium"
           >
-            I crafted Vogue Admin with dedication and vision, shaping every
-            detail with care. It&apos;s more than just a project—it&apos;s a journey of
-            constant refinement and innovation. I&apos;m always working to make it
-            better, and I&apos;d love to collaborate and take it even further
-            together.
+            This YouTube UI clone is the result of careful design and constant
+            evolution. Each feature is crafted to mirror the essence of the
+            YouTube experience, with a focus on functionality and smoothness.
+            It's an ongoing project that I&apos;m always refining, and I&apos;m excited to
+            collaborate to make it even better.
           </motion.p>
           <div className="flex flex-col">
             <motion.p
-            variants={fadeDu1D2}
-            initial="hidden"
-            whileInView="visible" className="font-extrabold font-satoshi">
-              <span className="text-neutral-600 md:text-[1.2vw] lg:text-[1vw]">Abdelrahman</span> Hatem
+              variants={fadeDu1D2}
+              initial="hidden"
+              whileInView="visible"
+              className="font-extrabold font-satoshi"
+            >
+              <span className="text-neutral-600 md:text-[1.2vw] lg:text-[1vw]">
+                Abdelrahman
+              </span>{" "}
+              Hatem
             </motion.p>
             <motion.p
-            variants={fadeDu1D3}
-            initial="hidden"
-            whileInView="visible" 
-            className="text-base md:text-[1vw] lg:text-[0.8vw]"
-            
+              variants={fadeDu1D3}
+              initial="hidden"
+              whileInView="visible"
+              className="text-base md:text-[1vw] lg:text-[0.8vw]"
             >
               Nextjs <span className="text-neutral-600">Developer</span>{" "}
             </motion.p>
