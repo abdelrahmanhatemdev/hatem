@@ -30,7 +30,12 @@ function Header() {
         <div className="flex gap-6 items-center justify-start">
           <ul className="gap-6 items-center justify-start hidden md:flex">
             <li className="hover:bg-neutral-800 px-3 py-1 rounded-lg cursor-pointer transition-colors">
-              <a href="https://drive.google.com/file/d/1r_rv6Iit1LrPtmJIASR-4bGGoKgPPbbB/view" target="_blank">CV</a>
+              <a
+                href="https://drive.google.com/file/d/1r_rv6Iit1LrPtmJIASR-4bGGoKgPPbbB/view"
+                target="_blank"
+              >
+                CV
+              </a>
             </li>
             <li className="hover:bg-neutral-800 px-3 py-1 rounded-lg cursor-pointer transition-colors">
               <a href="#works">Projects</a>
@@ -41,7 +46,10 @@ function Header() {
           </ul>
           <div className="hover:bg-neutral-800 px-[0.4rem] py-[0.4rem] rounded-lg cursor-pointer transition-colors">
             <DropdownMenu modal={false}>
-              <DropdownMenuTrigger className="flex items-center" aria-label="Menu">
+              <DropdownMenuTrigger
+                className="flex items-center"
+                aria-label="Menu"
+              >
                 <TbMenu size={25} />
               </DropdownMenuTrigger>
               <DropdownMenuContent
@@ -52,12 +60,26 @@ function Header() {
               >
                 <DropdownMenuGroup className="p-2 flex flex-col gap-2">
                   <DropdownMenuItem className="rounded-lg">
-                    <Link href="/#works" className="w-full py-1">Projects</Link>
+                    <Link href="/#works" className="w-full py-1">
+                      Projects
+                    </Link>
                   </DropdownMenuItem>
                   <DropdownMenuItem className="rounded-lg">
-                    <Link href="/#contact" className="w-full py-1">Contact</Link>
+                    <Link href="/#contact" className="w-full py-1">
+                      Contact
+                    </Link>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem className="rounded-lg">
+                    <a
+                      href="https://drive.google.com/file/d/1r_rv6Iit1LrPtmJIASR-4bGGoKgPPbbB/view"
+                      target="_blank"
+                      className="w-full py-1"
+                    >
+                      CV
+                    </a>
                   </DropdownMenuItem>
                 </DropdownMenuGroup>
+
                 <DropdownMenuSeparator className="w-[95%] m-auto" />
                 <DropdownMenuGroup>
                   <div className="flex items-center justify-between py-2 px-4 w-full">
