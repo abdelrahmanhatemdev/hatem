@@ -94,10 +94,7 @@ const Hero = () => {
         }}
         spaceBetween={20}
       >
-        {[
-          1,
-          // 2, 3
-        ].map((slide, index) => (
+        {[1, 2, 3].map((slide, index) => (
           <SwiperSlide key={index}>
             {slide === 1 && (
               <div className="h-full flex flex-col justify-center">
@@ -143,7 +140,7 @@ const Hero = () => {
                         delay: 2 * slideSpanDelay,
                       }}
                     >
-                      <strong className="relative inline-block font-normal">
+                      <strong className="relative inline-block font-extralight">
                         Developer
                       </strong>
                     </motion.span>
