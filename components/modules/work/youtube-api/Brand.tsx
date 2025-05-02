@@ -34,8 +34,9 @@ const Brand = () => {
                 <h2 className="text-3xl px-6">Our Vision</h2>
                 <div className="max-w-[300px] text-center">
                   <p>
-                    We strive to make online store management seamless, using
-                    technology to streamline operations and drive scalability.
+                    To reimagine the video streaming experience with intuitive
+                    design and real-time performance, making content discovery
+                    smooth, fast, and enjoyable.
                   </p>
                 </div>
               </motion.div>
@@ -68,9 +69,12 @@ const Brand = () => {
                 <h2 className="text-3xl px-6">Our Mission </h2>
                 <div className="max-w-[300px] text-center">
                   <p>
-                    We aim to simplify e-commerce management with intuitive
-                    tools and real-time insights, helping brands grow
-                    effortlessly.
+                    To deliver a sleek, responsive YouTube UI clone that
+                    replicates core features—search, video playback, Shorts, and
+                    more—while offering a polished, app-like experience powered
+                    by the YouTube Data API. We strive to make online store
+                    management seamless, using technology to streamline
+                    operations and drive scalability.
                   </p>
                 </div>
               </motion.div>
