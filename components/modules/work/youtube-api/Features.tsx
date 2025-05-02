@@ -3,77 +3,68 @@ import { cn } from "@/lib/utils";
 import { memo } from "react";
 import {easeInOut, motion} from "framer-motion"
 
-const featues = [
+export const features = [
   {
-    title: "User Authorization",
+    title: "Core Features",
     list: [
-      "Email and password login",
-      "Role-Based Access Control (RBAC)",
-      "Firebase role-based claims",
-      "Middleware-Based Authorization",
-    ],
-  },
-  {
-    title: "Data Fetching",
-    list: [
-      "Server-side rendering (SSR)",
-      "Static site generation (SSG)",
-      "Incremental static regeneration (ISR)",
-      "Hybrid Fetching (Redis + Firebase)",
-    ],
-  },
-  {
-    title: "API Integrations",
-    list: [
-      "REST API implementation",
-      "CRUD operations with Firebase",
-      "API caching with Next Fetch",
-      "Rate limiting & request throttling",
-    ],
-  },
-  {
-    title: "State Management",
-    list: [
-      "Zustand State Efficiency",
-      "Optimized Data Updates",
-      "Persistent Storage Management",
-      "Seamless Zustand Integration",
-    ],
-  },
-  {
-    title: "Theming",
-    list: [
-      "Dark/light theme toggle",
-      "Custom Themes Tailwind",
-      "Enhanced UI Accessibility",
-      "Framer Motion animations",
-    ],
-  },
-  {
-    title: "Performance",
-    list: [
-      "Code Splitting Optimization",
-      "Memoization and Lazy loading",
-      "Advanced Image Optimization",
-      "Optimized Lighthouse Performance",
-    ],
-  },
-  {
-    title: "Security",
-    list: [
-      "Zod frontend validation",
-      "Zod backend validation",
-      "Secure User Authentication",
-      "Advanced Rate Limiting",
+      "Real-time video search",
+      "Embedded video player",
+      "Shorts section with auto playback",
+      "Watch history saved locally",
     ],
   },
   {
     title: "UI & UX",
     list: [
-      "Smooth UI/UX Animations",
-      "Tables Pagination System",
-      "Interactive Toast notifications",
-      "Form Modals Functionality",
+      "Responsive design across devices",
+      "Dark/light mode toggle",
+      "Smooth transitions and interactions",
+      "Modern YouTube-inspired layout",
+    ],
+  },
+  {
+    title: "API Integration",
+    list: [
+      "YouTube Data API v3 integration",
+      "Search, video, and channel endpoints",
+      "Trending and category-based browsing",
+      "Pagination and loading states",
+    ],
+  },
+  {
+    title: "State & Storage",
+    list: [
+      "Local storage for user preferences",
+      "History and theme persistence",
+      "Simple state logic with React hooks",
+      "No external state libraries used",
+    ],
+  },
+  {
+    title: "Performance",
+    list: [
+      "Lazy loading of components",
+      "Code splitting via dynamic imports",
+      "Optimized image thumbnails",
+      "Fast and lightweight architecture",
+    ],
+  },
+  {
+    title: "Accessibility",
+    list: [
+      "Keyboard-friendly navigation",
+      "Screen-reader friendly labels",
+      "Focus outlines for inputs and buttons",
+      "High-contrast support in dark mode",
+    ],
+  },
+  {
+    title: "Theming",
+    list: [
+      "Tailwind-powered dark/light themes",
+      "Customizable color palette",
+      "Consistent UI across views",
+      "User preference stored in local storage",
     ],
   },
 ];
