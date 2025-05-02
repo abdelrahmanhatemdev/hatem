@@ -94,7 +94,10 @@ const Hero = () => {
         }}
         spaceBetween={20}
       >
-        {[1, 2, 3].map((slide, index) => (
+        {[
+          1,
+          // 2, 3
+        ].map((slide, index) => (
           <SwiperSlide key={index}>
             {slide === 1 && (
               <div className="h-full flex flex-col justify-center">
@@ -124,12 +127,9 @@ const Hero = () => {
                         ...slideTransition,
                         delay: 1 * slideSpanDelay,
                       }}
-                      className=" relative inline-block"
+                      className="font-extrabold md:tracking-wider text-[2.3rem] sm:text-[3rem] md:text-[3.5vw] scale-y-105"
                     >
-                      <span>
-Frontend 
-                        
-                      </span>
+                      <span>Frontend</span>
                     </motion.span>
                   </LazyAnimation>
                   <LazyAnimation>
@@ -143,7 +143,7 @@ Frontend
                         delay: 2 * slideSpanDelay,
                       }}
                     >
-                      <strong className="font-extrabold md:tracking-wider text-[2.3rem] sm:text-[3rem] md:text-[3.5vw] scale-y-105">
+                      <strong className="relative inline-block font-normal">
                         Developer
                       </strong>
                     </motion.span>
@@ -160,7 +160,7 @@ Frontend
                       delay: 1 * slideParagraphDelay,
                     }}
                   >
-                    <p className="text-[2.3rem] sm:text-[3rem] md:text-[3.5vw] md:leading-[5vw]">
+                    <p className="text-[2.3rem] sm:text-[3rem] md:text-[3.5vw] md:leading-[5vw] flex gap-2 lg:gap-4 items-center">
                       <motion.span
                         variants={slideVariants}
                         initial={`initial`}
@@ -200,15 +200,15 @@ Frontend
                           ...slideTransition,
                           delay: 1 * slideParagraphDelay + 3 * slideSpanDelay,
                         }}
+                        className="inline-flex justify-center items-center"
                       >
-                        <strong className="font-extrabold md:tracking-wider text-[2.3rem] sm:text-[3rem] md:text-[3.5vw] scale-y-105">
-                          <Image
+                        <Image
                           src="/assets/media/nextjs.webp"
                           width={135}
-                          height={68}
+                          height={60}
                           alt="Next.js"
+                          className="h-full"
                         />
-                        </strong>
                       </motion.span>
                     </p>
                   </motion.span>
@@ -293,7 +293,7 @@ Frontend
                               alt="Egyptian Pyramids"
                               width={200}
                               height={70}
-                               loading="lazy"
+                              loading="lazy"
                               className=" scale-150 opacity-70 group-hover:opacity-100 transition-opacity inline-block"
                             />
                           </motion.span>
