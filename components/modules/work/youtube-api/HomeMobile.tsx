@@ -21,7 +21,7 @@ const DashboardMobile = () => {
         <div className="flex flex-col gap-10 w-full md:w-[calc(50%-2.5rem)]">
           <h2 className="font-ogg text-4xl md:text-[4vw]">
             <motion.p variants={fadeD1} initial="hidden" whileInView="visible">
-              Manage with Ease
+              Watch with Ease
             </motion.p>
             <motion.p variants={fadeD2} initial="hidden" whileInView="visible">
               Anytime
@@ -36,10 +36,10 @@ const DashboardMobile = () => {
             whileInView="visible"
             className="text-lg font-medium text-neutral-400 md:text-[1.3vw]"
           >
-            I built a responsive, user-friendly dashboard that adapts seamlessly
-            to any device, ensuring a smooth experience. Its structured layout
-            helps users stay focused, making key insights and actions easily
-            accessible.
+            I built a responsive, user-friendly interface that adapts
+            beautifully to any screen size, delivering a smooth and immersive
+            viewing experience. The clean layout keeps users focused on content,
+            with quick access to trending videos, Shorts, and more.
           </motion.p>
           <div className="grid gap-5 grid-cols-1 sm:grid-cols-2">
             <motion.div
@@ -49,11 +49,11 @@ const DashboardMobile = () => {
               className="bg-gradient-to-r from-neutral-900/50 to-[#1f1f1f]/50 rounded-3xl border p-10 border-neutral-800 h-full flex flex-col gap-4 justify-center"
             >
               <h3 className="text-xl font-semibold md:text-[1.2vw]">
-                Real-Time Updates
+                Real-Time Content
               </h3>
               <p className="font-semibold text-neutral-400 md:text-[.9vw]">
-                Instantly reflects changes and new data, keeping users informed
-                without manual refreshes.
+                New videos, search results, and suggestions update instantly
+                using the YouTube Data API—no refresh needed.
               </p>
             </motion.div>
             <motion.div
@@ -63,11 +63,12 @@ const DashboardMobile = () => {
               className="bg-gradient-to-r from-neutral-900/50 to-[#1f1f1f]/50 rounded-3xl border p-10 border-neutral-800 h-full flex flex-col gap-4 justify-center"
             >
               <h3 className="text-xl font-semibold md:text-[1.2vw]">
-                Intelligent Navigation
+                Seamless Navigation
               </h3>
               <p className="font-semibold text-neutral-400 md:text-[.9vw]">
-                A well-structured menu and shortcuts allow users to access key
-                sections effortlessly.
+                Smart menus and smooth transitions make exploring content
+                effortless, whether you're browsing, searching, or jumping into
+                a video.
               </p>
             </motion.div>
           </div>
@@ -80,7 +81,7 @@ const DashboardMobile = () => {
             className="flex items-center"
           >
             <Image
-              src="/assets/media/work/vogue-admin/phone-1.webp"
+              src="/assets/media/work/youtube-api/phone-1.webp"
               alt="Dashboard Phone 1"
               className="rounded-[2vw] border border-neutral-800"
               width={306}
@@ -95,7 +96,7 @@ const DashboardMobile = () => {
               whileInView="visible"
             >
               <Image
-                src="/assets/media/work/vogue-admin/phone-2.webp"
+                src="/assets/media/work/youtube-api/phone-2.webp"
                 alt="Dashboard Phone 2"
                 className="rounded-[2vw] border border-neutral-800"
                 width={306}
@@ -109,7 +110,7 @@ const DashboardMobile = () => {
               whileInView="visible"
             >
               <Image
-                src="/assets/media/work/vogue-admin/dashboard-sm.webp"
+                src="/assets/media/work/youtube-api/home-sm.webp"
                 alt="Dashboard 3"
                 className="rounded-[2vw] border border-neutral-800"
                 width={306}

@@ -11,7 +11,7 @@ const DarkCaption = () => {
         <div>
           <motion.div variants={fadeDu1D3} initial="hidden" whileInView="visible" className="w-full h-full">
             <Image
-              src="/assets/media/work/vogue-admin/dashboard.webp"
+              src="/assets/media/work/vogue-admin/home.webp"
               alt="Dashboard"
               className="rounded-xl border-[10px] border-neutral-950/50 max-w-full md:max-w-[50vw] h-auto"
               width={1017}

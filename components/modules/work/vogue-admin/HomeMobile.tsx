@@ -109,7 +109,7 @@ const DashboardMobile = () => {
               whileInView="visible"
             >
               <Image
-                src="/assets/media/work/vogue-admin/dashboard-sm.webp"
+                src="/assets/media/work/vogue-admin/home-sm.webp"
                 alt="Dashboard 3"
                 className="rounded-[2vw] border border-neutral-800"
                 width={306}

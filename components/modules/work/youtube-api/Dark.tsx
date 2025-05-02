@@ -21,7 +21,7 @@ const Dark = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-0">
             <motion.div variants={fadeDu1} initial="hidden" whileInView="visible" className="px-3 md:px-5">
               <Image
-                src="/assets/media/work/vogue-admin/dark-1.webp"
+                src="/assets/media/work/youtube-api/dark-1.webp"
                 alt="Dark 1"
                 className="rounded-2xl border-[5px] border-neutral-950/50 contrast-[105%] max-w-full md:max-w-[25vw] lg:max-w-[15vw] h-auto"
                 width={545}
@@ -31,7 +31,7 @@ const Dark = () => {
             </motion.div>
             <motion.div variants={fadeDu2} initial="hidden" whileInView="visible" className="px-3 md:px-5 md:pt-16">
               <Image
-                src="/assets/media/work/vogue-admin/dark-2.webp"
+                src="/assets/media/work/youtube-api/dark-2.webp"
                 alt="Dark 2"
                 className="rounded-2xl border-[5px] border-neutral-950/50 contrast-[105%] max-w-full md:max-w-[25vw] lg:max-w-[15vw] h-auto"
                 width={545}
@@ -41,7 +41,7 @@ const Dark = () => {
             </motion.div>
             <motion.div variants={fadeDu3} initial="hidden" whileInView="visible" className="px-3 md:px-5 md:pt-32">
               <Image
-                src="/assets/media/work/vogue-admin/dark-3.webp"
+                src="/assets/media/work/youtube-api/dark-3.webp"
                 alt="Dark 3"
                 className="rounded-2xl border-[5px] border-neutral-950/50 contrast-[105%] max-w-full md:max-w-[25vw] lg:max-w-[15vw] h-auto"
                 width={545}

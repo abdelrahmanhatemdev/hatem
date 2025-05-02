@@ -24,10 +24,10 @@ const Brand = () => {
               >
                 <div className="absolute right-3 top-3">
                   <Image
-                    src={`/assets/media/work/vogue-admin/logo-light.webp`}
+                    src={`/assets/media/work/youtube-api/logo-light.webp`}
                     alt="Vogue Admin Logo Light"
-                    width={50}
-                    height={30}
+                    width={70}
+                    height={50}
                     loading="lazy"
                   />
                 </div>
@@ -58,10 +58,10 @@ const Brand = () => {
               >
                 <div className="absolute right-3 top-3">
                   <Image
-                    src={`/assets/media/work/vogue-admin/logo.webp`}
+                    src={`/assets/media/work/youtube-api/logo.webp`}
                     alt="Vogue Admin Logo"
-                    width={50}
-                    height={30}
+                    width={70}
+                    height={50}
                     loading="lazy"
                   />
                 </div>

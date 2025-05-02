@@ -11,7 +11,7 @@ const BigScreen = () => {
         <div className="flex flex-col items-center xl:items-start gap-10 order-2 xl:order-1 ">
           <motion.div variants={fadeDu1} initial="hidden" whileInView="visible" className="max-w-[750px]">
             <Image
-              src="/assets/media/work/vogue-admin/big-screen-1.webp"
+              src="/assets/media/work/youtube-api/big-screen-1.webp"
               alt="Big Screen 1"
               className="rounded-lg md:rounded-[3rem] border-4 md:border-[10px] border-neutral-900/50 max-w-full md:max-w-[90%] h-auto "
               width={1017}
@@ -21,7 +21,7 @@ const BigScreen = () => {
           </motion.div>
           <motion.div variants={fadeDu1} initial="hidden" whileInView="visible" className="max-w-[750px]">
             <Image
-              src="/assets/media/work/vogue-admin/big-screen-2.webp"
+              src="/assets/media/work/youtube-api/big-screen-2.webp"
               alt="Big Screen 2"
               className="rounded-lg md:rounded-[3rem] border-4 md:border-[10px] border-neutral-900/50 max-w-full md:max-w-[90%] h-auto "
               width={1017}
