@@ -7,6 +7,14 @@ import LazyAnimation from "@/components/custom/animation/LazyAnimation";
 
 const expertiseList = [
   {
+    title: "Frontend Development",
+    icon: "frontend",
+    details: `Crafting pixel-perfect, responsive, and accessible interfaces is
+                at the core of my skill set. Leveraging React and Next.js, I
+                create intuitive user experiences that work seamlessly across
+                devices and browsers.`,
+  },
+ {
     title: "Next.js Development",
     icon: "nextjs",
     details: `Next.js is more than just a React framework; it's the backbone
@@ -14,14 +22,6 @@ const expertiseList = [
                 rendering, static site generation, and API integrations, I build
                 fast, scalable, and SEO-friendly web applications tailored to
                 your needs.`,
-  },
-  {
-    title: "Frontend Development",
-    icon: "frontend",
-    details: `Crafting pixel-perfect, responsive, and accessible interfaces is
-                at the core of my skill set. Leveraging React and Next.js, I
-                create intuitive user experiences that work seamlessly across
-                devices and browsers.`,
   },
   {
     title: "Full-Stack Development",
