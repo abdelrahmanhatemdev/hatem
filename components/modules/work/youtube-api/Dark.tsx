@@ -99,7 +99,7 @@ const Dark = () => {
                 whileInView="visible"
                 className="text-lg font-medium text-neutral-400"
               >
-                Dark mode isn't just a visual upgrade. It enhances comfort by
+                Dark mode enhances comfort by
                 reducing glare and eye strain, especially during late-night or
                 low-light viewing. It effortlessly adapts to your environment,
                 offering a seamless and immersive experience day or night.
