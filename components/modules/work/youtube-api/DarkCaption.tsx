@@ -31,11 +31,11 @@ const DarkCaption = () => {
           whileInView="visible"
           className="text-lg md:text-2xl max-w-[600px] text-center font-satoshi text-neutral-500"
         >
-          Designed with comfort in mind, the dark theme offers a
+          Designed with comfort in mind, the dark theme offers a{" "}
           <strong className="font-semibold text-white">
-            visually relaxing experiencefor night browsing
+            visually relaxing experience 
           </strong>{" "}
-          and users who prefer a sleek, modern aesthetic.
+          for night browsing and users who prefer a sleek, modern aesthetic.
         </motion.p>
       </div>
     </section>
