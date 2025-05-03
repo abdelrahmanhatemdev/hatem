@@ -41,7 +41,11 @@ export const stack = [
     },
   ];
 
-  export const details = [
+  export const details: {
+    title: string,
+    value: string,
+    href?: string,
+  }[] = [
     {
       title: "Timeframe",
       value: "2 months",

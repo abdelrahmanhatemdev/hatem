@@ -30,7 +30,11 @@ export const links = [
   },
 ];
 
-export const details = [
+export const details: {
+  title: string;
+  value: string;
+  href?: string;
+}[] = [
   {
     title: "Timeframe",
     value: "1 week",
