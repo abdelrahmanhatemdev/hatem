@@ -67,7 +67,7 @@ const DashboardMobile = () => {
               </h3>
               <p className="font-semibold text-neutral-400 md:text-[.9vw]">
                 Smart menus and smooth transitions make exploring content
-                effortless, whether you're browsing, searching, or jumping into
+                effortless, whether you&apos;re browsing, searching, or jumping into
                 a video.
               </p>
             </motion.div>

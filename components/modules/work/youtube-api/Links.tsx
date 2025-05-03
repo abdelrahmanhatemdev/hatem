@@ -46,7 +46,7 @@ const Links = () => {
             This YouTube UI clone is the result of careful design and constant
             evolution. Each feature is crafted to mirror the essence of the
             YouTube experience, with a focus on functionality and smoothness.
-            It's an ongoing project that I&apos;m always refining, and I&apos;m excited to
+            It&apos;s an ongoing project that I&apos;m always refining, and I&apos;m excited to
             collaborate to make it even better.
           </motion.p>
           <div className="flex flex-col">
