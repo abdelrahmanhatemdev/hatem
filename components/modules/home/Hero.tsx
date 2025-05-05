@@ -94,11 +94,13 @@ const Hero = () => {
         }}
         spaceBetween={20}
       >
-        {[1, 2, 3].map((slide, index) => (
+        {[1, 
+        // 2, 3
+      ].map((slide, index) => (
           <SwiperSlide key={index}>
             {slide === 1 && (
               <div className="h-full flex flex-col justify-center">
-                <p className="text-[2.3rem] sm:text-[3rem] md:text-[3.5vw] md:leading-[5vw] flex items-center gap-[1vw]">
+                <p className="text-[2.3rem] sm:text-[3rem] md:text-[3.5vw] md:leading-[5vw] flex items-center gap-[2vw] md:gap-[1vw] flex-wrap">
                   <LazyAnimation>
                     <motion.span
                       variants={slideVariants}
@@ -106,10 +108,12 @@ const Hero = () => {
                       animate={activeSlide === index + 1 ? `active` : `initial`}
                       exit={`exit`}
                       transition={{ ...slideTransition, delay: 0 }}
+                      className="flex gap-[2vw]"
                     >
-                      <span>
+                      <span >
                         <span className="font-extralight">I</span>
                         <span className="font-extralight">&apos;m </span>
+                        
                       </span>
                       <span className="font-thin">a</span>
                     </motion.span>
