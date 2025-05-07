@@ -110,7 +110,6 @@ const Hero = () => {
                       transition={{ ...slideTransition, delay: 0 }}
                       className="flex gap-[2vw]"
                     >
-                      
                       <span >
                         <span className="font-extralight">I</span>
                         <span className="font-extralight">&apos;m </span>
