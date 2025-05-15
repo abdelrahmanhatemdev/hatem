@@ -94,7 +94,7 @@ const Hero = () => {
         spaceBetween={20}
       >
         {[1, 
-        // 2, 3
+        2, 3
       ].map((slide, index) => (
           <SwiperSlide key={index}>
             {slide === 1 && (
