@@ -2,7 +2,6 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
-import Image from "next/image";
 import { memo, useEffect, useState } from "react";
 import { cn, cubicBezier } from "@/lib/utils";
 import { motion } from "framer-motion";
