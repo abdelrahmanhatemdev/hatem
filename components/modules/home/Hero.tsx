@@ -144,7 +144,7 @@ const Hero = () => {
                         delay: 2 * slideSpanDelay,
                       }}
                     >
-                      <strong className="relative inline-block font-extralight">
+                      <strong className="inline-block font-extralight">
                         Developer
                       </strong>
                     </motion.span>
@@ -203,106 +203,12 @@ const Hero = () => {
                         }}
                         className="inline-flex justify-center items-center"
                       >
-                        <Image
-                          src="/assets/media/nextjs.webp"
-                          width={135}
-                          height={60}
-                          alt="Next.js"
-                          className="h-full"
-                        />
+                        <span className="inline-block font-black">React </span>
                       </motion.span>
                     </p>
                   </motion.span>
                 </LazyAnimation>
-                <LazyAnimation>
-                  <motion.span
-                    variants={slideVariants}
-                    initial={`initial`}
-                    animate={activeSlide === index + 1 ? `active` : `initial`}
-                    exit={`exit`}
-                    transition={{
-                      ...slideTransition,
-                      delay: 2 * slideParagraphDelay,
-                    }}
-                  >
-                    <p className="text-[2.3rem] sm:text-[3rem] md:text-[3.5vw] md:leading-[5vw]">
-                      <motion.span
-                        variants={slideVariants}
-                        initial={`initial`}
-                        animate={
-                          activeSlide === index + 1 ? `active` : `initial`
-                        }
-                        exit={`exit`}
-                        transition={{
-                          ...slideTransition,
-                          delay: 2 * slideParagraphDelay + 1 * slideSpanDelay,
-                        }}
-                      >
-                        <span className="font-extralight">Based </span>
-                      </motion.span>
-                      <motion.span
-                        variants={slideVariants}
-                        initial={`initial`}
-                        animate={
-                          activeSlide === index + 1 ? `active` : `initial`
-                        }
-                        exit={`exit`}
-                        transition={{
-                          ...slideTransition,
-                          delay: 2 * slideParagraphDelay + 2 * slideSpanDelay,
-                        }}
-                      >
-                        <span className="font-thin">in </span>
-                      </motion.span>
-                      <motion.span
-                        variants={slideVariants}
-                        initial={`initial`}
-                        animate={
-                          activeSlide === index + 1 ? `active` : `initial`
-                        }
-                        exit={`exit`}
-                        transition={{
-                          ...slideTransition,
-                          delay: 2 * slideParagraphDelay + 3 * slideSpanDelay,
-                        }}
-                      >
-                        <span className="inline-block relative">
-                          <strong className="font-extrabold md:tracking-wider text-[2.3rem] sm:text-[3rem] md:text-[3.5vw] scale-y-105">
-                            Cairo
-                          </strong>
-                        </span>
-                        <span className=" group">
-                          <motion.span
-                            variants={slideVariants}
-                            initial={{ opacity: 0, x: -100 }}
-                            animate={
-                              activeSlide === index + 1
-                                ? { opacity: 1, x: 0 }
-                                : { opacity: 0, x: -100 }
-                            }
-                            exit={{ opacity: 0, x: -100 }}
-                            transition={{
-                              ...slideTransition,
-                              delay:
-                                2 * slideParagraphDelay + 2 * slideSpanDelay,
-                              duration: 1,
-                            }}
-                            className="inline-block"
-                          >
-                            <Image
-                              src={"/assets/media/pyramids.webp"}
-                              alt="Egyptian Pyramids"
-                              width={200}
-                              height={70}
-                              loading="lazy"
-                              className=" scale-150 opacity-70 group-hover:opacity-100 transition-opacity inline-block"
-                            />
-                          </motion.span>
-                        </span>
-                      </motion.span>
-                    </p>
-                  </motion.span>
-                </LazyAnimation>
+              
               </div>
             )}
             {slide === 2 && (
