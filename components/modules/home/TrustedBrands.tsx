@@ -52,17 +52,13 @@ const TrustedBrands = () => {
                     },
                   }}
                 >
-                  <div className="group cursor-pointer p-4 bg-neutral-900 rounded-3xl border border-neutral-800  transition-colors duration-500 ease-in-out">
+                  <div className="group cursor-pointer p-2 bg-neutral-950 rounded-3xl border border-neutral-800 shadow-[0_0_20px_rgba(80,80,80,0.2)]">
                     <Image
                       src={`/assets/media/brands/${brand}.webp`}
                       alt={`${brand.replaceAll("-", " ")}`}
                       width={180}
                       height={180}
-                      loading="lazy"
-                      className="transition duration-500 ease-in-out
-                       brightness-0 contrast-200 invert
-                       group-hover:brightness-100 group-hover:contrast-100 group-hover:invert-0
-                       "
+                      className="size-28"
                     />
                   </div>
                 </motion.div>
