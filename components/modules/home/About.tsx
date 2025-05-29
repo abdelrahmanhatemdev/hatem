@@ -2,8 +2,6 @@ import { memo } from "react";
 import dynamic from "next/dynamic";
 import { animate } from "@/lib/animation/animate";
 
-
-
 const Description = dynamic(
   () => import("@/components/modules/home/about/Description")
 );

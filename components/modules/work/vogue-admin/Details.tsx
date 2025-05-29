@@ -3,7 +3,7 @@ import { memo } from "react";
 import { easeInOut, motion } from "framer-motion";
 import { fade, fadeD2, fadeD5, fadeScaleD2 } from "@/lib/animation";
 
-import { stack, details } from "@/data/vogueAdmin";
+import { stack, details } from "@/data/works/vogueAdmin";
 
 const Details = () => {
   return (

@@ -2,7 +2,7 @@
 import { memo } from "react";
 import { motion } from "framer-motion";
 import { fadeD1, fadeDu1D1, fadeDu1D2, fadeDu1D3 } from "@/lib/animation";
-import { links } from "@/data/vogueAdmin";
+import { links } from "@/data/works/vogueAdmin";
 
 const Links = () => {
   return (

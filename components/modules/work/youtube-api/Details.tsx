@@ -3,7 +3,7 @@ import { memo } from "react";
 import { easeInOut, motion } from "framer-motion";
 import { fade, fadeD2, fadeD5, fadeScaleD2 } from "@/lib/animation";
 
-import { details, stack } from "@/data/youtubeAPI";
+import { details, stack } from "@/data/works/youtubeAPI";
 
 const Details = () => {
   return (
