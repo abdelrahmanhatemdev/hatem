@@ -1,32 +1,22 @@
-"use client";
-import { motion } from "framer-motion";
 import { memo } from "react";
 import dynamic from "next/dynamic";
-import {
-  fade,
-  fadeScaleD1,
-  fadeScaleD2,
-  fadeScaleD3,
-  fadeScaleD4,
-} from "@/lib/animation";
+import { animate } from "@/lib/animation/animate";
 
 const ThreeQuarterCircle = dynamic(
-  () => import("@/components/modules/cta/ThreeQuarterCircle"),
-  {
-    ssr: false,
-    loading: () => <></>,
-  }
+  () => import("@/components/modules/cta/ThreeQuarterCircle")
 );
+const Animate = dynamic(() => import("@/components/custom/animation/Animate"));
+
+const fade = animate({ type: "fade" });
+const fadeScale1 = animate({ type: "fadeScale" });
+const fadeScale2 = animate({ type: "fadeScale", delay: 0.4 });
+const fadeScale3 = animate({ type: "fadeScale", delay: 0.5 });
+const fadeScale4 = animate({ type: "fadeScale", delay: 0.6 });
 
 const CTA = () => {
   return (
     <section className="w-full pt-40 px-8 relative" id="contact">
-      <motion.div
-        initial="hidden"
-        whileInView="visible"
-        variants={fade}
-        viewport={{ once: true, amount: 0.2 }}
-      >
+      <Animate variants={fade} viewOnce={true}>
         <div className="xs:w-[calc(95%-80px)] md:w-[78%] mx-auto h-full relative pt-4 z-10">
           <div
             className="w-full h-16 grid lg:grid-cols-3 absolute left-0 -top-12 border border-dashed 
@@ -60,16 +50,11 @@ const CTA = () => {
             p-5 w-full text-center relative z-20
           "
           >
-            <motion.div
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.2 }}
-              variants={fadeScaleD1}
-            >
+            <Animate viewOnce={true} variants={fadeScale1}>
               <h2 className="text-3xl lg:text-[3.2vw] bg-gradient-to-b from-neutral-50 to-neutral-300 bg-clip-text text-transparent font-extrabold lg:leading-[5rem] leading-10">
                 Turn Your Vision Into a Stunning Reality!
               </h2>
-            </motion.div>
+            </Animate>
             <div
               className="w-8 md:w-16 h-[calc(100%+2px)]  absolute -top-[1px] -left-8 md:-left-16 border border-dashed 
           border-[#191919] border-x-0"
@@ -83,12 +68,7 @@ const CTA = () => {
             className="border border-dashed border-[#191919] border-t-0
            w-full text-center flex items-start justify-center p-10 relative"
           >
-            <motion.div
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.2 }}
-              variants={fadeScaleD2}
-            >
+            <Animate viewOnce={true} variants={fadeScale2}>
               <p className="lg:text-2xl text-neutral-500 text-center max-w-[800px] sm:leading-7 lg:leading-10">
                 I provide the
                 <strong className="font-bold text-neutral-50">
@@ -112,7 +92,7 @@ const CTA = () => {
                   push your success to new heights!
                 </strong>
               </p>
-            </motion.div>
+            </Animate>
 
             <div
               className="w-8 md:w-16 h-[calc(100%+2px)] absolute -top-[1px] -left-8 md:-left-16 border border-dashed 
@@ -137,11 +117,9 @@ const CTA = () => {
             ></div>
             <div className="bg-neutral-950 bg-opacity-10 hover:bg-opacity-70 transition-colors duration-500"></div>
             <div className="h-full lg:border border-dashed border-[#191919] border-y-transparent flex items-center justify-center flex-wrap gap-4 py-12 relative">
-              <motion.div
-                initial="hidden"
-                whileInView="visible"
-                variants={fadeScaleD3}
-                viewport={{ once: true, amount: 0.2 }}
+              <Animate
+                viewOnce={true}
+                variants={fadeScale3}
                 className="min-w-fit"
               >
                 <a
@@ -151,12 +129,10 @@ const CTA = () => {
                 >
                   Join a Team
                 </a>
-              </motion.div>
-              <motion.div
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, amount: 0.2 }}
-                variants={fadeScaleD4}
+              </Animate>
+              <Animate
+                viewOnce={true}
+                variants={fadeScale4}
                 className="min-w-fit"
               >
                 <a
@@ -166,7 +142,7 @@ const CTA = () => {
                 >
                   Start a Project
                 </a>
-              </motion.div>
+              </Animate>
               <ThreeQuarterCircle
                 size={80}
                 strokeColor="#262626"
@@ -180,7 +156,7 @@ const CTA = () => {
             <div className="bg-neutral-950 bg-opacity-10 hover:bg-opacity-70 transition-colors duration-500"></div>
           </div>
         </div>
-      </motion.div>
+      </Animate>
     </section>
   );
 };

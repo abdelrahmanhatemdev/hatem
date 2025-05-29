@@ -1,16 +1,12 @@
-"use client";
 import { memo } from "react";
 import dynamic from "next/dynamic";
-import Loading from "@/components/custom/Loading";
 
 const VogeAdmin = dynamic(
-  () => import("@/components/modules/home/works/VogueAdmin"),
-  { loading: Loading, ssr: false }
+  () => import("@/components/modules/home/works/VogueAdmin")
 );
 
 const YoutubeAPI = dynamic(
-  () => import("@/components/modules/home/works/YoutubeAPI"),
-  { loading: Loading, ssr: false }
+  () => import("@/components/modules/home/works/YoutubeAPI")
 );
 
 const SelectedWorks = () => {

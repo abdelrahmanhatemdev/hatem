@@ -1,46 +1,18 @@
-"use client";
 import dynamic from "next/dynamic";
-// import Loading from "@/components/custom/Loading";
 
-const Hero = dynamic(() => import("@/components/modules/home/Hero"), {
-  loading: () => <></>,
-  ssr: false
-});
-
-const About = dynamic(() => import("@/components/modules/home/About"), {
-  loading: () => <></>,
-  ssr: false,
-});
-
-const SelectedWorks = dynamic(() => import("@/components/modules/home/Works"), {
-  loading: () => <></>,
-  ssr: false,
-});
-
-const Expertise = dynamic(() => import("@/components/modules/home/Expertise"), {
-  loading: () => <></>,
-  ssr: false,
-});
-
-const WorkProcess = dynamic(
-  () => import("@/components/modules/home/WorkProcess"),
-  {
-    loading: () => <></>,
-    ssr: false,
-  }
-);
-
-const Stack = dynamic(() => import("@/components/modules/home/Stack"), {
-  loading: () => <></>,
-  ssr: false,
-});
+const Hero = dynamic(() => import("@/components/modules/home/Hero"));
+const About = dynamic(() => import("@/components/modules/home/About"));
+const SelectedWorks = dynamic(() => import("@/components/modules/home/Works"));
+const Expertise = dynamic(() => import("@/components/modules/home/Expertise"));
+const WorkProcess = dynamic(() => import("@/components/modules/home/WorkProcess"));
+const Stack = dynamic(() => import("@/components/modules/home/Stack"));
 
 const Home = () => {
   return (
     <>
       <Hero />
       <About />
-      <SelectedWorks/>
+      <SelectedWorks />
       <Expertise />
       <WorkProcess />
       <Stack />

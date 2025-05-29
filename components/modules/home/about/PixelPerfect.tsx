@@ -1,18 +1,17 @@
-import LazyAnimation from "@/components/custom/animation/LazyAnimation";
-import { fadeScaleD2 } from "@/lib/animation";
-import { motion } from "framer-motion";
 import Link from "next/link";
 import { memo } from "react";
 import { HiArrowLongRight } from "react-icons/hi2";
+import { animate } from "@/lib/animation/animate";
+import dynamic from "next/dynamic";
+
+const Animate = dynamic(() => import("@/components/custom/animation/Animate"));
+
+const fadeScale2 = animate({ type: "fadeScale", delay: 0.5 });
 
 const PixelPerfect = () => {
   return (
-    <LazyAnimation>
-      <motion.div
-        initial="hidden"
-        whileInView="visible"
-        variants={fadeScaleD2}
-        layout
+      <Animate
+        variants={fadeScale2}
       >
         <div className="bg-gradient-to-r from-neutral-900 to-[#1f1f1f] rounded-3xl border pt-10 border-neutral-800 h-full flex flex-col gap-10 justify-center overflow-hidden">
           <div className="flex flex-col gap-4 items-start px-8">
@@ -50,8 +49,7 @@ const PixelPerfect = () => {
             </video>
           </div>
         </div>
-      </motion.div>
-    </LazyAnimation>
+      </Animate>
   );
 };
 export default memo(PixelPerfect);

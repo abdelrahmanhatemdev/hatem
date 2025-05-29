@@ -1,20 +1,11 @@
 import { memo, ReactNode } from "react";
 import dynamic from "next/dynamic";
 
-const Header = dynamic(() => import("@/components/modules/header/Header"), {
-  ssr: false,
-  loading: () => <></>
-});
+const Header = dynamic(() => import("@/components/modules/header/Header"));
 
-const CTA = dynamic(() => import("@/components/modules/cta"), {
-  ssr: false,
-  loading: () => <></>,
-});
+const CTA = dynamic(() => import("@/components/modules/cta"))
 
-const Footer = dynamic(() => import("@/components/modules/footer/Footer"), {
-  ssr: false,
-  loading: () => <></>,
-});
+const Footer = dynamic(() => import("@/components/modules/footer/Footer"))
 
 function AppLayout({ children }: Readonly<{ children: ReactNode }>) {
   return (

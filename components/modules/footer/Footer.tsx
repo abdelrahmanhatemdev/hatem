@@ -1,23 +1,17 @@
 import Link from "next/link";
-import { motion } from "framer-motion";
 import dynamic from "next/dynamic";
-import Loading from "@/components/custom/Loading";
-import { fade } from "@/lib/animation";
+import { animate } from "@/lib/animation/animate";
+
+const Animate = dynamic(() => import("@/components/custom/animation/Animate"));
+
+const fade = animate({ type: "fade" });
 
 const AnimatedText = dynamic(
-  () => import("@/components/custom/animation/animatedText/AnimatedText"),
-  {
-    loading: Loading,
-    ssr: false,
-  }
+  () => import("@/components/custom/animation/animatedText/AnimatedText")
 );
 
 const AnimateTextOnHover = dynamic(
-  () => import("@/components/custom/animation/animatedText/AnimateTextOnHover"),
-  {
-    loading: Loading,
-    ssr: false,
-  }
+  () => import("@/components/custom/animation/animatedText/AnimateTextOnHover")
 );
 
 const Footer = () => {
@@ -25,7 +19,7 @@ const Footer = () => {
 
   return (
     <>
-      <motion.div initial="hidden" whileInView="visible" variants={fade} layout>
+      <Animate variants={fade}>
         <footer className="w-[90%] mx-auto lg:w-full mt-64 md:mt-72 mb-10 md:p-5">
           <div className="0 border border-neutral-800 lg:p-20 lg:pb-10 p-10 rounded-xl 2xl:w-[75%] mx-auto bg-gradient-to-r from-neutral-900 to-[#1f1f1f] flex flex-col lg:gap-20 gap-10">
             <div className="flex justify-between w-full lg:gap-20 gap-10 flex-col lg:flex-row">
@@ -114,11 +108,7 @@ const Footer = () => {
                 </a>
               </div>
             </div>
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              className="inline-block"
-            >
+            <Animate variants={fade}>
               <div className="grid lg:grid-cols-3 items-center border-t border-neutral-800 pt-10 gap-10">
                 <div className="flex justify-between items-center order-2 md:order-1 flex-wrap">
                   <Link
@@ -174,10 +164,10 @@ const Footer = () => {
                   </span>
                 </p>
               </div>
-            </motion.div>
+            </Animate>
           </div>
         </footer>
-      </motion.div>
+      </Animate>
     </>
   );
 };

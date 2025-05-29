@@ -12,10 +12,7 @@ import { FaGithub } from "react-icons/fa";
 import { TbBrandLinkedinFilled } from "react-icons/tb";
 import dynamic from "next/dynamic";
 
-const Logo = dynamic(() => import("@/components/custom/Logo"), {
-  loading: () => <></>,
-  ssr: false,
-});
+const Logo = dynamic(() => import("@/components/custom/Logo"));
 
 function Header() {
   return (

@@ -86,7 +86,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body
-        className={`${interTight.className} ${interTight.variable} ${satoshi.variable} ${ogg.variable} antialiased`}
+        className={`antialiased`}
       >
         {children}
       </body>
