@@ -4,9 +4,6 @@ import { memo } from "react";
 import {easeInOut, motion} from "framer-motion"
 import { features } from "@/data/works/youtubeAPI";
 
-import dynamic from "next/dynamic";
-const Animate = dynamic(() => import("@/components/custom/animation/Animate"));
-
 
 const Features = () => {
   return (

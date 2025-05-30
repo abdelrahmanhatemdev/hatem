@@ -1,3 +1,4 @@
+"use client"
 import Image from "next/image";
 import { memo, useRef } from "react";
 import { useScroll, useTransform } from "framer-motion";

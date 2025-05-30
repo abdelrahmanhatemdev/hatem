@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { memo } from "react";
 import { HiArrowLongRight } from "react-icons/hi2";
-import { animate } from "@/lib/animation/animate";
 import dynamic from "next/dynamic";
 import { fadeScaleD2 } from "@/lib/animation";
 
