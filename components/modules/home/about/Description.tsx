@@ -22,13 +22,13 @@ const Performance = () => {
             Crafting Code with Precision and Purpose
           </h2>
           <div>
-            <span className="lg:text-xl text-neutral-400 leading-6 font-normal">
+            <span className="lg:text-xl text-neutral-300 leading-6 font-normal">
               I am passionate and dedicated for creating high-performing,
               seamless web applications. With expertise in building scalable and
               efficient frontend solutions, I specialize in turning complex
               ideas into functional, user-friendly experiences.
             </span>
-            <span className="md:text-xl text-neutral-400 leading-6 font-normal">
+            <span className="md:text-xl text-neutral-300 leading-6 font-normal">
               With a commitment to excellence and adaptability, I aim to deliver
               results that not only meet but exceed expectations—empowering
               businesses to thrive in the digital landscape.
