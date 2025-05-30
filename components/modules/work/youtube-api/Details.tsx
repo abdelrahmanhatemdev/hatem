@@ -5,23 +5,23 @@ import { fade, fadeD2, fadeD5, fadeScaleD2 } from "@/lib/animation";
 
 import { details, stack } from "@/data/works/youtubeAPI";
 
+import dynamic from "next/dynamic";
+const Animate = dynamic(() => import("@/components/custom/animation/Animate"));
+
 const Details = () => {
   return (
     <section className="px-3 md:px-6">
-      <motion.h1
+      <Animate
         variants={fade}
-        initial="hidden"
-        whileInView="visible"
+        element="h1"
         className="py-8 lg:py-[2vw] text-[12vw] md:text-[9vw] font-black font-satoshi"
       >
         Youtube API
-      </motion.h1>
+      </Animate>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-12 lg:gap-0">
         <div className="flex gap-5 lg:gap-20">
-          <motion.div
+          <Animate
             variants={fadeD2}
-            initial="hidden"
-            whileInView="visible"
             className="flex flex-col gap-2 lg:gap-[1vw]"
           >
             {details.map((item, i) => {
@@ -46,7 +46,7 @@ const Details = () => {
                 </div>
               );
             })}
-          </motion.div>
+          </Animate>
           <motion.div
             initial={{ opacity: 0, height: 0 }}
             whileInView={{
@@ -72,10 +72,8 @@ const Details = () => {
             ))}
           </motion.div>
         </div>
-        <motion.div
+        <Animate
           variants={fadeD5}
-          initial="hidden"
-          whileInView="visible"
           className="text-base md:text-[1.7vw] font-medium text-neutral-200"
         >
           I built YouTube UI clone to capture the essence of YouTube with a
@@ -84,7 +82,7 @@ const Details = () => {
           dark mode, watch history, and an interactive Shorts section. Every
           interaction is smooth and fast, delivering a blazing-fast, app-like
           experience optimized for both performance and delight.
-        </motion.div>
+        </Animate>
       </div>
     </section>
   );

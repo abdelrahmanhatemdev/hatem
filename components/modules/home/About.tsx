@@ -1,6 +1,6 @@
 import { memo } from "react";
 import dynamic from "next/dynamic";
-import { animate } from "@/lib/animation/animate";
+import { fadeScale, fadeScaleD1 } from "@/lib/animation";
 
 const Description = dynamic(
   () => import("@/components/modules/home/about/Description")
@@ -30,8 +30,6 @@ const TrustedBrands = dynamic(
 
 const Animate = dynamic(() => import("@/components/custom/animation/Animate"));
 
-const fadeScale = animate({ type: "fadeScale" });
-const fadeScale1 = animate({ type: "fadeScale", delay: 0.4 });
 
 const About = () => {
   return (
@@ -42,7 +40,7 @@ const About = () => {
           <Animate variants={fadeScale} className="max-w-full">
             <ResponsiveWeb />
           </Animate>
-          <Animate variants={fadeScale1}>
+          <Animate variants={fadeScaleD1}>
             <Performance />
           </Animate>
         </div>

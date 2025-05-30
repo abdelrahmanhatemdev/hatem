@@ -1,7 +1,5 @@
-"use client";
 import Image from "next/image";
 import { memo } from "react";
-import { motion } from "framer-motion";
 import {
   fadeD1,
   fadeD2,
@@ -13,6 +11,8 @@ import {
   fadeScaleD4,
   fadeScaleD5,
 } from "@/lib/animation";
+import dynamic from "next/dynamic";
+const Animate = dynamic(() => import("@/components/custom/animation/Animate"));
 
 const DashboardMobile = () => {
   return (
@@ -20,32 +20,29 @@ const DashboardMobile = () => {
       <div className="flex justify-between flex-wrap gap-20 md:px-6 lg:px-28 w-full">
         <div className="flex flex-col gap-10 w-full md:w-[calc(50%-2.5rem)]">
           <h2 className="font-ogg text-4xl md:text-[4vw]">
-            <motion.p variants={fadeD1} initial="hidden" whileInView="visible">
+            <Animate element="p" variants={fadeD1}>
               Manage with Ease
-            </motion.p>
-            <motion.p variants={fadeD2} initial="hidden" whileInView="visible">
+            </Animate>
+            <Animate element="p" variants={fadeD2}>
               Anytime
-            </motion.p>
-            <motion.p variants={fadeD3} initial="hidden" whileInView="visible">
+            </Animate>
+            <Animate element="p" variants={fadeD3}>
               Anywhere
-            </motion.p>
+            </Animate>
           </h2>
-          <motion.p
+          <Animate
+            element="p"
             variants={fadeD4}
-            initial="hidden"
-            whileInView="visible"
             className="text-lg font-medium text-neutral-400 md:text-[1.3vw]"
           >
             I built a responsive, user-friendly dashboard that adapts seamlessly
             to any device, ensuring a smooth experience. Its structured layout
             helps users stay focused, making key insights and actions easily
             accessible.
-          </motion.p>
+          </Animate>
           <div className="grid gap-5 grid-cols-1 sm:grid-cols-2">
-            <motion.div
+            <Animate
               variants={fadeScaleD4}
-              initial="hidden"
-              whileInView="visible"
               className="bg-gradient-to-r from-neutral-900/50 to-[#1f1f1f]/50 rounded-3xl border p-10 border-neutral-800 h-full flex flex-col gap-4 justify-center"
             >
               <h3 className="text-xl font-semibold md:text-[1.2vw]">
@@ -55,11 +52,9 @@ const DashboardMobile = () => {
                 Instantly reflects changes and new data, keeping users informed
                 without manual refreshes.
               </p>
-            </motion.div>
-            <motion.div
+            </Animate>
+            <Animate
               variants={fadeScaleD5}
-              initial="hidden"
-              whileInView="visible"
               className="bg-gradient-to-r from-neutral-900/50 to-[#1f1f1f]/50 rounded-3xl border p-10 border-neutral-800 h-full flex flex-col gap-4 justify-center"
             >
               <h3 className="text-xl font-semibold md:text-[1.2vw]">
@@ -69,16 +64,11 @@ const DashboardMobile = () => {
                 A well-structured menu and shortcuts allow users to access key
                 sections effortlessly.
               </p>
-            </motion.div>
+            </Animate>
           </div>
         </div>
         <div className="flex flex-col sm:flex-row justify-center items-center gap-10 grow md:w-[calc(50%-2.5rem)]">
-          <motion.div
-            variants={fadeDu2}
-            initial="hidden"
-            whileInView="visible"
-            className="flex items-center"
-          >
+          <Animate variants={fadeDu2} className="flex items-center">
             <Image
               src="/assets/media/work/vogue-admin/phone-1.webp"
               alt="Dashboard Phone 1"
@@ -87,13 +77,9 @@ const DashboardMobile = () => {
               height={600}
               loading="lazy"
             />
-          </motion.div>
+          </Animate>
           <div className="flex flex-col gap-10">
-            <motion.div
-              variants={fadeDu1}
-              initial="hidden"
-              whileInView="visible"
-            >
+            <Animate variants={fadeDu1}>
               <Image
                 src="/assets/media/work/vogue-admin/phone-2.webp"
                 alt="Dashboard Phone 2"
@@ -102,12 +88,8 @@ const DashboardMobile = () => {
                 height={600}
                 loading="lazy"
               />
-            </motion.div>
-            <motion.div
-              variants={fadeDu3}
-              initial="hidden"
-              whileInView="visible"
-            >
+            </Animate>
+            <Animate variants={fadeDu3}>
               <Image
                 src="/assets/media/work/vogue-admin/home-sm.webp"
                 alt="Dashboard 3"
@@ -116,7 +98,7 @@ const DashboardMobile = () => {
                 height={600}
                 loading="lazy"
               />
-            </motion.div>
+            </Animate>
           </div>
         </div>
       </div>

@@ -2,20 +2,21 @@
 import Image from "next/image";
 import { easeInOut, motion } from "framer-motion";
 import { fadeScale, fadeScaleD4 } from "@/lib/animation";
+import dynamic from "next/dynamic";
+const Animate = dynamic(() => import("@/components/custom/animation/Animate"));
+
 const Dashboard = () => {
   return (
     <section className="py-10 lg:py-32 px-3 md:px-6 w-full">
       <div className="bg-neutral-950/50">
         <div className="w-full grid grid-cols-1 md:grid-cols-[35%_65%] p-3 lg:p-28 gap-4">
-          <motion.div
+          <Animate
             variants={fadeScaleD4}
-            initial="hidden"
-            whileInView={"visible"}
             className="flex items-end grow-0 max-w-96 text-lg order-2 md:order-1"
           >
             The Dashboard provides real-time insights with a clean, intuitive
             layout, keeping key metrics and trends easily accessible.
-          </motion.div>
+          </Animate>
           <div className="flex flex-col gap-24 order-1 md:order-2">
             <motion.div
               initial={{ opacity: 0 }}
@@ -33,15 +34,13 @@ const Dashboard = () => {
                  loading="lazy"
               />
             </motion.div>
-            <motion.p
+            <Animate element="p"
               variants={fadeScale}
-              initial="hidden"
-              whileInView={"visible"}
               className="max-w-96 text-lg"
             >
               With dynamic widgets and smooth navigation, it simplifies data
               analysis, empowering businesses to make quick, informed decisions.
-            </motion.p>
+            </Animate>
           </div>
         </div>
       </div>

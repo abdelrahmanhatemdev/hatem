@@ -4,14 +4,15 @@ import { motion } from "framer-motion";
 import { fadeD1, fadeDu1D1, fadeDu1D2, fadeDu1D3 } from "@/lib/animation";
 import { links } from "@/data/works/youtubeAPI";
 
+import dynamic from "next/dynamic";
+const Animate = dynamic(() => import("@/components/custom/animation/Animate"));
+
 const Links = () => {
   return (
     <section className="py-10 lg:py-32 px-3 md:px-6">
       <div className="flex justify-between flex-wrap gap-20">
-        <motion.div
+        <Animate
           variants={fadeD1}
-          initial="hidden"
-          whileInView="visible"
           className="flex flex-col gap-2 lg:gap-5 order-2 md:order-1"
         >
           {links.map((item, i) => {
@@ -34,13 +35,12 @@ const Links = () => {
               </div>
             );
           })}
-        </motion.div>
+        </Animate>
 
         <div className="flex flex-col gap-5 md:text-[1.5vw] lg:text-[1.2vw] md:max-w-[40vw] order-1 md:order-2">
-          <motion.p
+          <Animate
             variants={fadeDu1D1}
-            initial="hidden"
-            whileInView="visible"
+            element="p"
             className=" font-medium"
           >
             This YouTube UI clone is the result of careful design and constant
@@ -48,27 +48,25 @@ const Links = () => {
             YouTube experience, with a focus on functionality and smoothness.
             It&apos;s an ongoing project that I&apos;m always refining, and I&apos;m excited to
             collaborate to make it even better.
-          </motion.p>
+          </Animate>
           <div className="flex flex-col">
-            <motion.p
+            <Animate
               variants={fadeDu1D2}
-              initial="hidden"
-              whileInView="visible"
+              element="p"
               className="font-extrabold font-satoshi"
             >
               <span className="text-neutral-600 md:text-[1.2vw] lg:text-[1vw]">
                 Abdelrahman
               </span>{" "}
               Hatem
-            </motion.p>
-            <motion.p
+            </Animate>
+            <Animate
               variants={fadeDu1D3}
-              initial="hidden"
-              whileInView="visible"
+              element="p"
               className="text-base md:text-[1vw] lg:text-[0.8vw]"
             >
               Nextjs <span className="text-neutral-600">Developer</span>{" "}
-            </motion.p>
+            </Animate>
           </div>
         </div>
       </div>

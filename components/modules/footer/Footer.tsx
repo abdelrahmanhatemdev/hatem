@@ -1,15 +1,11 @@
 import Link from "next/link";
 import dynamic from "next/dynamic";
-import { animate } from "@/lib/animation/animate";
+import { fade } from "@/lib/animation";
 
 const Animate = dynamic(() => import("@/components/custom/animation/Animate"));
-
-const fade = animate({ type: "fade" });
-
 const AnimatedText = dynamic(
   () => import("@/components/custom/animation/animatedText/AnimatedText")
 );
-
 const AnimateTextOnHover = dynamic(
   () => import("@/components/custom/animation/animatedText/AnimateTextOnHover")
 );

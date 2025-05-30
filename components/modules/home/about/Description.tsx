@@ -1,14 +1,9 @@
 import { memo } from "react";
-import { animate } from "@/lib/animation/animate";
 import dynamic from "next/dynamic";
+import { fadeScale, fadeScaleD1, fadeScaleD2, fadeScaleD3, fadeScaleD4 } from "@/lib/animation";
 
 const Animate = dynamic(() => import("@/components/custom/animation/Animate"));
 
-const fadeScale = animate({ type: "fadeScale" });
-const fadeScale1 = animate({ type: "fadeScale", delay: 0.4 });
-const fadeScale2 = animate({ type: "fadeScale", delay: 0.5 });
-const fadeScale3 = animate({ type: "fadeScale", delay: 0.6 });
-const fadeScale4 = animate({ type: "fadeScale", delay: 0.7 });
 
 const Performance = () => {
   return (
@@ -38,7 +33,7 @@ const Performance = () => {
       </div>
       <div className="grid grid-cols-2 lg:gap-8 gap-5">
         <Animate
-          variants={fadeScale1}
+          variants={fadeScaleD1}
           className="bg-gradient-to-r from-neutral-900 to-[#1f1f1f] aspect-square md:aspect-auto rounded-3xl border border-neutral-800 md:p-10 flex flex-col gap-2 items-center justify-center"
         >
           <h3 className="text-3xl md:text-5xl font-medium bg-gradient-to-b from-sky-600 to-sky-400 bg-clip-text text-transparent flex gap-1 items-center">
@@ -51,7 +46,7 @@ const Performance = () => {
         </Animate>
 
         <Animate
-          variants={fadeScale2}
+          variants={fadeScaleD2}
           className="bg-gradient-to-r from-neutral-900 to-[#1f1f1f] aspect-square md:aspect-auto rounded-3xl border border-neutral-800 md:p-10 flex flex-col gap-2 items-center justify-center"
         >
           <h3 className="text-3xl md:text-5xl font-medium bg-gradient-to-b from-sky-600 to-sky-400 bg-clip-text text-transparent flex gap-1 items-center">
@@ -64,7 +59,7 @@ const Performance = () => {
         </Animate>
 
         <Animate
-          variants={fadeScale3}
+          variants={fadeScaleD3}
           className="bg-gradient-to-r from-neutral-900 to-[#1f1f1f] aspect-square md:aspect-auto rounded-3xl border border-neutral-800 md:p-10 flex flex-col gap-2 items-center justify-center"
         >
           {" "}
@@ -78,7 +73,7 @@ const Performance = () => {
         </Animate>
 
         <Animate
-          variants={fadeScale4}
+          variants={fadeScaleD4}
           className="bg-gradient-to-r from-neutral-900 to-[#1f1f1f] aspect-square md:aspect-auto rounded-3xl border border-neutral-800 md:p-10 flex flex-col gap-2 items-center justify-center"
         >
           <h3 className="text-3xl md:text-5xl font-medium bg-gradient-to-b from-sky-600 to-sky-400 bg-clip-text text-transparent flex gap-1 items-center">

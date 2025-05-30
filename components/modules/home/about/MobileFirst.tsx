@@ -5,15 +5,14 @@ import Image from "next/image";
 import Link from "next/link";
 import { memo } from "react";
 import { HiArrowLongRight } from "react-icons/hi2";
-import { animate } from "@/lib/animation/animate";
 import dynamic from "next/dynamic";
+import { fadeScaleD1 } from "@/lib/animation";
 
 const Animate = dynamic(() => import("@/components/custom/animation/Animate"));
-const fadeScale1 = animate({ type: "fadeScale", delay: 0.4 });
 
 const MobileFirst = () => {
   return (
-      <Animate variants={fadeScale1}>
+      <Animate variants={fadeScaleD1}>
         <div className="bg-gradient-to-r from-neutral-900 to-[#1f1f1f] rounded-3xl border pt-10 border-neutral-800 h-full flex flex-col gap-10 justify-center overflow-hidden relative">
           <div className="flex flex-col gap-4 items-start px-8">
             <h3 className="text-xl font-semibold ">Mobile-First Design</h3>

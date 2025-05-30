@@ -1,17 +1,13 @@
 import { memo } from "react";
 import dynamic from "next/dynamic";
-import { animate } from "@/lib/animation/animate";
+import { fade, fadeScaleD1, fadeScaleD2, fadeScaleD3, fadeScaleD4 } from "@/lib/animation";
 
 const ThreeQuarterCircle = dynamic(
   () => import("@/components/modules/cta/ThreeQuarterCircle")
 );
 const Animate = dynamic(() => import("@/components/custom/animation/Animate"));
 
-const fade = animate({ type: "fade" });
-const fadeScale1 = animate({ type: "fadeScale" });
-const fadeScale2 = animate({ type: "fadeScale", delay: 0.4 });
-const fadeScale3 = animate({ type: "fadeScale", delay: 0.5 });
-const fadeScale4 = animate({ type: "fadeScale", delay: 0.6 });
+
 
 const CTA = () => {
   return (
@@ -50,7 +46,7 @@ const CTA = () => {
             p-5 w-full text-center relative z-20
           "
           >
-            <Animate viewOnce={true} variants={fadeScale1}>
+            <Animate viewOnce={true} variants={fadeScaleD1}>
               <h2 className="text-3xl lg:text-[3.2vw] bg-gradient-to-b from-neutral-50 to-neutral-300 bg-clip-text text-transparent font-extrabold lg:leading-[5rem] leading-10">
                 Turn Your Vision Into a Stunning Reality!
               </h2>
@@ -68,7 +64,7 @@ const CTA = () => {
             className="border border-dashed border-[#191919] border-t-0
            w-full text-center flex items-start justify-center p-10 relative"
           >
-            <Animate viewOnce={true} variants={fadeScale2}>
+            <Animate viewOnce={true} variants={fadeScaleD2}>
               <p className="lg:text-2xl text-neutral-500 text-center max-w-[800px] sm:leading-7 lg:leading-10">
                 I provide the
                 <strong className="font-bold text-neutral-50">
@@ -119,7 +115,7 @@ const CTA = () => {
             <div className="h-full lg:border border-dashed border-[#191919] border-y-transparent flex items-center justify-center flex-wrap gap-4 py-12 relative">
               <Animate
                 viewOnce={true}
-                variants={fadeScale3}
+                variants={fadeScaleD3}
                 className="min-w-fit"
               >
                 <a
@@ -132,7 +128,7 @@ const CTA = () => {
               </Animate>
               <Animate
                 viewOnce={true}
-                variants={fadeScale4}
+                variants={fadeScaleD4}
                 className="min-w-fit"
               >
                 <a

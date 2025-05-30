@@ -1,11 +1,10 @@
 import { memo } from "react";
 import Image from "next/image";
 import { expertiseList } from "@/data/expertise";
-import { animate } from "@/lib/animation/animate";
 import dynamic from "next/dynamic";
+import { fadeScaleD2 } from "@/lib/animation";
 const Animate = dynamic(() => import("@/components/custom/animation/Animate"));
 
-const fadeScale2 = animate({ type: "fadeScale", delay: 0.5 });
 
 const Expertise = () => {
   return (
@@ -16,7 +15,7 @@ const Expertise = () => {
           {expertiseList.map((item, i) => (
             <Animate
               key={`${i}`}
-              variants={fadeScale2}
+              variants={fadeScaleD2}
               className="bg-gradient-to-r from-neutral-900 to-[#1f1f1f] rounded-3xl border p-10 border-neutral-800 h-full flex flex-col gap-2 overflow-hidden"
             >
               <Image

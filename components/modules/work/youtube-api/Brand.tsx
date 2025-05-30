@@ -1,25 +1,21 @@
-"use client";
 import Image from "next/image";
 import { memo } from "react";
-import { motion } from "framer-motion";
 import { fadeDu1, fadeDu3, fadeScale, fadeScaleD2 } from "@/lib/animation";
+import dynamic from "next/dynamic";
+const Animate = dynamic(() => import("@/components/custom/animation/Animate"));
 
 const Brand = () => {
   return (
     <section className="py-10 lg:py-32 px-3 md:px-6">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-20 md:gap-0">
-        <motion.div
+        <Animate
           variants={fadeDu1}
-          initial="hidden"
-          whileInView="visible"
           className="md:border-[12px] md:border-neutral-950/50"
         >
           <div className="flex justify-center items-center bg-black aspect-square">
             <div className=" flex flex-col justify-center items-center w-full h-full md:p-3">
-              <motion.div
+              <Animate
                 variants={fadeScale}
-                initial="hidden"
-                whileInView="visible"
                 className="relative flex flex-col gap-10 items-center justify-center font-satoshi border-[15px] border-neutral-950/50 p-6 aspect-square"
               >
                 <div className="absolute right-3 top-3">
@@ -39,22 +35,18 @@ const Brand = () => {
                     smooth, fast, and enjoyable.
                   </p>
                 </div>
-              </motion.div>
+              </Animate>
             </div>
           </div>
-        </motion.div>
-        <motion.div
+        </Animate>
+        <Animate
           variants={fadeDu3}
-          initial="hidden"
-          whileInView="visible"
           className="md:border-[12px] md:border-neutral-100/95"
         >
           <div className="flex justify-center items-center bg-white aspect-square ">
             <div className=" flex flex-col justify-center items-center w-full h-full md:p-3">
-              <motion.div
+              <Animate
                 variants={fadeScaleD2}
-                initial="hidden"
-                whileInView="visible"
                 className="relative flex flex-col gap-10 items-center justify-center font-satoshi border-[15px] border-neutral-200/50 p-6 aspect-square text-black"
               >
                 <div className="absolute right-3 top-3">
@@ -77,10 +69,10 @@ const Brand = () => {
                     operations and drive scalability.
                   </p>
                 </div>
-              </motion.div>
+              </Animate>
             </div>
           </div>
-        </motion.div>
+        </Animate>
       </div>
     </section>
   );

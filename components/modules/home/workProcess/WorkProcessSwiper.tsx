@@ -2,11 +2,11 @@
 import { memo } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
-import { animate } from "@/lib/animation/animate";
 import dynamic from "next/dynamic";
 import { workProcess } from "@/data/workProcess";
+import { fade } from "@/lib/animation";
 const Animate = dynamic(() => import("@/components/custom/animation/Animate"));
-const fade = animate({ type: "fade" });
+
 
 function WorkProcessSwiper() {
   return (

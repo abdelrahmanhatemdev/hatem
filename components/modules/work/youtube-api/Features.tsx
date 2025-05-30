@@ -2,72 +2,11 @@
 import { cn } from "@/lib/utils";
 import { memo } from "react";
 import {easeInOut, motion} from "framer-motion"
+import { features } from "@/data/works/youtubeAPI";
 
-export const features = [
-  {
-    title: "Core Features",
-    list: [
-      "Real-time video search",
-      "Embedded video player",
-      "Shorts section with auto playback",
-      "Watch history stored locally",
-    ],
-  },
-  {
-    title: "UI & UX",
-    list: [
-      "Responsive layout with plain CSS",
-      "Dark/light mode toggle",
-      "Clean, YouTube-inspired design",
-      "Smooth user interactions",
-    ],
-  },
-  {
-    title: "API Integration",
-    list: [
-      "YouTube Data API v3 integration",
-      "Search, video, and channel endpoints",
-      "Trending & category browsing",
-      "Pagination and error handling",
-    ],
-  },
-  {
-    title: "State & Storage",
-    list: [
-      "React state with hooks",
-      "Local storage for theme & history",
-      "No external state libraries used",
-      "Simple and maintainable logic",
-    ],
-  },
-  {
-    title: "Performance",
-    list: [
-      "Code splitting with dynamic imports",
-      "Lazy loading for components",
-      "Optimized image and video loading",
-      "Lightweight and fast experience",
-    ],
-  },
-  {
-    title: "Accessibility",
-    list: [
-      "Keyboard navigation support",
-      "ARIA-friendly elements",
-      "Accessible color contrast",
-      "Focus-visible enhancements",
-    ],
-  },
-  {
-    title: "Theming",
-    list: [
-      "CSS-based dark and light themes",
-      "User preference saved in local storage",
-      "Consistent styling across pages",
-      "Minimalist and modern look",
-    ],
-  },
-];
+import dynamic from "next/dynamic";
+const Animate = dynamic(() => import("@/components/custom/animation/Animate"));
+
 
 const Features = () => {
   return (

@@ -1,12 +1,10 @@
 import Link from "next/link";
 import { memo } from "react";
 import { HiArrowLongRight } from "react-icons/hi2";
-import { animate } from "@/lib/animation/animate";
 import dynamic from "next/dynamic";
+import { fadeScale } from "@/lib/animation";
 
 const Animate = dynamic(() => import("@/components/custom/animation/Animate"));
-
-const fadeScale = animate({ type: "fadeScale" });
 
 const SPA = () => {
   return (
