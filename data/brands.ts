@@ -1,0 +1,16 @@
+export const brands = [
+  "roasting-house",
+  "camel-step",
+  "ccit",
+  "fg-sports",
+  "menu-app",
+  "ajlan",
+  "mystation",
+  "al-zowayed",
+  "bullet",
+  "wow",
+  "asasiat",
+  "codecube",
+  "coming",
+  "crossedlink",
+];

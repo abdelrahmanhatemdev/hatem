@@ -1,17 +1,7 @@
-"use client";
-import { motion } from "framer-motion";
+
 import { memo } from "react";
 import Image from "next/image";
-import { cn } from "@/lib/utils";
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from "@/components/ui/popover";
-import { GoArrowUpRight } from "react-icons/go";
-import LazyAnimation from "@/components/custom/animation/LazyAnimation";
 import { stack } from "@/data/stack";
-
 import { animate } from "@/lib/animation/animate";
 import dynamic from "next/dynamic";
 
@@ -61,7 +51,7 @@ const Stack = () => {
                       alt=""
                       width={100}
                       height={100}
-                      className="absolute inset-0 w-full h-full opacity-10 z-10"
+                      className="absolute inset-0 w-full h-full opacity-5 z-10"
                     />
                     
                     <Image
@@ -72,8 +62,8 @@ const Stack = () => {
                       className="size-10"
                     />
                 </div>
-                <div className="flex flex-col gap-3 items-center">
-                  <p className="transition-opacity duration-500 text-xs text-center font-bold leading-3 rounded bg-neutral-950 border border-neutral-900 p-2">
+                <div className="flex flex-col gap-1 items-center">
+                  <p className="transition-opacity duration-500 text-xs text-center font-bold leading-3 rounded bg-neutral-950 border border-neutral-900 p-1">
                     {tech.title}
                   </p>
                   <p className="text-neutral-400 text-xs text-center flex items-center gap-1"><strong className="text-white text-sm">{tech.years} </strong><span>years</span></p>

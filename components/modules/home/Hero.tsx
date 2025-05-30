@@ -6,7 +6,6 @@ import { memo, useEffect, useState } from "react";
 import { cn, cubicBezier } from "@/lib/utils";
 import { motion } from "framer-motion";
 import { slideTransition, slideVariants } from "@/lib/animation/slider";
-import LazyAnimation from "@/components/custom/animation/LazyAnimation";
 
 const Hero = () => {
   const [activeSlide, setActiveSlide] = useState<number | null>(1);
@@ -93,63 +92,26 @@ const Hero = () => {
         }}
         spaceBetween={20}
       >
-        {[1, 
-        2, 3
-      ].map((slide, index) => (
+        {[1, 2, 3].map((slide, index) => (
           <SwiperSlide key={index}>
             {slide === 1 && (
               <div className="h-full flex flex-col justify-center">
                 <p className="text-[2.3rem] sm:text-[3rem] md:text-[3.5vw] md:leading-[5vw] flex items-center gap-[2vw] md:gap-[1vw] flex-wrap">
-                  <LazyAnimation>
-                    <motion.span
-                      variants={slideVariants}
-                      initial={`initial`}
-                      animate={activeSlide === index + 1 ? `active` : `initial`}
-                      exit={`exit`}
-                      transition={{ ...slideTransition, delay: 0 }}
-                      className="flex gap-[2vw]"
-                    >
-                      <span >
-                        <span className="font-extralight">I</span>
-                        <span className="font-extralight">&apos;m </span>
-                        
-                      </span>
-                      <span className="font-thin">a</span>
-                    </motion.span>
-                  </LazyAnimation>
-                  <LazyAnimation>
-                    <motion.span
-                      variants={slideVariants}
-                      initial={`initial`}
-                      animate={activeSlide === index + 1 ? `active` : `initial`}
-                      exit={`exit`}
-                      transition={{
-                        ...slideTransition,
-                        delay: 1 * slideSpanDelay,
-                      }}
-                      className="font-extrabold md:tracking-wider text-[2.3rem] sm:text-[3rem] md:text-[3.5vw] scale-y-105"
-                    >
-                      <span>Frontend</span>
-                    </motion.span>
-                  </LazyAnimation>
-                  <LazyAnimation>
-                    <motion.span
-                      variants={slideVariants}
-                      initial={`initial`}
-                      animate={activeSlide === index + 1 ? `active` : `initial`}
-                      exit={`exit`}
-                      transition={{
-                        ...slideTransition,
-                        delay: 2 * slideSpanDelay,
-                      }}
-                    >
-                      <strong className="inline-block font-extralight">
-                        Developer
-                      </strong>
-                    </motion.span>
-                  </LazyAnimation>
-                </p>
-                <LazyAnimation>
+                  <motion.span
+                    variants={slideVariants}
+                    initial={`initial`}
+                    animate={activeSlide === index + 1 ? `active` : `initial`}
+                    exit={`exit`}
+                    transition={{ ...slideTransition, delay: 0 }}
+                    className="flex gap-[2vw]"
+                  >
+                    <span>
+                      <span className="font-extralight">I</span>
+                      <span className="font-extralight">&apos;m </span>
+                    </span>
+                    <span className="font-thin">a</span>
+                  </motion.span>
+
                   <motion.span
                     variants={slideVariants}
                     initial={`initial`}
@@ -157,57 +119,79 @@ const Hero = () => {
                     exit={`exit`}
                     transition={{
                       ...slideTransition,
-                      delay: 1 * slideParagraphDelay,
+                      delay: 1 * slideSpanDelay,
+                    }}
+                    className="font-extrabold md:tracking-wider text-[2.3rem] sm:text-[3rem] md:text-[3.5vw] scale-y-105"
+                  >
+                    <span>Frontend</span>
+                  </motion.span>
+
+                  <motion.span
+                    variants={slideVariants}
+                    initial={`initial`}
+                    animate={activeSlide === index + 1 ? `active` : `initial`}
+                    exit={`exit`}
+                    transition={{
+                      ...slideTransition,
+                      delay: 2 * slideSpanDelay,
                     }}
                   >
-                    <p className="text-[2.3rem] sm:text-[3rem] md:text-[3.5vw] md:leading-[5vw] flex gap-2 lg:gap-4 items-center">
-                      <motion.span
-                        variants={slideVariants}
-                        initial={`initial`}
-                        animate={
-                          activeSlide === index + 1 ? `active` : `initial`
-                        }
-                        exit={`exit`}
-                        transition={{
-                          ...slideTransition,
-                          delay: 1 * slideParagraphDelay + slideSpanDelay,
-                        }}
-                      >
-                        <span className="font-light">Specialized </span>
-                      </motion.span>
-                      <motion.span
-                        variants={slideVariants}
-                        initial={`initial`}
-                        animate={
-                          activeSlide === index + 1 ? `active` : `initial`
-                        }
-                        exit={`exit`}
-                        transition={{
-                          ...slideTransition,
-                          delay: 1 * slideParagraphDelay + 2 * slideSpanDelay,
-                        }}
-                      >
-                        <span className="font-thin">in </span>
-                      </motion.span>
-                      <motion.span
-                        variants={slideVariants}
-                        initial={`initial`}
-                        animate={
-                          activeSlide === index + 1 ? `active` : `initial`
-                        }
-                        exit={`exit`}
-                        transition={{
-                          ...slideTransition,
-                          delay: 1 * slideParagraphDelay + 3 * slideSpanDelay,
-                        }}
-                        className="inline-flex justify-center items-center"
-                      >
-                        <span className="inline-block font-black">React </span>
-                      </motion.span>
-                    </p>
+                    <strong className="inline-block font-extralight">
+                      Developer
+                    </strong>
                   </motion.span>
-                </LazyAnimation>
-              
+                </p>
+
+                <motion.span
+                  variants={slideVariants}
+                  initial={`initial`}
+                  animate={activeSlide === index + 1 ? `active` : `initial`}
+                  exit={`exit`}
+                  transition={{
+                    ...slideTransition,
+                    delay: 1 * slideParagraphDelay,
+                  }}
+                >
+                  <p className="text-[2.3rem] sm:text-[3rem] md:text-[3.5vw] md:leading-[5vw] flex gap-2 lg:gap-4 items-center">
+                    <motion.span
+                      variants={slideVariants}
+                      initial={`initial`}
+                      animate={activeSlide === index + 1 ? `active` : `initial`}
+                      exit={`exit`}
+                      transition={{
+                        ...slideTransition,
+                        delay: 1 * slideParagraphDelay + slideSpanDelay,
+                      }}
+                    >
+                      <span className="font-light">Specialized </span>
+                    </motion.span>
+                    <motion.span
+                      variants={slideVariants}
+                      initial={`initial`}
+                      animate={activeSlide === index + 1 ? `active` : `initial`}
+                      exit={`exit`}
+                      transition={{
+                        ...slideTransition,
+                        delay: 1 * slideParagraphDelay + 2 * slideSpanDelay,
+                      }}
+                    >
+                      <span className="font-thin">in </span>
+                    </motion.span>
+                    <motion.span
+                      variants={slideVariants}
+                      initial={`initial`}
+                      animate={activeSlide === index + 1 ? `active` : `initial`}
+                      exit={`exit`}
+                      transition={{
+                        ...slideTransition,
+                        delay: 1 * slideParagraphDelay + 3 * slideSpanDelay,
+                      }}
+                      className="inline-flex justify-center items-center"
+                    >
+                      <span className="inline-block font-black">React </span>
+                    </motion.span>
+                  </p>
+                </motion.span>
               </div>
             )}
             {slide === 2 && (
