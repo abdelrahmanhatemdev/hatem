@@ -1,11 +1,9 @@
-"use client";
 import { memo } from "react";
-import { easeInOut, motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import dynamic from "next/dynamic";
 import { fadeScale, fadeScaleD1, fadeScaleD2, fadeScaleD3, fadeScaleD4, fadeScaleD5 } from "@/lib/animation";
-
+const StackList = dynamic(() => import("@/components/custom/StackList"));
 const Animate = dynamic(() => import("@/components/custom/animation/Animate"));
 
 const HomeWork = ({
@@ -51,20 +49,7 @@ const HomeWork = ({
               <div className="text-sm hidden lg:flex flex-col justify-start gap-2 ">
                 <span className="text-neutral-600 font-extrabold">Stack</span>
                 <div className="text-neutral-400">
-                  {stack.map((tech, i) => (
-                    <motion.div
-                      key={i}
-                      initial={{ opacity: 0, y: -5 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      transition={{
-                        duration: 0.3,
-                        delay: fadeScaleD3.visible.transition.delay + i * 0.1,
-                        ease: easeInOut,
-                      }}
-                    >
-                      {tech}
-                    </motion.div>
-                  ))}
+                  <StackList stack={stack}/>
                 </div>
               </div>
             </Animate>

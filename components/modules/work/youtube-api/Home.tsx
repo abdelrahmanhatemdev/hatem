@@ -1,7 +1,5 @@
-"use client";
 import Image from "next/image";
-import { easeInOut, motion } from "framer-motion";
-import { fadeScale, fadeScaleD4 } from "@/lib/animation";
+import { fadeDu1D3, fadeScale, fadeScaleD4 } from "@/lib/animation";
 import dynamic from "next/dynamic";
 const Animate = dynamic(() => import("@/components/custom/animation/Animate"));
 
@@ -19,13 +17,7 @@ const Dashboard = () => {
             your fingertips.
           </Animate>
           <div className="flex flex-col gap-24 order-1 md:order-2">
-            <motion.div
-              initial={{ opacity: 0 }}
-              whileInView={{
-                opacity: 1,
-                transition: { duration: 3, ease: easeInOut },
-              }}
-            >
+            <Animate variants={fadeDu1D3}>
               <Image
                 src={`/assets/media/work/youtube-api/home-light.webp`}
                 alt="Vogue Admin Dashboard"
@@ -34,13 +26,10 @@ const Dashboard = () => {
                 height={617}
                 loading="lazy"
               />
-            </motion.div>
-            <Animate
-              variants={fadeScale}
-              className="max-w-96 text-lg"
-            >
-              Paired with intelligent search, every interaction feels fast, fluid, and addictive—just
-              like the YouTube experience, reimagined.
+            </Animate>
+            <Animate variants={fadeScale} className="max-w-96 text-lg">
+              Paired with intelligent search, every interaction feels fast,
+              fluid, and addictive—just like the YouTube experience, reimagined.
             </Animate>
           </div>
         </div>

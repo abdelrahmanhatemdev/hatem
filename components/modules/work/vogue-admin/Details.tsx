@@ -1,9 +1,9 @@
 import { memo } from "react";
-import { easeInOut, motion } from "framer-motion";
 import { stack, details } from "@/data/works/vogueAdmin";
 import dynamic from "next/dynamic";
-import { fade, fadeD2, fadeD4, fadeScaleD2 } from "@/lib/animation";
+import { fade, fadeD2, fadeD4, fillVerticalFade } from "@/lib/animation";
 const Animate = dynamic(() => import("@/components/custom/animation/Animate"));
+const StackList = dynamic(() => import("@/components/custom/StackList"));
 
 const Details = () => {
   return (
@@ -44,30 +44,11 @@ const Details = () => {
               );
             })}
           </Animate>
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            whileInView={{
-              opacity: 1,
-              height: "100%",
-              transition: { duration: 2.5, ease: easeInOut },
-            }}
+          <Animate variants={fillVerticalFade}
             className="border-s border-neutral-200 px-2 text-neutral-500 font-semibold text-xs md:text-[1vw] pb-5"
           >
-            {stack.map((tech, i) => (
-              <motion.p
-                key={i}
-                initial={{ opacity: 0, y: -5 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{
-                  duration: 0.3,
-                  delay: fadeScaleD2.visible.transition.delay + i * 0.1,
-                  ease: easeInOut,
-                }}
-              >
-                {tech}
-              </motion.p>
-            ))}
-          </motion.div>
+            <StackList stack={stack}/>
+          </Animate>
         </div>
         <Animate
           variants={fadeD4}

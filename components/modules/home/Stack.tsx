@@ -2,7 +2,7 @@ import { memo } from "react";
 import Image from "next/image";
 import { stack } from "@/data/stack";
 import dynamic from "next/dynamic";
-import { fade, fadeD1 } from "@/lib/animation";
+import { fade, fadeD1, fadeD1NoTransition } from "@/lib/animation";
 
 const Animate = dynamic(() => import("@/components/custom/animation/Animate"));
 const SquaresBackground = dynamic(
@@ -30,17 +30,11 @@ const Stack = () => {
             <Animate
               key={`${tech.src}`}
               viewOnce={true}
-              variants={{
-                ...fadeD1,
-                visible: {
-                  ...fadeD1.visible,
-                  transition: {
-                    ...fadeD1.visible.transition,
-
-                    delay: 0.05 * (i + 1),
-                  },
-                },
+              transition={{
+                duration: 0.8,
+                delay: 0.05 * (i + 1),
               }}
+              variants={fadeD1NoTransition}
             >
               <div className="flex flex-col gap-4 items-center w-full">
                 <div className="group flex flex-col items-center justify-center cursor-pointer p-3 bg-neutral-950 transition-colors rounded-full relative border border-neutral-900 shadow-[0_0_30px_rgba(80,80,80,0.3)]">

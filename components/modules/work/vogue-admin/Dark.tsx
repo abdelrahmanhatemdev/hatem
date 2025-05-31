@@ -1,7 +1,7 @@
-"use client"
+"use client";
 import Image from "next/image";
 import { memo, useRef } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { useScroll, useTransform } from "framer-motion";
 import {
   fade,
   fadeD1,
@@ -21,7 +21,8 @@ const Dark = () => {
     offset: ["start start", "end end"],
   });
 
-  const y1 = useTransform(scrollYProgress, [0, 1], ["-40%", "0%"]);
+  const y1 = useTransform(scrollYProgress, [0, 1], ["-40%", "0%"])
+
 
   return (
     <section ref={containerRef} className="py-10 lg:py-32 px-3 md:px-6">
@@ -61,16 +62,25 @@ const Dark = () => {
           </div>
           <div className="flex flex-col gap-10 sticky top-0 px-6 lg:px-32 w-full">
             <h2 className="font-ogg text-4xl md:text-6xl">
-              <motion.p variants={fade} className="laeding-10 md:leading-20">
+              <Animate
+                variants={fade}
+                element="p"
+                className="laeding-10 md:leading-20"
+              >
                 Breathtaking Experience
-              </motion.p>
-              <motion.p variants={fadeD1} className="laeding-10 md:leading-20">
+              </Animate>
+              <Animate
+                variants={fadeD1}
+                element="p"
+                className="laeding-10 md:leading-20"
+              >
                 {" "}
                 In Light and Dark
-              </motion.p>
+              </Animate>
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 max-w-[800px] gap-5">
-              <motion.p
+              <Animate
+                element="p"
                 variants={fadeDu1D1}
                 className="text-lg font-medium text-neutral-400"
               >
@@ -79,15 +89,16 @@ const Dark = () => {
                 eyes. It adapts to different lighting conditions, ensuring a
                 smooth and comfortable experience, especially in dim
                 environments.
-              </motion.p>
-              <motion.p
+              </Animate>
+              <Animate
+                element="p"
                 variants={fadeDu1D3}
                 className="text-lg font-medium text-neutral-400 md:px-5"
               >
                 Beyond aesthetics, dark mode boosts battery life on OLED and
                 AMOLED screens by using less power, allowing for longer device
                 usage.
-              </motion.p>
+              </Animate>
             </div>
           </div>
         </div>

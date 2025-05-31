@@ -2,10 +2,8 @@ import { brands } from "@/data/brands";
 import Image from "next/image";
 import { memo } from "react";
 import dynamic from "next/dynamic";
-import { fadeScale } from "@/lib/animation";
+import { fadeD1NoTransition, fadeScale } from "@/lib/animation";
 const Animate = dynamic(() => import("@/components/custom/animation/Animate"));
-
-
 
 const TrustedBrands = () => {
   return (
@@ -17,17 +15,13 @@ const TrustedBrands = () => {
         <div className="grid grid-cols-2 lg:grid-cols-7 gap-4 ">
           {brands.map((brand, i) => (
             <Animate
-              variants={{
-                ...fadeScale,
-                visible: {
-                  ...fadeScale.visible,
-                  transition: {
-                    ...fadeScale.visible.transition,
-                    delay: 0.05 * (i + 1),
-                  },
-                },
-              }}
               key={`${i}`}
+              viewOnce={true}
+              transition={{
+                duration: 0.8,
+                delay: 0.05 * (i + 1),
+              }}
+              variants={fadeD1NoTransition}
             >
               <div className="group cursor-pointer p-2 bg-neutral-950 rounded-3xl border border-neutral-800 shadow-[0_0_20px_rgba(80,80,80,0.2)]">
                 <Image

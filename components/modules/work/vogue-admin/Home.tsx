@@ -1,7 +1,5 @@
-"use client";
 import Image from "next/image";
-import { easeInOut, motion } from "framer-motion";
-import { fadeScale, fadeScaleD4 } from "@/lib/animation";
+import { fadeDu1D3, fadeScale, fadeScaleD4 } from "@/lib/animation";
 import dynamic from "next/dynamic";
 const Animate = dynamic(() => import("@/components/custom/animation/Animate"));
 
@@ -18,12 +16,8 @@ const Dashboard = () => {
             layout, keeping key metrics and trends easily accessible.
           </Animate>
           <div className="flex flex-col gap-24 order-1 md:order-2">
-            <motion.div
-              initial={{ opacity: 0 }}
-              whileInView={{
-                opacity: 1,
-                transition: { duration: 3, ease: easeInOut },
-              }}
+            <Animate
+              variants={fadeDu1D3}
             >
               <Image
                 src={`/assets/media/work/vogue-admin/home-light.webp`}
@@ -33,7 +27,7 @@ const Dashboard = () => {
                 height={617}
                  loading="lazy"
               />
-            </motion.div>
+            </Animate>
             <Animate element="p"
               variants={fadeScale}
               className="max-w-96 text-lg"
