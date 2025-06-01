@@ -21,7 +21,7 @@ const HomeWork = ({
         <div className="flex flex-col gap-24 order-2 lg:order-1">
           <div className="grid-cols-1 lg:grid-cols-[60%_40%] hidden lg:grid">
             <Animate variants={fadeScale} viewOnce={true}>
-              <Link href={`/work/vogue-admin`}>
+              <Link href={`/work/${basic.slug}`}>
                 <h2 className="uppercase text-6xl font-bold">{basic.name}</h2>
               </Link>
             </Animate>
@@ -72,11 +72,11 @@ const HomeWork = ({
         </div>
       </div>
       <div className="lg:hidden mb-4">
-        <Link href={`/work/vogue-admin`}>
+        <Link href={`/work/${basic.slug}`}>
           <h2 className="uppercase text-6xl font-bold">{basic.name}</h2>
         </Link>
       </div>
-      <Link href={`/work/vogue-admin`} className=" order-1 lg:order-2">
+      <Link href={`/work/${basic.slug}`} className=" order-1 lg:order-2">
         <div className="group relative flex justify-center h-[70vw] lg:h-[35vw]">
           <Animate
             variants={fadeScaleD1}

@@ -1,5 +1,6 @@
 export const basic: BasicType = {
   name: "Vogue",
+  slug: "vogue-admin",
   role: "Frontend / Backend",
   type: "Dashboard",
   year: "2025",
@@ -54,7 +55,7 @@ export const links: LinkType[] = [
   {
     title: "Git",
     value: "Visit Git",
-    href: "https://github.com/abdulrahmanhatem/vogue-admin",
+    href: "https://github.com/abdelrahmanhatemdev/vogue-admin",
   },
 ];
 

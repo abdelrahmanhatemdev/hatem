@@ -21,7 +21,7 @@ const HomeMobile = () => {
         <div className="flex flex-col gap-10 w-full md:w-[calc(50%-2.5rem)]">
           <h2 className="font-ogg text-4xl md:text-[4vw]">
             <Animate element="p" variants={fadeD1}>
-              Manage with Ease
+              Explore with Ease
             </Animate>
             <Animate element="p" variants={fadeD2}>
               Anytime
@@ -35,10 +35,10 @@ const HomeMobile = () => {
             variants={fadeD4}
             className="text-lg font-medium text-neutral-400 md:text-[1.3vw]"
           >
-            I built a responsive, user-friendly dashboard that adapts seamlessly
-            to any device, ensuring a smooth experience. Its structured layout
-            helps users stay focused, making key insights and actions easily
-            accessible.
+            I built a mobile-first experience for Simone that adapts beautifully
+            across all screen sizes. Visitors can explore collections, view
+            details, and connect with the brand from anywhere — all in an elegant,
+            clutter-free interface.
           </Animate>
           <div className="grid gap-5 grid-cols-1 sm:grid-cols-2">
             <Animate
@@ -46,11 +46,11 @@ const HomeMobile = () => {
               className="bg-gradient-to-r from-neutral-900/50 to-[#1f1f1f]/50 rounded-3xl border p-10 border-neutral-800 h-full flex flex-col gap-4 justify-center"
             >
               <h3 className="text-xl font-semibold md:text-[1.2vw]">
-                Real-Time Updates
+                Seamless Experience
               </h3>
               <p className="font-semibold text-neutral-400 md:text-[.9vw]">
-                Instantly reflects changes and new data, keeping users informed
-                without manual refreshes.
+                Designed for smooth interactions and fluid transitions that
+                reflect the sophistication of the brand.
               </p>
             </Animate>
             <Animate
@@ -58,11 +58,11 @@ const HomeMobile = () => {
               className="bg-gradient-to-r from-neutral-900/50 to-[#1f1f1f]/50 rounded-3xl border p-10 border-neutral-800 h-full flex flex-col gap-4 justify-center"
             >
               <h3 className="text-xl font-semibold md:text-[1.2vw]">
-                Intelligent Navigation
+                Effortless Browsing
               </h3>
               <p className="font-semibold text-neutral-400 md:text-[.9vw]">
-                A well-structured menu and shortcuts allow users to access key
-                sections effortlessly.
+                Clear navigation and optimized layouts help users discover pieces
+                without distractions.
               </p>
             </Animate>
           </div>
@@ -70,8 +70,8 @@ const HomeMobile = () => {
         <div className="flex flex-col sm:flex-row justify-center items-center gap-10 grow md:w-[calc(50%-2.5rem)]">
           <Animate variants={fadeDu2} className="flex items-center">
             <Image
-              src="/assets/media/work/vogue-admin/phone-1.webp"
-              alt="Dashboard Phone 1"
+              src="/assets/media/work/simone/phone-1.webp"
+              alt="Simone Mobile View 1"
               className="rounded-[2vw] border border-neutral-800"
               width={306}
               height={600}
@@ -81,8 +81,8 @@ const HomeMobile = () => {
           <div className="flex flex-col gap-10">
             <Animate variants={fadeDu1}>
               <Image
-                src="/assets/media/work/vogue-admin/phone-2.webp"
-                alt="Dashboard Phone 2"
+                src="/assets/media/work/simone/phone-2.webp"
+                alt="Simone Mobile View 2"
                 className="rounded-[2vw] border border-neutral-800"
                 width={306}
                 height={600}
@@ -91,8 +91,8 @@ const HomeMobile = () => {
             </Animate>
             <Animate variants={fadeDu3}>
               <Image
-                src="/assets/media/work/vogue-admin/home-sm.webp"
-                alt="Dashboard 3"
+                src="/assets/media/work/simone/home-sm.webp"
+                alt="Simone Mobile View 3"
                 className="rounded-[2vw] border border-neutral-800"
                 width={306}
                 height={600}
@@ -105,4 +105,5 @@ const HomeMobile = () => {
     </section>
   );
 };
+
 export default memo(HomeMobile);

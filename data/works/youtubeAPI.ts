@@ -1,5 +1,6 @@
 export const basic: BasicType = {
   name: "Youtube API",
+  slug: "youtube-api",
   role: "Frontend",
   type: "Streaming UI",
   year: "2024",

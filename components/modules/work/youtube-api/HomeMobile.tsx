@@ -17,7 +17,7 @@ import {
 import dynamic from "next/dynamic";
 const Animate = dynamic(() => import("@/components/custom/animation/Animate"));
 
-const DashboardMobile = () => {
+const HomeMobile = () => {
   return (
     <section className="py-10 md:py-32 px-3 md:px-6 w-full">
       <div className="flex justify-between flex-wrap gap-20 md:px-6 lg:px-28 w-full">
@@ -115,4 +115,4 @@ const DashboardMobile = () => {
     </section>
   );
 };
-export default memo(DashboardMobile);
+export default memo(HomeMobile);

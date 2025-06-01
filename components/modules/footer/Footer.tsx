@@ -126,7 +126,7 @@ const Footer = () => {
                 <ul className="flex justify-between gap-10 md:gap-5 font-medium order-1 xl:order-2 flex-wrap">
                   <li>
                     <a
-                      href="https://github.com/abdulrahmanhatem"
+                      href="https://github.com/abdelrahmanhatemdev"
                       target="_blank"
                       aria-label="Github"
                     >

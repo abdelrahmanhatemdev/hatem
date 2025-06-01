@@ -1,5 +1,6 @@
 interface BasicType {
   name: string;
+  slug: string;
   role: string;
   type: string;
   year: string;
