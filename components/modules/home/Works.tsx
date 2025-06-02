@@ -19,8 +19,8 @@ const SelectedWorks = () => {
       <div className="w-[90%] mx-auto flex flex-col gap-10">
         <h2 className="text-4xl text-center p-4">Selected Works</h2>
         <div className="grid grid-cols-1 gap-8 lg:gap-32 py-8 lg:py-32">
-          <VogueAdmin />
           <Simone />
+          <VogueAdmin />
           <YoutubeAPI />
         </div>
       </div>
