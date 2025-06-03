@@ -1,4 +1,4 @@
-# Hatem.bio
+# Hatem Portfolio
 
 **Hatem.bio** is my personal portfolio website, built to professionally represent my work as a frontend developer. It highlights my projects, technical skills, and contact information in a clean, fast, and modern design.
 
