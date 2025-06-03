@@ -25,7 +25,7 @@ I developed this portfolio to present my frontend development capabilities in a 
 
 ## <img src="https://abdelrahmanhatemdev.github.io/images/icons/markdown/features.png" alt="Features" align="center"> Features 
 
-| **Category**      | **Features** |                                                             |
+| **Category**   | **Features** |                                                            
 |----------------|--------------------------------------------------------------------------|
 | **Performance** | ⚡ Static site generation (SSG) with Next.js<br>⚡ Optimized assets and fonts<br>⚡ Image optimization and lazy loading |
 | **Styling**     | 🎨 Tailwind CSS with Shadcn UI<br>🎨 Fully responsive layout<br>🌙 Dark/light mode with local storage persistence |
