@@ -1,29 +1,31 @@
 # Hatem Portfolio
 
-**Hatem.bio** is my personal portfolio website, built to professionally represent my work as a frontend developer. It highlights my projects, technical skills, and contact information in a clean, fast, and modern design.
+**Hatem.bio** is my personal portfolio website, built to professionally represent my work as a frontend developer. 
 
-## 📝 About the Project
+<img src="https://abdelrahmanhatemdev.github.io/images/images/mega/hatem.webp" alt="hatem" align="center"> 
 
-This site serves as a central hub to showcase my experience building performant, responsive web applications using modern technologies. It’s optimized for performance, SEO, and accessibility — reflecting both my technical ability and attention to detail.
+## <img src="https://abdelrahmanhatemdev.github.io/images/icons/markdown/link.png" alt="Link" align="center"> Link  
+[Live Link](https://hatem.bio/)
 
-## 💡 Purpose
 
+## <img src="https://abdelrahmanhatemdev.github.io/images/icons/markdown/description.png" alt="Description" align="center"> Description  
+This site serves as a central hub to showcase my experience building performant, responsive web applications using modern technologies. It highlights my projects, technical skills, and contact information in a clean, fast, and modern design. It’s optimized for performance, SEO, and accessibility — reflecting both my technical ability and attention to detail.
+
+### <img src="https://abdelrahmanhatemdev.github.io/images/icons/markdown/motivation.png" alt="Motivation" align="center"> Motivation
 I developed this portfolio to present my frontend development capabilities in a structured and visually appealing way. The goal was to create a fast and elegant platform that not only showcases my work, but also demonstrates the same technologies and design principles I apply in real-world projects.
 
-## 🧱 Tech Stack
+### <img src="https://abdelrahmanhatemdev.github.io/images/icons/markdown/stack.png" alt="Stack" align="center"> Stack
 
-- [Next.js](https://nextjs.org/) – for routing, static generation, and performance
-- [React](https://react.dev/) – for component-based UI architecture
-- [Tailwind CSS](https://tailwindcss.com/) – for utility-first styling
-- [Shadcn UI](https://ui.shadcn.dev/) – for accessible and themeable components
-- [Firebase (Auth + Hosting)](https://firebase.google.com/) – for authentication and deployment
-- [Framer Motion](https://www.framer.com/motion/) – for smooth UI animations
-- [Zod](https://zod.dev/) – for type-safe form validation
-- [Vercel](https://vercel.com/) – for seamless deployment and CDN delivery
+[<img src="https://abdelrahmanhatemdev.github.io/images/images/stack_frames/nextjs.webp" alt="Nextjs" title="Nextjs">](https://nextjs.org/) &ensp;
+[<img src="https://abdelrahmanhatemdev.github.io/images/images/stack_frames/react.webp" alt="React" title="React">](https://react.dev/) &ensp;
+[<img src="https://abdelrahmanhatemdev.github.io/images/images/stack_frames/tailwind.webp" alt="Tailwind" title="Tailwind">](https://tailwindcss.com/) &ensp;
+[<img src="https://abdelrahmanhatemdev.github.io/images/images/stack_frames/framer.webp" alt="Framer Motion" title="Framer Motion">](https://www.framer.com/motion/) &ensp;
+[<img src="https://abdelrahmanhatemdev.github.io/images/images/stack_frames/eslint.webp" alt="ESLint" title="ESLint">](https://eslint.org/) &ensp;
+[<img src="https://abdelrahmanhatemdev.github.io/images/images/stack_frames/vercel.webp" alt="Vercel" title="Vercel">](https://vercel.com/) &ensp;
 
-## 🚀 Features
+## <img src="https://abdelrahmanhatemdev.github.io/images/icons/markdown/features.png" alt="Features" align="center"> Features 
 
-| Category       | Features                                                                 |
+| **Category**      | **Features** |                                                             |
 |----------------|--------------------------------------------------------------------------|
 | **Performance** | ⚡ Static site generation (SSG) with Next.js<br>⚡ Optimized assets and fonts<br>⚡ Image optimization and lazy loading |
 | **Styling**     | 🎨 Tailwind CSS with Shadcn UI<br>🎨 Fully responsive layout<br>🌙 Dark/light mode with local storage persistence |
