@@ -10,6 +10,7 @@ const AnimateTextOnHover = dynamic(
   () => import("@/components/custom/animation/animatedText/AnimateTextOnHover")
 );
 
+
 const Footer = () => {
   const contactDelay = 1;
 
