@@ -20,7 +20,6 @@ const ResponsiveWeb = () => {
               alt="Responsive Web"
               width={1366}
               height={3024}
-              loading="lazy"
               className="rounded-2xl"
             />
           </Animate>
@@ -35,7 +34,6 @@ const ResponsiveWeb = () => {
               alt="Responsive Phone"
               width={1366}
               height={3024}
-              loading="lazy"
               className="rounded-2xl"
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             />

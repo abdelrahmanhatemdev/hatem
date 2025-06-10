@@ -1,9 +1,17 @@
 import { memo } from "react";
 import { stack, details } from "@/data/works/simone";
 import dynamic from "next/dynamic";
-import { fade, fadeD2, fadeD4, fillVerticalFade } from "@/lib/animation";
+import { fade, fadeD2, fadeD4 } from "@/lib/animation";
+import { animate } from "@/lib/animation/animate";
 const Animate = dynamic(() => import("@/components/custom/animation/Animate"));
 const StackList = dynamic(() => import("@/components/custom/StackList"));
+
+const fillVerticalFade = animate({
+  type: "fillVerticalFade",
+  duration: 2,
+  yFrom: 0,
+  yTo: "100%",
+});
 
 const Details = () => {
   return (
@@ -44,12 +52,16 @@ const Details = () => {
               );
             })}
           </Animate>
-          <Animate
-            variants={fillVerticalFade}
-            className="border-s border-neutral-200 px-2 text-neutral-500 font-semibold text-xs md:text-[1vw] pb-5"
-          >
-            <StackList stack={stack} />
-          </Animate>
+          <div className="h-fit grid grid-cols-[3px_calc(100%-3px)]">
+            <Animate
+              variants={fillVerticalFade}
+              className="w-[1px] h-full bg-white "
+            ></Animate>
+
+            <div className="px-2 text-neutral-500 font-semibold text-xs md:text-[1vw] pb-5">
+              <StackList stack={stack} />
+            </div>
+          </div>
         </div>
         <Animate
           variants={fadeD4}
@@ -58,9 +70,9 @@ const Details = () => {
           I designed Simone as a refined website for an Italian furniture
           agency, crafted to highlight timeless aesthetics and elevate brand
           presence. It elegantly showcases furniture collections with smooth
-          interactions, immersive visuals, and responsive layouts. With a design consistency, and performance, it helps
-          the agency connect with design-conscious clients and express its
-          identity online.
+          interactions, immersive visuals, and responsive layouts. With a design
+          consistency, and performance, it helps the agency connect with
+          design-conscious clients and express its identity online.
         </Animate>
       </div>
     </section>

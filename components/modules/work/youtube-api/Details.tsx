@@ -3,14 +3,22 @@ import {
   fade,
   fadeD2,
   fadeD5,
-  fillVerticalFade,
 } from "@/lib/animation";
 
 import { details, stack } from "@/data/works/youtubeAPI";
 
 import dynamic from "next/dynamic";
+import { animate } from "@/lib/animation/animate";
 const Animate = dynamic(() => import("@/components/custom/animation/Animate"));
 const StackList = dynamic(() => import("@/components/custom/StackList"));
+
+
+const fillVerticalFade = animate({
+  type: "fillVerticalFade",
+  duration: 1.5,
+  yFrom: 0,
+  yTo: "100%",
+});
 
 const Details = () => {
   return (
@@ -51,12 +59,16 @@ const Details = () => {
               );
             })}
           </Animate>
-          <Animate
-            variants={fillVerticalFade}
-            className="border-s border-neutral-200 px-2 text-neutral-500 font-semibold text-xs md:text-[1vw] pb-5"
-          >
-            <StackList stack={stack} />
-          </Animate>
+            <div className="h-fit grid grid-cols-[3px_calc(100%-3px)]">
+                      <Animate
+                        variants={fillVerticalFade}
+                        className="w-[1px] h-full bg-white "
+                      ></Animate>
+          
+                      <div className="px-2 text-neutral-500 font-semibold text-xs md:text-[1vw] pb-5">
+                        <StackList stack={stack} />
+                      </div>
+                    </div>
         </div>
         <Animate
           variants={fadeD5}
