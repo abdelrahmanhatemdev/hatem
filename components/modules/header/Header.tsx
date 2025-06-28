@@ -14,6 +14,7 @@ import dynamic from "next/dynamic";
 
 const Logo = dynamic(() => import("@/components/custom/Logo"));
 
+
 function Header() {
   return (
     <header className="fixed top-4 left-[5%] lg:left-[2%] z-50 w-[90%] lg:w-[96%] h-12">
