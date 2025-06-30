@@ -9,8 +9,6 @@ const VogueAdmin = dynamic(
   () => import("@/components/modules/home/works/VogueAdmin")
 );
 
-
-
 const SelectedWorks = () => {
   return (
     <section className="w-full mt-32" id="works">
