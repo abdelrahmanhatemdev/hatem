@@ -9,9 +9,7 @@ const VogueAdmin = dynamic(
   () => import("@/components/modules/home/works/VogueAdmin")
 );
 
-const YoutubeAPI = dynamic(
-  () => import("@/components/modules/home/works/YoutubeAPI")
-);
+
 
 const SelectedWorks = () => {
   return (
@@ -21,7 +19,6 @@ const SelectedWorks = () => {
         <div className="grid grid-cols-1 gap-8 lg:gap-32 py-8 lg:py-32">
           <Simone />
           <VogueAdmin />
-          <YoutubeAPI />
         </div>
       </div>
     </section>
