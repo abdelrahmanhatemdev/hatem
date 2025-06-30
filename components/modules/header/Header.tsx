@@ -29,7 +29,7 @@ function Header() {
           <ul className="gap-6 items-center justify-start hidden md:flex">
             <li className="hover:bg-neutral-800 px-3 py-1 rounded-lg cursor-pointer transition-colors">
               <a
-                href="https://drive.google.com/file/d/1LXJ1l_yJ9mzT1GyHBmkgXnHiCQ0sH67B/view?usp=sharing"
+                href="https://drive.google.com/file/d/1sbUQeY1oZAcArDIubhkeWPKfnD5U0lo3/view?usp=sharing"
                 target="_blank"
               >
                 CV
