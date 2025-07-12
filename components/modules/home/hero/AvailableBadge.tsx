@@ -22,7 +22,7 @@ function AvailableBadge({ className, activate = true }: AvailableBadgeProps) {
         <span className="animate-pulse">Available Now</span>
       </p>
       <p>
-        <span className="text-sm text-green-600 font-medium duration-1000">$1200 </span>
+        <span className="text-sm text-green-600 font-medium duration-1000">From $1200 </span>
         <span className="text-md text-green-500 font-extrabold">/ mo</span>
       </p>
     </div>
