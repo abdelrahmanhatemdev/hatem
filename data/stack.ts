@@ -75,8 +75,48 @@ export const stack = [
     years: 6,
   },
   {
+    src: "Jest",
+    title: "Jest",
+    years: 1,
+  },
+  {
+    src: "react-testing-library",
+    title: "RTL",
+    years: 1,
+  },
+  {
+    src: "cypress",
+    title: "RHF",
+    years: 1,
+  },
+  {
+    src: "figma",
+    title: "Figma",
+    years: 1,
+  },
+  {
+    src: "jira",
+    title: "Jira",
+    years: 1,
+  },
+  {
+    src: "apollo",
+    title: "Apollo",
+    years: 1,
+  },
+  {
     src: "react-hook-form",
     title: "RHF",
     years: 2,
+  },
+  {
+    src: "react-native",
+    title: "Native",
+    years: 0,
+  },
+  {
+    src: "docker",
+    title: "Docker",
+    years: 0,
   },
 ];
